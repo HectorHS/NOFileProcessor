@@ -1,0 +1,4 @@
+rename neoplasms to cancer
+rename various age brackets for consistent naming
+remove floatig points from values
+rename to DALYs

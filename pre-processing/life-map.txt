@@ -1,0 +1,7 @@
+combine the various un files to a single file with a format like "life death map.csv"
+make population actual total number (not thousands)
+reshape data from tableau tab to something like life-map.csv
+remove special characters for Côte d'Ivoire, Curaçao, Réunion, Saint BarthÃ©lemy
+double check geographic areas like Asia, Africa etc are not included after processing
+
+

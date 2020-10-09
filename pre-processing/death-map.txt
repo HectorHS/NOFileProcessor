@@ -1,0 +1,2 @@
+rename ages for consistency
+remove extra floating points on values and multiply by 100

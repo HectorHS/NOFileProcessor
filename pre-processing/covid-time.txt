@@ -1,0 +1,13 @@
+open output file
+sort country alphabetacally
+open covid time helper file and copy output there
+check we have the same number of countries
+if not, add missing countries
+create new column, following same format
+copy values from output to master tab (confirmed, active, recovered, deaths)
+copy formulas for the change values
+save file
+copy the whole thing in a new tab as values
+replace header
+save as covid-time.csv
+

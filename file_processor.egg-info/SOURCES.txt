@@ -1,0 +1,8 @@
+processor.py
+setup.py
+file_processor.egg-info/PKG-INFO
+file_processor.egg-info/SOURCES.txt
+file_processor.egg-info/dependency_links.txt
+file_processor.egg-info/entry_points.txt
+file_processor.egg-info/requires.txt
+file_processor.egg-info/top_level.txt
