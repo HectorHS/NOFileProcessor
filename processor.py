@@ -613,7 +613,11 @@ def cli(input, processtype):
                         latest = row.DTotal
                     else:
                         oldSum += row.DTotal
+                if country in ['Greece', 'Germany']:
+                    oldAverage = oldSum / 4
+                else:
                 oldAverage = oldSum / 5
+
                 output = output.append(
                     {'Country': country, 'Week': week, 'Deaths_old': oldAverage, 'Deaths_2020': latest}, ignore_index=True)
 
