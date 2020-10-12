@@ -191,7 +191,7 @@ def cli(input, processtype):
                 "South Africa": "South Africa - people tested",
                 "Korea, South": "South Korea - people tested",
                 "Spain": "Spain - tests performed",
-                "Sweden": "Sweden - samples tested",
+                "Sweden": "Sweden - tests performed",
                 "Switzerland": "Switzerland - tests performed",
                 "Taiwan": "Taiwan - tests performed",
                 "Thailand": "Thailand - people tested",
@@ -214,7 +214,7 @@ def cli(input, processtype):
             for row in testing.itertuples():
                 if row.entity == testingCountryName:
                     # France, DRC and Sweden are missing testing totals, so this is a workaround
-                    if row.entity in ["France - people tested", "Sweden - samples tested", "Democratic Republic of Congo - samples tested"]:
+                    if row.entity in ["France - people tested", "Sweden - tests performed", "Democratic Republic of Congo - samples tested"]:
                         return (confirmed / row.short_term_positive_rate)
                     # Numbers for Peru do not add up, so ignore them for now
                     if row.entity == "Peru - people tested":
@@ -641,6 +641,7 @@ def cli(input, processtype):
             output = output.append({'Country': "United Kingdom", 'Week': week,
                                     'Deaths_old': oldAverage, 'Deaths_2020': latest}, ignore_index=True)
             output = output.reset_index()
-            output.to_csv(r'output.csv', index=None, header=True)
+        output.to_csv(
+            r'../NavigateObscurity/worlddata/static/worlddata/csv/covid-excess-deaths.csv', index=None, header=True)
 
     click.echo('Processing completed.')
