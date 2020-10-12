@@ -549,7 +549,9 @@ def cli(input, processtype):
             "Sweden",
             "USA",
             "Germany",
-            "Greece"}
+            "Greece",
+            "Korea, South",
+            "New Zealand"}
 
         years = {2015, 2016, 2017, 2018, 2019, 2020}
         weeks = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26,
@@ -586,7 +588,9 @@ def cli(input, processtype):
                 "Sweden": "SWE",
                 "USA": "USA",
                 "Germany": "DEUTNP",
-                "Greece": "GRC"}
+                "Greece": "GRC",
+                "Korea, South": "KOR",
+                "New Zealand": "NZL_NP"}
 
             return countryCode[country]
 
