@@ -616,7 +616,7 @@ def cli(input, processtype):
                 if country in ['Greece', 'Germany']:
                     oldAverage = oldSum / 4
                 else:
-                oldAverage = oldSum / 5
+                    oldAverage = oldSum / 5
 
                 output = output.append(
                     {'Country': country, 'Week': week, 'Deaths_old': oldAverage, 'Deaths_2020': latest}, ignore_index=True)
@@ -640,7 +640,7 @@ def cli(input, processtype):
 
             output = output.append({'Country': "United Kingdom", 'Week': week,
                                     'Deaths_old': oldAverage, 'Deaths_2020': latest}, ignore_index=True)
-            output = output.reset_index()
+        output = output.reset_index()
         output.to_csv(
             r'../NavigateObscurity/worlddata/static/worlddata/csv/covid-excess-deaths.csv', index=None, header=True)
 
