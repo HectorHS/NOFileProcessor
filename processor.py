@@ -2,6 +2,7 @@ import click
 # import csv
 import numpy as np
 import pandas as pd
+import math
 
 
 @click.command()
@@ -29,6 +30,135 @@ def cli(input, processtype):
         output = pd.pivot_table(loaded, values='val', columns=['cause'],
                                 index=['measure', 'location', 'sex', 'age'],
                                 aggfunc=lambda x: x)
+        output = output.reset_index()
+        output.to_csv(r'output.csv', index=None, header=True)
+    elif processtype == 'death-causes':
+        # get rid of float points
+        loaded['val'] = loaded['val'].astype(int)
+        # expand ages so we can combine them in 10 year buckets instead of 5
+        ages = pd.pivot_table(loaded, values='val', columns=['age'],
+                              index=['location', 'cause', 'sex'],
+                              aggfunc=lambda x: x)
+        ages = ages.reset_index()
+
+        # fill empty values otherwise operations fail
+        ages = ages.fillna(0)
+        # combine ages
+        ages['0-9'] = (ages['<1 year'] +
+                       ages['1 to 4'] + ages['5 to 9'])
+        ages['10-19'] = ages['10 to 14'] + ages['15 to 19']
+        ages['20-29'] = ages['20 to 24'] + ages['25 to 29']
+        ages['30-39'] = ages['30 to 34'] + ages['35 to 39']
+        ages['40-49'] = ages['40 to 44'] + ages['45 to 49']
+        ages['50-59'] = ages['50 to 54'] + ages['55 to 59']
+        ages['60-69'] = ages['60 to 64'] + ages['65 to 69']
+        ages['70-79'] = ages['70 to 74'] + ages['75 to 79']
+        ages['80-89'] = ages['80 to 84'] + ages['85 to 89']
+        ages['90+'] = ages['90 to 94'] + ages['95 plus']
+
+        # get rid of older brackets / columns
+        del ages['<1 year']
+        del ages['1 to 4']
+        del ages['10 to 14']
+        del ages['20 to 24']
+        del ages['30 to 34']
+        del ages['40 to 44']
+        del ages['50 to 54']
+        del ages['60 to 64']
+        del ages['70 to 74']
+        del ages['80 to 84']
+        del ages['90 to 94']
+        del ages['5 to 9']
+        del ages['15 to 19']
+        del ages['25 to 29']
+        del ages['35 to 39']
+        del ages['45 to 49']
+        del ages['55 to 59']
+        del ages['65 to 69']
+        del ages['75 to 79']
+        del ages['85 to 89']
+        del ages['95 plus']
+
+        # convert ages to single column
+        ages = pd.melt(ages,
+                       id_vars=['cause', 'sex', 'location'],
+                       # list of days of the week
+                       value_vars=list(ages.columns[3:]),
+                       var_name='age',
+                       value_name='val')
+
+        # expand location to multiple columns to reduce rows and file size
+        output = pd.pivot_table(ages, values='val', columns=['location'],
+                                index=['cause', 'sex', 'age'],
+                                aggfunc=lambda x: x)
+
+        output = output.replace(0, np.nan)
+
+        output = output.reset_index()
+        output.to_csv(r'output.csv', index=None, header=True)
+
+    elif processtype == 'death-risks':
+        # get rid of float points
+        loaded['val'] = loaded['val'].astype(int)
+        # expand ages so we can combine them in 10 year buckets instead of 5
+        ages = pd.pivot_table(loaded, values='val', columns=['age'],
+                              index=['location', 'cause', 'sex', 'rei'],
+                              aggfunc=lambda x: x)
+        ages = ages.reset_index()
+
+        # fill empty values otherwise operations fail
+        ages = ages.fillna(0)
+        # combine ages
+        ages['0-9'] = (ages['<1 year'] +
+                       ages['1 to 4'] + ages['5 to 9'])
+        ages['10-19'] = ages['10 to 14'] + ages['15 to 19']
+        ages['20-29'] = ages['20 to 24'] + ages['25 to 29']
+        ages['30-39'] = ages['30 to 34'] + ages['35 to 39']
+        ages['40-49'] = ages['40 to 44'] + ages['45 to 49']
+        ages['50-59'] = ages['50 to 54'] + ages['55 to 59']
+        ages['60-69'] = ages['60 to 64'] + ages['65 to 69']
+        ages['70-79'] = ages['70 to 74'] + ages['75 to 79']
+        ages['80-89'] = ages['80 to 84'] + ages['85 to 89']
+        ages['90+'] = ages['90 to 94'] + ages['95 plus']
+
+        # get rid of older brackets / columns
+        del ages['<1 year']
+        del ages['1 to 4']
+        del ages['10 to 14']
+        del ages['20 to 24']
+        del ages['30 to 34']
+        del ages['40 to 44']
+        del ages['50 to 54']
+        del ages['60 to 64']
+        del ages['70 to 74']
+        del ages['80 to 84']
+        del ages['90 to 94']
+        del ages['5 to 9']
+        del ages['15 to 19']
+        del ages['25 to 29']
+        del ages['35 to 39']
+        del ages['45 to 49']
+        del ages['55 to 59']
+        del ages['65 to 69']
+        del ages['75 to 79']
+        del ages['85 to 89']
+        del ages['95 plus']
+
+        # convert ages to single column
+        ages = pd.melt(ages,
+                       id_vars=['cause', 'sex', 'location', 'rei'],
+                       # list of days of the week
+                       value_vars=list(ages.columns[4:]),
+                       var_name='age',
+                       value_name='val')
+
+        # expand location to multiple columns to reduce rows and file size
+        output = pd.pivot_table(ages, values='val', columns=['location'],
+                                index=['cause', 'sex', 'age', 'rei'],
+                                aggfunc=lambda x: x)
+
+        output = output.replace(0, np.nan)
+
         output = output.reset_index()
         output.to_csv(r'output.csv', index=None, header=True)
     elif processtype == 'death-map':
@@ -106,6 +236,7 @@ def cli(input, processtype):
         indDeaths, indConfirmed, indRecovered, indActive = 0, 0, 0, 0
         ukDeaths, ukConfirmed, ukRecovered, ukActive = 0, 0, 0, 0
         nldDeaths, nldConfirmed, nldRecovered, nldActive = 0, 0, 0, 0
+        belDeaths, belConfirmed, belRecovered, belActive = 0, 0, 0, 0
         glDeaths, glConfirmed, glRecovered, glActive = 0, 0, 0, 0
 
         def getPopulation(country):
@@ -130,17 +261,17 @@ def cli(input, processtype):
                 "Bulgaria": "Bulgaria - tests performed",
                 "Canada": "Canada - people tested",
                 "Chile": "Chile - tests performed",
-                "Colombia": "Colombia - samples tested",
-                "Costa Rica": "Costa Rica - people tested (incl. non-PCR)",
+                "Colombia": "Colombia - tests performed",
+                "Costa Rica": "Costa Rica - people tested",
                 "Croatia": "Croatia - people tested",
                 "Cuba": "Cuba - tests performed",
-                "Czechia": "Czech Republic - tests performed",
+                "Czechia": "Czechia - tests performed",
                 "Denmark": "Denmark - tests performed",
                 "Ecuador": "Ecuador - people tested",
                 "El Salvador": "El Salvador - tests performed",
                 "Estonia": "Estonia - tests performed",
                 "Ethiopia": "Ethiopia - tests performed",
-                "Finland": "Finland - samples tested",
+                "Finland": "Finland - tests performed",
                 "France": "France - people tested",
                 "Germany": "Germany - tests performed",
                 "Ghana": "Ghana - samples tested",
@@ -155,11 +286,10 @@ def cli(input, processtype):
                 "Israel": "Israel - tests performed",
                 "Italy": "Italy - people tested",
                 "Japan": "Japan - people tested",
-                "Japan": "Japan - tests performed",
                 "Kazakhstan": "Kazakhstan - tests performed",
                 "Kenya": "Kenya - samples tested",
                 "Latvia": "Latvia - tests performed",
-                "Lithuania": "Lithuania - samples tested",
+                "Lithuania": "Lithuania - tests performed",
                 "Luxembourg": "Luxembourg - tests performed",
                 "Malaysia": "Malaysia - people tested",
                 "Mexico": "Mexico - people tested",
@@ -174,10 +304,10 @@ def cli(input, processtype):
                 "Pakistan": "Pakistan - tests performed",
                 "Panama": "Panama - tests performed",
                 "Paraguay": "Paraguay - tests performed",
-                "Peru": "Peru - people tested",
+                "Peru": "Peru - tests performed",
                 "Philippines": "Philippines - people tested",
                 "Poland": "Poland - people tested",
-                "Portugal": "Portugal - samples tested",
+                "Portugal": "Portugal - tests performed",
                 "Qatar": "Qatar - people tested",
                 "Romania": "Romania - tests performed",
                 "Russia": "Russia - tests performed",
@@ -194,7 +324,7 @@ def cli(input, processtype):
                 "Sweden": "Sweden - tests performed",
                 "Switzerland": "Switzerland - tests performed",
                 "Taiwan": "Taiwan - tests performed",
-                "Thailand": "Thailand - people tested",
+                "Thailand": "Thailand - tests performed",
                 "Tunisia": "Tunisia - tests performed",
                 "Turkey": "Turkey - tests performed",
                 "Uganda": "Uganda - samples tested",
@@ -365,6 +495,12 @@ def cli(input, processtype):
                 indRecovered += row.Recovered
                 if row.Active > 0:
                     indActive += row.Active
+            elif row.Country_Region == 'Belgium':
+                belDeaths += row.Deaths
+                belConfirmed += row.Confirmed
+                belRecovered += row.Recovered
+                if row.Active > 0:
+                    belActive += row.Active
             elif row.Country_Region == 'United Kingdom' and row.Province_State in ['England', 'Scotland', 'Northern Ireland', 'Unknown', 'Wales']:
                 ukDeaths += row.Deaths
                 ukConfirmed += row.Confirmed
@@ -389,8 +525,9 @@ def cli(input, processtype):
                 tested = 0 if testingCountryName == "" else getTestTotal(
                     testingCountryName, row.Confirmed)
 
-                outputAppend(row.Country_Region, row.Confirmed, row.Deaths,
-                             row.Recovered, row.Active, tested, getPopulation(row.Country_Region))
+                if not isinstance(row.Country_Region, float):
+                    outputAppend(row.Country_Region, row.Confirmed, row.Deaths,
+                                 row.Recovered, row.Active, tested, getPopulation(row.Country_Region))
             else:
                 testingCountryName = getTestingCountryName(row.Province_State)
 
@@ -458,6 +595,9 @@ def cli(input, processtype):
         outputAppend('India', indConfirmed, indDeaths,
                      indRecovered, indActive, getTestTotal(
                          getTestingCountryName("India"), indConfirmed), getPopulation('India'))
+        outputAppend('Belgium', belConfirmed, belDeaths,
+                     belRecovered, belActive, getTestTotal(
+                         getTestingCountryName("Belgium"), belConfirmed), getPopulation('Belgium'))
         outputAppend('United Kingdom', ukConfirmed, ukDeaths,
                      ukRecovered, ukActive, getTestTotal(
                          getTestingCountryName("United Kingdom"), ukConfirmed), getPopulation('United Kingdom'))
@@ -509,15 +649,15 @@ def cli(input, processtype):
         click.echo('covid-time.csv exported')
 
         # Update covid-lockdown.csv
-        lockdown = pd.read_csv(
-            '../NavigateObscurity/static/worlddata/csv/covid-lockdown.csv', delimiter=',', encoding='latin1')
-        click.echo('lockdown data loaded')
-        lockday = []
-        lockday = lockdown.iloc[:, -1:]
-        lockdown = lockdown.assign(**{input: lockday})
-        lockdown.to_csv(
-            r'../NavigateObscurity/worlddata/static/worlddata/csv/covid-lockdown.csv', index=False, header=True)
-        click.echo('covid-lockdown.csv exported')
+        # lockdown = pd.read_csv(
+        #     '../NavigateObscurity/static/worlddata/csv/covid-lockdown.csv', delimiter=',', encoding='latin1')
+        # click.echo('lockdown data loaded')
+        # lockday = []
+        # lockday = lockdown.iloc[:, -1:]
+        # lockdown = lockdown.assign(**{input: lockday})
+        # lockdown.to_csv(
+        #     r'../NavigateObscurity/worlddata/static/worlddata/csv/covid-lockdown.csv', index=False, header=True)
+        # click.echo('covid-lockdown.csv exported')
 
     elif processtype == 'covid19-week':
         countries = {
