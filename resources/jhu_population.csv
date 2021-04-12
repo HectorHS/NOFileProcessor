@@ -1,0 +1,3529 @@
+FIPS,Admin2,Province_State,Country_Region,Combined_Key,Population
+,,,Afghanistan,Afghanistan,38936381
+,,,Albania,Albania,2877800
+,,,Algeria,Algeria,43851043
+,,,Andorra,Andorra,77265
+,,,Angola,Angola,32866268
+,,,Antigua and Barbuda,Antigua and Barbuda,97928
+,,,Argentina,Argentina,45195777
+,,,Armenia,Armenia,2963234
+,,Australian Capital Territory,Australia,"Australian Capital Territory, Australia",428100
+,,New South Wales,Australia,"New South Wales, Australia",8118000
+,,Northern Territory,Australia,"Northern Territory, Australia",245600
+,,Queensland,Australia,"Queensland, Australia",5115500
+,,South Australia,Australia,"South Australia, Australia",1756500
+,,Tasmania,Australia,"Tasmania, Australia",535500
+,,Victoria,Australia,"Victoria, Australia",6629900
+,,Western Australia,Australia,"Western Australia, Australia",2630600
+,,,Austria,Austria,9006400
+,,,Azerbaijan,Azerbaijan,10139175
+,,,Bahamas,Bahamas,393248
+,,,Bahrain,Bahrain,1701583
+,,,Bangladesh,Bangladesh,164689383
+,,,Barbados,Barbados,287371
+,,,Belarus,Belarus,9449321
+,,,Belgium,Belgium,11589616
+,,,Belize,Belize,397621
+,,,Benin,Benin,12123198
+,,,Bhutan,Bhutan,771612
+,,,Bolivia,Bolivia,11673029
+,,,Bosnia and Herzegovina,Bosnia and Herzegovina,3280815
+,,,Botswana,Botswana,2351625
+,,Acre,Brazil,"Acre, Brazil",881935
+,,Alagoas,Brazil,"Alagoas, Brazil",3337357
+,,Amapa,Brazil,"Amapa, Brazil",845731
+,,Amazonas,Brazil,"Amazonas, Brazil",4144597
+,,Bahia,Brazil,"Bahia, Brazil",14873064
+,,Ceara,Brazil,"Ceara, Brazil",9132078
+,,Distrito Federal,Brazil,"Distrito Federal, Brazil",3015268
+,,Espirito Santo,Brazil,"Espirito Santo, Brazil",4018650
+,,Goias,Brazil,"Goias, Brazil",7018354
+,,Maranhao,Brazil,"Maranhao, Brazil",7075181
+,,Mato Grosso,Brazil,"Mato Grosso, Brazil",3484466
+,,Mato Grosso do Sul,Brazil,"Mato Grosso do Sul, Brazil",2778986
+,,Minas Gerais,Brazil,"Minas Gerais, Brazil",21168791
+,,Para,Brazil,"Para, Brazil",8602865
+,,Paraiba,Brazil,"Paraiba, Brazil",4018127
+,,Parana,Brazil,"Parana, Brazil",11433957
+,,Pernambuco,Brazil,"Pernambuco, Brazil",9557071
+,,Piaui,Brazil,"Piaui, Brazil",3273227
+,,Rio de Janeiro,Brazil,"Rio de Janeiro, Brazil",17264943
+,,Rio Grande do Norte,Brazil,"Rio Grande do Norte, Brazil",3506853
+,,Rio Grande do Sul,Brazil,"Rio Grande do Sul, Brazil",11377239
+,,Rondonia,Brazil,"Rondonia, Brazil",1777225
+,,Roraima,Brazil,"Roraima, Brazil",605761
+,,Santa Catarina,Brazil,"Santa Catarina, Brazil",7164788
+,,Sao Paulo,Brazil,"Sao Paulo, Brazil",45919049
+,,Sergipe,Brazil,"Sergipe, Brazil",2298696
+,,Tocantins,Brazil,"Tocantins, Brazil",1572866
+,,Unknown,Brazil,"Unknown, Brazil",0
+,,,Brunei,Brunei,437483
+,,,Bulgaria,Bulgaria,6948445
+,,,Burkina Faso,Burkina Faso,20903278
+,,,Burma,Burma,54409794
+,,,Burundi,Burundi,11890781
+,,,Cabo Verde,Cabo Verde,555988
+,,,Cambodia,Cambodia,16718971
+,,,Cameroon,Cameroon,26545864
+,,Alberta,Canada,"Alberta, Canada",4413146
+,,British Columbia,Canada,"British Columbia, Canada",5110917
+,,Diamond Princess,Canada,"Diamond Princess, Canada",0
+,,Grand Princess,Canada,"Grand Princess, Canada",0
+,,Manitoba,Canada,"Manitoba, Canada",1377517
+,,New Brunswick,Canada,"New Brunswick, Canada",779993
+,,Newfoundland and Labrador,Canada,"Newfoundland and Labrador, Canada",521365
+,,Northwest Territories,Canada,"Northwest Territories, Canada",44904
+,,Nova Scotia,Canada,"Nova Scotia, Canada",977457
+,,Nunavut,Canada,"Nunavut, Canada",0
+,,Ontario,Canada,"Ontario, Canada",14711827
+,,Prince Edward Island,Canada,"Prince Edward Island, Canada",158158
+,,Quebec,Canada,"Quebec, Canada",8537674
+,,Saskatchewan,Canada,"Saskatchewan, Canada",1181666
+,,Yukon,Canada,"Yukon, Canada",41078
+,,,Central African Republic,Central African Republic,4829764
+,,,Chad,Chad,16425859
+,,Antofagasta,Chile,"Antofagasta, Chile",607534
+,,Araucania,Chile,"Araucania, Chile",957224
+,,Arica y Parinacota,Chile,"Arica y Parinacota, Chile",226068
+,,Atacama,Chile,"Atacama, Chile",286168
+,,Aysen,Chile,"Aysen, Chile",103158
+,,Biobio,Chile,"Biobio, Chile",1556805
+,,Coquimbo,Chile,"Coquimbo, Chile",757586
+,,Los Lagos,Chile,"Los Lagos, Chile",828708
+,,Los Rios,Chile,"Los Rios, Chile",384837
+,,Magallanes,Chile,"Magallanes, Chile",166533
+,,Maule,Chile,"Maule, Chile",1044950
+,,Metropolitana,Chile,"Metropolitana, Chile",7112808
+,,Nuble,Chile,"Nuble, Chile",480609
+,,OHiggins,Chile,"OHiggins, Chile",914555
+,,Tarapaca,Chile,"Tarapaca, Chile",330558
+,,Unknown,Chile,"Unknown, Chile",0
+,,Valparaiso,Chile,"Valparaiso, Chile",1815902
+,,Anhui,China,"Anhui, China",63240000
+,,Beijing,China,"Beijing, China",21540000
+,,Chongqing,China,"Chongqing, China",31020000
+,,Fujian,China,"Fujian, China",39410000
+,,Gansu,China,"Gansu, China",26370000
+,,Guangdong,China,"Guangdong, China",113460000
+,,Guangxi,China,"Guangxi, China",49260000
+,,Guizhou,China,"Guizhou, China",36000000
+,,Hainan,China,"Hainan, China",9340000
+,,Hebei,China,"Hebei, China",75560000
+,,Heilongjiang,China,"Heilongjiang, China",37730000
+,,Henan,China,"Henan, China",96050000
+,,Hong Kong,China,"Hong Kong, China",7496988
+,,Hubei,China,"Hubei, China",59170000
+,,Hunan,China,"Hunan, China",68990000
+,,Inner Mongolia,China,"Inner Mongolia, China",25340000
+,,Jiangsu,China,"Jiangsu, China",80510000
+,,Jiangxi,China,"Jiangxi, China",46480000
+,,Jilin,China,"Jilin, China",27040000
+,,Liaoning,China,"Liaoning, China",43590000
+,,Macau,China,"Macau, China",649342
+,,Ningxia,China,"Ningxia, China",6880000
+,,Qinghai,China,"Qinghai, China",6030000
+,,Shaanxi,China,"Shaanxi, China",38640000
+,,Shandong,China,"Shandong, China",100470000
+,,Shanghai,China,"Shanghai, China",24240000
+,,Shanxi,China,"Shanxi, China",37180000
+,,Sichuan,China,"Sichuan, China",83410000
+,,Tianjin,China,"Tianjin, China",15600000
+,,Tibet,China,"Tibet, China",3440000
+,,Xinjiang,China,"Xinjiang, China",24870000
+,,Yunnan,China,"Yunnan, China",48300000
+,,Zhejiang,China,"Zhejiang, China",57370000
+,,Amazonas,Colombia,"Amazonas, Colombia",76589
+,,Antioquia,Colombia,"Antioquia, Colombia",6407102
+,,Arauca,Colombia,"Arauca, Colombia",262174
+,,Atlantico,Colombia,"Atlantico, Colombia",2535517
+,,Bolivar,Colombia,"Bolivar, Colombia",2070110
+,,Boyaca,Colombia,"Boyaca, Colombia",1217376
+,,Caldas,Colombia,"Caldas, Colombia",998255
+,,Capital District,Colombia,"Capital District, Colombia",7412566
+,,Caqueta,Colombia,"Caqueta, Colombia",401489
+,,Casanare,Colombia,"Casanare, Colombia",420504
+,,Cauca,Colombia,"Cauca, Colombia",1464488
+,,Cesar,Colombia,"Cesar, Colombia",1200574
+,,Choco,Colombia,"Choco, Colombia",534826
+,,Cordoba,Colombia,"Cordoba, Colombia",1784783
+,,Cundinamarca,Colombia,"Cundinamarca, Colombia",2919060
+,,Guainia,Colombia,"Guainia, Colombia",48114
+,,Huila,Colombia,"Huila, Colombia",1100386
+,,La Guajira,Colombia,"La Guajira, Colombia",880560
+,,Magdalena,Colombia,"Magdalena, Colombia",1341746
+,,Meta,Colombia,"Meta, Colombia",1039722
+,,Narino,Colombia,"Narino, Colombia",1630592
+,,Norte de Santander,Colombia,"Norte de Santander, Colombia",1491689
+,,Putumayo,Colombia,"Putumayo, Colombia",348182
+,,Quindio,Colombia,"Quindio, Colombia",539904
+,,Risaralda,Colombia,"Risaralda, Colombia",943401
+,,San Andres y Providencia,Colombia,"San Andres y Providencia, Colombia",61280
+,,Santander,Colombia,"Santander, Colombia",2184837
+,,Sucre,Colombia,"Sucre, Colombia",904863
+,,Tolima,Colombia,"Tolima, Colombia",1330187
+,,Valle del Cauca,Colombia,"Valle del Cauca, Colombia",4475886
+,,Vaupes,Colombia,"Vaupes, Colombia",40797
+,,Vichada,Colombia,"Vichada, Colombia",107808
+,,,Comoros,Comoros,869595
+,,,Congo (Brazzaville),Congo (Brazzaville),5518092
+,,,Congo (Kinshasa),Congo (Kinshasa),89561404
+,,,Costa Rica,Costa Rica,5094114
+,,,Cote d'Ivoire,Cote d'Ivoire,26378275
+,,,Croatia,Croatia,4105268
+,,,Cuba,Cuba,11326616
+,,,Cyprus,Cyprus,1207361
+,,,Czechia,Czechia,10708982
+,,Faroe Islands,Denmark,"Faroe Islands, Denmark",48865
+,,Greenland,Denmark,"Greenland, Denmark",56772
+,,,Denmark,Denmark,5792203
+,,,Diamond Princess,Diamond Princess,0
+,,,Djibouti,Djibouti,988002
+,,,Dominica,Dominica,71991
+,,,Dominican Republic,Dominican Republic,10847904
+,,,Ecuador,Ecuador,17643060
+,,,Egypt,Egypt,102334403
+,,,El Salvador,El Salvador,6486201
+,,,Equatorial Guinea,Equatorial Guinea,1402985
+,,,Eritrea,Eritrea,3546427
+,,,Estonia,Estonia,1326539
+,,,Eswatini,Eswatini,1160164
+,,,Ethiopia,Ethiopia,114963583
+,,,Fiji,Fiji,896444
+,,,Finland,Finland,5540718
+,,French Guiana,France,"French Guiana, France",298682
+,,French Polynesia,France,"French Polynesia, France",280904
+,,Guadeloupe,France,"Guadeloupe, France",400127
+,,Martinique,France,"Martinique, France",375265
+,,Mayotte,France,"Mayotte, France",272813
+,,New Caledonia,France,"New Caledonia, France",285491
+,,Reunion,France,"Reunion, France",895308
+,,Saint Barthelemy,France,"Saint Barthelemy, France",9885
+,,Saint Pierre and Miquelon,France,"Saint Pierre and Miquelon, France",5795
+,,St Martin,France,"St Martin, France",38659
+,,,France,France,65974016
+,,,Gabon,Gabon,2225728
+,,,Gambia,Gambia,2416664
+,,,Georgia,Georgia,3989175
+,,Baden-Wurttemberg,Germany,"Baden-Wurttemberg, Germany",11069533
+,,Bayern,Germany,"Bayern, Germany",13076721
+,,Berlin,Germany,"Berlin, Germany",3644826
+,,Brandenburg,Germany,"Brandenburg, Germany",2511917
+,,Bremen,Germany,"Bremen, Germany",682986
+,,Hamburg,Germany,"Hamburg, Germany",1841179
+,,Hessen,Germany,"Hessen, Germany",6265809
+,,Mecklenburg-Vorpommern,Germany,"Mecklenburg-Vorpommern, Germany",1609675
+,,Niedersachsen,Germany,"Niedersachsen, Germany",7982448
+,,Nordrhein-Westfalen,Germany,"Nordrhein-Westfalen, Germany",17932651
+,,Rheinland-Pfalz,Germany,"Rheinland-Pfalz, Germany",4084844
+,,Saarland,Germany,"Saarland, Germany",990509
+,,Sachsen,Germany,"Sachsen, Germany",4077937
+,,Sachsen-Anhalt,Germany,"Sachsen-Anhalt, Germany",2208321
+,,Schleswig-Holstein,Germany,"Schleswig-Holstein, Germany",2896712
+,,Thuringen,Germany,"Thuringen, Germany",2143145
+,,Unknown,Germany,"Unknown, Germany",0
+,,,Ghana,Ghana,31072945
+,,,Greece,Greece,10423056
+,,,Grenada,Grenada,112519
+,,,Guatemala,Guatemala,17915567
+,,,Guinea,Guinea,13132792
+,,,Guinea-Bissau,Guinea-Bissau,1967998
+,,,Guyana,Guyana,786559
+,,,Haiti,Haiti,8822442
+,,,Holy See,Holy See,809
+,,,Honduras,Honduras,9904608
+,,,Hungary,Hungary,9660350
+,,,Iceland,Iceland,341250
+,,,India,India,1380004385
+,,,Indonesia,Indonesia,273523621
+,,,Iran,Iran,83992953
+,,,Iraq,Iraq,40222503
+,,,Ireland,Ireland,4937796
+,,,Israel,Israel,8645365
+,,Abruzzo,Italy,"Abruzzo, Italy",1311580
+,,Basilicata,Italy,"Basilicata, Italy",562869
+,,Calabria,Italy,"Calabria, Italy",1947131
+,,Campania,Italy,"Campania, Italy",5801692
+,,Emilia-Romagna,Italy,"Emilia-Romagna, Italy",4459477
+,,Friuli Venezia Giulia,Italy,"Friuli Venezia Giulia, Italy",1215220
+,,Lazio,Italy,"Lazio, Italy",5879082
+,,Liguria,Italy,"Liguria, Italy",1550640
+,,Lombardia,Italy,"Lombardia, Italy",10060574
+,,Marche,Italy,"Marche, Italy",1525271
+,,Molise,Italy,"Molise, Italy",305617
+,,P.A. Bolzano,Italy,"P.A. Bolzano, Italy",532318
+,,P.A. Trento,Italy,"P.A. Trento, Italy",541418
+,,Piemonte,Italy,"Piemonte, Italy",4356406
+,,Puglia,Italy,"Puglia, Italy",4029053
+,,Sardegna,Italy,"Sardegna, Italy",1639591
+,,Sicilia,Italy,"Sicilia, Italy",4999891
+,,Toscana,Italy,"Toscana, Italy",3729641
+,,Umbria,Italy,"Umbria, Italy",882015
+,,Valle d'Aosta,Italy,"Valle d'Aosta, Italy",125666
+,,Veneto,Italy,"Veneto, Italy",4905854
+,,,Jamaica,Jamaica,2961161
+,,Aichi,Japan,"Aichi, Japan",7552239
+,,Akita,Japan,"Akita, Japan",966490
+,,Aomori,Japan,"Aomori, Japan",1246371
+,,Chiba,Japan,"Chiba, Japan",6259382
+,,Ehime,Japan,"Ehime, Japan",1339215
+,,Fukui,Japan,"Fukui, Japan",767937
+,,Fukuoka,Japan,"Fukuoka, Japan",5103679
+,,Fukushima,Japan,"Fukushima, Japan",1845519
+,,Gifu,Japan,"Gifu, Japan",1986587
+,,Gunma,Japan,"Gunma, Japan",1942456
+,,Hiroshima,Japan,"Hiroshima, Japan",2804177
+,,Hokkaido,Japan,"Hokkaido, Japan",5250049
+,,Hyogo,Japan,"Hyogo, Japan",5466190
+,,Ibaraki,Japan,"Ibaraki, Japan",2860307
+,,Ishikawa,Japan,"Ishikawa, Japan",1137649
+,,Kagawa,Japan,"Kagawa, Japan",956347
+,,Kagoshima,Japan,"Kagoshima, Japan",1602273
+,,Kanagawa,Japan,"Kanagawa, Japan",9198268
+,,Kochi,Japan,"Kochi, Japan",698029
+,,Kumamoto,Japan,"Kumamoto, Japan",1747567
+,,Kyoto,Japan,"Kyoto, Japan",2582957
+,,Mie,Japan,"Mie, Japan",1780882
+,,Miyagi,Japan,"Miyagi, Japan",2306365
+,,Miyazaki,Japan,"Miyazaki, Japan",1073301
+,,Nagano,Japan,"Nagano, Japan",2048790
+,,Nagasaki,Japan,"Nagasaki, Japan",1326524
+,,Nara,Japan,"Nara, Japan",1330123
+,,Niigata,Japan,"Niigata, Japan",2223106
+,,Oita,Japan,"Oita, Japan",1135434
+,,Okayama,Japan,"Okayama, Japan",1889586
+,,Okinawa,Japan,"Okinawa, Japan",1453168
+,,Osaka,Japan,"Osaka, Japan",8809363
+,,Port Quarantine,Japan,"Port Quarantine, Japan",0
+,,Saga,Japan,"Saga, Japan",814711
+,,Saitama,Japan,"Saitama, Japan",7349693
+,,Shiga,Japan,"Shiga, Japan",1413943
+,,Shimane,Japan,"Shimane, Japan",674346
+,,Shizuoka,Japan,"Shizuoka, Japan",3643528
+,,Tochigi,Japan,"Tochigi, Japan",1933990
+,,Tokushima,Japan,"Tokushima, Japan",727977
+,,Tokyo,Japan,"Tokyo, Japan",13920663
+,,Tottori,Japan,"Tottori, Japan",555558
+,,Toyama,Japan,"Toyama, Japan",1043502
+,,Unknown,Japan,"Unknown, Japan",0
+,,Wakayama,Japan,"Wakayama, Japan",924933
+,,Yamagata,Japan,"Yamagata, Japan",1077666
+,,Yamaguchi,Japan,"Yamaguchi, Japan",1358336
+,,Yamanashi,Japan,"Yamanashi, Japan",810956
+,,,Jordan,Jordan,10203140
+,,,Kazakhstan,Kazakhstan,18776707
+,,,Kenya,Kenya,53771300
+,,,"Korea, South","Korea, South",51269183
+,,,Kosovo,Kosovo,1810366
+,,,Kuwait,Kuwait,4270563
+,,,Kyrgyzstan,Kyrgyzstan,6524191
+,,,Laos,Laos,7275556
+,,,Latvia,Latvia,1886202
+,,,Lebanon,Lebanon,6825442
+,,,Lesotho,Lesotho,2142252
+,,,Liberia,Liberia,5057677
+,,,Libya,Libya,6871287
+,,,Liechtenstein,Liechtenstein,38137
+,,,Lithuania,Lithuania,2709250
+,,,Luxembourg,Luxembourg,625976
+,,,Madagascar,Madagascar,27691019
+,,,Malawi,Malawi,19129955
+,,,Malaysia,Malaysia,32365998
+,,,Maldives,Maldives,540542
+,,,Mali,Mali,20250834
+,,,Malta,Malta,441539
+,,,Mauritania,Mauritania,4649660
+,,,Mauritius,Mauritius,1271767
+,,Aguascalientes,Mexico,"Aguascalientes, Mexico",1434635
+,,Baja California,Mexico,"Baja California, Mexico",3634868
+,,Baja California Sur,Mexico,"Baja California Sur, Mexico",804708
+,,Campeche,Mexico,"Campeche, Mexico",1000617
+,,Chiapas,Mexico,"Chiapas, Mexico",5730367
+,,Chihuahua,Mexico,"Chihuahua, Mexico",3801487
+,,Ciudad de Mexico,Mexico,"Ciudad de Mexico, Mexico",9018645
+,,Coahuila,Mexico,"Coahuila, Mexico",3218720
+,,Colima,Mexico,"Colima, Mexico",785153
+,,Durango,Mexico,"Durango, Mexico",1868996
+,,Guanajuato,Mexico,"Guanajuato, Mexico",6228175
+,,Guerrero,Mexico,"Guerrero, Mexico",3657048
+,,Hidalgo,Mexico,"Hidalgo, Mexico",3086414
+,,Jalisco,Mexico,"Jalisco, Mexico",8409693
+,,Mexico,Mexico,"Mexico, Mexico",17427790
+,,Michoacan,Mexico,"Michoacan, Mexico",4825401
+,,Morelos,Mexico,"Morelos, Mexico",2044058
+,,Nayarit,Mexico,"Nayarit, Mexico",1288571
+,,Nuevo Leon,Mexico,"Nuevo Leon, Mexico",5610153
+,,Oaxaca,Mexico,"Oaxaca, Mexico",4143593
+,,Puebla,Mexico,"Puebla, Mexico",6604451
+,,Queretaro,Mexico,"Queretaro, Mexico",2279637
+,,Quintana Roo,Mexico,"Quintana Roo, Mexico",1723259
+,,San Luis Potosi,Mexico,"San Luis Potosi, Mexico",2866142
+,,Sinaloa,Mexico,"Sinaloa, Mexico",3156674
+,,Sonora,Mexico,"Sonora, Mexico",3074745
+,,Tabasco,Mexico,"Tabasco, Mexico",2572287
+,,Tamaulipas,Mexico,"Tamaulipas, Mexico",3650602
+,,Tlaxcala,Mexico,"Tlaxcala, Mexico",1380011
+,,Veracruz,Mexico,"Veracruz, Mexico",8539862
+,,Yucatan,Mexico,"Yucatan, Mexico",2259098
+,,Zacatecas,Mexico,"Zacatecas, Mexico",1666426
+,,,Moldova,Moldova,4033963
+,,,Monaco,Monaco,39244
+,,,Mongolia,Mongolia,3278292
+,,,Montenegro,Montenegro,628062
+,,,Morocco,Morocco,36910558
+,,,Mozambique,Mozambique,31255435
+,,,MS Zaandam,MS Zaandam,0
+,,,Namibia,Namibia,2540916
+,,,Nepal,Nepal,29136808
+,,Aruba,Netherlands,"Aruba, Netherlands",106766
+,,"Bonaire, Sint Eustatius and Saba",Netherlands,"Bonaire, Sint Eustatius and Saba, Netherlands",26221
+,,Curacao,Netherlands,"Curacao, Netherlands",164100
+,,Sint Maarten,Netherlands,"Sint Maarten, Netherlands",42882
+,,,Netherlands,Netherlands,17134873
+,,,New Zealand,New Zealand,4822233
+,,,Nicaragua,Nicaragua,6624554
+,,,Niger,Niger,24206636
+,,,Nigeria,Nigeria,206139587
+,,,North Macedonia,North Macedonia,2083380
+,,,Norway,Norway,5421242
+,,,Oman,Oman,5106622
+,,,Pakistan,Pakistan,220892331
+,,,Panama,Panama,4314768
+,,,Papua New Guinea,Papua New Guinea,8947027
+,,,Paraguay,Paraguay,7132530
+,,Amazonas,Peru,"Amazonas, Peru",426800
+,,Ancash,Peru,"Ancash, Peru",1180600
+,,Apurimac,Peru,"Apurimac, Peru",430700
+,,Arequipa,Peru,"Arequipa, Peru",1497400
+,,Ayacucho,Peru,"Ayacucho, Peru",668200
+,,Cajamarca,Peru,"Cajamarca, Peru",1453700
+,,Callao,Peru,"Callao, Peru",1129900
+,,Cusco,Peru,"Cusco, Peru",1357100
+,,Huancavelica,Peru,"Huancavelica, Peru",365300
+,,Huanuco,Peru,"Huanuco, Peru",760300
+,,Ica,Peru,"Ica, Peru",975200
+,,Junin,Peru,"Junin, Peru",1361500
+,,La Libertad,Peru,"La Libertad, Peru",2016800
+,,Lambayeque,Peru,"Lambayeque, Peru",1310800
+,,Lima,Peru,"Lima, Peru",10628500
+,,Loreto,Peru,"Loreto, Peru",1027600
+,,Madre de Dios,Peru,"Madre de Dios, Peru",173800
+,,Moquegua,Peru,"Moquegua, Peru",192700
+,,Pasco,Peru,"Pasco, Peru",271900
+,,Piura,Peru,"Piura, Peru",2048000
+,,Puno,Peru,"Puno, Peru",1238000
+,,San Martin,Peru,"San Martin, Peru",899600
+,,Tacna,Peru,"Tacna, Peru",371000
+,,Tumbes,Peru,"Tumbes, Peru",251500
+,,Ucayali,Peru,"Ucayali, Peru",589100
+,,Unknown,Peru,"Unknown, Peru",0
+,,,Philippines,Philippines,109581085
+,,,Poland,Poland,37846605
+,,,Portugal,Portugal,10196707
+,,,Qatar,Qatar,2881060
+,,,Romania,Romania,19237682
+,,,Russia,Russia,145934460
+,,,Rwanda,Rwanda,12952209
+,,,Saint Kitts and Nevis,Saint Kitts and Nevis,53192
+,,,Saint Lucia,Saint Lucia,183629
+,,,Saint Vincent and the Grenadines,Saint Vincent and the Grenadines,110947
+,,,Samoa,Samoa,0
+,,,San Marino,San Marino,33938
+,,,Sao Tome and Principe,Sao Tome and Principe,219161
+,,,Saudi Arabia,Saudi Arabia,34813867
+,,,Senegal,Senegal,16743930
+,,,Serbia,Serbia,8737370
+,,,Seychelles,Seychelles,98340
+,,,Sierra Leone,Sierra Leone,7976985
+,,,Singapore,Singapore,5850343
+,,,Slovakia,Slovakia,5459643
+,,,Slovenia,Slovenia,2078932
+,,,Somalia,Somalia,15893219
+,,,South Africa,South Africa,59308690
+,,,South Sudan,South Sudan,11193729
+,,Andalusia,Spain,"Andalusia, Spain",8427405
+,,Aragon,Spain,"Aragon, Spain",1320586
+,,Asturias,Spain,"Asturias, Spain",1022205
+,,Baleares,Spain,"Baleares, Spain",1188220
+,,C. Valenciana,Spain,"C. Valenciana, Spain",4974969
+,,Canarias,Spain,"Canarias, Spain",2206901
+,,Cantabria,Spain,"Cantabria, Spain",581641
+,,Castilla - La Mancha,Spain,"Castilla - La Mancha, Spain",2034877
+,,Castilla y Leon,Spain,"Castilla y Leon, Spain",2407733
+,,Catalonia,Spain,"Catalonia, Spain",7566431
+,,Ceuta,Spain,"Ceuta, Spain",84829
+,,Extremadura,Spain,"Extremadura, Spain",1065424
+,,Galicia,Spain,"Galicia, Spain",2700441
+,,La Rioja,Spain,"La Rioja, Spain",313571
+,,Madrid,Spain,"Madrid, Spain",6641649
+,,Melilla,Spain,"Melilla, Spain",84689
+,,Murcia,Spain,"Murcia, Spain",1487663
+,,Navarra,Spain,"Navarra, Spain",649946
+,,Pais Vasco,Spain,"Pais Vasco, Spain",2177880
+,,Unknown,Spain,"Unknown, Spain",0
+,,,Sri Lanka,Sri Lanka,21413250
+,,,Sudan,Sudan,41300530
+,,,Suriname,Suriname,586634
+,,,Sweden,Sweden,10099270
+,,,Switzerland,Switzerland,8654618
+,,,Syria,Syria,17500657
+,,,Taiwan*,Taiwan*,23816775
+,,,Tajikistan,Tajikistan,9537642
+,,,Tanzania,Tanzania,59734213
+,,,Thailand,Thailand,69799978
+,,,Timor-Leste,Timor-Leste,1318442
+,,,Togo,Togo,8278737
+,,,Trinidad and Tobago,Trinidad and Tobago,1399491
+,,,Tunisia,Tunisia,11818618
+,,,Turkey,Turkey,84339067
+,,,Uganda,Uganda,45741000
+,,,Ukraine,Ukraine,43733759
+,,,United Arab Emirates,United Arab Emirates,9890400
+,,Anguilla,United Kingdom,"Anguilla, United Kingdom",15002
+,,Bermuda,United Kingdom,"Bermuda, United Kingdom",62273
+,,British Virgin Islands,United Kingdom,"British Virgin Islands, United Kingdom",30237
+,,Cayman Islands,United Kingdom,"Cayman Islands, United Kingdom",65720
+,,Channel Islands,United Kingdom,"Channel Islands, United Kingdom",170499
+,,Falkland Islands (Malvinas),United Kingdom,"Falkland Islands (Malvinas), United Kingdom",3483
+,,Gibraltar,United Kingdom,"Gibraltar, United Kingdom",33691
+,,Isle of Man,United Kingdom,"Isle of Man, United Kingdom",85032
+,,Montserrat,United Kingdom,"Montserrat, United Kingdom",4999
+,,"Saint Helena, Ascension and Tristan da Cunha",United Kingdom,"Saint Helena, Ascension and Tristan da Cunha, United Kingdom",0
+,,Turks and Caicos Islands,United Kingdom,"Turks and Caicos Islands, United Kingdom",38718
+,,,United Kingdom,United Kingdom,67886004
+,,,Uruguay,Uruguay,3473727
+1001,Autauga,Alabama,US,"Autauga, Alabama, US",55869
+1003,Baldwin,Alabama,US,"Baldwin, Alabama, US",230333
+1005,Barbour,Alabama,US,"Barbour, Alabama, US",25508
+1007,Bibb,Alabama,US,"Bibb, Alabama, US",23016
+1009,Blount,Alabama,US,"Blount, Alabama, US",61617
+1011,Bullock,Alabama,US,"Bullock, Alabama, US",10200
+1013,Butler,Alabama,US,"Butler, Alabama, US",19496
+1015,Calhoun,Alabama,US,"Calhoun, Alabama, US",118768
+1017,Chambers,Alabama,US,"Chambers, Alabama, US",34761
+1019,Cherokee,Alabama,US,"Cherokee, Alabama, US",26196
+1021,Chilton,Alabama,US,"Chilton, Alabama, US",46205
+1023,Choctaw,Alabama,US,"Choctaw, Alabama, US",12505
+1025,Clarke,Alabama,US,"Clarke, Alabama, US",23622
+1027,Clay,Alabama,US,"Clay, Alabama, US",11764
+1029,Cleburne,Alabama,US,"Cleburne, Alabama, US",13845
+1031,Coffee,Alabama,US,"Coffee, Alabama, US",52799
+1033,Colbert,Alabama,US,"Colbert, Alabama, US",56482
+1035,Conecuh,Alabama,US,"Conecuh, Alabama, US",12376
+1037,Coosa,Alabama,US,"Coosa, Alabama, US",10663
+1039,Covington,Alabama,US,"Covington, Alabama, US",39454
+1041,Crenshaw,Alabama,US,"Crenshaw, Alabama, US",14859
+1043,Cullman,Alabama,US,"Cullman, Alabama, US",90416
+1045,Dale,Alabama,US,"Dale, Alabama, US",50513
+1047,Dallas,Alabama,US,"Dallas, Alabama, US",37911
+1049,DeKalb,Alabama,US,"DeKalb, Alabama, US",72395
+1051,Elmore,Alabama,US,"Elmore, Alabama, US",81209
+1053,Escambia,Alabama,US,"Escambia, Alabama, US",36633
+1055,Etowah,Alabama,US,"Etowah, Alabama, US",101443
+1057,Fayette,Alabama,US,"Fayette, Alabama, US",18475
+1059,Franklin,Alabama,US,"Franklin, Alabama, US",31994
+1061,Geneva,Alabama,US,"Geneva, Alabama, US",27584
+1063,Greene,Alabama,US,"Greene, Alabama, US",8628
+1065,Hale,Alabama,US,"Hale, Alabama, US",14927
+1067,Henry,Alabama,US,"Henry, Alabama, US",17437
+1069,Houston,Alabama,US,"Houston, Alabama, US",107908
+1071,Jackson,Alabama,US,"Jackson, Alabama, US",52966
+1073,Jefferson,Alabama,US,"Jefferson, Alabama, US",677442
+1075,Lamar,Alabama,US,"Lamar, Alabama, US",14405
+1077,Lauderdale,Alabama,US,"Lauderdale, Alabama, US",91001
+1079,Lawrence,Alabama,US,"Lawrence, Alabama, US",34295
+1081,Lee,Alabama,US,"Lee, Alabama, US",168198
+1083,Limestone,Alabama,US,"Limestone, Alabama, US",104176
+1085,Lowndes,Alabama,US,"Lowndes, Alabama, US",9889
+1087,Macon,Alabama,US,"Macon, Alabama, US",18790
+1089,Madison,Alabama,US,"Madison, Alabama, US",385453
+1091,Marengo,Alabama,US,"Marengo, Alabama, US",18747
+1093,Marion,Alabama,US,"Marion, Alabama, US",29709
+1095,Marshall,Alabama,US,"Marshall, Alabama, US",97478
+1097,Mobile,Alabama,US,"Mobile, Alabama, US",417359
+1099,Monroe,Alabama,US,"Monroe, Alabama, US",19051
+1101,Montgomery,Alabama,US,"Montgomery, Alabama, US",229955
+1103,Morgan,Alabama,US,"Morgan, Alabama, US",126354
+1105,Perry,Alabama,US,"Perry, Alabama, US",9164
+1107,Pickens,Alabama,US,"Pickens, Alabama, US",20468
+1109,Pike,Alabama,US,"Pike, Alabama, US",33950
+1111,Randolph,Alabama,US,"Randolph, Alabama, US",23449
+1113,Russell,Alabama,US,"Russell, Alabama, US",57266
+1117,Shelby,Alabama,US,"Shelby, Alabama, US",225059
+1115,St. Clair,Alabama,US,"St. Clair, Alabama, US",96339
+1119,Sumter,Alabama,US,"Sumter, Alabama, US",12314
+1121,Talladega,Alabama,US,"Talladega, Alabama, US",81445
+1123,Tallapoosa,Alabama,US,"Tallapoosa, Alabama, US",41130
+1125,Tuscaloosa,Alabama,US,"Tuscaloosa, Alabama, US",212191
+90001,Unassigned,Alabama,US,"Unassigned, Alabama, US",#DIV/0!
+1127,Walker,Alabama,US,"Walker, Alabama, US",65552
+1129,Washington,Alabama,US,"Washington, Alabama, US",17526
+1131,Wilcox,Alabama,US,"Wilcox, Alabama, US",10517
+1133,Winston,Alabama,US,"Winston, Alabama, US",22554
+2020,Anchorage,Alaska,US,"Anchorage, Alaska, US",288000
+2050,Bethel,Alaska,US,"Bethel, Alaska, US",18386
+2090,Fairbanks North Star,Alaska,US,"Fairbanks North Star, Alaska, US",96849
+2110,Juneau,Alaska,US,"Juneau, Alaska, US",31974
+2122,Kenai Peninsula,Alaska,US,"Kenai Peninsula, Alaska, US",58708
+2130,Ketchikan Gateway,Alaska,US,"Ketchikan Gateway, Alaska, US",13901
+2150,Kodiak Island,Alaska,US,"Kodiak Island, Alaska, US",12998
+2170,Matanuska-Susitna,Alaska,US,"Matanuska-Susitna, Alaska, US",108317
+2180,Nome,Alaska,US,"Nome, Alaska, US",10004
+2185,North Slope,Alaska,US,"North Slope, Alaska, US",9832
+2188,Northwest Arctic,Alaska,US,"Northwest Arctic, Alaska, US",7621
+2195,Petersburg,Alaska,US,"Petersburg, Alaska, US",3266
+2198,Prince of Wales-Hyder,Alaska,US,"Prince of Wales-Hyder, Alaska, US",6203
+2220,Sitka,Alaska,US,"Sitka, Alaska, US",8493
+2240,Southeast Fairbanks,Alaska,US,"Southeast Fairbanks, Alaska, US",6893
+90002,Unassigned,Alaska,US,"Unassigned, Alaska, US",#DIV/0!
+2290,Yukon-Koyukuk,Alaska,US,"Yukon-Koyukuk, Alaska, US",5230
+4001,Apache,Arizona,US,"Apache, Arizona, US",71887
+4003,Cochise,Arizona,US,"Cochise, Arizona, US",125922
+4005,Coconino,Arizona,US,"Coconino, Arizona, US",143476
+4007,Gila,Arizona,US,"Gila, Arizona, US",54018
+4009,Graham,Arizona,US,"Graham, Arizona, US",38837
+4011,Greenlee,Arizona,US,"Greenlee, Arizona, US",9498
+4012,La Paz,Arizona,US,"La Paz, Arizona, US",21108
+4013,Maricopa,Arizona,US,"Maricopa, Arizona, US",4485414
+4015,Mohave,Arizona,US,"Mohave, Arizona, US",212181
+4017,Navajo,Arizona,US,"Navajo, Arizona, US",110924
+4019,Pima,Arizona,US,"Pima, Arizona, US",1047279
+4021,Pinal,Arizona,US,"Pinal, Arizona, US",462789
+4023,Santa Cruz,Arizona,US,"Santa Cruz, Arizona, US",46498
+90004,Unassigned,Arizona,US,"Unassigned, Arizona, US",#DIV/0!
+4025,Yavapai,Arizona,US,"Yavapai, Arizona, US",235099
+4027,Yuma,Arizona,US,"Yuma, Arizona, US",213787
+5001,Arkansas,Arkansas,US,"Arkansas, Arkansas, US",17486
+5003,Ashley,Arkansas,US,"Ashley, Arkansas, US",19657
+5005,Baxter,Arkansas,US,"Baxter, Arkansas, US",41932
+5007,Benton,Arkansas,US,"Benton, Arkansas, US",279141
+5009,Boone,Arkansas,US,"Boone, Arkansas, US",37432
+5011,Bradley,Arkansas,US,"Bradley, Arkansas, US",10763
+5015,Carroll,Arkansas,US,"Carroll, Arkansas, US",28380
+5017,Chicot,Arkansas,US,"Chicot, Arkansas, US",10118
+5019,Clark,Arkansas,US,"Clark, Arkansas, US",22320
+5021,Clay,Arkansas,US,"Clay, Arkansas, US",14551
+5023,Cleburne,Arkansas,US,"Cleburne, Arkansas, US",24919
+5025,Cleveland,Arkansas,US,"Cleveland, Arkansas, US",7956
+5027,Columbia,Arkansas,US,"Columbia, Arkansas, US",23457
+5029,Conway,Arkansas,US,"Conway, Arkansas, US",20846
+5031,Craighead,Arkansas,US,"Craighead, Arkansas, US",110332
+5033,Crawford,Arkansas,US,"Crawford, Arkansas, US",63257
+5035,Crittenden,Arkansas,US,"Crittenden, Arkansas, US",47955
+5037,Cross,Arkansas,US,"Cross, Arkansas, US",16419
+5039,Dallas,Arkansas,US,"Dallas, Arkansas, US",7009
+5041,Desha,Arkansas,US,"Desha, Arkansas, US",11361
+5043,Drew,Arkansas,US,"Drew, Arkansas, US",18219
+5045,Faulkner,Arkansas,US,"Faulkner, Arkansas, US",126007
+5047,Franklin,Arkansas,US,"Franklin, Arkansas, US",17715
+5049,Fulton,Arkansas,US,"Fulton, Arkansas, US",12477
+5051,Garland,Arkansas,US,"Garland, Arkansas, US",99386
+5053,Grant,Arkansas,US,"Grant, Arkansas, US",18265
+5055,Greene,Arkansas,US,"Greene, Arkansas, US",45325
+5057,Hempstead,Arkansas,US,"Hempstead, Arkansas, US",21532
+5059,Hot Spring,Arkansas,US,"Hot Spring, Arkansas, US",33771
+5061,Howard,Arkansas,US,"Howard, Arkansas, US",13202
+5063,Independence,Arkansas,US,"Independence, Arkansas, US",37825
+5065,Izard,Arkansas,US,"Izard, Arkansas, US",13629
+5067,Jackson,Arkansas,US,"Jackson, Arkansas, US",16719
+5069,Jefferson,Arkansas,US,"Jefferson, Arkansas, US",66824
+5071,Johnson,Arkansas,US,"Johnson, Arkansas, US",26578
+5073,Lafayette,Arkansas,US,"Lafayette, Arkansas, US",6624
+5075,Lawrence,Arkansas,US,"Lawrence, Arkansas, US",16406
+5077,Lee,Arkansas,US,"Lee, Arkansas, US",8857
+5079,Lincoln,Arkansas,US,"Lincoln, Arkansas, US",13024
+5081,Little River,Arkansas,US,"Little River, Arkansas, US",12259
+5083,Logan,Arkansas,US,"Logan, Arkansas, US",21466
+5085,Lonoke,Arkansas,US,"Lonoke, Arkansas, US",73309
+5087,Madison,Arkansas,US,"Madison, Arkansas, US",16576
+5089,Marion,Arkansas,US,"Marion, Arkansas, US",16694
+5091,Miller,Arkansas,US,"Miller, Arkansas, US",43257
+5093,Mississippi,Arkansas,US,"Mississippi, Arkansas, US",40651
+5095,Monroe,Arkansas,US,"Monroe, Arkansas, US",6701
+5097,Montgomery,Arkansas,US,"Montgomery, Arkansas, US",8986
+5099,Nevada,Arkansas,US,"Nevada, Arkansas, US",8252
+5101,Newton,Arkansas,US,"Newton, Arkansas, US",7753
+5103,Ouachita,Arkansas,US,"Ouachita, Arkansas, US",23382
+5105,Perry,Arkansas,US,"Perry, Arkansas, US",10455
+5107,Phillips,Arkansas,US,"Phillips, Arkansas, US",17782
+5109,Pike,Arkansas,US,"Pike, Arkansas, US",10718
+5111,Poinsett,Arkansas,US,"Poinsett, Arkansas, US",23528
+5113,Polk,Arkansas,US,"Polk, Arkansas, US",19964
+5115,Pope,Arkansas,US,"Pope, Arkansas, US",64072
+5117,Prairie,Arkansas,US,"Prairie, Arkansas, US",8062
+5119,Pulaski,Arkansas,US,"Pulaski, Arkansas, US",391911
+5121,Randolph,Arkansas,US,"Randolph, Arkansas, US",17958
+5125,Saline,Arkansas,US,"Saline, Arkansas, US",122437
+5127,Scott,Arkansas,US,"Scott, Arkansas, US",10281
+5129,Searcy,Arkansas,US,"Searcy, Arkansas, US",7881
+5131,Sebastian,Arkansas,US,"Sebastian, Arkansas, US",127827
+5133,Sevier,Arkansas,US,"Sevier, Arkansas, US",17007
+5135,Sharp,Arkansas,US,"Sharp, Arkansas, US",17442
+5123,St. Francis,Arkansas,US,"St. Francis, Arkansas, US",24994
+5137,Stone,Arkansas,US,"Stone, Arkansas, US",12506
+90005,Unassigned,Arkansas,US,"Unassigned, Arkansas, US",#DIV/0!
+5139,Union,Arkansas,US,"Union, Arkansas, US",38682
+5141,Van Buren,Arkansas,US,"Van Buren, Arkansas, US",16545
+5143,Washington,Arkansas,US,"Washington, Arkansas, US",239187
+5145,White,Arkansas,US,"White, Arkansas, US",78753
+5147,Woodruff,Arkansas,US,"Woodruff, Arkansas, US",6320
+5149,Yell,Arkansas,US,"Yell, Arkansas, US",21341
+6001,Alameda,California,US,"Alameda, California, US",1671329
+6003,Alpine,California,US,"Alpine, California, US",1129
+6005,Amador,California,US,"Amador, California, US",39752
+6007,Butte,California,US,"Butte, California, US",219186
+6009,Calaveras,California,US,"Calaveras, California, US",45905
+6011,Colusa,California,US,"Colusa, California, US",21547
+6013,Contra Costa,California,US,"Contra Costa, California, US",1153526
+6015,Del Norte,California,US,"Del Norte, California, US",27812
+6017,El Dorado,California,US,"El Dorado, California, US",192843
+6019,Fresno,California,US,"Fresno, California, US",999101
+6021,Glenn,California,US,"Glenn, California, US",28393
+6023,Humboldt,California,US,"Humboldt, California, US",135558
+6025,Imperial,California,US,"Imperial, California, US",181215
+6027,Inyo,California,US,"Inyo, California, US",18039
+6029,Kern,California,US,"Kern, California, US",900202
+6031,Kings,California,US,"Kings, California, US",152940
+6033,Lake,California,US,"Lake, California, US",64386
+6035,Lassen,California,US,"Lassen, California, US",30573
+6037,Los Angeles,California,US,"Los Angeles, California, US",10039107
+6039,Madera,California,US,"Madera, California, US",157327
+6041,Marin,California,US,"Marin, California, US",258826
+6043,Mariposa,California,US,"Mariposa, California, US",17203
+6045,Mendocino,California,US,"Mendocino, California, US",86749
+6047,Merced,California,US,"Merced, California, US",277680
+6051,Mono,California,US,"Mono, California, US",14444
+6053,Monterey,California,US,"Monterey, California, US",434061
+6055,Napa,California,US,"Napa, California, US",137744
+6057,Nevada,California,US,"Nevada, California, US",99755
+6059,Orange,California,US,"Orange, California, US",3708271
+6061,Placer,California,US,"Placer, California, US",398329
+6063,Plumas,California,US,"Plumas, California, US",18807
+6065,Riverside,California,US,"Riverside, California, US",2470546
+6067,Sacramento,California,US,"Sacramento, California, US",1552058
+6069,San Benito,California,US,"San Benito, California, US",62808
+6071,San Bernardino,California,US,"San Bernardino, California, US",2180085
+6073,San Diego,California,US,"San Diego, California, US",3338330
+6075,San Francisco,California,US,"San Francisco, California, US",881549
+6077,San Joaquin,California,US,"San Joaquin, California, US",762148
+6079,San Luis Obispo,California,US,"San Luis Obispo, California, US",283111
+6081,San Mateo,California,US,"San Mateo, California, US",766573
+6083,Santa Barbara,California,US,"Santa Barbara, California, US",446499
+6085,Santa Clara,California,US,"Santa Clara, California, US",1927852
+6087,Santa Cruz,California,US,"Santa Cruz, California, US",273213
+6089,Shasta,California,US,"Shasta, California, US",180080
+6091,Sierra,California,US,"Sierra, California, US",3005
+6093,Siskiyou,California,US,"Siskiyou, California, US",43539
+6095,Solano,California,US,"Solano, California, US",447643
+6097,Sonoma,California,US,"Sonoma, California, US",494336
+6099,Stanislaus,California,US,"Stanislaus, California, US",565627
+6101,Sutter,California,US,"Sutter, California, US",96971
+6103,Tehama,California,US,"Tehama, California, US",65084
+6105,Trinity,California,US,"Trinity, California, US",12285
+6107,Tulare,California,US,"Tulare, California, US",466195
+6109,Tuolumne,California,US,"Tuolumne, California, US",54478
+90006,Unassigned,California,US,"Unassigned, California, US",#DIV/0!
+6111,Ventura,California,US,"Ventura, California, US",846006
+6113,Yolo,California,US,"Yolo, California, US",220500
+6115,Yuba,California,US,"Yuba, California, US",78668
+8001,Adams,Colorado,US,"Adams, Colorado, US",517421
+8003,Alamosa,Colorado,US,"Alamosa, Colorado, US",16233
+8005,Arapahoe,Colorado,US,"Arapahoe, Colorado, US",656590
+8007,Archuleta,Colorado,US,"Archuleta, Colorado, US",14029
+8009,Baca,Colorado,US,"Baca, Colorado, US",3581
+8011,Bent,Colorado,US,"Bent, Colorado, US",5577
+8013,Boulder,Colorado,US,"Boulder, Colorado, US",326196
+8014,Broomfield,Colorado,US,"Broomfield, Colorado, US",70465
+8015,Chaffee,Colorado,US,"Chaffee, Colorado, US",20356
+8017,Cheyenne,Colorado,US,"Cheyenne, Colorado, US",1831
+8019,Clear Creek,Colorado,US,"Clear Creek, Colorado, US",9700
+8021,Conejos,Colorado,US,"Conejos, Colorado, US",8205
+8023,Costilla,Colorado,US,"Costilla, Colorado, US",3887
+8025,Crowley,Colorado,US,"Crowley, Colorado, US",6061
+8027,Custer,Colorado,US,"Custer, Colorado, US",5068
+8029,Delta,Colorado,US,"Delta, Colorado, US",31162
+8031,Denver,Colorado,US,"Denver, Colorado, US",727211
+8035,Douglas,Colorado,US,"Douglas, Colorado, US",351154
+8037,Eagle,Colorado,US,"Eagle, Colorado, US",55127
+8041,El Paso,Colorado,US,"El Paso, Colorado, US",720403
+8039,Elbert,Colorado,US,"Elbert, Colorado, US",26729
+8043,Fremont,Colorado,US,"Fremont, Colorado, US",47839
+8045,Garfield,Colorado,US,"Garfield, Colorado, US",60061
+8047,Gilpin,Colorado,US,"Gilpin, Colorado, US",6243
+8049,Grand,Colorado,US,"Grand, Colorado, US",15734
+8051,Gunnison,Colorado,US,"Gunnison, Colorado, US",17462
+8053,Hinsdale,Colorado,US,"Hinsdale, Colorado, US",820
+8055,Huerfano,Colorado,US,"Huerfano, Colorado, US",6897
+8059,Jefferson,Colorado,US,"Jefferson, Colorado, US",582881
+8063,Kit Carson,Colorado,US,"Kit Carson, Colorado, US",7097
+8067,La Plata,Colorado,US,"La Plata, Colorado, US",56221
+8065,Lake,Colorado,US,"Lake, Colorado, US",8127
+8069,Larimer,Colorado,US,"Larimer, Colorado, US",356899
+8071,Las Animas,Colorado,US,"Las Animas, Colorado, US",14506
+8073,Lincoln,Colorado,US,"Lincoln, Colorado, US",5701
+8075,Logan,Colorado,US,"Logan, Colorado, US",22409
+8077,Mesa,Colorado,US,"Mesa, Colorado, US",154210
+8079,Mineral,Colorado,US,"Mineral, Colorado, US",769
+8081,Moffat,Colorado,US,"Moffat, Colorado, US",13283
+8083,Montezuma,Colorado,US,"Montezuma, Colorado, US",26183
+8085,Montrose,Colorado,US,"Montrose, Colorado, US",42758
+8087,Morgan,Colorado,US,"Morgan, Colorado, US",29068
+8089,Otero,Colorado,US,"Otero, Colorado, US",18278
+8091,Ouray,Colorado,US,"Ouray, Colorado, US",4952
+8093,Park,Colorado,US,"Park, Colorado, US",18845
+8095,Phillips,Colorado,US,"Phillips, Colorado, US",4265
+8097,Pitkin,Colorado,US,"Pitkin, Colorado, US",17767
+8099,Prowers,Colorado,US,"Prowers, Colorado, US",12172
+8101,Pueblo,Colorado,US,"Pueblo, Colorado, US",168424
+8103,Rio Blanco,Colorado,US,"Rio Blanco, Colorado, US",6324
+8105,Rio Grande,Colorado,US,"Rio Grande, Colorado, US",11267
+8107,Routt,Colorado,US,"Routt, Colorado, US",25638
+8109,Saguache,Colorado,US,"Saguache, Colorado, US",6824
+8111,San Juan,Colorado,US,"San Juan, Colorado, US",728
+8113,San Miguel,Colorado,US,"San Miguel, Colorado, US",8179
+8117,Summit,Colorado,US,"Summit, Colorado, US",31011
+8119,Teller,Colorado,US,"Teller, Colorado, US",25388
+90008,Unassigned,Colorado,US,"Unassigned, Colorado, US",#DIV/0!
+8121,Washington,Colorado,US,"Washington, Colorado, US",4908
+8123,Weld,Colorado,US,"Weld, Colorado, US",324492
+8125,Yuma,Colorado,US,"Yuma, Colorado, US",10019
+9001,Fairfield,Connecticut,US,"Fairfield, Connecticut, US",943332
+9003,Hartford,Connecticut,US,"Hartford, Connecticut, US",891720
+9005,Litchfield,Connecticut,US,"Litchfield, Connecticut, US",180333
+9007,Middlesex,Connecticut,US,"Middlesex, Connecticut, US",162436
+9009,New Haven,Connecticut,US,"New Haven, Connecticut, US",854757
+9011,New London,Connecticut,US,"New London, Connecticut, US",265206
+9013,Tolland,Connecticut,US,"Tolland, Connecticut, US",150721
+90009,Unassigned,Connecticut,US,"Unassigned, Connecticut, US",#DIV/0!
+9015,Windham,Connecticut,US,"Windham, Connecticut, US",116782
+10001,Kent,Delaware,US,"Kent, Delaware, US",180786
+10003,New Castle,Delaware,US,"New Castle, Delaware, US",558753
+10005,Sussex,Delaware,US,"Sussex, Delaware, US",234225
+90010,Unassigned,Delaware,US,"Unassigned, Delaware, US",#DIV/0!
+88888,,Diamond Princess,US,"Diamond Princess, US",#DIV/0!
+11001,District of Columbia,District of Columbia,US,"District of Columbia, District of Columbia, US",705749
+12001,Alachua,Florida,US,"Alachua, Florida, US",269043
+12003,Baker,Florida,US,"Baker, Florida, US",29210
+12005,Bay,Florida,US,"Bay, Florida, US",174705
+12007,Bradford,Florida,US,"Bradford, Florida, US",28201
+12009,Brevard,Florida,US,"Brevard, Florida, US",601942
+12011,Broward,Florida,US,"Broward, Florida, US",1952778
+12013,Calhoun,Florida,US,"Calhoun, Florida, US",14105
+12015,Charlotte,Florida,US,"Charlotte, Florida, US",188910
+12017,Citrus,Florida,US,"Citrus, Florida, US",149657
+12019,Clay,Florida,US,"Clay, Florida, US",219252
+12021,Collier,Florida,US,"Collier, Florida, US",384902
+12023,Columbia,Florida,US,"Columbia, Florida, US",71686
+12027,DeSoto,Florida,US,"DeSoto, Florida, US",38001
+12029,Dixie,Florida,US,"Dixie, Florida, US",16826
+12031,Duval,Florida,US,"Duval, Florida, US",957755
+12033,Escambia,Florida,US,"Escambia, Florida, US",318316
+12035,Flagler,Florida,US,"Flagler, Florida, US",115081
+12037,Franklin,Florida,US,"Franklin, Florida, US",12125
+12039,Gadsden,Florida,US,"Gadsden, Florida, US",45660
+12041,Gilchrist,Florida,US,"Gilchrist, Florida, US",18582
+12043,Glades,Florida,US,"Glades, Florida, US",13811
+12045,Gulf,Florida,US,"Gulf, Florida, US",13639
+12047,Hamilton,Florida,US,"Hamilton, Florida, US",14428
+12049,Hardee,Florida,US,"Hardee, Florida, US",26937
+12051,Hendry,Florida,US,"Hendry, Florida, US",42022
+12053,Hernando,Florida,US,"Hernando, Florida, US",193920
+12055,Highlands,Florida,US,"Highlands, Florida, US",106221
+12057,Hillsborough,Florida,US,"Hillsborough, Florida, US",1471968
+12059,Holmes,Florida,US,"Holmes, Florida, US",19617
+12061,Indian River,Florida,US,"Indian River, Florida, US",159923
+12063,Jackson,Florida,US,"Jackson, Florida, US",46414
+12065,Jefferson,Florida,US,"Jefferson, Florida, US",14246
+12067,Lafayette,Florida,US,"Lafayette, Florida, US",8422
+12069,Lake,Florida,US,"Lake, Florida, US",367118
+12071,Lee,Florida,US,"Lee, Florida, US",770577
+12073,Leon,Florida,US,"Leon, Florida, US",293582
+12075,Levy,Florida,US,"Levy, Florida, US",41503
+12077,Liberty,Florida,US,"Liberty, Florida, US",8354
+12079,Madison,Florida,US,"Madison, Florida, US",18493
+12081,Manatee,Florida,US,"Manatee, Florida, US",403253
+12083,Marion,Florida,US,"Marion, Florida, US",365579
+12085,Martin,Florida,US,"Martin, Florida, US",161000
+12086,Miami-Dade,Florida,US,"Miami-Dade, Florida, US",2716940
+12087,Monroe,Florida,US,"Monroe, Florida, US",74228
+12089,Nassau,Florida,US,"Nassau, Florida, US",88625
+12091,Okaloosa,Florida,US,"Okaloosa, Florida, US",210738
+12093,Okeechobee,Florida,US,"Okeechobee, Florida, US",42168
+12095,Orange,Florida,US,"Orange, Florida, US",1393452
+12097,Osceola,Florida,US,"Osceola, Florida, US",375751
+12099,Palm Beach,Florida,US,"Palm Beach, Florida, US",1496770
+12101,Pasco,Florida,US,"Pasco, Florida, US",553947
+12103,Pinellas,Florida,US,"Pinellas, Florida, US",974996
+12105,Polk,Florida,US,"Polk, Florida, US",724777
+12107,Putnam,Florida,US,"Putnam, Florida, US",74521
+12113,Santa Rosa,Florida,US,"Santa Rosa, Florida, US",184313
+12115,Sarasota,Florida,US,"Sarasota, Florida, US",433742
+12117,Seminole,Florida,US,"Seminole, Florida, US",471826
+12109,St. Johns,Florida,US,"St. Johns, Florida, US",264672
+12111,St. Lucie,Florida,US,"St. Lucie, Florida, US",328297
+12119,Sumter,Florida,US,"Sumter, Florida, US",132420
+12121,Suwannee,Florida,US,"Suwannee, Florida, US",44417
+12123,Taylor,Florida,US,"Taylor, Florida, US",21569
+90012,Unassigned,Florida,US,"Unassigned, Florida, US",#DIV/0!
+12125,Union,Florida,US,"Union, Florida, US",15237
+12127,Volusia,Florida,US,"Volusia, Florida, US",553284
+12129,Wakulla,Florida,US,"Wakulla, Florida, US",33739
+12131,Walton,Florida,US,"Walton, Florida, US",74071
+12133,Washington,Florida,US,"Washington, Florida, US",25473
+13001,Appling,Georgia,US,"Appling, Georgia, US",18386
+13003,Atkinson,Georgia,US,"Atkinson, Georgia, US",8165
+13005,Bacon,Georgia,US,"Bacon, Georgia, US",11164
+13007,Baker,Georgia,US,"Baker, Georgia, US",3038
+13009,Baldwin,Georgia,US,"Baldwin, Georgia, US",44890
+13011,Banks,Georgia,US,"Banks, Georgia, US",19234
+13013,Barrow,Georgia,US,"Barrow, Georgia, US",83240
+13015,Bartow,Georgia,US,"Bartow, Georgia, US",107738
+13017,Ben Hill,Georgia,US,"Ben Hill, Georgia, US",16700
+13019,Berrien,Georgia,US,"Berrien, Georgia, US",19397
+13021,Bibb,Georgia,US,"Bibb, Georgia, US",153159
+13023,Bleckley,Georgia,US,"Bleckley, Georgia, US",12873
+13025,Brantley,Georgia,US,"Brantley, Georgia, US",19109
+13027,Brooks,Georgia,US,"Brooks, Georgia, US",15457
+13029,Bryan,Georgia,US,"Bryan, Georgia, US",39627
+13031,Bulloch,Georgia,US,"Bulloch, Georgia, US",79608
+13033,Burke,Georgia,US,"Burke, Georgia, US",22383
+13035,Butts,Georgia,US,"Butts, Georgia, US",24936
+13037,Calhoun,Georgia,US,"Calhoun, Georgia, US",6189
+13039,Camden,Georgia,US,"Camden, Georgia, US",54666
+13043,Candler,Georgia,US,"Candler, Georgia, US",10803
+13045,Carroll,Georgia,US,"Carroll, Georgia, US",119992
+13047,Catoosa,Georgia,US,"Catoosa, Georgia, US",67580
+13049,Charlton,Georgia,US,"Charlton, Georgia, US",13392
+13051,Chatham,Georgia,US,"Chatham, Georgia, US",289430
+13053,Chattahoochee,Georgia,US,"Chattahoochee, Georgia, US",10907
+13055,Chattooga,Georgia,US,"Chattooga, Georgia, US",24789
+13057,Cherokee,Georgia,US,"Cherokee, Georgia, US",258773
+13059,Clarke,Georgia,US,"Clarke, Georgia, US",128331
+13061,Clay,Georgia,US,"Clay, Georgia, US",2834
+13063,Clayton,Georgia,US,"Clayton, Georgia, US",292256
+13065,Clinch,Georgia,US,"Clinch, Georgia, US",6618
+13067,Cobb,Georgia,US,"Cobb, Georgia, US",760141
+13069,Coffee,Georgia,US,"Coffee, Georgia, US",43273
+13071,Colquitt,Georgia,US,"Colquitt, Georgia, US",45600
+13073,Columbia,Georgia,US,"Columbia, Georgia, US",156714
+13075,Cook,Georgia,US,"Cook, Georgia, US",17270
+13077,Coweta,Georgia,US,"Coweta, Georgia, US",148509
+13079,Crawford,Georgia,US,"Crawford, Georgia, US",12404
+13081,Crisp,Georgia,US,"Crisp, Georgia, US",22372
+13083,Dade,Georgia,US,"Dade, Georgia, US",16116
+13085,Dawson,Georgia,US,"Dawson, Georgia, US",26108
+13087,Decatur,Georgia,US,"Decatur, Georgia, US",26404
+13089,DeKalb,Georgia,US,"DeKalb, Georgia, US",759297
+13091,Dodge,Georgia,US,"Dodge, Georgia, US",20605
+13093,Dooly,Georgia,US,"Dooly, Georgia, US",13390
+13095,Dougherty,Georgia,US,"Dougherty, Georgia, US",87956
+13097,Douglas,Georgia,US,"Douglas, Georgia, US",146343
+13099,Early,Georgia,US,"Early, Georgia, US",10190
+13101,Echols,Georgia,US,"Echols, Georgia, US",4006
+13103,Effingham,Georgia,US,"Effingham, Georgia, US",64296
+13105,Elbert,Georgia,US,"Elbert, Georgia, US",19194
+13107,Emanuel,Georgia,US,"Emanuel, Georgia, US",22646
+13109,Evans,Georgia,US,"Evans, Georgia, US",10654
+13111,Fannin,Georgia,US,"Fannin, Georgia, US",26188
+13113,Fayette,Georgia,US,"Fayette, Georgia, US",114421
+13115,Floyd,Georgia,US,"Floyd, Georgia, US",98498
+13117,Forsyth,Georgia,US,"Forsyth, Georgia, US",244252
+13119,Franklin,Georgia,US,"Franklin, Georgia, US",23349
+13121,Fulton,Georgia,US,"Fulton, Georgia, US",1063937
+13123,Gilmer,Georgia,US,"Gilmer, Georgia, US",31369
+13125,Glascock,Georgia,US,"Glascock, Georgia, US",2971
+13127,Glynn,Georgia,US,"Glynn, Georgia, US",85292
+13129,Gordon,Georgia,US,"Gordon, Georgia, US",57963
+13131,Grady,Georgia,US,"Grady, Georgia, US",24633
+13133,Greene,Georgia,US,"Greene, Georgia, US",18324
+13135,Gwinnett,Georgia,US,"Gwinnett, Georgia, US",936250
+13137,Habersham,Georgia,US,"Habersham, Georgia, US",45328
+13139,Hall,Georgia,US,"Hall, Georgia, US",204441
+13141,Hancock,Georgia,US,"Hancock, Georgia, US",8457
+13143,Haralson,Georgia,US,"Haralson, Georgia, US",29792
+13145,Harris,Georgia,US,"Harris, Georgia, US",35236
+13147,Hart,Georgia,US,"Hart, Georgia, US",26205
+13149,Heard,Georgia,US,"Heard, Georgia, US",11923
+13151,Henry,Georgia,US,"Henry, Georgia, US",234561
+13153,Houston,Georgia,US,"Houston, Georgia, US",157863
+13155,Irwin,Georgia,US,"Irwin, Georgia, US",9416
+13157,Jackson,Georgia,US,"Jackson, Georgia, US",72977
+13159,Jasper,Georgia,US,"Jasper, Georgia, US",14219
+13161,Jeff Davis,Georgia,US,"Jeff Davis, Georgia, US",15115
+13163,Jefferson,Georgia,US,"Jefferson, Georgia, US",15362
+13165,Jenkins,Georgia,US,"Jenkins, Georgia, US",8676
+13167,Johnson,Georgia,US,"Johnson, Georgia, US",9643
+13169,Jones,Georgia,US,"Jones, Georgia, US",28735
+13171,Lamar,Georgia,US,"Lamar, Georgia, US",19077
+13173,Lanier,Georgia,US,"Lanier, Georgia, US",10423
+13175,Laurens,Georgia,US,"Laurens, Georgia, US",47546
+13177,Lee,Georgia,US,"Lee, Georgia, US",29992
+13179,Liberty,Georgia,US,"Liberty, Georgia, US",61435
+13181,Lincoln,Georgia,US,"Lincoln, Georgia, US",7921
+13183,Long,Georgia,US,"Long, Georgia, US",19559
+13185,Lowndes,Georgia,US,"Lowndes, Georgia, US",117406
+13187,Lumpkin,Georgia,US,"Lumpkin, Georgia, US",33610
+13193,Macon,Georgia,US,"Macon, Georgia, US",12947
+13195,Madison,Georgia,US,"Madison, Georgia, US",29880
+13197,Marion,Georgia,US,"Marion, Georgia, US",8359
+13189,McDuffie,Georgia,US,"McDuffie, Georgia, US",21312
+13191,McIntosh,Georgia,US,"McIntosh, Georgia, US",14378
+13199,Meriwether,Georgia,US,"Meriwether, Georgia, US",21167
+13201,Miller,Georgia,US,"Miller, Georgia, US",5718
+13205,Mitchell,Georgia,US,"Mitchell, Georgia, US",21863
+13207,Monroe,Georgia,US,"Monroe, Georgia, US",27578
+13209,Montgomery,Georgia,US,"Montgomery, Georgia, US",9172
+13211,Morgan,Georgia,US,"Morgan, Georgia, US",19276
+13213,Murray,Georgia,US,"Murray, Georgia, US",40096
+13215,Muscogee,Georgia,US,"Muscogee, Georgia, US",195769
+13217,Newton,Georgia,US,"Newton, Georgia, US",111744
+13219,Oconee,Georgia,US,"Oconee, Georgia, US",40280
+13221,Oglethorpe,Georgia,US,"Oglethorpe, Georgia, US",15259
+80013,Out of GA,Georgia,US,"Out of GA, Georgia, US",#DIV/0!
+13223,Paulding,Georgia,US,"Paulding, Georgia, US",168667
+13225,Peach,Georgia,US,"Peach, Georgia, US",27546
+13227,Pickens,Georgia,US,"Pickens, Georgia, US",32591
+13229,Pierce,Georgia,US,"Pierce, Georgia, US",19465
+13231,Pike,Georgia,US,"Pike, Georgia, US",18962
+13233,Polk,Georgia,US,"Polk, Georgia, US",42613
+13235,Pulaski,Georgia,US,"Pulaski, Georgia, US",11137
+13237,Putnam,Georgia,US,"Putnam, Georgia, US",22119
+13239,Quitman,Georgia,US,"Quitman, Georgia, US",2299
+13241,Rabun,Georgia,US,"Rabun, Georgia, US",17137
+13243,Randolph,Georgia,US,"Randolph, Georgia, US",6778
+13245,Richmond,Georgia,US,"Richmond, Georgia, US",202518
+13247,Rockdale,Georgia,US,"Rockdale, Georgia, US",90896
+13249,Schley,Georgia,US,"Schley, Georgia, US",5257
+13251,Screven,Georgia,US,"Screven, Georgia, US",13966
+13253,Seminole,Georgia,US,"Seminole, Georgia, US",8090
+13255,Spalding,Georgia,US,"Spalding, Georgia, US",66703
+13257,Stephens,Georgia,US,"Stephens, Georgia, US",25925
+13259,Stewart,Georgia,US,"Stewart, Georgia, US",6621
+13261,Sumter,Georgia,US,"Sumter, Georgia, US",29524
+13263,Talbot,Georgia,US,"Talbot, Georgia, US",6195
+13265,Taliaferro,Georgia,US,"Taliaferro, Georgia, US",1537
+13267,Tattnall,Georgia,US,"Tattnall, Georgia, US",25286
+13269,Taylor,Georgia,US,"Taylor, Georgia, US",8020
+13271,Telfair,Georgia,US,"Telfair, Georgia, US",15860
+13273,Terrell,Georgia,US,"Terrell, Georgia, US",8531
+13275,Thomas,Georgia,US,"Thomas, Georgia, US",44451
+13277,Tift,Georgia,US,"Tift, Georgia, US",40644
+13279,Toombs,Georgia,US,"Toombs, Georgia, US",26830
+13281,Towns,Georgia,US,"Towns, Georgia, US",12037
+13283,Treutlen,Georgia,US,"Treutlen, Georgia, US",6901
+13285,Troup,Georgia,US,"Troup, Georgia, US",69922
+13287,Turner,Georgia,US,"Turner, Georgia, US",7985
+13289,Twiggs,Georgia,US,"Twiggs, Georgia, US",8120
+90013,Unassigned,Georgia,US,"Unassigned, Georgia, US",#DIV/0!
+13291,Union,Georgia,US,"Union, Georgia, US",24511
+13293,Upson,Georgia,US,"Upson, Georgia, US",26320
+13295,Walker,Georgia,US,"Walker, Georgia, US",69761
+13297,Walton,Georgia,US,"Walton, Georgia, US",94593
+13299,Ware,Georgia,US,"Ware, Georgia, US",35734
+13301,Warren,Georgia,US,"Warren, Georgia, US",5254
+13303,Washington,Georgia,US,"Washington, Georgia, US",20374
+13305,Wayne,Georgia,US,"Wayne, Georgia, US",29927
+13307,Webster,Georgia,US,"Webster, Georgia, US",2607
+13309,Wheeler,Georgia,US,"Wheeler, Georgia, US",7855
+13311,White,Georgia,US,"White, Georgia, US",30798
+13313,Whitfield,Georgia,US,"Whitfield, Georgia, US",104628
+13315,Wilcox,Georgia,US,"Wilcox, Georgia, US",8635
+13317,Wilkes,Georgia,US,"Wilkes, Georgia, US",9777
+13319,Wilkinson,Georgia,US,"Wilkinson, Georgia, US",8954
+13321,Worth,Georgia,US,"Worth, Georgia, US",20247
+99999,,Grand Princess,US,"Grand Princess, US",#DIV/0!
+66,,Guam,US,"Guam, US",164229
+15001,Hawaii,Hawaii,US,"Hawaii, Hawaii, US",201513
+15003,Honolulu,Hawaii,US,"Honolulu, Hawaii, US",974563
+15007,Kauai,Hawaii,US,"Kauai, Hawaii, US",72293
+15009,Maui,Hawaii,US,"Maui, Hawaii, US",167417
+80015,Out of HI,Hawaii,US,"Out of HI, Hawaii, US",#DIV/0!
+90015,Unassigned,Hawaii,US,"Unassigned, Hawaii, US",#DIV/0!
+16001,Ada,Idaho,US,"Ada, Idaho, US",481587
+16003,Adams,Idaho,US,"Adams, Idaho, US",4294
+16005,Bannock,Idaho,US,"Bannock, Idaho, US",87808
+16009,Benewah,Idaho,US,"Benewah, Idaho, US",9298
+16011,Bingham,Idaho,US,"Bingham, Idaho, US",46811
+16013,Blaine,Idaho,US,"Blaine, Idaho, US",23021
+16017,Bonner,Idaho,US,"Bonner, Idaho, US",45739
+16019,Bonneville,Idaho,US,"Bonneville, Idaho, US",119062
+16021,Boundary,Idaho,US,"Boundary, Idaho, US",#DIV/0!
+16025,Camas,Idaho,US,"Camas, Idaho, US",1106
+16027,Canyon,Idaho,US,"Canyon, Idaho, US",229849
+16029,Caribou,Idaho,US,"Caribou, Idaho, US",7155
+16031,Cassia,Idaho,US,"Cassia, Idaho, US",24030
+16037,Custer,Idaho,US,"Custer, Idaho, US",4315
+16039,Elmore,Idaho,US,"Elmore, Idaho, US",27511
+16041,Franklin,Idaho,US,"Franklin, Idaho, US",13876
+16043,Fremont,Idaho,US,"Fremont, Idaho, US",13099
+16045,Gem,Idaho,US,"Gem, Idaho, US",18112
+16047,Gooding,Idaho,US,"Gooding, Idaho, US",15179
+16049,Idaho,Idaho,US,"Idaho, Idaho, US",16667
+16051,Jefferson,Idaho,US,"Jefferson, Idaho, US",29871
+16053,Jerome,Idaho,US,"Jerome, Idaho, US",24412
+16055,Kootenai,Idaho,US,"Kootenai, Idaho, US",165697
+16057,Latah,Idaho,US,"Latah, Idaho, US",40108
+16059,Lemhi,Idaho,US,"Lemhi, Idaho, US",8027
+16061,Lewis,Idaho,US,"Lewis, Idaho, US",#DIV/0!
+16063,Lincoln,Idaho,US,"Lincoln, Idaho, US",5366
+16065,Madison,Idaho,US,"Madison, Idaho, US",39907
+16067,Minidoka,Idaho,US,"Minidoka, Idaho, US",21039
+16069,Nez Perce,Idaho,US,"Nez Perce, Idaho, US",40408
+16073,Owyhee,Idaho,US,"Owyhee, Idaho, US",11823
+16075,Payette,Idaho,US,"Payette, Idaho, US",23951
+16077,Power,Idaho,US,"Power, Idaho, US",7681
+16081,Teton,Idaho,US,"Teton, Idaho, US",12142
+16083,Twin Falls,Idaho,US,"Twin Falls, Idaho, US",86878
+90016,Unassigned,Idaho,US,"Unassigned, Idaho, US",#DIV/0!
+16085,Valley,Idaho,US,"Valley, Idaho, US",11392
+16087,Washington,Idaho,US,"Washington, Idaho, US",10194
+17001,Adams,Illinois,US,"Adams, Illinois, US",65435
+17003,Alexander,Illinois,US,"Alexander, Illinois, US",5761
+17005,Bond,Illinois,US,"Bond, Illinois, US",16426
+17007,Boone,Illinois,US,"Boone, Illinois, US",53544
+17009,Brown,Illinois,US,"Brown, Illinois, US",6578
+17011,Bureau,Illinois,US,"Bureau, Illinois, US",32628
+17013,Calhoun,Illinois,US,"Calhoun, Illinois, US",4739
+17015,Carroll,Illinois,US,"Carroll, Illinois, US",14305
+17017,Cass,Illinois,US,"Cass, Illinois, US",12147
+17019,Champaign,Illinois,US,"Champaign, Illinois, US",209689
+17021,Christian,Illinois,US,"Christian, Illinois, US",32304
+17023,Clark,Illinois,US,"Clark, Illinois, US",15441
+17025,Clay,Illinois,US,"Clay, Illinois, US",13184
+17027,Clinton,Illinois,US,"Clinton, Illinois, US",37562
+17029,Coles,Illinois,US,"Coles, Illinois, US",50621
+17031,Cook,Illinois,US,"Cook, Illinois, US",5150233
+17033,Crawford,Illinois,US,"Crawford, Illinois, US",18667
+17035,Cumberland,Illinois,US,"Cumberland, Illinois, US",10766
+17039,De Witt,Illinois,US,"De Witt, Illinois, US",15638
+17037,DeKalb,Illinois,US,"DeKalb, Illinois, US",104897
+17041,Douglas,Illinois,US,"Douglas, Illinois, US",19465
+17043,DuPage,Illinois,US,"DuPage, Illinois, US",922921
+17045,Edgar,Illinois,US,"Edgar, Illinois, US",17161
+17047,Edwards,Illinois,US,"Edwards, Illinois, US",6395
+17049,Effingham,Illinois,US,"Effingham, Illinois, US",34008
+17051,Fayette,Illinois,US,"Fayette, Illinois, US",21336
+17053,Ford,Illinois,US,"Ford, Illinois, US",12961
+17055,Franklin,Illinois,US,"Franklin, Illinois, US",38469
+17057,Fulton,Illinois,US,"Fulton, Illinois, US",34340
+17059,Gallatin,Illinois,US,"Gallatin, Illinois, US",4828
+17061,Greene,Illinois,US,"Greene, Illinois, US",12969
+17063,Grundy,Illinois,US,"Grundy, Illinois, US",51054
+17065,Hamilton,Illinois,US,"Hamilton, Illinois, US",8116
+17067,Hancock,Illinois,US,"Hancock, Illinois, US",17708
+17069,Hardin,Illinois,US,"Hardin, Illinois, US",3821
+17071,Henderson,Illinois,US,"Henderson, Illinois, US",6646
+17073,Henry,Illinois,US,"Henry, Illinois, US",48913
+17075,Iroquois,Illinois,US,"Iroquois, Illinois, US",27114
+17077,Jackson,Illinois,US,"Jackson, Illinois, US",56750
+17079,Jasper,Illinois,US,"Jasper, Illinois, US",9610
+17081,Jefferson,Illinois,US,"Jefferson, Illinois, US",37684
+17083,Jersey,Illinois,US,"Jersey, Illinois, US",21773
+17085,Jo Daviess,Illinois,US,"Jo Daviess, Illinois, US",21235
+17087,Johnson,Illinois,US,"Johnson, Illinois, US",12417
+17089,Kane,Illinois,US,"Kane, Illinois, US",532403
+17091,Kankakee,Illinois,US,"Kankakee, Illinois, US",109862
+17093,Kendall,Illinois,US,"Kendall, Illinois, US",128990
+17095,Knox,Illinois,US,"Knox, Illinois, US",49699
+17097,Lake,Illinois,US,"Lake, Illinois, US",696535
+17099,LaSalle,Illinois,US,"LaSalle, Illinois, US",108669
+17101,Lawrence,Illinois,US,"Lawrence, Illinois, US",15678
+17103,Lee,Illinois,US,"Lee, Illinois, US",34096
+17105,Livingston,Illinois,US,"Livingston, Illinois, US",35648
+17107,Logan,Illinois,US,"Logan, Illinois, US",28618
+17115,Macon,Illinois,US,"Macon, Illinois, US",104009
+17117,Macoupin,Illinois,US,"Macoupin, Illinois, US",44926
+17119,Madison,Illinois,US,"Madison, Illinois, US",262966
+17121,Marion,Illinois,US,"Marion, Illinois, US",37205
+17123,Marshall,Illinois,US,"Marshall, Illinois, US",11438
+17125,Mason,Illinois,US,"Mason, Illinois, US",13359
+17127,Massac,Illinois,US,"Massac, Illinois, US",13772
+17109,McDonough,Illinois,US,"McDonough, Illinois, US",29682
+17111,McHenry,Illinois,US,"McHenry, Illinois, US",307774
+17113,McLean,Illinois,US,"McLean, Illinois, US",171517
+17129,Menard,Illinois,US,"Menard, Illinois, US",12196
+17131,Mercer,Illinois,US,"Mercer, Illinois, US",15437
+17133,Monroe,Illinois,US,"Monroe, Illinois, US",34637
+17135,Montgomery,Illinois,US,"Montgomery, Illinois, US",28414
+17137,Morgan,Illinois,US,"Morgan, Illinois, US",33658
+17139,Moultrie,Illinois,US,"Moultrie, Illinois, US",14501
+17141,Ogle,Illinois,US,"Ogle, Illinois, US",50643
+80017,Out of IL,Illinois,US,"Out of IL, Illinois, US",#DIV/0!
+17143,Peoria,Illinois,US,"Peoria, Illinois, US",179179
+17145,Perry,Illinois,US,"Perry, Illinois, US",20916
+17147,Piatt,Illinois,US,"Piatt, Illinois, US",16344
+17149,Pike,Illinois,US,"Pike, Illinois, US",15561
+17151,Pope,Illinois,US,"Pope, Illinois, US",4177
+17153,Pulaski,Illinois,US,"Pulaski, Illinois, US",5335
+17155,Putnam,Illinois,US,"Putnam, Illinois, US",5739
+17157,Randolph,Illinois,US,"Randolph, Illinois, US",31782
+17159,Richland,Illinois,US,"Richland, Illinois, US",15513
+17161,Rock Island,Illinois,US,"Rock Island, Illinois, US",141879
+17165,Saline,Illinois,US,"Saline, Illinois, US",23491
+17167,Sangamon,Illinois,US,"Sangamon, Illinois, US",194672
+17169,Schuyler,Illinois,US,"Schuyler, Illinois, US",6768
+17173,Shelby,Illinois,US,"Shelby, Illinois, US",21634
+17163,St. Clair,Illinois,US,"St. Clair, Illinois, US",259686
+17175,Stark,Illinois,US,"Stark, Illinois, US",5342
+17177,Stephenson,Illinois,US,"Stephenson, Illinois, US",44498
+17179,Tazewell,Illinois,US,"Tazewell, Illinois, US",131803
+90017,Unassigned,Illinois,US,"Unassigned, Illinois, US",#DIV/0!
+17181,Union,Illinois,US,"Union, Illinois, US",16653
+17183,Vermilion,Illinois,US,"Vermilion, Illinois, US",75758
+17185,Wabash,Illinois,US,"Wabash, Illinois, US",11520
+17187,Warren,Illinois,US,"Warren, Illinois, US",16844
+17189,Washington,Illinois,US,"Washington, Illinois, US",13887
+17191,Wayne,Illinois,US,"Wayne, Illinois, US",16215
+17193,White,Illinois,US,"White, Illinois, US",13537
+17195,Whiteside,Illinois,US,"Whiteside, Illinois, US",55175
+17197,Will,Illinois,US,"Will, Illinois, US",690743
+17199,Williamson,Illinois,US,"Williamson, Illinois, US",66597
+17201,Winnebago,Illinois,US,"Winnebago, Illinois, US",282572
+17203,Woodford,Illinois,US,"Woodford, Illinois, US",38459
+18001,Adams,Indiana,US,"Adams, Indiana, US",35777
+18003,Allen,Indiana,US,"Allen, Indiana, US",379299
+18005,Bartholomew,Indiana,US,"Bartholomew, Indiana, US",83779
+18007,Benton,Indiana,US,"Benton, Indiana, US",8748
+18009,Blackford,Indiana,US,"Blackford, Indiana, US",11758
+18011,Boone,Indiana,US,"Boone, Indiana, US",67843
+18013,Brown,Indiana,US,"Brown, Indiana, US",15092
+18015,Carroll,Indiana,US,"Carroll, Indiana, US",20257
+18017,Cass,Indiana,US,"Cass, Indiana, US",37689
+18019,Clark,Indiana,US,"Clark, Indiana, US",118302
+18021,Clay,Indiana,US,"Clay, Indiana, US",26225
+18023,Clinton,Indiana,US,"Clinton, Indiana, US",32399
+18025,Crawford,Indiana,US,"Crawford, Indiana, US",10577
+18027,Daviess,Indiana,US,"Daviess, Indiana, US",33351
+18029,Dearborn,Indiana,US,"Dearborn, Indiana, US",49458
+18031,Decatur,Indiana,US,"Decatur, Indiana, US",26559
+18033,DeKalb,Indiana,US,"DeKalb, Indiana, US",43475
+18035,Delaware,Indiana,US,"Delaware, Indiana, US",114135
+18037,Dubois,Indiana,US,"Dubois, Indiana, US",42736
+18039,Elkhart,Indiana,US,"Elkhart, Indiana, US",206341
+18041,Fayette,Indiana,US,"Fayette, Indiana, US",23102
+18043,Floyd,Indiana,US,"Floyd, Indiana, US",78522
+18045,Fountain,Indiana,US,"Fountain, Indiana, US",16346
+18047,Franklin,Indiana,US,"Franklin, Indiana, US",22758
+18049,Fulton,Indiana,US,"Fulton, Indiana, US",19974
+18051,Gibson,Indiana,US,"Gibson, Indiana, US",33659
+18053,Grant,Indiana,US,"Grant, Indiana, US",65769
+18055,Greene,Indiana,US,"Greene, Indiana, US",31922
+18057,Hamilton,Indiana,US,"Hamilton, Indiana, US",338011
+18059,Hancock,Indiana,US,"Hancock, Indiana, US",78168
+18061,Harrison,Indiana,US,"Harrison, Indiana, US",40515
+18063,Hendricks,Indiana,US,"Hendricks, Indiana, US",170311
+18065,Henry,Indiana,US,"Henry, Indiana, US",47972
+18067,Howard,Indiana,US,"Howard, Indiana, US",82544
+18069,Huntington,Indiana,US,"Huntington, Indiana, US",36520
+18071,Jackson,Indiana,US,"Jackson, Indiana, US",44231
+18073,Jasper,Indiana,US,"Jasper, Indiana, US",33562
+18075,Jay,Indiana,US,"Jay, Indiana, US",20436
+18077,Jefferson,Indiana,US,"Jefferson, Indiana, US",32308
+18079,Jennings,Indiana,US,"Jennings, Indiana, US",27735
+18081,Johnson,Indiana,US,"Johnson, Indiana, US",158167
+18083,Knox,Indiana,US,"Knox, Indiana, US",36594
+18085,Kosciusko,Indiana,US,"Kosciusko, Indiana, US",79456
+18087,LaGrange,Indiana,US,"LaGrange, Indiana, US",39614
+18089,Lake,Indiana,US,"Lake, Indiana, US",485493
+18091,LaPorte,Indiana,US,"LaPorte, Indiana, US",109888
+18093,Lawrence,Indiana,US,"Lawrence, Indiana, US",45370
+18095,Madison,Indiana,US,"Madison, Indiana, US",129569
+18097,Marion,Indiana,US,"Marion, Indiana, US",964582
+18099,Marshall,Indiana,US,"Marshall, Indiana, US",46258
+18101,Martin,Indiana,US,"Martin, Indiana, US",10255
+18103,Miami,Indiana,US,"Miami, Indiana, US",35516
+18105,Monroe,Indiana,US,"Monroe, Indiana, US",148431
+18107,Montgomery,Indiana,US,"Montgomery, Indiana, US",38338
+18109,Morgan,Indiana,US,"Morgan, Indiana, US",70489
+18111,Newton,Indiana,US,"Newton, Indiana, US",13984
+18113,Noble,Indiana,US,"Noble, Indiana, US",47744
+18115,Ohio,Indiana,US,"Ohio, Indiana, US",5875
+18117,Orange,Indiana,US,"Orange, Indiana, US",19646
+18119,Owen,Indiana,US,"Owen, Indiana, US",20799
+18121,Parke,Indiana,US,"Parke, Indiana, US",16937
+18123,Perry,Indiana,US,"Perry, Indiana, US",19169
+18125,Pike,Indiana,US,"Pike, Indiana, US",12389
+18127,Porter,Indiana,US,"Porter, Indiana, US",170389
+18129,Posey,Indiana,US,"Posey, Indiana, US",25427
+18131,Pulaski,Indiana,US,"Pulaski, Indiana, US",12353
+18133,Putnam,Indiana,US,"Putnam, Indiana, US",37576
+18135,Randolph,Indiana,US,"Randolph, Indiana, US",24665
+18137,Ripley,Indiana,US,"Ripley, Indiana, US",28324
+18139,Rush,Indiana,US,"Rush, Indiana, US",16581
+18143,Scott,Indiana,US,"Scott, Indiana, US",23873
+18145,Shelby,Indiana,US,"Shelby, Indiana, US",44729
+18147,Spencer,Indiana,US,"Spencer, Indiana, US",20277
+18141,St. Joseph,Indiana,US,"St. Joseph, Indiana, US",271826
+18149,Starke,Indiana,US,"Starke, Indiana, US",22995
+18151,Steuben,Indiana,US,"Steuben, Indiana, US",34594
+18153,Sullivan,Indiana,US,"Sullivan, Indiana, US",20669
+18155,Switzerland,Indiana,US,"Switzerland, Indiana, US",10751
+18157,Tippecanoe,Indiana,US,"Tippecanoe, Indiana, US",195732
+18159,Tipton,Indiana,US,"Tipton, Indiana, US",15148
+90018,Unassigned,Indiana,US,"Unassigned, Indiana, US",#DIV/0!
+18161,Union,Indiana,US,"Union, Indiana, US",7054
+18163,Vanderburgh,Indiana,US,"Vanderburgh, Indiana, US",181451
+18165,Vermillion,Indiana,US,"Vermillion, Indiana, US",15498
+18167,Vigo,Indiana,US,"Vigo, Indiana, US",107038
+18169,Wabash,Indiana,US,"Wabash, Indiana, US",30996
+18171,Warren,Indiana,US,"Warren, Indiana, US",8265
+18173,Warrick,Indiana,US,"Warrick, Indiana, US",62998
+18175,Washington,Indiana,US,"Washington, Indiana, US",28036
+18177,Wayne,Indiana,US,"Wayne, Indiana, US",65884
+18179,Wells,Indiana,US,"Wells, Indiana, US",28296
+18181,White,Indiana,US,"White, Indiana, US",24102
+18183,Whitley,Indiana,US,"Whitley, Indiana, US",33964
+19001,Adair,Iowa,US,"Adair, Iowa, US",7152
+19003,Adams,Iowa,US,"Adams, Iowa, US",3602
+19005,Allamakee,Iowa,US,"Allamakee, Iowa, US",13687
+19007,Appanoose,Iowa,US,"Appanoose, Iowa, US",12426
+19009,Audubon,Iowa,US,"Audubon, Iowa, US",5496
+19011,Benton,Iowa,US,"Benton, Iowa, US",25645
+19013,Black Hawk,Iowa,US,"Black Hawk, Iowa, US",131228
+19015,Boone,Iowa,US,"Boone, Iowa, US",26234
+19017,Bremer,Iowa,US,"Bremer, Iowa, US",25062
+19019,Buchanan,Iowa,US,"Buchanan, Iowa, US",21175
+19021,Buena Vista,Iowa,US,"Buena Vista, Iowa, US",19620
+19023,Butler,Iowa,US,"Butler, Iowa, US",14439
+19025,Calhoun,Iowa,US,"Calhoun, Iowa, US",9668
+19027,Carroll,Iowa,US,"Carroll, Iowa, US",20165
+19029,Cass,Iowa,US,"Cass, Iowa, US",12836
+19031,Cedar,Iowa,US,"Cedar, Iowa, US",18627
+19033,Cerro Gordo,Iowa,US,"Cerro Gordo, Iowa, US",42450
+19035,Cherokee,Iowa,US,"Cherokee, Iowa, US",11235
+19037,Chickasaw,Iowa,US,"Chickasaw, Iowa, US",11933
+19039,Clarke,Iowa,US,"Clarke, Iowa, US",9395
+19041,Clay,Iowa,US,"Clay, Iowa, US",16016
+19043,Clayton,Iowa,US,"Clayton, Iowa, US",17549
+19045,Clinton,Iowa,US,"Clinton, Iowa, US",46429
+19047,Crawford,Iowa,US,"Crawford, Iowa, US",16820
+19049,Dallas,Iowa,US,"Dallas, Iowa, US",93453
+19051,Davis,Iowa,US,"Davis, Iowa, US",9000
+19053,Decatur,Iowa,US,"Decatur, Iowa, US",7870
+19055,Delaware,Iowa,US,"Delaware, Iowa, US",17011
+19057,Des Moines,Iowa,US,"Des Moines, Iowa, US",38967
+19059,Dickinson,Iowa,US,"Dickinson, Iowa, US",17258
+19061,Dubuque,Iowa,US,"Dubuque, Iowa, US",97311
+19063,Emmet,Iowa,US,"Emmet, Iowa, US",9208
+19065,Fayette,Iowa,US,"Fayette, Iowa, US",19650
+19067,Floyd,Iowa,US,"Floyd, Iowa, US",15642
+19069,Franklin,Iowa,US,"Franklin, Iowa, US",10070
+19071,Fremont,Iowa,US,"Fremont, Iowa, US",6960
+19073,Greene,Iowa,US,"Greene, Iowa, US",8888
+19075,Grundy,Iowa,US,"Grundy, Iowa, US",12232
+19077,Guthrie,Iowa,US,"Guthrie, Iowa, US",10689
+19079,Hamilton,Iowa,US,"Hamilton, Iowa, US",14773
+19081,Hancock,Iowa,US,"Hancock, Iowa, US",10630
+19083,Hardin,Iowa,US,"Hardin, Iowa, US",16846
+19085,Harrison,Iowa,US,"Harrison, Iowa, US",14049
+19087,Henry,Iowa,US,"Henry, Iowa, US",19954
+19089,Howard,Iowa,US,"Howard, Iowa, US",9158
+19091,Humboldt,Iowa,US,"Humboldt, Iowa, US",9558
+19093,Ida,Iowa,US,"Ida, Iowa, US",6860
+19095,Iowa,Iowa,US,"Iowa, Iowa, US",16184
+19097,Jackson,Iowa,US,"Jackson, Iowa, US",19439
+19099,Jasper,Iowa,US,"Jasper, Iowa, US",37185
+19101,Jefferson,Iowa,US,"Jefferson, Iowa, US",18295
+19103,Johnson,Iowa,US,"Johnson, Iowa, US",151140
+19105,Jones,Iowa,US,"Jones, Iowa, US",20681
+19107,Keokuk,Iowa,US,"Keokuk, Iowa, US",10246
+19109,Kossuth,Iowa,US,"Kossuth, Iowa, US",14813
+19111,Lee,Iowa,US,"Lee, Iowa, US",33657
+19113,Linn,Iowa,US,"Linn, Iowa, US",226706
+19115,Louisa,Iowa,US,"Louisa, Iowa, US",11035
+19117,Lucas,Iowa,US,"Lucas, Iowa, US",8600
+19119,Lyon,Iowa,US,"Lyon, Iowa, US",11755
+19121,Madison,Iowa,US,"Madison, Iowa, US",16338
+19123,Mahaska,Iowa,US,"Mahaska, Iowa, US",22095
+19125,Marion,Iowa,US,"Marion, Iowa, US",33253
+19127,Marshall,Iowa,US,"Marshall, Iowa, US",39369
+19129,Mills,Iowa,US,"Mills, Iowa, US",15109
+19131,Mitchell,Iowa,US,"Mitchell, Iowa, US",10586
+19133,Monona,Iowa,US,"Monona, Iowa, US",8615
+19135,Monroe,Iowa,US,"Monroe, Iowa, US",7707
+19137,Montgomery,Iowa,US,"Montgomery, Iowa, US",9917
+19139,Muscatine,Iowa,US,"Muscatine, Iowa, US",42664
+19141,O'Brien,Iowa,US,"O'Brien, Iowa, US",13753
+19143,Osceola,Iowa,US,"Osceola, Iowa, US",5958
+19145,Page,Iowa,US,"Page, Iowa, US",15107
+19147,Palo Alto,Iowa,US,"Palo Alto, Iowa, US",8886
+19149,Plymouth,Iowa,US,"Plymouth, Iowa, US",25177
+19151,Pocahontas,Iowa,US,"Pocahontas, Iowa, US",6619
+19153,Polk,Iowa,US,"Polk, Iowa, US",490161
+19155,Pottawattamie,Iowa,US,"Pottawattamie, Iowa, US",93206
+19157,Poweshiek,Iowa,US,"Poweshiek, Iowa, US",18504
+19159,Ringgold,Iowa,US,"Ringgold, Iowa, US",4894
+19161,Sac,Iowa,US,"Sac, Iowa, US",9721
+19163,Scott,Iowa,US,"Scott, Iowa, US",172943
+19165,Shelby,Iowa,US,"Shelby, Iowa, US",11454
+19167,Sioux,Iowa,US,"Sioux, Iowa, US",34855
+19169,Story,Iowa,US,"Story, Iowa, US",97117
+19171,Tama,Iowa,US,"Tama, Iowa, US",16854
+19173,Taylor,Iowa,US,"Taylor, Iowa, US",6121
+90019,Unassigned,Iowa,US,"Unassigned, Iowa, US",#DIV/0!
+19175,Union,Iowa,US,"Union, Iowa, US",12241
+19177,Van Buren,Iowa,US,"Van Buren, Iowa, US",7044
+19179,Wapello,Iowa,US,"Wapello, Iowa, US",34969
+19181,Warren,Iowa,US,"Warren, Iowa, US",51466
+19183,Washington,Iowa,US,"Washington, Iowa, US",21965
+19185,Wayne,Iowa,US,"Wayne, Iowa, US",6441
+19187,Webster,Iowa,US,"Webster, Iowa, US",35904
+19189,Winnebago,Iowa,US,"Winnebago, Iowa, US",10354
+19191,Winneshiek,Iowa,US,"Winneshiek, Iowa, US",19991
+19193,Woodbury,Iowa,US,"Woodbury, Iowa, US",103107
+19195,Worth,Iowa,US,"Worth, Iowa, US",7381
+19197,Wright,Iowa,US,"Wright, Iowa, US",12562
+20001,Allen,Kansas,US,"Allen, Kansas, US",12369
+20003,Anderson,Kansas,US,"Anderson, Kansas, US",7858
+20005,Atchison,Kansas,US,"Atchison, Kansas, US",16073
+20007,Barber,Kansas,US,"Barber, Kansas, US",4427
+20009,Barton,Kansas,US,"Barton, Kansas, US",25779
+20011,Bourbon,Kansas,US,"Bourbon, Kansas, US",14534
+20013,Brown,Kansas,US,"Brown, Kansas, US",9564
+20015,Butler,Kansas,US,"Butler, Kansas, US",66911
+20017,Chase,Kansas,US,"Chase, Kansas, US",2648
+20019,Chautauqua,Kansas,US,"Chautauqua, Kansas, US",3250
+20021,Cherokee,Kansas,US,"Cherokee, Kansas, US",19939
+20023,Cheyenne,Kansas,US,"Cheyenne, Kansas, US",2657
+20025,Clark,Kansas,US,"Clark, Kansas, US",1994
+20027,Clay,Kansas,US,"Clay, Kansas, US",8002
+20029,Cloud,Kansas,US,"Cloud, Kansas, US",8786
+20031,Coffey,Kansas,US,"Coffey, Kansas, US",8179
+20033,Comanche,Kansas,US,"Comanche, Kansas, US",1700
+20035,Cowley,Kansas,US,"Cowley, Kansas, US",34908
+20037,Crawford,Kansas,US,"Crawford, Kansas, US",38818
+20041,Dickinson,Kansas,US,"Dickinson, Kansas, US",18466
+20043,Doniphan,Kansas,US,"Doniphan, Kansas, US",7600
+20045,Douglas,Kansas,US,"Douglas, Kansas, US",122259
+20047,Edwards,Kansas,US,"Edwards, Kansas, US",2798
+20049,Elk,Kansas,US,"Elk, Kansas, US",#DIV/0!
+20051,Ellis,Kansas,US,"Ellis, Kansas, US",28553
+20053,Ellsworth,Kansas,US,"Ellsworth, Kansas, US",6102
+20055,Finney,Kansas,US,"Finney, Kansas, US",36467
+20057,Ford,Kansas,US,"Ford, Kansas, US",33619
+20059,Franklin,Kansas,US,"Franklin, Kansas, US",25544
+20061,Geary,Kansas,US,"Geary, Kansas, US",31670
+20063,Gove,Kansas,US,"Gove, Kansas, US",2636
+20067,Grant,Kansas,US,"Grant, Kansas, US",7150
+20069,Gray,Kansas,US,"Gray, Kansas, US",5988
+20073,Greenwood,Kansas,US,"Greenwood, Kansas, US",5982
+20075,Hamilton,Kansas,US,"Hamilton, Kansas, US",2539
+20077,Harper,Kansas,US,"Harper, Kansas, US",5436
+20079,Harvey,Kansas,US,"Harvey, Kansas, US",34429
+20081,Haskell,Kansas,US,"Haskell, Kansas, US",3968
+20083,Hodgeman,Kansas,US,"Hodgeman, Kansas, US",1794
+20085,Jackson,Kansas,US,"Jackson, Kansas, US",13171
+20087,Jefferson,Kansas,US,"Jefferson, Kansas, US",19043
+20089,Jewell,Kansas,US,"Jewell, Kansas, US",2879
+20091,Johnson,Kansas,US,"Johnson, Kansas, US",602401
+20093,Kearny,Kansas,US,"Kearny, Kansas, US",3838
+20097,Kiowa,Kansas,US,"Kiowa, Kansas, US",2475
+20099,Labette,Kansas,US,"Labette, Kansas, US",19618
+20101,Lane,Kansas,US,"Lane, Kansas, US",1535
+20103,Leavenworth,Kansas,US,"Leavenworth, Kansas, US",81758
+20107,Linn,Kansas,US,"Linn, Kansas, US",9703
+20111,Lyon,Kansas,US,"Lyon, Kansas, US",33195
+20115,Marion,Kansas,US,"Marion, Kansas, US",11884
+20113,McPherson,Kansas,US,"McPherson, Kansas, US",28542
+20119,Meade,Kansas,US,"Meade, Kansas, US",4033
+20121,Miami,Kansas,US,"Miami, Kansas, US",34237
+20123,Mitchell,Kansas,US,"Mitchell, Kansas, US",5979
+20125,Montgomery,Kansas,US,"Montgomery, Kansas, US",31829
+20127,Morris,Kansas,US,"Morris, Kansas, US",5620
+20129,Morton,Kansas,US,"Morton, Kansas, US",2587
+20131,Nemaha,Kansas,US,"Nemaha, Kansas, US",10231
+20133,Neosho,Kansas,US,"Neosho, Kansas, US",16007
+20135,Ness,Kansas,US,"Ness, Kansas, US",2750
+20137,Norton,Kansas,US,"Norton, Kansas, US",5361
+20139,Osage,Kansas,US,"Osage, Kansas, US",15949
+20141,Osborne,Kansas,US,"Osborne, Kansas, US",3421
+20143,Ottawa,Kansas,US,"Ottawa, Kansas, US",5704
+20147,Phillips,Kansas,US,"Phillips, Kansas, US",5234
+20149,Pottawatomie,Kansas,US,"Pottawatomie, Kansas, US",24383
+20151,Pratt,Kansas,US,"Pratt, Kansas, US",9164
+20155,Reno,Kansas,US,"Reno, Kansas, US",61998
+20157,Republic,Kansas,US,"Republic, Kansas, US",4636
+20159,Rice,Kansas,US,"Rice, Kansas, US",9537
+20161,Riley,Kansas,US,"Riley, Kansas, US",74232
+20163,Rooks,Kansas,US,"Rooks, Kansas, US",4920
+20169,Saline,Kansas,US,"Saline, Kansas, US",54224
+20171,Scott,Kansas,US,"Scott, Kansas, US",4823
+20173,Sedgwick,Kansas,US,"Sedgwick, Kansas, US",516042
+20175,Seward,Kansas,US,"Seward, Kansas, US",21428
+20177,Shawnee,Kansas,US,"Shawnee, Kansas, US",176875
+20179,Sheridan,Kansas,US,"Sheridan, Kansas, US",2521
+20181,Sherman,Kansas,US,"Sherman, Kansas, US",5917
+20183,Smith,Kansas,US,"Smith, Kansas, US",3583
+20185,Stafford,Kansas,US,"Stafford, Kansas, US",4156
+20187,Stanton,Kansas,US,"Stanton, Kansas, US",2006
+20189,Stevens,Kansas,US,"Stevens, Kansas, US",5485
+20191,Sumner,Kansas,US,"Sumner, Kansas, US",22836
+20195,Trego,Kansas,US,"Trego, Kansas, US",2803
+90020,Unassigned,Kansas,US,"Unassigned, Kansas, US",#DIV/0!
+20197,Wabaunsee,Kansas,US,"Wabaunsee, Kansas, US",6931
+20201,Washington,Kansas,US,"Washington, Kansas, US",#DIV/0!
+20205,Wilson,Kansas,US,"Wilson, Kansas, US",8525
+20207,Woodson,Kansas,US,"Woodson, Kansas, US",3138
+20209,Wyandotte,Kansas,US,"Wyandotte, Kansas, US",165429
+21001,Adair,Kentucky,US,"Adair, Kentucky, US",19202
+21003,Allen,Kentucky,US,"Allen, Kentucky, US",21315
+21005,Anderson,Kentucky,US,"Anderson, Kentucky, US",22747
+21007,Ballard,Kentucky,US,"Ballard, Kentucky, US",7888
+21009,Barren,Kentucky,US,"Barren, Kentucky, US",44249
+21011,Bath,Kentucky,US,"Bath, Kentucky, US",12500
+21013,Bell,Kentucky,US,"Bell, Kentucky, US",26032
+21015,Boone,Kentucky,US,"Boone, Kentucky, US",133581
+21017,Bourbon,Kentucky,US,"Bourbon, Kentucky, US",19788
+21019,Boyd,Kentucky,US,"Boyd, Kentucky, US",46718
+21021,Boyle,Kentucky,US,"Boyle, Kentucky, US",30060
+21023,Bracken,Kentucky,US,"Bracken, Kentucky, US",8303
+21025,Breathitt,Kentucky,US,"Breathitt, Kentucky, US",12630
+21027,Breckinridge,Kentucky,US,"Breckinridge, Kentucky, US",20477
+21029,Bullitt,Kentucky,US,"Bullitt, Kentucky, US",81676
+21031,Butler,Kentucky,US,"Butler, Kentucky, US",12879
+21033,Caldwell,Kentucky,US,"Caldwell, Kentucky, US",12747
+21035,Calloway,Kentucky,US,"Calloway, Kentucky, US",39001
+21037,Campbell,Kentucky,US,"Campbell, Kentucky, US",93584
+21039,Carlisle,Kentucky,US,"Carlisle, Kentucky, US",4760
+21041,Carroll,Kentucky,US,"Carroll, Kentucky, US",10631
+21043,Carter,Kentucky,US,"Carter, Kentucky, US",26797
+21045,Casey,Kentucky,US,"Casey, Kentucky, US",16159
+21047,Christian,Kentucky,US,"Christian, Kentucky, US",70461
+21049,Clark,Kentucky,US,"Clark, Kentucky, US",36263
+21051,Clay,Kentucky,US,"Clay, Kentucky, US",19901
+21053,Clinton,Kentucky,US,"Clinton, Kentucky, US",10218
+21055,Crittenden,Kentucky,US,"Crittenden, Kentucky, US",8806
+21057,Cumberland,Kentucky,US,"Cumberland, Kentucky, US",6614
+21059,Daviess,Kentucky,US,"Daviess, Kentucky, US",101511
+21061,Edmonson,Kentucky,US,"Edmonson, Kentucky, US",12150
+21063,Elliott,Kentucky,US,"Elliott, Kentucky, US",7517
+21067,Fayette,Kentucky,US,"Fayette, Kentucky, US",323152
+21069,Fleming,Kentucky,US,"Fleming, Kentucky, US",14581
+21071,Floyd,Kentucky,US,"Floyd, Kentucky, US",35589
+21073,Franklin,Kentucky,US,"Franklin, Kentucky, US",50991
+21075,Fulton,Kentucky,US,"Fulton, Kentucky, US",5969
+21077,Gallatin,Kentucky,US,"Gallatin, Kentucky, US",8869
+21079,Garrard,Kentucky,US,"Garrard, Kentucky, US",17666
+21081,Grant,Kentucky,US,"Grant, Kentucky, US",25069
+21083,Graves,Kentucky,US,"Graves, Kentucky, US",37266
+21085,Grayson,Kentucky,US,"Grayson, Kentucky, US",26427
+21087,Green,Kentucky,US,"Green, Kentucky, US",10941
+21089,Greenup,Kentucky,US,"Greenup, Kentucky, US",35098
+21091,Hancock,Kentucky,US,"Hancock, Kentucky, US",8722
+21093,Hardin,Kentucky,US,"Hardin, Kentucky, US",110958
+21095,Harlan,Kentucky,US,"Harlan, Kentucky, US",26010
+21097,Harrison,Kentucky,US,"Harrison, Kentucky, US",18886
+21099,Hart,Kentucky,US,"Hart, Kentucky, US",19035
+21101,Henderson,Kentucky,US,"Henderson, Kentucky, US",45210
+21103,Henry,Kentucky,US,"Henry, Kentucky, US",16126
+21105,Hickman,Kentucky,US,"Hickman, Kentucky, US",4380
+21107,Hopkins,Kentucky,US,"Hopkins, Kentucky, US",44686
+21109,Jackson,Kentucky,US,"Jackson, Kentucky, US",13329
+21111,Jefferson,Kentucky,US,"Jefferson, Kentucky, US",766757
+21113,Jessamine,Kentucky,US,"Jessamine, Kentucky, US",54115
+21115,Johnson,Kentucky,US,"Johnson, Kentucky, US",22188
+21117,Kenton,Kentucky,US,"Kenton, Kentucky, US",166998
+21119,Knott,Kentucky,US,"Knott, Kentucky, US",14806
+21121,Knox,Kentucky,US,"Knox, Kentucky, US",31145
+21123,Larue,Kentucky,US,"Larue, Kentucky, US",14398
+21125,Laurel,Kentucky,US,"Laurel, Kentucky, US",60813
+21127,Lawrence,Kentucky,US,"Lawrence, Kentucky, US",15317
+21129,Lee,Kentucky,US,"Lee, Kentucky, US",7403
+21131,Leslie,Kentucky,US,"Leslie, Kentucky, US",9877
+21133,Letcher,Kentucky,US,"Letcher, Kentucky, US",21553
+21135,Lewis,Kentucky,US,"Lewis, Kentucky, US",13275
+21137,Lincoln,Kentucky,US,"Lincoln, Kentucky, US",24549
+21139,Livingston,Kentucky,US,"Livingston, Kentucky, US",9194
+21141,Logan,Kentucky,US,"Logan, Kentucky, US",27102
+21143,Lyon,Kentucky,US,"Lyon, Kentucky, US",8210
+21151,Madison,Kentucky,US,"Madison, Kentucky, US",92987
+21153,Magoffin,Kentucky,US,"Magoffin, Kentucky, US",12161
+21155,Marion,Kentucky,US,"Marion, Kentucky, US",19273
+21157,Marshall,Kentucky,US,"Marshall, Kentucky, US",31100
+21159,Martin,Kentucky,US,"Martin, Kentucky, US",11195
+21161,Mason,Kentucky,US,"Mason, Kentucky, US",17070
+21145,McCracken,Kentucky,US,"McCracken, Kentucky, US",65418
+21147,McCreary,Kentucky,US,"McCreary, Kentucky, US",17231
+21149,McLean,Kentucky,US,"McLean, Kentucky, US",9207
+21163,Meade,Kentucky,US,"Meade, Kentucky, US",28572
+21165,Menifee,Kentucky,US,"Menifee, Kentucky, US",6489
+21167,Mercer,Kentucky,US,"Mercer, Kentucky, US",21933
+21169,Metcalfe,Kentucky,US,"Metcalfe, Kentucky, US",10071
+21171,Monroe,Kentucky,US,"Monroe, Kentucky, US",10650
+21173,Montgomery,Kentucky,US,"Montgomery, Kentucky, US",28157
+21175,Morgan,Kentucky,US,"Morgan, Kentucky, US",13309
+21177,Muhlenberg,Kentucky,US,"Muhlenberg, Kentucky, US",30622
+21179,Nelson,Kentucky,US,"Nelson, Kentucky, US",46233
+21181,Nicholas,Kentucky,US,"Nicholas, Kentucky, US",7269
+21183,Ohio,Kentucky,US,"Ohio, Kentucky, US",23994
+21185,Oldham,Kentucky,US,"Oldham, Kentucky, US",66799
+21187,Owen,Kentucky,US,"Owen, Kentucky, US",10901
+21189,Owsley,Kentucky,US,"Owsley, Kentucky, US",4415
+21191,Pendleton,Kentucky,US,"Pendleton, Kentucky, US",14590
+21193,Perry,Kentucky,US,"Perry, Kentucky, US",25758
+21195,Pike,Kentucky,US,"Pike, Kentucky, US",57876
+21197,Powell,Kentucky,US,"Powell, Kentucky, US",12359
+21199,Pulaski,Kentucky,US,"Pulaski, Kentucky, US",64979
+21203,Rockcastle,Kentucky,US,"Rockcastle, Kentucky, US",16695
+21205,Rowan,Kentucky,US,"Rowan, Kentucky, US",24460
+21207,Russell,Kentucky,US,"Russell, Kentucky, US",17923
+21209,Scott,Kentucky,US,"Scott, Kentucky, US",57004
+21211,Shelby,Kentucky,US,"Shelby, Kentucky, US",49024
+21213,Simpson,Kentucky,US,"Simpson, Kentucky, US",18572
+21215,Spencer,Kentucky,US,"Spencer, Kentucky, US",19351
+21217,Taylor,Kentucky,US,"Taylor, Kentucky, US",25769
+21219,Todd,Kentucky,US,"Todd, Kentucky, US",12294
+21221,Trigg,Kentucky,US,"Trigg, Kentucky, US",14651
+21223,Trimble,Kentucky,US,"Trimble, Kentucky, US",8471
+90021,Unassigned,Kentucky,US,"Unassigned, Kentucky, US",#DIV/0!
+21225,Union,Kentucky,US,"Union, Kentucky, US",14381
+21227,Warren,Kentucky,US,"Warren, Kentucky, US",132896
+21229,Washington,Kentucky,US,"Washington, Kentucky, US",12095
+21231,Wayne,Kentucky,US,"Wayne, Kentucky, US",20333
+21233,Webster,Kentucky,US,"Webster, Kentucky, US",12942
+21235,Whitley,Kentucky,US,"Whitley, Kentucky, US",36264
+21237,Wolfe,Kentucky,US,"Wolfe, Kentucky, US",7157
+21239,Woodford,Kentucky,US,"Woodford, Kentucky, US",26734
+22001,Acadia,Louisiana,US,"Acadia, Louisiana, US",62045
+22003,Allen,Louisiana,US,"Allen, Louisiana, US",25627
+22005,Ascension,Louisiana,US,"Ascension, Louisiana, US",126604
+22007,Assumption,Louisiana,US,"Assumption, Louisiana, US",21891
+22009,Avoyelles,Louisiana,US,"Avoyelles, Louisiana, US",40144
+22011,Beauregard,Louisiana,US,"Beauregard, Louisiana, US",37497
+22013,Bienville,Louisiana,US,"Bienville, Louisiana, US",13241
+22015,Bossier,Louisiana,US,"Bossier, Louisiana, US",127039
+22017,Caddo,Louisiana,US,"Caddo, Louisiana, US",240204
+22019,Calcasieu,Louisiana,US,"Calcasieu, Louisiana, US",203436
+22021,Caldwell,Louisiana,US,"Caldwell, Louisiana, US",9918
+22023,Cameron,Louisiana,US,"Cameron, Louisiana, US",6973
+22025,Catahoula,Louisiana,US,"Catahoula, Louisiana, US",9494
+22027,Claiborne,Louisiana,US,"Claiborne, Louisiana, US",15670
+22029,Concordia,Louisiana,US,"Concordia, Louisiana, US",19259
+22031,De Soto,Louisiana,US,"De Soto, Louisiana, US",27463
+22033,East Baton Rouge,Louisiana,US,"East Baton Rouge, Louisiana, US",440059
+22035,East Carroll,Louisiana,US,"East Carroll, Louisiana, US",6861
+22037,East Feliciana,Louisiana,US,"East Feliciana, Louisiana, US",19135
+22039,Evangeline,Louisiana,US,"Evangeline, Louisiana, US",33395
+22041,Franklin,Louisiana,US,"Franklin, Louisiana, US",20015
+22043,Grant,Louisiana,US,"Grant, Louisiana, US",22389
+22045,Iberia,Louisiana,US,"Iberia, Louisiana, US",69830
+22047,Iberville,Louisiana,US,"Iberville, Louisiana, US",32511
+22049,Jackson,Louisiana,US,"Jackson, Louisiana, US",15744
+22051,Jefferson,Louisiana,US,"Jefferson, Louisiana, US",432493
+22053,Jefferson Davis,Louisiana,US,"Jefferson Davis, Louisiana, US",31368
+22055,Lafayette,Louisiana,US,"Lafayette, Louisiana, US",244390
+22057,Lafourche,Louisiana,US,"Lafourche, Louisiana, US",97614
+22059,LaSalle,Louisiana,US,"LaSalle, Louisiana, US",14892
+22061,Lincoln,Louisiana,US,"Lincoln, Louisiana, US",46742
+22063,Livingston,Louisiana,US,"Livingston, Louisiana, US",140789
+22065,Madison,Louisiana,US,"Madison, Louisiana, US",10951
+22067,Morehouse,Louisiana,US,"Morehouse, Louisiana, US",24874
+22069,Natchitoches,Louisiana,US,"Natchitoches, Louisiana, US",38158
+22071,Orleans,Louisiana,US,"Orleans, Louisiana, US",390144
+22073,Ouachita,Louisiana,US,"Ouachita, Louisiana, US",153279
+22075,Plaquemines,Louisiana,US,"Plaquemines, Louisiana, US",23197
+22077,Pointe Coupee,Louisiana,US,"Pointe Coupee, Louisiana, US",21730
+22079,Rapides,Louisiana,US,"Rapides, Louisiana, US",129648
+22081,Red River,Louisiana,US,"Red River, Louisiana, US",8442
+22083,Richland,Louisiana,US,"Richland, Louisiana, US",20122
+22085,Sabine,Louisiana,US,"Sabine, Louisiana, US",23884
+22087,St. Bernard,Louisiana,US,"St. Bernard, Louisiana, US",47244
+22089,St. Charles,Louisiana,US,"St. Charles, Louisiana, US",53100
+22091,St. Helena,Louisiana,US,"St. Helena, Louisiana, US",10132
+22093,St. James,Louisiana,US,"St. James, Louisiana, US",21096
+22095,St. John the Baptist,Louisiana,US,"St. John the Baptist, Louisiana, US",42837
+22097,St. Landry,Louisiana,US,"St. Landry, Louisiana, US",82124
+22099,St. Martin,Louisiana,US,"St. Martin, Louisiana, US",53431
+22101,St. Mary,Louisiana,US,"St. Mary, Louisiana, US",49348
+22103,St. Tammany,Louisiana,US,"St. Tammany, Louisiana, US",260419
+22105,Tangipahoa,Louisiana,US,"Tangipahoa, Louisiana, US",134758
+22107,Tensas,Louisiana,US,"Tensas, Louisiana, US",4334
+22109,Terrebonne,Louisiana,US,"Terrebonne, Louisiana, US",110461
+90022,Unassigned,Louisiana,US,"Unassigned, Louisiana, US",#DIV/0!
+22111,Union,Louisiana,US,"Union, Louisiana, US",22108
+22113,Vermilion,Louisiana,US,"Vermilion, Louisiana, US",59511
+22115,Vernon,Louisiana,US,"Vernon, Louisiana, US",47429
+22117,Washington,Louisiana,US,"Washington, Louisiana, US",46194
+22119,Webster,Louisiana,US,"Webster, Louisiana, US",38340
+22121,West Baton Rouge,Louisiana,US,"West Baton Rouge, Louisiana, US",26465
+22123,West Carroll,Louisiana,US,"West Carroll, Louisiana, US",10830
+22125,West Feliciana,Louisiana,US,"West Feliciana, Louisiana, US",15568
+22127,Winn,Louisiana,US,"Winn, Louisiana, US",13904
+23001,Androscoggin,Maine,US,"Androscoggin, Maine, US",108277
+23003,Aroostook,Maine,US,"Aroostook, Maine, US",67055
+23005,Cumberland,Maine,US,"Cumberland, Maine, US",295003
+23007,Franklin,Maine,US,"Franklin, Maine, US",30199
+23009,Hancock,Maine,US,"Hancock, Maine, US",54987
+23011,Kennebec,Maine,US,"Kennebec, Maine, US",122302
+23013,Knox,Maine,US,"Knox, Maine, US",39772
+23015,Lincoln,Maine,US,"Lincoln, Maine, US",34634
+23017,Oxford,Maine,US,"Oxford, Maine, US",57975
+23019,Penobscot,Maine,US,"Penobscot, Maine, US",152148
+23021,Piscataquis,Maine,US,"Piscataquis, Maine, US",16785
+23023,Sagadahoc,Maine,US,"Sagadahoc, Maine, US",35856
+23025,Somerset,Maine,US,"Somerset, Maine, US",50484
+90023,Unassigned,Maine,US,"Unassigned, Maine, US",#DIV/0!
+23027,Waldo,Maine,US,"Waldo, Maine, US",39715
+23029,Washington,Maine,US,"Washington, Maine, US",31379
+23031,York,Maine,US,"York, Maine, US",207641
+24001,Allegany,Maryland,US,"Allegany, Maryland, US",70416
+24003,Anne Arundel,Maryland,US,"Anne Arundel, Maryland, US",579234
+24005,Baltimore,Maryland,US,"Baltimore, Maryland, US",827370
+24510,Baltimore City,Maryland,US,"Baltimore City, Maryland, US",593490
+24009,Calvert,Maryland,US,"Calvert, Maryland, US",92525
+24011,Caroline,Maryland,US,"Caroline, Maryland, US",33406
+24013,Carroll,Maryland,US,"Carroll, Maryland, US",168447
+24015,Cecil,Maryland,US,"Cecil, Maryland, US",102855
+24017,Charles,Maryland,US,"Charles, Maryland, US",163257
+24019,Dorchester,Maryland,US,"Dorchester, Maryland, US",31929
+24021,Frederick,Maryland,US,"Frederick, Maryland, US",259547
+24023,Garrett,Maryland,US,"Garrett, Maryland, US",29014
+24025,Harford,Maryland,US,"Harford, Maryland, US",255441
+24027,Howard,Maryland,US,"Howard, Maryland, US",325690
+24029,Kent,Maryland,US,"Kent, Maryland, US",19422
+24031,Montgomery,Maryland,US,"Montgomery, Maryland, US",1050688
+24033,Prince George's,Maryland,US,"Prince George's, Maryland, US",909327
+24035,Queen Anne's,Maryland,US,"Queen Anne's, Maryland, US",50381
+24039,Somerset,Maryland,US,"Somerset, Maryland, US",25616
+24037,St. Mary's,Maryland,US,"St. Mary's, Maryland, US",113510
+24041,Talbot,Maryland,US,"Talbot, Maryland, US",37181
+90024,Unassigned,Maryland,US,"Unassigned, Maryland, US",#DIV/0!
+24043,Washington,Maryland,US,"Washington, Maryland, US",151049
+24045,Wicomico,Maryland,US,"Wicomico, Maryland, US",103609
+24047,Worcester,Maryland,US,"Worcester, Maryland, US",52276
+25001,Barnstable,Massachusetts,US,"Barnstable, Massachusetts, US",212990
+25003,Berkshire,Massachusetts,US,"Berkshire, Massachusetts, US",124944
+25005,Bristol,Massachusetts,US,"Bristol, Massachusetts, US",565217
+,Dukes and Nantucket,Massachusetts,US,"Dukes and Nantucket, Massachusetts, US",28731
+25009,Essex,Massachusetts,US,"Essex, Massachusetts, US",789034
+25011,Franklin,Massachusetts,US,"Franklin, Massachusetts, US",70180
+25013,Hampden,Massachusetts,US,"Hampden, Massachusetts, US",466372
+25015,Hampshire,Massachusetts,US,"Hampshire, Massachusetts, US",160830
+25017,Middlesex,Massachusetts,US,"Middlesex, Massachusetts, US",1611699
+25021,Norfolk,Massachusetts,US,"Norfolk, Massachusetts, US",706775
+25023,Plymouth,Massachusetts,US,"Plymouth, Massachusetts, US",521202
+25025,Suffolk,Massachusetts,US,"Suffolk, Massachusetts, US",803907
+90025,Unassigned,Massachusetts,US,"Unassigned, Massachusetts, US",#DIV/0!
+25027,Worcester,Massachusetts,US,"Worcester, Massachusetts, US",830622
+26001,Alcona,Michigan,US,"Alcona, Michigan, US",10405
+26005,Allegan,Michigan,US,"Allegan, Michigan, US",118081
+26007,Alpena,Michigan,US,"Alpena, Michigan, US",28405
+26009,Antrim,Michigan,US,"Antrim, Michigan, US",23324
+26011,Arenac,Michigan,US,"Arenac, Michigan, US",14883
+26013,Baraga,Michigan,US,"Baraga, Michigan, US",8209
+26015,Barry,Michigan,US,"Barry, Michigan, US",61550
+26017,Bay,Michigan,US,"Bay, Michigan, US",103126
+26019,Benzie,Michigan,US,"Benzie, Michigan, US",17766
+26021,Berrien,Michigan,US,"Berrien, Michigan, US",153401
+26023,Branch,Michigan,US,"Branch, Michigan, US",43517
+26025,Calhoun,Michigan,US,"Calhoun, Michigan, US",134159
+26027,Cass,Michigan,US,"Cass, Michigan, US",51787
+26029,Charlevoix,Michigan,US,"Charlevoix, Michigan, US",26143
+26031,Cheboygan,Michigan,US,"Cheboygan, Michigan, US",25276
+26033,Chippewa,Michigan,US,"Chippewa, Michigan, US",37349
+26035,Clare,Michigan,US,"Clare, Michigan, US",30950
+26037,Clinton,Michigan,US,"Clinton, Michigan, US",79595
+26039,Crawford,Michigan,US,"Crawford, Michigan, US",14029
+26041,Delta,Michigan,US,"Delta, Michigan, US",35784
+26043,Dickinson,Michigan,US,"Dickinson, Michigan, US",25239
+26045,Eaton,Michigan,US,"Eaton, Michigan, US",110268
+26047,Emmet,Michigan,US,"Emmet, Michigan, US",33415
+,Federal Correctional Institution (FCI),Michigan,US,"Federal Correctional Institution (FCI), Michigan, US",#DIV/0!
+26049,Genesee,Michigan,US,"Genesee, Michigan, US",405813
+26051,Gladwin,Michigan,US,"Gladwin, Michigan, US",25449
+26053,Gogebic,Michigan,US,"Gogebic, Michigan, US",13975
+26055,Grand Traverse,Michigan,US,"Grand Traverse, Michigan, US",93088
+26057,Gratiot,Michigan,US,"Gratiot, Michigan, US",40711
+26059,Hillsdale,Michigan,US,"Hillsdale, Michigan, US",45605
+26061,Houghton,Michigan,US,"Houghton, Michigan, US",35684
+26063,Huron,Michigan,US,"Huron, Michigan, US",30981
+26065,Ingham,Michigan,US,"Ingham, Michigan, US",292406
+26067,Ionia,Michigan,US,"Ionia, Michigan, US",64697
+26069,Iosco,Michigan,US,"Iosco, Michigan, US",25127
+26073,Isabella,Michigan,US,"Isabella, Michigan, US",69872
+26075,Jackson,Michigan,US,"Jackson, Michigan, US",158510
+26077,Kalamazoo,Michigan,US,"Kalamazoo, Michigan, US",265066
+26079,Kalkaska,Michigan,US,"Kalkaska, Michigan, US",18038
+26081,Kent,Michigan,US,"Kent, Michigan, US",656955
+26085,Lake,Michigan,US,"Lake, Michigan, US",11853
+26087,Lapeer,Michigan,US,"Lapeer, Michigan, US",87607
+26089,Leelanau,Michigan,US,"Leelanau, Michigan, US",21761
+26091,Lenawee,Michigan,US,"Lenawee, Michigan, US",98451
+26093,Livingston,Michigan,US,"Livingston, Michigan, US",191995
+26095,Luce,Michigan,US,"Luce, Michigan, US",6229
+26097,Mackinac,Michigan,US,"Mackinac, Michigan, US",10799
+26099,Macomb,Michigan,US,"Macomb, Michigan, US",873972
+26101,Manistee,Michigan,US,"Manistee, Michigan, US",24558
+26103,Marquette,Michigan,US,"Marquette, Michigan, US",66699
+26105,Mason,Michigan,US,"Mason, Michigan, US",29144
+26107,Mecosta,Michigan,US,"Mecosta, Michigan, US",43453
+26109,Menominee,Michigan,US,"Menominee, Michigan, US",22780
+,Michigan Department of Corrections (MDOC),Michigan,US,"Michigan Department of Corrections (MDOC), Michigan, US",#DIV/0!
+26111,Midland,Michigan,US,"Midland, Michigan, US",83156
+26113,Missaukee,Michigan,US,"Missaukee, Michigan, US",15118
+26115,Monroe,Michigan,US,"Monroe, Michigan, US",150500
+26117,Montcalm,Michigan,US,"Montcalm, Michigan, US",63888
+26119,Montmorency,Michigan,US,"Montmorency, Michigan, US",9328
+26121,Muskegon,Michigan,US,"Muskegon, Michigan, US",173566
+26123,Newaygo,Michigan,US,"Newaygo, Michigan, US",48980
+26125,Oakland,Michigan,US,"Oakland, Michigan, US",1257584
+26127,Oceana,Michigan,US,"Oceana, Michigan, US",26467
+26129,Ogemaw,Michigan,US,"Ogemaw, Michigan, US",20997
+26131,Ontonagon,Michigan,US,"Ontonagon, Michigan, US",#DIV/0!
+26133,Osceola,Michigan,US,"Osceola, Michigan, US",23460
+26135,Oscoda,Michigan,US,"Oscoda, Michigan, US",8241
+26137,Otsego,Michigan,US,"Otsego, Michigan, US",24668
+26139,Ottawa,Michigan,US,"Ottawa, Michigan, US",291830
+80026,Out of MI,Michigan,US,"Out of MI, Michigan, US",#DIV/0!
+26141,Presque Isle,Michigan,US,"Presque Isle, Michigan, US",12592
+26143,Roscommon,Michigan,US,"Roscommon, Michigan, US",24019
+26145,Saginaw,Michigan,US,"Saginaw, Michigan, US",190539
+26151,Sanilac,Michigan,US,"Sanilac, Michigan, US",41170
+26153,Schoolcraft,Michigan,US,"Schoolcraft, Michigan, US",8094
+26155,Shiawassee,Michigan,US,"Shiawassee, Michigan, US",68122
+26147,St. Clair,Michigan,US,"St. Clair, Michigan, US",159128
+26149,St. Joseph,Michigan,US,"St. Joseph, Michigan, US",60964
+26157,Tuscola,Michigan,US,"Tuscola, Michigan, US",52245
+90026,Unassigned,Michigan,US,"Unassigned, Michigan, US",#DIV/0!
+26159,Van Buren,Michigan,US,"Van Buren, Michigan, US",75677
+26161,Washtenaw,Michigan,US,"Washtenaw, Michigan, US",367601
+26163,Wayne,Michigan,US,"Wayne, Michigan, US",1749343
+26165,Wexford,Michigan,US,"Wexford, Michigan, US",33631
+27001,Aitkin,Minnesota,US,"Aitkin, Minnesota, US",15886
+27003,Anoka,Minnesota,US,"Anoka, Minnesota, US",356921
+27005,Becker,Minnesota,US,"Becker, Minnesota, US",34423
+27007,Beltrami,Minnesota,US,"Beltrami, Minnesota, US",47188
+27009,Benton,Minnesota,US,"Benton, Minnesota, US",40889
+27011,Big Stone,Minnesota,US,"Big Stone, Minnesota, US",4991
+27013,Blue Earth,Minnesota,US,"Blue Earth, Minnesota, US",67653
+27015,Brown,Minnesota,US,"Brown, Minnesota, US",25008
+27017,Carlton,Minnesota,US,"Carlton, Minnesota, US",35871
+27019,Carver,Minnesota,US,"Carver, Minnesota, US",105089
+27021,Cass,Minnesota,US,"Cass, Minnesota, US",29779
+27023,Chippewa,Minnesota,US,"Chippewa, Minnesota, US",11800
+27025,Chisago,Minnesota,US,"Chisago, Minnesota, US",56579
+27027,Clay,Minnesota,US,"Clay, Minnesota, US",64222
+27029,Clearwater,Minnesota,US,"Clearwater, Minnesota, US",8818
+27033,Cottonwood,Minnesota,US,"Cottonwood, Minnesota, US",11196
+27035,Crow Wing,Minnesota,US,"Crow Wing, Minnesota, US",65055
+27037,Dakota,Minnesota,US,"Dakota, Minnesota, US",429021
+27039,Dodge,Minnesota,US,"Dodge, Minnesota, US",20934
+27041,Douglas,Minnesota,US,"Douglas, Minnesota, US",38141
+27043,Faribault,Minnesota,US,"Faribault, Minnesota, US",13653
+27045,Fillmore,Minnesota,US,"Fillmore, Minnesota, US",21067
+27047,Freeborn,Minnesota,US,"Freeborn, Minnesota, US",30281
+27049,Goodhue,Minnesota,US,"Goodhue, Minnesota, US",46340
+27051,Grant,Minnesota,US,"Grant, Minnesota, US",5972
+27053,Hennepin,Minnesota,US,"Hennepin, Minnesota, US",1265843
+27055,Houston,Minnesota,US,"Houston, Minnesota, US",18600
+27057,Hubbard,Minnesota,US,"Hubbard, Minnesota, US",21491
+27059,Isanti,Minnesota,US,"Isanti, Minnesota, US",40596
+27061,Itasca,Minnesota,US,"Itasca, Minnesota, US",45130
+27063,Jackson,Minnesota,US,"Jackson, Minnesota, US",9846
+27065,Kanabec,Minnesota,US,"Kanabec, Minnesota, US",16337
+27067,Kandiyohi,Minnesota,US,"Kandiyohi, Minnesota, US",43199
+27069,Kittson,Minnesota,US,"Kittson, Minnesota, US",4298
+27071,Koochiching,Minnesota,US,"Koochiching, Minnesota, US",12229
+27073,Lac qui Parle,Minnesota,US,"Lac qui Parle, Minnesota, US",6623
+27075,Lake,Minnesota,US,"Lake, Minnesota, US",10641
+27079,Le Sueur,Minnesota,US,"Le Sueur, Minnesota, US",28887
+27081,Lincoln,Minnesota,US,"Lincoln, Minnesota, US",5639
+27083,Lyon,Minnesota,US,"Lyon, Minnesota, US",25474
+27087,Mahnomen,Minnesota,US,"Mahnomen, Minnesota, US",5527
+27089,Marshall,Minnesota,US,"Marshall, Minnesota, US",9336
+27091,Martin,Minnesota,US,"Martin, Minnesota, US",19683
+27085,McLeod,Minnesota,US,"McLeod, Minnesota, US",35893
+27093,Meeker,Minnesota,US,"Meeker, Minnesota, US",23222
+27095,Mille Lacs,Minnesota,US,"Mille Lacs, Minnesota, US",26277
+27097,Morrison,Minnesota,US,"Morrison, Minnesota, US",33386
+27099,Mower,Minnesota,US,"Mower, Minnesota, US",40062
+27101,Murray,Minnesota,US,"Murray, Minnesota, US",8194
+27103,Nicollet,Minnesota,US,"Nicollet, Minnesota, US",34274
+27105,Nobles,Minnesota,US,"Nobles, Minnesota, US",21629
+27107,Norman,Minnesota,US,"Norman, Minnesota, US",6375
+27109,Olmsted,Minnesota,US,"Olmsted, Minnesota, US",158293
+27111,Otter Tail,Minnesota,US,"Otter Tail, Minnesota, US",58746
+27113,Pennington,Minnesota,US,"Pennington, Minnesota, US",14119
+27115,Pine,Minnesota,US,"Pine, Minnesota, US",29579
+27117,Pipestone,Minnesota,US,"Pipestone, Minnesota, US",9126
+27119,Polk,Minnesota,US,"Polk, Minnesota, US",31364
+27121,Pope,Minnesota,US,"Pope, Minnesota, US",11249
+27123,Ramsey,Minnesota,US,"Ramsey, Minnesota, US",550321
+27125,Red Lake,Minnesota,US,"Red Lake, Minnesota, US",4055
+27127,Redwood,Minnesota,US,"Redwood, Minnesota, US",15170
+27129,Renville,Minnesota,US,"Renville, Minnesota, US",14548
+27131,Rice,Minnesota,US,"Rice, Minnesota, US",66972
+27133,Rock,Minnesota,US,"Rock, Minnesota, US",9315
+27135,Roseau,Minnesota,US,"Roseau, Minnesota, US",15165
+27139,Scott,Minnesota,US,"Scott, Minnesota, US",149013
+27141,Sherburne,Minnesota,US,"Sherburne, Minnesota, US",97238
+27143,Sibley,Minnesota,US,"Sibley, Minnesota, US",14865
+27137,St. Louis,Minnesota,US,"St. Louis, Minnesota, US",199070
+27145,Stearns,Minnesota,US,"Stearns, Minnesota, US",161075
+27147,Steele,Minnesota,US,"Steele, Minnesota, US",36649
+27149,Stevens,Minnesota,US,"Stevens, Minnesota, US",9805
+27151,Swift,Minnesota,US,"Swift, Minnesota, US",9266
+27153,Todd,Minnesota,US,"Todd, Minnesota, US",24664
+27155,Traverse,Minnesota,US,"Traverse, Minnesota, US",3259
+90027,Unassigned,Minnesota,US,"Unassigned, Minnesota, US",#DIV/0!
+27157,Wabasha,Minnesota,US,"Wabasha, Minnesota, US",21627
+27159,Wadena,Minnesota,US,"Wadena, Minnesota, US",13682
+27161,Waseca,Minnesota,US,"Waseca, Minnesota, US",18612
+27163,Washington,Minnesota,US,"Washington, Minnesota, US",262440
+27165,Watonwan,Minnesota,US,"Watonwan, Minnesota, US",10897
+27167,Wilkin,Minnesota,US,"Wilkin, Minnesota, US",6207
+27169,Winona,Minnesota,US,"Winona, Minnesota, US",50484
+27171,Wright,Minnesota,US,"Wright, Minnesota, US",138377
+27173,Yellow Medicine,Minnesota,US,"Yellow Medicine, Minnesota, US",9709
+28001,Adams,Mississippi,US,"Adams, Mississippi, US",30693
+28003,Alcorn,Mississippi,US,"Alcorn, Mississippi, US",36953
+28005,Amite,Mississippi,US,"Amite, Mississippi, US",12297
+28007,Attala,Mississippi,US,"Attala, Mississippi, US",18174
+28009,Benton,Mississippi,US,"Benton, Mississippi, US",8259
+28011,Bolivar,Mississippi,US,"Bolivar, Mississippi, US",30628
+28013,Calhoun,Mississippi,US,"Calhoun, Mississippi, US",14361
+28015,Carroll,Mississippi,US,"Carroll, Mississippi, US",9947
+28017,Chickasaw,Mississippi,US,"Chickasaw, Mississippi, US",17103
+28019,Choctaw,Mississippi,US,"Choctaw, Mississippi, US",8210
+28021,Claiborne,Mississippi,US,"Claiborne, Mississippi, US",8988
+28023,Clarke,Mississippi,US,"Clarke, Mississippi, US",15541
+28025,Clay,Mississippi,US,"Clay, Mississippi, US",19316
+28027,Coahoma,Mississippi,US,"Coahoma, Mississippi, US",22124
+28029,Copiah,Mississippi,US,"Copiah, Mississippi, US",28065
+28031,Covington,Mississippi,US,"Covington, Mississippi, US",18636
+28033,DeSoto,Mississippi,US,"DeSoto, Mississippi, US",184945
+28035,Forrest,Mississippi,US,"Forrest, Mississippi, US",74897
+28037,Franklin,Mississippi,US,"Franklin, Mississippi, US",7713
+28039,George,Mississippi,US,"George, Mississippi, US",24500
+28041,Greene,Mississippi,US,"Greene, Mississippi, US",13586
+28043,Grenada,Mississippi,US,"Grenada, Mississippi, US",20758
+28045,Hancock,Mississippi,US,"Hancock, Mississippi, US",47632
+28047,Harrison,Mississippi,US,"Harrison, Mississippi, US",208080
+28049,Hinds,Mississippi,US,"Hinds, Mississippi, US",231840
+28051,Holmes,Mississippi,US,"Holmes, Mississippi, US",17010
+28053,Humphreys,Mississippi,US,"Humphreys, Mississippi, US",8064
+28057,Itawamba,Mississippi,US,"Itawamba, Mississippi, US",23390
+28059,Jackson,Mississippi,US,"Jackson, Mississippi, US",143617
+28061,Jasper,Mississippi,US,"Jasper, Mississippi, US",16383
+28063,Jefferson,Mississippi,US,"Jefferson, Mississippi, US",6990
+28065,Jefferson Davis,Mississippi,US,"Jefferson Davis, Mississippi, US",11128
+28067,Jones,Mississippi,US,"Jones, Mississippi, US",68098
+28069,Kemper,Mississippi,US,"Kemper, Mississippi, US",9742
+28071,Lafayette,Mississippi,US,"Lafayette, Mississippi, US",54019
+28073,Lamar,Mississippi,US,"Lamar, Mississippi, US",63343
+28075,Lauderdale,Mississippi,US,"Lauderdale, Mississippi, US",74125
+28077,Lawrence,Mississippi,US,"Lawrence, Mississippi, US",12586
+28079,Leake,Mississippi,US,"Leake, Mississippi, US",22786
+28081,Lee,Mississippi,US,"Lee, Mississippi, US",85436
+28083,Leflore,Mississippi,US,"Leflore, Mississippi, US",28183
+28085,Lincoln,Mississippi,US,"Lincoln, Mississippi, US",34153
+28087,Lowndes,Mississippi,US,"Lowndes, Mississippi, US",58595
+28089,Madison,Mississippi,US,"Madison, Mississippi, US",106272
+28091,Marion,Mississippi,US,"Marion, Mississippi, US",24573
+28093,Marshall,Mississippi,US,"Marshall, Mississippi, US",35294
+28095,Monroe,Mississippi,US,"Monroe, Mississippi, US",35252
+28097,Montgomery,Mississippi,US,"Montgomery, Mississippi, US",9775
+28099,Neshoba,Mississippi,US,"Neshoba, Mississippi, US",29118
+28101,Newton,Mississippi,US,"Newton, Mississippi, US",21018
+28103,Noxubee,Mississippi,US,"Noxubee, Mississippi, US",10417
+28105,Oktibbeha,Mississippi,US,"Oktibbeha, Mississippi, US",49587
+28107,Panola,Mississippi,US,"Panola, Mississippi, US",34192
+28109,Pearl River,Mississippi,US,"Pearl River, Mississippi, US",55535
+28111,Perry,Mississippi,US,"Perry, Mississippi, US",11973
+28113,Pike,Mississippi,US,"Pike, Mississippi, US",39288
+28115,Pontotoc,Mississippi,US,"Pontotoc, Mississippi, US",32174
+28117,Prentiss,Mississippi,US,"Prentiss, Mississippi, US",25126
+28119,Quitman,Mississippi,US,"Quitman, Mississippi, US",6792
+28121,Rankin,Mississippi,US,"Rankin, Mississippi, US",155271
+28123,Scott,Mississippi,US,"Scott, Mississippi, US",28124
+28125,Sharkey,Mississippi,US,"Sharkey, Mississippi, US",4321
+28127,Simpson,Mississippi,US,"Simpson, Mississippi, US",26658
+28129,Smith,Mississippi,US,"Smith, Mississippi, US",15916
+28131,Stone,Mississippi,US,"Stone, Mississippi, US",18336
+28133,Sunflower,Mississippi,US,"Sunflower, Mississippi, US",25110
+28135,Tallahatchie,Mississippi,US,"Tallahatchie, Mississippi, US",13809
+28137,Tate,Mississippi,US,"Tate, Mississippi, US",28321
+28139,Tippah,Mississippi,US,"Tippah, Mississippi, US",22015
+28141,Tishomingo,Mississippi,US,"Tishomingo, Mississippi, US",19383
+28143,Tunica,Mississippi,US,"Tunica, Mississippi, US",9632
+90028,Unassigned,Mississippi,US,"Unassigned, Mississippi, US",#DIV/0!
+28145,Union,Mississippi,US,"Union, Mississippi, US",28815
+28147,Walthall,Mississippi,US,"Walthall, Mississippi, US",14286
+28149,Warren,Mississippi,US,"Warren, Mississippi, US",45381
+28151,Washington,Mississippi,US,"Washington, Mississippi, US",43909
+28153,Wayne,Mississippi,US,"Wayne, Mississippi, US",20183
+28155,Webster,Mississippi,US,"Webster, Mississippi, US",9689
+28157,Wilkinson,Mississippi,US,"Wilkinson, Mississippi, US",8630
+28159,Winston,Mississippi,US,"Winston, Mississippi, US",17955
+28161,Yalobusha,Mississippi,US,"Yalobusha, Mississippi, US",12108
+28163,Yazoo,Mississippi,US,"Yazoo, Mississippi, US",29690
+29001,Adair,Missouri,US,"Adair, Missouri, US",25343
+29003,Andrew,Missouri,US,"Andrew, Missouri, US",17712
+29005,Atchison,Missouri,US,"Atchison, Missouri, US",5143
+29007,Audrain,Missouri,US,"Audrain, Missouri, US",25388
+29009,Barry,Missouri,US,"Barry, Missouri, US",35789
+29013,Bates,Missouri,US,"Bates, Missouri, US",16172
+29015,Benton,Missouri,US,"Benton, Missouri, US",19443
+29017,Bollinger,Missouri,US,"Bollinger, Missouri, US",12133
+29019,Boone,Missouri,US,"Boone, Missouri, US",180463
+29021,Buchanan,Missouri,US,"Buchanan, Missouri, US",87364
+29023,Butler,Missouri,US,"Butler, Missouri, US",42478
+29025,Caldwell,Missouri,US,"Caldwell, Missouri, US",9020
+29027,Callaway,Missouri,US,"Callaway, Missouri, US",44743
+29029,Camden,Missouri,US,"Camden, Missouri, US",46305
+29031,Cape Girardeau,Missouri,US,"Cape Girardeau, Missouri, US",78871
+29033,Carroll,Missouri,US,"Carroll, Missouri, US",8679
+29035,Carter,Missouri,US,"Carter, Missouri, US",5982
+29037,Cass,Missouri,US,"Cass, Missouri, US",105780
+29039,Cedar,Missouri,US,"Cedar, Missouri, US",14349
+29041,Chariton,Missouri,US,"Chariton, Missouri, US",7426
+29043,Christian,Missouri,US,"Christian, Missouri, US",88595
+29045,Clark,Missouri,US,"Clark, Missouri, US",6797
+29047,Clay,Missouri,US,"Clay, Missouri, US",249948
+29049,Clinton,Missouri,US,"Clinton, Missouri, US",20387
+29051,Cole,Missouri,US,"Cole, Missouri, US",76745
+29053,Cooper,Missouri,US,"Cooper, Missouri, US",17709
+29055,Crawford,Missouri,US,"Crawford, Missouri, US",23920
+29059,Dallas,Missouri,US,"Dallas, Missouri, US",16878
+29061,Daviess,Missouri,US,"Daviess, Missouri, US",8278
+29063,DeKalb,Missouri,US,"DeKalb, Missouri, US",12547
+29069,Dunklin,Missouri,US,"Dunklin, Missouri, US",29131
+29071,Franklin,Missouri,US,"Franklin, Missouri, US",103967
+29073,Gasconade,Missouri,US,"Gasconade, Missouri, US",14706
+29075,Gentry,Missouri,US,"Gentry, Missouri, US",6571
+29077,Greene,Missouri,US,"Greene, Missouri, US",293086
+29081,Harrison,Missouri,US,"Harrison, Missouri, US",8352
+29083,Henry,Missouri,US,"Henry, Missouri, US",21824
+29087,Holt,Missouri,US,"Holt, Missouri, US",4403
+29089,Howard,Missouri,US,"Howard, Missouri, US",10001
+29091,Howell,Missouri,US,"Howell, Missouri, US",40117
+29093,Iron,Missouri,US,"Iron, Missouri, US",10125
+29095,Jackson,Missouri,US,"Jackson, Missouri, US",703011
+29097,Jasper,Missouri,US,"Jasper, Missouri, US",121328
+29099,Jefferson,Missouri,US,"Jefferson, Missouri, US",225081
+29101,Johnson,Missouri,US,"Johnson, Missouri, US",54062
+,Kansas City,Missouri,US,"Kansas City, Missouri, US",488943
+29105,Laclede,Missouri,US,"Laclede, Missouri, US",35723
+29107,Lafayette,Missouri,US,"Lafayette, Missouri, US",32708
+29109,Lawrence,Missouri,US,"Lawrence, Missouri, US",38355
+29111,Lewis,Missouri,US,"Lewis, Missouri, US",9776
+29113,Lincoln,Missouri,US,"Lincoln, Missouri, US",59013
+29115,Linn,Missouri,US,"Linn, Missouri, US",11920
+29117,Livingston,Missouri,US,"Livingston, Missouri, US",15227
+29121,Macon,Missouri,US,"Macon, Missouri, US",15117
+29123,Madison,Missouri,US,"Madison, Missouri, US",12088
+29125,Maries,Missouri,US,"Maries, Missouri, US",8697
+29127,Marion,Missouri,US,"Marion, Missouri, US",28530
+29119,McDonald,Missouri,US,"McDonald, Missouri, US",22837
+29131,Miller,Missouri,US,"Miller, Missouri, US",25619
+29133,Mississippi,Missouri,US,"Mississippi, Missouri, US",13180
+29135,Moniteau,Missouri,US,"Moniteau, Missouri, US",16132
+29139,Montgomery,Missouri,US,"Montgomery, Missouri, US",11551
+29141,Morgan,Missouri,US,"Morgan, Missouri, US",20627
+29143,New Madrid,Missouri,US,"New Madrid, Missouri, US",17076
+29145,Newton,Missouri,US,"Newton, Missouri, US",58236
+29147,Nodaway,Missouri,US,"Nodaway, Missouri, US",22092
+29149,Oregon,Missouri,US,"Oregon, Missouri, US",10529
+29151,Osage,Missouri,US,"Osage, Missouri, US",13615
+29155,Pemiscot,Missouri,US,"Pemiscot, Missouri, US",15805
+29157,Perry,Missouri,US,"Perry, Missouri, US",19136
+29159,Pettis,Missouri,US,"Pettis, Missouri, US",42339
+29161,Phelps,Missouri,US,"Phelps, Missouri, US",44573
+29163,Pike,Missouri,US,"Pike, Missouri, US",18302
+29165,Platte,Missouri,US,"Platte, Missouri, US",104418
+29167,Polk,Missouri,US,"Polk, Missouri, US",32149
+29169,Pulaski,Missouri,US,"Pulaski, Missouri, US",52607
+29173,Ralls,Missouri,US,"Ralls, Missouri, US",10309
+29175,Randolph,Missouri,US,"Randolph, Missouri, US",24748
+29177,Ray,Missouri,US,"Ray, Missouri, US",23018
+29179,Reynolds,Missouri,US,"Reynolds, Missouri, US",6270
+29181,Ripley,Missouri,US,"Ripley, Missouri, US",13288
+29195,Saline,Missouri,US,"Saline, Missouri, US",22761
+29199,Scotland,Missouri,US,"Scotland, Missouri, US",4902
+29201,Scott,Missouri,US,"Scott, Missouri, US",38280
+29205,Shelby,Missouri,US,"Shelby, Missouri, US",5930
+29183,St. Charles,Missouri,US,"St. Charles, Missouri, US",402022
+29185,St. Clair,Missouri,US,"St. Clair, Missouri, US",9397
+29187,St. Francois,Missouri,US,"St. Francois, Missouri, US",67215
+29189,St. Louis,Missouri,US,"St. Louis, Missouri, US",994205
+29510,St. Louis City,Missouri,US,"St. Louis City, Missouri, US",299797
+29186,Ste. Genevieve,Missouri,US,"Ste. Genevieve, Missouri, US",17894
+29207,Stoddard,Missouri,US,"Stoddard, Missouri, US",29025
+29209,Stone,Missouri,US,"Stone, Missouri, US",31952
+29211,Sullivan,Missouri,US,"Sullivan, Missouri, US",6089
+29213,Taney,Missouri,US,"Taney, Missouri, US",55928
+29215,Texas,Missouri,US,"Texas, Missouri, US",25398
+90029,Unassigned,Missouri,US,"Unassigned, Missouri, US",#DIV/0!
+29217,Vernon,Missouri,US,"Vernon, Missouri, US",20563
+29219,Warren,Missouri,US,"Warren, Missouri, US",35649
+29221,Washington,Missouri,US,"Washington, Missouri, US",24730
+29225,Webster,Missouri,US,"Webster, Missouri, US",39592
+29227,Worth,Missouri,US,"Worth, Missouri, US",2013
+29229,Wright,Missouri,US,"Wright, Missouri, US",18289
+30001,Beaverhead,Montana,US,"Beaverhead, Montana, US",9453
+30003,Big Horn,Montana,US,"Big Horn, Montana, US",13319
+30007,Broadwater,Montana,US,"Broadwater, Montana, US",6237
+30009,Carbon,Montana,US,"Carbon, Montana, US",10725
+30013,Cascade,Montana,US,"Cascade, Montana, US",81366
+30023,Deer Lodge,Montana,US,"Deer Lodge, Montana, US",9140
+30027,Fergus,Montana,US,"Fergus, Montana, US",#DIV/0!
+30029,Flathead,Montana,US,"Flathead, Montana, US",103806
+30031,Gallatin,Montana,US,"Gallatin, Montana, US",114434
+30035,Glacier,Montana,US,"Glacier, Montana, US",13753
+30037,Golden Valley,Montana,US,"Golden Valley, Montana, US",821
+30041,Hill,Montana,US,"Hill, Montana, US",16484
+30043,Jefferson,Montana,US,"Jefferson, Montana, US",12221
+30047,Lake,Montana,US,"Lake, Montana, US",30458
+30049,Lewis and Clark,Montana,US,"Lewis and Clark, Montana, US",69432
+30051,Liberty,Montana,US,"Liberty, Montana, US",2337
+30053,Lincoln,Montana,US,"Lincoln, Montana, US",19980
+30057,Madison,Montana,US,"Madison, Montana, US",8600
+30059,Meagher,Montana,US,"Meagher, Montana, US",1862
+30063,Missoula,Montana,US,"Missoula, Montana, US",119600
+30065,Musselshell,Montana,US,"Musselshell, Montana, US",4633
+30067,Park,Montana,US,"Park, Montana, US",16606
+30073,Pondera,Montana,US,"Pondera, Montana, US",5911
+30081,Ravalli,Montana,US,"Ravalli, Montana, US",43806
+30083,Richland,Montana,US,"Richland, Montana, US",10803
+30085,Roosevelt,Montana,US,"Roosevelt, Montana, US",11004
+30093,Silver Bow,Montana,US,"Silver Bow, Montana, US",34915
+30095,Stillwater,Montana,US,"Stillwater, Montana, US",9642
+30101,Toole,Montana,US,"Toole, Montana, US",4736
+90030,Unassigned,Montana,US,"Unassigned, Montana, US",#DIV/0!
+30107,Wheatland,Montana,US,"Wheatland, Montana, US",2126
+30111,Yellowstone,Montana,US,"Yellowstone, Montana, US",161300
+31001,Adams,Nebraska,US,"Adams, Nebraska, US",31363
+31003,Antelope,Nebraska,US,"Antelope, Nebraska, US",6298
+31005,Arthur,Nebraska,US,"Arthur, Nebraska, US",#DIV/0!
+31011,Boone,Nebraska,US,"Boone, Nebraska, US",5192
+31013,Box Butte,Nebraska,US,"Box Butte, Nebraska, US",10783
+31019,Buffalo,Nebraska,US,"Buffalo, Nebraska, US",49659
+31021,Burt,Nebraska,US,"Burt, Nebraska, US",6459
+31023,Butler,Nebraska,US,"Butler, Nebraska, US",8016
+31025,Cass,Nebraska,US,"Cass, Nebraska, US",26248
+31027,Cedar,Nebraska,US,"Cedar, Nebraska, US",8402
+31029,Chase,Nebraska,US,"Chase, Nebraska, US",3924
+31031,Cherry,Nebraska,US,"Cherry, Nebraska, US",5689
+31033,Cheyenne,Nebraska,US,"Cheyenne, Nebraska, US",8910
+31035,Clay,Nebraska,US,"Clay, Nebraska, US",6203
+31037,Colfax,Nebraska,US,"Colfax, Nebraska, US",10709
+31039,Cuming,Nebraska,US,"Cuming, Nebraska, US",8846
+31041,Custer,Nebraska,US,"Custer, Nebraska, US",10777
+31043,Dakota,Nebraska,US,"Dakota, Nebraska, US",20026
+31045,Dawes,Nebraska,US,"Dawes, Nebraska, US",8589
+31047,Dawson,Nebraska,US,"Dawson, Nebraska, US",23595
+31051,Dixon,Nebraska,US,"Dixon, Nebraska, US",5636
+31053,Dodge,Nebraska,US,"Dodge, Nebraska, US",36565
+31055,Douglas,Nebraska,US,"Douglas, Nebraska, US",571327
+31059,Fillmore,Nebraska,US,"Fillmore, Nebraska, US",5462
+31061,Franklin,Nebraska,US,"Franklin, Nebraska, US",2979
+31063,Frontier,Nebraska,US,"Frontier, Nebraska, US",2627
+31065,Furnas,Nebraska,US,"Furnas, Nebraska, US",4676
+31067,Gage,Nebraska,US,"Gage, Nebraska, US",21513
+31071,Garfield,Nebraska,US,"Garfield, Nebraska, US",#DIV/0!
+31073,Gosper,Nebraska,US,"Gosper, Nebraska, US",1990
+31077,Greeley,Nebraska,US,"Greeley, Nebraska, US",2356
+31079,Hall,Nebraska,US,"Hall, Nebraska, US",61353
+31081,Hamilton,Nebraska,US,"Hamilton, Nebraska, US",9324
+31083,Harlan,Nebraska,US,"Harlan, Nebraska, US",#DIV/0!
+31087,Hitchcock,Nebraska,US,"Hitchcock, Nebraska, US",2762
+31089,Holt,Nebraska,US,"Holt, Nebraska, US",10067
+31091,Hooker,Nebraska,US,"Hooker, Nebraska, US",#DIV/0!
+31093,Howard,Nebraska,US,"Howard, Nebraska, US",6445
+31095,Jefferson,Nebraska,US,"Jefferson, Nebraska, US",7046
+31097,Johnson,Nebraska,US,"Johnson, Nebraska, US",5071
+31099,Kearney,Nebraska,US,"Kearney, Nebraska, US",6495
+31101,Keith,Nebraska,US,"Keith, Nebraska, US",8034
+31103,Keya Paha,Nebraska,US,"Keya Paha, Nebraska, US",#DIV/0!
+31105,Kimball,Nebraska,US,"Kimball, Nebraska, US",3632
+31107,Knox,Nebraska,US,"Knox, Nebraska, US",8332
+31109,Lancaster,Nebraska,US,"Lancaster, Nebraska, US",319090
+31111,Lincoln,Nebraska,US,"Lincoln, Nebraska, US",34914
+31113,Logan,Nebraska,US,"Logan, Nebraska, US",#DIV/0!
+31119,Madison,Nebraska,US,"Madison, Nebraska, US",35099
+31117,McPherson,Nebraska,US,"McPherson, Nebraska, US",#DIV/0!
+31121,Merrick,Nebraska,US,"Merrick, Nebraska, US",7755
+31123,Morrill,Nebraska,US,"Morrill, Nebraska, US",4642
+31125,Nance,Nebraska,US,"Nance, Nebraska, US",3519
+31127,Nemaha,Nebraska,US,"Nemaha, Nebraska, US",6972
+31129,Nuckolls,Nebraska,US,"Nuckolls, Nebraska, US",4148
+31131,Otoe,Nebraska,US,"Otoe, Nebraska, US",16012
+31137,Phelps,Nebraska,US,"Phelps, Nebraska, US",9034
+31139,Pierce,Nebraska,US,"Pierce, Nebraska, US",7148
+31141,Platte,Nebraska,US,"Platte, Nebraska, US",33470
+31143,Polk,Nebraska,US,"Polk, Nebraska, US",5213
+31145,Red Willow,Nebraska,US,"Red Willow, Nebraska, US",10724
+31147,Richardson,Nebraska,US,"Richardson, Nebraska, US",7865
+31151,Saline,Nebraska,US,"Saline, Nebraska, US",14224
+31153,Sarpy,Nebraska,US,"Sarpy, Nebraska, US",187196
+31155,Saunders,Nebraska,US,"Saunders, Nebraska, US",21578
+31157,Scotts Bluff,Nebraska,US,"Scotts Bluff, Nebraska, US",35618
+31159,Seward,Nebraska,US,"Seward, Nebraska, US",17284
+31161,Sheridan,Nebraska,US,"Sheridan, Nebraska, US",#DIV/0!
+31163,Sherman,Nebraska,US,"Sherman, Nebraska, US",3001
+31167,Stanton,Nebraska,US,"Stanton, Nebraska, US",5920
+31169,Thayer,Nebraska,US,"Thayer, Nebraska, US",5003
+31171,Thomas,Nebraska,US,"Thomas, Nebraska, US",722
+31173,Thurston,Nebraska,US,"Thurston, Nebraska, US",7224
+90031,Unassigned,Nebraska,US,"Unassigned, Nebraska, US",#DIV/0!
+31175,Valley,Nebraska,US,"Valley, Nebraska, US",4158
+31177,Washington,Nebraska,US,"Washington, Nebraska, US",20729
+31179,Wayne,Nebraska,US,"Wayne, Nebraska, US",9385
+31181,Webster,Nebraska,US,"Webster, Nebraska, US",3487
+31185,York,Nebraska,US,"York, Nebraska, US",13679
+32510,Carson City,Nevada,US,"Carson City, Nevada, US",55916
+32001,Churchill,Nevada,US,"Churchill, Nevada, US",24909
+32003,Clark,Nevada,US,"Clark, Nevada, US",2266715
+32005,Douglas,Nevada,US,"Douglas, Nevada, US",48905
+32007,Elko,Nevada,US,"Elko, Nevada, US",52778
+32011,Eureka,Nevada,US,"Eureka, Nevada, US",#DIV/0!
+32013,Humboldt,Nevada,US,"Humboldt, Nevada, US",16831
+32015,Lander,Nevada,US,"Lander, Nevada, US",5532
+32017,Lincoln,Nevada,US,"Lincoln, Nevada, US",5183
+32019,Lyon,Nevada,US,"Lyon, Nevada, US",57510
+32021,Mineral,Nevada,US,"Mineral, Nevada, US",4505
+32023,Nye,Nevada,US,"Nye, Nevada, US",46523
+32027,Pershing,Nevada,US,"Pershing, Nevada, US",#DIV/0!
+32029,Storey,Nevada,US,"Storey, Nevada, US",4123
+90032,Unassigned,Nevada,US,"Unassigned, Nevada, US",#DIV/0!
+32031,Washoe,Nevada,US,"Washoe, Nevada, US",471519
+32033,White Pine,Nevada,US,"White Pine, Nevada, US",9580
+33001,Belknap,New Hampshire,US,"Belknap, New Hampshire, US",61303
+33003,Carroll,New Hampshire,US,"Carroll, New Hampshire, US",48910
+33005,Cheshire,New Hampshire,US,"Cheshire, New Hampshire, US",76085
+33007,Coos,New Hampshire,US,"Coos, New Hampshire, US",31563
+33009,Grafton,New Hampshire,US,"Grafton, New Hampshire, US",89886
+33011,Hillsborough,New Hampshire,US,"Hillsborough, New Hampshire, US",417025
+33013,Merrimack,New Hampshire,US,"Merrimack, New Hampshire, US",151391
+33015,Rockingham,New Hampshire,US,"Rockingham, New Hampshire, US",309769
+33017,Strafford,New Hampshire,US,"Strafford, New Hampshire, US",130633
+33019,Sullivan,New Hampshire,US,"Sullivan, New Hampshire, US",43146
+90033,Unassigned,New Hampshire,US,"Unassigned, New Hampshire, US",#DIV/0!
+34001,Atlantic,New Jersey,US,"Atlantic, New Jersey, US",264757
+34003,Bergen,New Jersey,US,"Bergen, New Jersey, US",935375
+34005,Burlington,New Jersey,US,"Burlington, New Jersey, US",446226
+34007,Camden,New Jersey,US,"Camden, New Jersey, US",506943
+34009,Cape May,New Jersey,US,"Cape May, New Jersey, US",96379
+34011,Cumberland,New Jersey,US,"Cumberland, New Jersey, US",150188
+34013,Essex,New Jersey,US,"Essex, New Jersey, US",800246
+34015,Gloucester,New Jersey,US,"Gloucester, New Jersey, US",292688
+34017,Hudson,New Jersey,US,"Hudson, New Jersey, US",673741
+34019,Hunterdon,New Jersey,US,"Hunterdon, New Jersey, US",124623
+34021,Mercer,New Jersey,US,"Mercer, New Jersey, US",367644
+34023,Middlesex,New Jersey,US,"Middlesex, New Jersey, US",826000
+34025,Monmouth,New Jersey,US,"Monmouth, New Jersey, US",619629
+34027,Morris,New Jersey,US,"Morris, New Jersey, US",491845
+34029,Ocean,New Jersey,US,"Ocean, New Jersey, US",607325
+34031,Passaic,New Jersey,US,"Passaic, New Jersey, US",502449
+34033,Salem,New Jersey,US,"Salem, New Jersey, US",62385
+34035,Somerset,New Jersey,US,"Somerset, New Jersey, US",330158
+34037,Sussex,New Jersey,US,"Sussex, New Jersey, US",140614
+90034,Unassigned,New Jersey,US,"Unassigned, New Jersey, US",#DIV/0!
+34039,Union,New Jersey,US,"Union, New Jersey, US",557682
+34041,Warren,New Jersey,US,"Warren, New Jersey, US",105448
+35001,Bernalillo,New Mexico,US,"Bernalillo, New Mexico, US",679121
+35003,Catron,New Mexico,US,"Catron, New Mexico, US",3527
+35005,Chaves,New Mexico,US,"Chaves, New Mexico, US",64615
+35006,Cibola,New Mexico,US,"Cibola, New Mexico, US",26675
+35007,Colfax,New Mexico,US,"Colfax, New Mexico, US",11941
+35009,Curry,New Mexico,US,"Curry, New Mexico, US",48954
+35011,De Baca,New Mexico,US,"De Baca, New Mexico, US",#DIV/0!
+35013,Dona Ana,New Mexico,US,"Dona Ana, New Mexico, US",218195
+35015,Eddy,New Mexico,US,"Eddy, New Mexico, US",58460
+35017,Grant,New Mexico,US,"Grant, New Mexico, US",26998
+35019,Guadalupe,New Mexico,US,"Guadalupe, New Mexico, US",4300
+35021,Harding,New Mexico,US,"Harding, New Mexico, US",625
+35023,Hidalgo,New Mexico,US,"Hidalgo, New Mexico, US",4198
+35025,Lea,New Mexico,US,"Lea, New Mexico, US",71070
+35027,Lincoln,New Mexico,US,"Lincoln, New Mexico, US",19572
+35028,Los Alamos,New Mexico,US,"Los Alamos, New Mexico, US",19369
+35029,Luna,New Mexico,US,"Luna, New Mexico, US",23709
+35031,McKinley,New Mexico,US,"McKinley, New Mexico, US",71367
+35035,Otero,New Mexico,US,"Otero, New Mexico, US",67490
+35037,Quay,New Mexico,US,"Quay, New Mexico, US",8253
+35039,Rio Arriba,New Mexico,US,"Rio Arriba, New Mexico, US",38921
+35041,Roosevelt,New Mexico,US,"Roosevelt, New Mexico, US",18500
+35045,San Juan,New Mexico,US,"San Juan, New Mexico, US",123958
+35047,San Miguel,New Mexico,US,"San Miguel, New Mexico, US",27277
+35043,Sandoval,New Mexico,US,"Sandoval, New Mexico, US",146748
+35049,Santa Fe,New Mexico,US,"Santa Fe, New Mexico, US",150358
+35051,Sierra,New Mexico,US,"Sierra, New Mexico, US",10791
+35053,Socorro,New Mexico,US,"Socorro, New Mexico, US",16637
+35055,Taos,New Mexico,US,"Taos, New Mexico, US",32723
+35057,Torrance,New Mexico,US,"Torrance, New Mexico, US",15461
+90035,Unassigned,New Mexico,US,"Unassigned, New Mexico, US",#DIV/0!
+35059,Union,New Mexico,US,"Union, New Mexico, US",4059
+35061,Valencia,New Mexico,US,"Valencia, New Mexico, US",76688
+36001,Albany,New York,US,"Albany, New York, US",305506
+36003,Allegany,New York,US,"Allegany, New York, US",46091
+36007,Broome,New York,US,"Broome, New York, US",190488
+36009,Cattaraugus,New York,US,"Cattaraugus, New York, US",76117
+36011,Cayuga,New York,US,"Cayuga, New York, US",76576
+36013,Chautauqua,New York,US,"Chautauqua, New York, US",126903
+36015,Chemung,New York,US,"Chemung, New York, US",83456
+36017,Chenango,New York,US,"Chenango, New York, US",47207
+36019,Clinton,New York,US,"Clinton, New York, US",80485
+36021,Columbia,New York,US,"Columbia, New York, US",59461
+36023,Cortland,New York,US,"Cortland, New York, US",47581
+36025,Delaware,New York,US,"Delaware, New York, US",44135
+36027,Dutchess,New York,US,"Dutchess, New York, US",294218
+36029,Erie,New York,US,"Erie, New York, US",918702
+36031,Essex,New York,US,"Essex, New York, US",36885
+36033,Franklin,New York,US,"Franklin, New York, US",50022
+36035,Fulton,New York,US,"Fulton, New York, US",53383
+36037,Genesee,New York,US,"Genesee, New York, US",57280
+36039,Greene,New York,US,"Greene, New York, US",47188
+36041,Hamilton,New York,US,"Hamilton, New York, US",4416
+36043,Herkimer,New York,US,"Herkimer, New York, US",61319
+36045,Jefferson,New York,US,"Jefferson, New York, US",109834
+36049,Lewis,New York,US,"Lewis, New York, US",26296
+36051,Livingston,New York,US,"Livingston, New York, US",62914
+36053,Madison,New York,US,"Madison, New York, US",70941
+36055,Monroe,New York,US,"Monroe, New York, US",741770
+36057,Montgomery,New York,US,"Montgomery, New York, US",49221
+36059,Nassau,New York,US,"Nassau, New York, US",1356924
+36061,New York City,New York,US,"New York City, New York, US",8336817
+36063,Niagara,New York,US,"Niagara, New York, US",209281
+36065,Oneida,New York,US,"Oneida, New York, US",228671
+36067,Onondaga,New York,US,"Onondaga, New York, US",460528
+36069,Ontario,New York,US,"Ontario, New York, US",109777
+36071,Orange,New York,US,"Orange, New York, US",384940
+36073,Orleans,New York,US,"Orleans, New York, US",40352
+36075,Oswego,New York,US,"Oswego, New York, US",117124
+36077,Otsego,New York,US,"Otsego, New York, US",59493
+36079,Putnam,New York,US,"Putnam, New York, US",98320
+36083,Rensselaer,New York,US,"Rensselaer, New York, US",158714
+36087,Rockland,New York,US,"Rockland, New York, US",325789
+36091,Saratoga,New York,US,"Saratoga, New York, US",229863
+36093,Schenectady,New York,US,"Schenectady, New York, US",155299
+36095,Schoharie,New York,US,"Schoharie, New York, US",30999
+36097,Schuyler,New York,US,"Schuyler, New York, US",17807
+36099,Seneca,New York,US,"Seneca, New York, US",34016
+36089,St. Lawrence,New York,US,"St. Lawrence, New York, US",107740
+36101,Steuben,New York,US,"Steuben, New York, US",95379
+36103,Suffolk,New York,US,"Suffolk, New York, US",1476601
+36105,Sullivan,New York,US,"Sullivan, New York, US",75432
+36107,Tioga,New York,US,"Tioga, New York, US",48203
+36109,Tompkins,New York,US,"Tompkins, New York, US",102180
+36111,Ulster,New York,US,"Ulster, New York, US",177573
+90036,Unassigned,New York,US,"Unassigned, New York, US",#DIV/0!
+36113,Warren,New York,US,"Warren, New York, US",63944
+36115,Washington,New York,US,"Washington, New York, US",61204
+36117,Wayne,New York,US,"Wayne, New York, US",89918
+36119,Westchester,New York,US,"Westchester, New York, US",967506
+36121,Wyoming,New York,US,"Wyoming, New York, US",39859
+36123,Yates,New York,US,"Yates, New York, US",24913
+37001,Alamance,North Carolina,US,"Alamance, North Carolina, US",169509
+37003,Alexander,North Carolina,US,"Alexander, North Carolina, US",37497
+37005,Alleghany,North Carolina,US,"Alleghany, North Carolina, US",11137
+37007,Anson,North Carolina,US,"Anson, North Carolina, US",24446
+37009,Ashe,North Carolina,US,"Ashe, North Carolina, US",27203
+37011,Avery,North Carolina,US,"Avery, North Carolina, US",17557
+37013,Beaufort,North Carolina,US,"Beaufort, North Carolina, US",46994
+37015,Bertie,North Carolina,US,"Bertie, North Carolina, US",18947
+37017,Bladen,North Carolina,US,"Bladen, North Carolina, US",32722
+37019,Brunswick,North Carolina,US,"Brunswick, North Carolina, US",142820
+37021,Buncombe,North Carolina,US,"Buncombe, North Carolina, US",261191
+37023,Burke,North Carolina,US,"Burke, North Carolina, US",90485
+37025,Cabarrus,North Carolina,US,"Cabarrus, North Carolina, US",216453
+37027,Caldwell,North Carolina,US,"Caldwell, North Carolina, US",82178
+37029,Camden,North Carolina,US,"Camden, North Carolina, US",10867
+37031,Carteret,North Carolina,US,"Carteret, North Carolina, US",69473
+37033,Caswell,North Carolina,US,"Caswell, North Carolina, US",22604
+37035,Catawba,North Carolina,US,"Catawba, North Carolina, US",159551
+37037,Chatham,North Carolina,US,"Chatham, North Carolina, US",74470
+37039,Cherokee,North Carolina,US,"Cherokee, North Carolina, US",28612
+37041,Chowan,North Carolina,US,"Chowan, North Carolina, US",13943
+37043,Clay,North Carolina,US,"Clay, North Carolina, US",11231
+37045,Cleveland,North Carolina,US,"Cleveland, North Carolina, US",97947
+37047,Columbus,North Carolina,US,"Columbus, North Carolina, US",55508
+37049,Craven,North Carolina,US,"Craven, North Carolina, US",102139
+37051,Cumberland,North Carolina,US,"Cumberland, North Carolina, US",335509
+37053,Currituck,North Carolina,US,"Currituck, North Carolina, US",27763
+37055,Dare,North Carolina,US,"Dare, North Carolina, US",37009
+37057,Davidson,North Carolina,US,"Davidson, North Carolina, US",167609
+37059,Davie,North Carolina,US,"Davie, North Carolina, US",42846
+37061,Duplin,North Carolina,US,"Duplin, North Carolina, US",58741
+37063,Durham,North Carolina,US,"Durham, North Carolina, US",321488
+37065,Edgecombe,North Carolina,US,"Edgecombe, North Carolina, US",51472
+37067,Forsyth,North Carolina,US,"Forsyth, North Carolina, US",382295
+37069,Franklin,North Carolina,US,"Franklin, North Carolina, US",69685
+37071,Gaston,North Carolina,US,"Gaston, North Carolina, US",224529
+37073,Gates,North Carolina,US,"Gates, North Carolina, US",11562
+37075,Graham,North Carolina,US,"Graham, North Carolina, US",8441
+37077,Granville,North Carolina,US,"Granville, North Carolina, US",60443
+37079,Greene,North Carolina,US,"Greene, North Carolina, US",21069
+37081,Guilford,North Carolina,US,"Guilford, North Carolina, US",537174
+37083,Halifax,North Carolina,US,"Halifax, North Carolina, US",50010
+37085,Harnett,North Carolina,US,"Harnett, North Carolina, US",135976
+37087,Haywood,North Carolina,US,"Haywood, North Carolina, US",62317
+37089,Henderson,North Carolina,US,"Henderson, North Carolina, US",117417
+37091,Hertford,North Carolina,US,"Hertford, North Carolina, US",23677
+37093,Hoke,North Carolina,US,"Hoke, North Carolina, US",55234
+37095,Hyde,North Carolina,US,"Hyde, North Carolina, US",4937
+37097,Iredell,North Carolina,US,"Iredell, North Carolina, US",181806
+37099,Jackson,North Carolina,US,"Jackson, North Carolina, US",43938
+37101,Johnston,North Carolina,US,"Johnston, North Carolina, US",209339
+37103,Jones,North Carolina,US,"Jones, North Carolina, US",9419
+37105,Lee,North Carolina,US,"Lee, North Carolina, US",61779
+37107,Lenoir,North Carolina,US,"Lenoir, North Carolina, US",55949
+37109,Lincoln,North Carolina,US,"Lincoln, North Carolina, US",86111
+37113,Macon,North Carolina,US,"Macon, North Carolina, US",35858
+37115,Madison,North Carolina,US,"Madison, North Carolina, US",21755
+37117,Martin,North Carolina,US,"Martin, North Carolina, US",22440
+37111,McDowell,North Carolina,US,"McDowell, North Carolina, US",45756
+37119,Mecklenburg,North Carolina,US,"Mecklenburg, North Carolina, US",1110356
+37121,Mitchell,North Carolina,US,"Mitchell, North Carolina, US",14964
+37123,Montgomery,North Carolina,US,"Montgomery, North Carolina, US",27173
+37125,Moore,North Carolina,US,"Moore, North Carolina, US",100880
+37127,Nash,North Carolina,US,"Nash, North Carolina, US",94298
+37129,New Hanover,North Carolina,US,"New Hanover, North Carolina, US",234473
+37131,Northampton,North Carolina,US,"Northampton, North Carolina, US",19483
+37133,Onslow,North Carolina,US,"Onslow, North Carolina, US",197938
+37135,Orange,North Carolina,US,"Orange, North Carolina, US",148476
+37137,Pamlico,North Carolina,US,"Pamlico, North Carolina, US",12726
+37139,Pasquotank,North Carolina,US,"Pasquotank, North Carolina, US",39824
+37141,Pender,North Carolina,US,"Pender, North Carolina, US",63060
+37143,Perquimans,North Carolina,US,"Perquimans, North Carolina, US",13463
+37145,Person,North Carolina,US,"Person, North Carolina, US",39490
+37147,Pitt,North Carolina,US,"Pitt, North Carolina, US",180742
+37149,Polk,North Carolina,US,"Polk, North Carolina, US",20724
+37151,Randolph,North Carolina,US,"Randolph, North Carolina, US",143667
+37153,Richmond,North Carolina,US,"Richmond, North Carolina, US",44829
+37155,Robeson,North Carolina,US,"Robeson, North Carolina, US",130625
+37157,Rockingham,North Carolina,US,"Rockingham, North Carolina, US",91010
+37159,Rowan,North Carolina,US,"Rowan, North Carolina, US",142088
+37161,Rutherford,North Carolina,US,"Rutherford, North Carolina, US",67029
+37163,Sampson,North Carolina,US,"Sampson, North Carolina, US",63531
+37165,Scotland,North Carolina,US,"Scotland, North Carolina, US",34823
+37167,Stanly,North Carolina,US,"Stanly, North Carolina, US",62806
+37169,Stokes,North Carolina,US,"Stokes, North Carolina, US",45591
+37171,Surry,North Carolina,US,"Surry, North Carolina, US",71783
+37173,Swain,North Carolina,US,"Swain, North Carolina, US",14271
+37175,Transylvania,North Carolina,US,"Transylvania, North Carolina, US",34385
+37177,Tyrrell,North Carolina,US,"Tyrrell, North Carolina, US",4016
+90037,Unassigned,North Carolina,US,"Unassigned, North Carolina, US",#DIV/0!
+37179,Union,North Carolina,US,"Union, North Carolina, US",239859
+37181,Vance,North Carolina,US,"Vance, North Carolina, US",44535
+37183,Wake,North Carolina,US,"Wake, North Carolina, US",1111761
+37185,Warren,North Carolina,US,"Warren, North Carolina, US",19731
+37187,Washington,North Carolina,US,"Washington, North Carolina, US",11580
+37189,Watauga,North Carolina,US,"Watauga, North Carolina, US",56177
+37191,Wayne,North Carolina,US,"Wayne, North Carolina, US",123131
+37193,Wilkes,North Carolina,US,"Wilkes, North Carolina, US",68412
+37195,Wilson,North Carolina,US,"Wilson, North Carolina, US",81801
+37197,Yadkin,North Carolina,US,"Yadkin, North Carolina, US",37667
+37199,Yancey,North Carolina,US,"Yancey, North Carolina, US",18069
+38003,Barnes,North Dakota,US,"Barnes, North Dakota, US",10415
+38005,Benson,North Dakota,US,"Benson, North Dakota, US",6832
+38009,Bottineau,North Dakota,US,"Bottineau, North Dakota, US",6282
+38011,Bowman,North Dakota,US,"Bowman, North Dakota, US",3024
+38013,Burke,North Dakota,US,"Burke, North Dakota, US",2115
+38015,Burleigh,North Dakota,US,"Burleigh, North Dakota, US",95626
+38017,Cass,North Dakota,US,"Cass, North Dakota, US",181923
+38023,Divide,North Dakota,US,"Divide, North Dakota, US",2264
+38025,Dunn,North Dakota,US,"Dunn, North Dakota, US",4424
+38027,Eddy,North Dakota,US,"Eddy, North Dakota, US",2287
+38029,Emmons,North Dakota,US,"Emmons, North Dakota, US",3241
+38031,Foster,North Dakota,US,"Foster, North Dakota, US",3210
+38035,Grand Forks,North Dakota,US,"Grand Forks, North Dakota, US",69451
+38037,Grant,North Dakota,US,"Grant, North Dakota, US",2274
+38039,Griggs,North Dakota,US,"Griggs, North Dakota, US",2231
+38049,McHenry,North Dakota,US,"McHenry, North Dakota, US",5745
+38051,McIntosh,North Dakota,US,"McIntosh, North Dakota, US",2497
+38053,McKenzie,North Dakota,US,"McKenzie, North Dakota, US",15024
+38055,McLean,North Dakota,US,"McLean, North Dakota, US",9450
+38057,Mercer,North Dakota,US,"Mercer, North Dakota, US",8187
+38059,Morton,North Dakota,US,"Morton, North Dakota, US",31364
+38061,Mountrail,North Dakota,US,"Mountrail, North Dakota, US",10545
+38063,Nelson,North Dakota,US,"Nelson, North Dakota, US",2879
+38065,Oliver,North Dakota,US,"Oliver, North Dakota, US",1959
+38067,Pembina,North Dakota,US,"Pembina, North Dakota, US",6801
+38069,Pierce,North Dakota,US,"Pierce, North Dakota, US",3975
+38071,Ramsey,North Dakota,US,"Ramsey, North Dakota, US",11519
+38073,Ransom,North Dakota,US,"Ransom, North Dakota, US",5218
+38075,Renville,North Dakota,US,"Renville, North Dakota, US",2327
+38077,Richland,North Dakota,US,"Richland, North Dakota, US",16177
+38079,Rolette,North Dakota,US,"Rolette, North Dakota, US",14176
+38081,Sargent,North Dakota,US,"Sargent, North Dakota, US",3898
+38085,Sioux,North Dakota,US,"Sioux, North Dakota, US",4230
+38087,Slope,North Dakota,US,"Slope, North Dakota, US",750
+38089,Stark,North Dakota,US,"Stark, North Dakota, US",31489
+38091,Steele,North Dakota,US,"Steele, North Dakota, US",1890
+38093,Stutsman,North Dakota,US,"Stutsman, North Dakota, US",20704
+38097,Traill,North Dakota,US,"Traill, North Dakota, US",8036
+90038,Unassigned,North Dakota,US,"Unassigned, North Dakota, US",#DIV/0!
+38099,Walsh,North Dakota,US,"Walsh, North Dakota, US",10641
+38101,Ward,North Dakota,US,"Ward, North Dakota, US",67641
+38103,Wells,North Dakota,US,"Wells, North Dakota, US",3834
+38105,Williams,North Dakota,US,"Williams, North Dakota, US",37589
+69,,Northern Mariana Islands,US,"Northern Mariana Islands, US",55144
+39001,Adams,Ohio,US,"Adams, Ohio, US",27698
+39003,Allen,Ohio,US,"Allen, Ohio, US",102351
+39005,Ashland,Ohio,US,"Ashland, Ohio, US",53484
+39007,Ashtabula,Ohio,US,"Ashtabula, Ohio, US",97241
+39009,Athens,Ohio,US,"Athens, Ohio, US",65327
+39011,Auglaize,Ohio,US,"Auglaize, Ohio, US",45656
+39013,Belmont,Ohio,US,"Belmont, Ohio, US",67006
+39015,Brown,Ohio,US,"Brown, Ohio, US",43432
+39017,Butler,Ohio,US,"Butler, Ohio, US",383134
+39019,Carroll,Ohio,US,"Carroll, Ohio, US",26914
+39021,Champaign,Ohio,US,"Champaign, Ohio, US",38885
+39023,Clark,Ohio,US,"Clark, Ohio, US",134083
+39025,Clermont,Ohio,US,"Clermont, Ohio, US",206428
+39027,Clinton,Ohio,US,"Clinton, Ohio, US",41968
+39029,Columbiana,Ohio,US,"Columbiana, Ohio, US",101883
+39031,Coshocton,Ohio,US,"Coshocton, Ohio, US",36600
+39033,Crawford,Ohio,US,"Crawford, Ohio, US",41494
+39035,Cuyahoga,Ohio,US,"Cuyahoga, Ohio, US",1235072
+39037,Darke,Ohio,US,"Darke, Ohio, US",51113
+39039,Defiance,Ohio,US,"Defiance, Ohio, US",38087
+39041,Delaware,Ohio,US,"Delaware, Ohio, US",209177
+39043,Erie,Ohio,US,"Erie, Ohio, US",74266
+39045,Fairfield,Ohio,US,"Fairfield, Ohio, US",157574
+39047,Fayette,Ohio,US,"Fayette, Ohio, US",28525
+39049,Franklin,Ohio,US,"Franklin, Ohio, US",1316756
+39051,Fulton,Ohio,US,"Fulton, Ohio, US",42126
+39053,Gallia,Ohio,US,"Gallia, Ohio, US",29898
+39055,Geauga,Ohio,US,"Geauga, Ohio, US",93649
+39057,Greene,Ohio,US,"Greene, Ohio, US",168937
+39059,Guernsey,Ohio,US,"Guernsey, Ohio, US",38875
+39061,Hamilton,Ohio,US,"Hamilton, Ohio, US",817473
+39063,Hancock,Ohio,US,"Hancock, Ohio, US",75783
+39065,Hardin,Ohio,US,"Hardin, Ohio, US",31365
+39067,Harrison,Ohio,US,"Harrison, Ohio, US",15040
+39069,Henry,Ohio,US,"Henry, Ohio, US",27006
+39071,Highland,Ohio,US,"Highland, Ohio, US",43161
+39073,Hocking,Ohio,US,"Hocking, Ohio, US",28264
+39075,Holmes,Ohio,US,"Holmes, Ohio, US",43960
+39077,Huron,Ohio,US,"Huron, Ohio, US",58266
+39079,Jackson,Ohio,US,"Jackson, Ohio, US",32413
+39081,Jefferson,Ohio,US,"Jefferson, Ohio, US",65325
+39083,Knox,Ohio,US,"Knox, Ohio, US",62322
+39085,Lake,Ohio,US,"Lake, Ohio, US",230149
+39087,Lawrence,Ohio,US,"Lawrence, Ohio, US",59463
+39089,Licking,Ohio,US,"Licking, Ohio, US",176862
+39091,Logan,Ohio,US,"Logan, Ohio, US",45672
+39093,Lorain,Ohio,US,"Lorain, Ohio, US",309833
+39095,Lucas,Ohio,US,"Lucas, Ohio, US",428348
+39097,Madison,Ohio,US,"Madison, Ohio, US",44731
+39099,Mahoning,Ohio,US,"Mahoning, Ohio, US",228683
+39101,Marion,Ohio,US,"Marion, Ohio, US",65093
+39103,Medina,Ohio,US,"Medina, Ohio, US",179746
+39105,Meigs,Ohio,US,"Meigs, Ohio, US",22907
+39107,Mercer,Ohio,US,"Mercer, Ohio, US",41172
+39109,Miami,Ohio,US,"Miami, Ohio, US",106987
+39111,Monroe,Ohio,US,"Monroe, Ohio, US",13654
+39113,Montgomery,Ohio,US,"Montgomery, Ohio, US",531687
+39115,Morgan,Ohio,US,"Morgan, Ohio, US",14508
+39117,Morrow,Ohio,US,"Morrow, Ohio, US",35328
+39119,Muskingum,Ohio,US,"Muskingum, Ohio, US",86215
+39121,Noble,Ohio,US,"Noble, Ohio, US",14424
+39123,Ottawa,Ohio,US,"Ottawa, Ohio, US",40525
+39125,Paulding,Ohio,US,"Paulding, Ohio, US",18672
+39127,Perry,Ohio,US,"Perry, Ohio, US",36134
+39129,Pickaway,Ohio,US,"Pickaway, Ohio, US",58457
+39131,Pike,Ohio,US,"Pike, Ohio, US",27772
+39133,Portage,Ohio,US,"Portage, Ohio, US",162466
+39135,Preble,Ohio,US,"Preble, Ohio, US",40882
+39137,Putnam,Ohio,US,"Putnam, Ohio, US",33861
+39139,Richland,Ohio,US,"Richland, Ohio, US",121154
+39141,Ross,Ohio,US,"Ross, Ohio, US",76666
+39143,Sandusky,Ohio,US,"Sandusky, Ohio, US",58518
+39145,Scioto,Ohio,US,"Scioto, Ohio, US",75314
+39147,Seneca,Ohio,US,"Seneca, Ohio, US",55178
+39149,Shelby,Ohio,US,"Shelby, Ohio, US",48590
+39151,Stark,Ohio,US,"Stark, Ohio, US",370606
+39153,Summit,Ohio,US,"Summit, Ohio, US",541013
+39155,Trumbull,Ohio,US,"Trumbull, Ohio, US",197974
+39157,Tuscarawas,Ohio,US,"Tuscarawas, Ohio, US",91987
+90039,Unassigned,Ohio,US,"Unassigned, Ohio, US",#DIV/0!
+39159,Union,Ohio,US,"Union, Ohio, US",58988
+39161,Van Wert,Ohio,US,"Van Wert, Ohio, US",28275
+39163,Vinton,Ohio,US,"Vinton, Ohio, US",13085
+39165,Warren,Ohio,US,"Warren, Ohio, US",234602
+39167,Washington,Ohio,US,"Washington, Ohio, US",59911
+39169,Wayne,Ohio,US,"Wayne, Ohio, US",115710
+39171,Williams,Ohio,US,"Williams, Ohio, US",36692
+39173,Wood,Ohio,US,"Wood, Ohio, US",130817
+39175,Wyandot,Ohio,US,"Wyandot, Ohio, US",21772
+40001,Adair,Oklahoma,US,"Adair, Oklahoma, US",22194
+40003,Alfalfa,Oklahoma,US,"Alfalfa, Oklahoma, US",5702
+40005,Atoka,Oklahoma,US,"Atoka, Oklahoma, US",13758
+40007,Beaver,Oklahoma,US,"Beaver, Oklahoma, US",5311
+40009,Beckham,Oklahoma,US,"Beckham, Oklahoma, US",21859
+40011,Blaine,Oklahoma,US,"Blaine, Oklahoma, US",9429
+40013,Bryan,Oklahoma,US,"Bryan, Oklahoma, US",47995
+40015,Caddo,Oklahoma,US,"Caddo, Oklahoma, US",28762
+40017,Canadian,Oklahoma,US,"Canadian, Oklahoma, US",148306
+40019,Carter,Oklahoma,US,"Carter, Oklahoma, US",48111
+40021,Cherokee,Oklahoma,US,"Cherokee, Oklahoma, US",48657
+40023,Choctaw,Oklahoma,US,"Choctaw, Oklahoma, US",14672
+40025,Cimarron,Oklahoma,US,"Cimarron, Oklahoma, US",2137
+40027,Cleveland,Oklahoma,US,"Cleveland, Oklahoma, US",284014
+40029,Coal,Oklahoma,US,"Coal, Oklahoma, US",5495
+40031,Comanche,Oklahoma,US,"Comanche, Oklahoma, US",120749
+40033,Cotton,Oklahoma,US,"Cotton, Oklahoma, US",5666
+40035,Craig,Oklahoma,US,"Craig, Oklahoma, US",14142
+40037,Creek,Oklahoma,US,"Creek, Oklahoma, US",71522
+40039,Custer,Oklahoma,US,"Custer, Oklahoma, US",29003
+40041,Delaware,Oklahoma,US,"Delaware, Oklahoma, US",43009
+40043,Dewey,Oklahoma,US,"Dewey, Oklahoma, US",4891
+40047,Garfield,Oklahoma,US,"Garfield, Oklahoma, US",61056
+40049,Garvin,Oklahoma,US,"Garvin, Oklahoma, US",27711
+40051,Grady,Oklahoma,US,"Grady, Oklahoma, US",55834
+40053,Grant,Oklahoma,US,"Grant, Oklahoma, US",4333
+40055,Greer,Oklahoma,US,"Greer, Oklahoma, US",5712
+40059,Harper,Oklahoma,US,"Harper, Oklahoma, US",3688
+40061,Haskell,Oklahoma,US,"Haskell, Oklahoma, US",12627
+40063,Hughes,Oklahoma,US,"Hughes, Oklahoma, US",13279
+40065,Jackson,Oklahoma,US,"Jackson, Oklahoma, US",24530
+40067,Jefferson,Oklahoma,US,"Jefferson, Oklahoma, US",6002
+40069,Johnston,Oklahoma,US,"Johnston, Oklahoma, US",11085
+40071,Kay,Oklahoma,US,"Kay, Oklahoma, US",43538
+40073,Kingfisher,Oklahoma,US,"Kingfisher, Oklahoma, US",15765
+40075,Kiowa,Oklahoma,US,"Kiowa, Oklahoma, US",8708
+40077,Latimer,Oklahoma,US,"Latimer, Oklahoma, US",10073
+40079,Le Flore,Oklahoma,US,"Le Flore, Oklahoma, US",49853
+40081,Lincoln,Oklahoma,US,"Lincoln, Oklahoma, US",34877
+40083,Logan,Oklahoma,US,"Logan, Oklahoma, US",48011
+40085,Love,Oklahoma,US,"Love, Oklahoma, US",10253
+40093,Major,Oklahoma,US,"Major, Oklahoma, US",7629
+40095,Marshall,Oklahoma,US,"Marshall, Oklahoma, US",16931
+40097,Mayes,Oklahoma,US,"Mayes, Oklahoma, US",41100
+40087,McClain,Oklahoma,US,"McClain, Oklahoma, US",40474
+40089,McCurtain,Oklahoma,US,"McCurtain, Oklahoma, US",32832
+40091,McIntosh,Oklahoma,US,"McIntosh, Oklahoma, US",19596
+40099,Murray,Oklahoma,US,"Murray, Oklahoma, US",14073
+40101,Muskogee,Oklahoma,US,"Muskogee, Oklahoma, US",67997
+40103,Noble,Oklahoma,US,"Noble, Oklahoma, US",11131
+40105,Nowata,Oklahoma,US,"Nowata, Oklahoma, US",10076
+40107,Okfuskee,Oklahoma,US,"Okfuskee, Oklahoma, US",11993
+40109,Oklahoma,Oklahoma,US,"Oklahoma, Oklahoma, US",797434
+40111,Okmulgee,Oklahoma,US,"Okmulgee, Oklahoma, US",38465
+40113,Osage,Oklahoma,US,"Osage, Oklahoma, US",46963
+40115,Ottawa,Oklahoma,US,"Ottawa, Oklahoma, US",31127
+80040,Out of OK,Oklahoma,US,"Out of OK, Oklahoma, US",#DIV/0!
+40117,Pawnee,Oklahoma,US,"Pawnee, Oklahoma, US",16376
+40119,Payne,Oklahoma,US,"Payne, Oklahoma, US",81784
+40121,Pittsburg,Oklahoma,US,"Pittsburg, Oklahoma, US",43654
+40123,Pontotoc,Oklahoma,US,"Pontotoc, Oklahoma, US",38284
+40125,Pottawatomie,Oklahoma,US,"Pottawatomie, Oklahoma, US",72592
+40127,Pushmataha,Oklahoma,US,"Pushmataha, Oklahoma, US",11096
+40131,Rogers,Oklahoma,US,"Rogers, Oklahoma, US",92459
+40133,Seminole,Oklahoma,US,"Seminole, Oklahoma, US",24258
+40135,Sequoyah,Oklahoma,US,"Sequoyah, Oklahoma, US",41569
+40137,Stephens,Oklahoma,US,"Stephens, Oklahoma, US",43143
+40139,Texas,Oklahoma,US,"Texas, Oklahoma, US",19983
+40141,Tillman,Oklahoma,US,"Tillman, Oklahoma, US",7250
+40143,Tulsa,Oklahoma,US,"Tulsa, Oklahoma, US",651552
+90040,Unassigned,Oklahoma,US,"Unassigned, Oklahoma, US",#DIV/0!
+40145,Wagoner,Oklahoma,US,"Wagoner, Oklahoma, US",81289
+40147,Washington,Oklahoma,US,"Washington, Oklahoma, US",51527
+40149,Washita,Oklahoma,US,"Washita, Oklahoma, US",10916
+40151,Woods,Oklahoma,US,"Woods, Oklahoma, US",8793
+40153,Woodward,Oklahoma,US,"Woodward, Oklahoma, US",20211
+41001,Baker,Oregon,US,"Baker, Oregon, US",16124
+41003,Benton,Oregon,US,"Benton, Oregon, US",93053
+41005,Clackamas,Oregon,US,"Clackamas, Oregon, US",418187
+41007,Clatsop,Oregon,US,"Clatsop, Oregon, US",40224
+41009,Columbia,Oregon,US,"Columbia, Oregon, US",52354
+41011,Coos,Oregon,US,"Coos, Oregon, US",64487
+41013,Crook,Oregon,US,"Crook, Oregon, US",24404
+41015,Curry,Oregon,US,"Curry, Oregon, US",22925
+41017,Deschutes,Oregon,US,"Deschutes, Oregon, US",197692
+41019,Douglas,Oregon,US,"Douglas, Oregon, US",110980
+41023,Grant,Oregon,US,"Grant, Oregon, US",7199
+41025,Harney,Oregon,US,"Harney, Oregon, US",7393
+41027,Hood River,Oregon,US,"Hood River, Oregon, US",23382
+41029,Jackson,Oregon,US,"Jackson, Oregon, US",220944
+41031,Jefferson,Oregon,US,"Jefferson, Oregon, US",24658
+41033,Josephine,Oregon,US,"Josephine, Oregon, US",87487
+41035,Klamath,Oregon,US,"Klamath, Oregon, US",68238
+41037,Lake,Oregon,US,"Lake, Oregon, US",7869
+41039,Lane,Oregon,US,"Lane, Oregon, US",382067
+41041,Lincoln,Oregon,US,"Lincoln, Oregon, US",49962
+41043,Linn,Oregon,US,"Linn, Oregon, US",129749
+41045,Malheur,Oregon,US,"Malheur, Oregon, US",30571
+41047,Marion,Oregon,US,"Marion, Oregon, US",347818
+41049,Morrow,Oregon,US,"Morrow, Oregon, US",11603
+41051,Multnomah,Oregon,US,"Multnomah, Oregon, US",812855
+41053,Polk,Oregon,US,"Polk, Oregon, US",86085
+41055,Sherman,Oregon,US,"Sherman, Oregon, US",1780
+41057,Tillamook,Oregon,US,"Tillamook, Oregon, US",27036
+41059,Umatilla,Oregon,US,"Umatilla, Oregon, US",77950
+90041,Unassigned,Oregon,US,"Unassigned, Oregon, US",#DIV/0!
+41061,Union,Oregon,US,"Union, Oregon, US",26835
+41063,Wallowa,Oregon,US,"Wallowa, Oregon, US",7208
+41065,Wasco,Oregon,US,"Wasco, Oregon, US",26682
+41067,Washington,Oregon,US,"Washington, Oregon, US",601592
+41071,Yamhill,Oregon,US,"Yamhill, Oregon, US",107100
+42001,Adams,Pennsylvania,US,"Adams, Pennsylvania, US",103009
+42003,Allegheny,Pennsylvania,US,"Allegheny, Pennsylvania, US",1216045
+42005,Armstrong,Pennsylvania,US,"Armstrong, Pennsylvania, US",64735
+42007,Beaver,Pennsylvania,US,"Beaver, Pennsylvania, US",163929
+42009,Bedford,Pennsylvania,US,"Bedford, Pennsylvania, US",47888
+42011,Berks,Pennsylvania,US,"Berks, Pennsylvania, US",421164
+42013,Blair,Pennsylvania,US,"Blair, Pennsylvania, US",121829
+42015,Bradford,Pennsylvania,US,"Bradford, Pennsylvania, US",60323
+42017,Bucks,Pennsylvania,US,"Bucks, Pennsylvania, US",628270
+42019,Butler,Pennsylvania,US,"Butler, Pennsylvania, US",187853
+42021,Cambria,Pennsylvania,US,"Cambria, Pennsylvania, US",130192
+42023,Cameron,Pennsylvania,US,"Cameron, Pennsylvania, US",4447
+42025,Carbon,Pennsylvania,US,"Carbon, Pennsylvania, US",64182
+42027,Centre,Pennsylvania,US,"Centre, Pennsylvania, US",162385
+42029,Chester,Pennsylvania,US,"Chester, Pennsylvania, US",524989
+42031,Clarion,Pennsylvania,US,"Clarion, Pennsylvania, US",38438
+42033,Clearfield,Pennsylvania,US,"Clearfield, Pennsylvania, US",79255
+42035,Clinton,Pennsylvania,US,"Clinton, Pennsylvania, US",38632
+42037,Columbia,Pennsylvania,US,"Columbia, Pennsylvania, US",64964
+42039,Crawford,Pennsylvania,US,"Crawford, Pennsylvania, US",84629
+42041,Cumberland,Pennsylvania,US,"Cumberland, Pennsylvania, US",253370
+42043,Dauphin,Pennsylvania,US,"Dauphin, Pennsylvania, US",278299
+42045,Delaware,Pennsylvania,US,"Delaware, Pennsylvania, US",566747
+42047,Elk,Pennsylvania,US,"Elk, Pennsylvania, US",29910
+42049,Erie,Pennsylvania,US,"Erie, Pennsylvania, US",269728
+42051,Fayette,Pennsylvania,US,"Fayette, Pennsylvania, US",129274
+42053,Forest,Pennsylvania,US,"Forest, Pennsylvania, US",7247
+42055,Franklin,Pennsylvania,US,"Franklin, Pennsylvania, US",155027
+42057,Fulton,Pennsylvania,US,"Fulton, Pennsylvania, US",14530
+42059,Greene,Pennsylvania,US,"Greene, Pennsylvania, US",36233
+42061,Huntingdon,Pennsylvania,US,"Huntingdon, Pennsylvania, US",45144
+42063,Indiana,Pennsylvania,US,"Indiana, Pennsylvania, US",84073
+42065,Jefferson,Pennsylvania,US,"Jefferson, Pennsylvania, US",43425
+42067,Juniata,Pennsylvania,US,"Juniata, Pennsylvania, US",24763
+42069,Lackawanna,Pennsylvania,US,"Lackawanna, Pennsylvania, US",209674
+42071,Lancaster,Pennsylvania,US,"Lancaster, Pennsylvania, US",545724
+42073,Lawrence,Pennsylvania,US,"Lawrence, Pennsylvania, US",85512
+42075,Lebanon,Pennsylvania,US,"Lebanon, Pennsylvania, US",141793
+42077,Lehigh,Pennsylvania,US,"Lehigh, Pennsylvania, US",369318
+42079,Luzerne,Pennsylvania,US,"Luzerne, Pennsylvania, US",317417
+42081,Lycoming,Pennsylvania,US,"Lycoming, Pennsylvania, US",113299
+42083,McKean,Pennsylvania,US,"McKean, Pennsylvania, US",40625
+42085,Mercer,Pennsylvania,US,"Mercer, Pennsylvania, US",109424
+42087,Mifflin,Pennsylvania,US,"Mifflin, Pennsylvania, US",46138
+42089,Monroe,Pennsylvania,US,"Monroe, Pennsylvania, US",170271
+42091,Montgomery,Pennsylvania,US,"Montgomery, Pennsylvania, US",830915
+42093,Montour,Pennsylvania,US,"Montour, Pennsylvania, US",18230
+42095,Northampton,Pennsylvania,US,"Northampton, Pennsylvania, US",305285
+42097,Northumberland,Pennsylvania,US,"Northumberland, Pennsylvania, US",90843
+42099,Perry,Pennsylvania,US,"Perry, Pennsylvania, US",46272
+42101,Philadelphia,Pennsylvania,US,"Philadelphia, Pennsylvania, US",1584064
+42103,Pike,Pennsylvania,US,"Pike, Pennsylvania, US",55809
+42105,Potter,Pennsylvania,US,"Potter, Pennsylvania, US",16526
+42107,Schuylkill,Pennsylvania,US,"Schuylkill, Pennsylvania, US",141359
+42109,Snyder,Pennsylvania,US,"Snyder, Pennsylvania, US",40372
+42111,Somerset,Pennsylvania,US,"Somerset, Pennsylvania, US",73447
+42113,Sullivan,Pennsylvania,US,"Sullivan, Pennsylvania, US",6066
+42115,Susquehanna,Pennsylvania,US,"Susquehanna, Pennsylvania, US",40328
+42117,Tioga,Pennsylvania,US,"Tioga, Pennsylvania, US",40591
+90042,Unassigned,Pennsylvania,US,"Unassigned, Pennsylvania, US",#DIV/0!
+42119,Union,Pennsylvania,US,"Union, Pennsylvania, US",44923
+42121,Venango,Pennsylvania,US,"Venango, Pennsylvania, US",50668
+42123,Warren,Pennsylvania,US,"Warren, Pennsylvania, US",39191
+42125,Washington,Pennsylvania,US,"Washington, Pennsylvania, US",206865
+42127,Wayne,Pennsylvania,US,"Wayne, Pennsylvania, US",51361
+42129,Westmoreland,Pennsylvania,US,"Westmoreland, Pennsylvania, US",348899
+42131,Wyoming,Pennsylvania,US,"Wyoming, Pennsylvania, US",26794
+42133,York,Pennsylvania,US,"York, Pennsylvania, US",449058
+72,,Puerto Rico,US,"Puerto Rico, US",2933408
+,,Recovered,US,"Recovered, US",#DIV/0!
+44001,Bristol,Rhode Island,US,"Bristol, Rhode Island, US",48479
+44003,Kent,Rhode Island,US,"Kent, Rhode Island, US",164292
+44005,Newport,Rhode Island,US,"Newport, Rhode Island, US",82082
+44007,Providence,Rhode Island,US,"Providence, Rhode Island, US",638931
+90044,Unassigned,Rhode Island,US,"Unassigned, Rhode Island, US",#DIV/0!
+44009,Washington,Rhode Island,US,"Washington, Rhode Island, US",125577
+45001,Abbeville,South Carolina,US,"Abbeville, South Carolina, US",24527
+45003,Aiken,South Carolina,US,"Aiken, South Carolina, US",170872
+45005,Allendale,South Carolina,US,"Allendale, South Carolina, US",8688
+45007,Anderson,South Carolina,US,"Anderson, South Carolina, US",202558
+45009,Bamberg,South Carolina,US,"Bamberg, South Carolina, US",14066
+45011,Barnwell,South Carolina,US,"Barnwell, South Carolina, US",20866
+45013,Beaufort,South Carolina,US,"Beaufort, South Carolina, US",192122
+45015,Berkeley,South Carolina,US,"Berkeley, South Carolina, US",227907
+45017,Calhoun,South Carolina,US,"Calhoun, South Carolina, US",14553
+45019,Charleston,South Carolina,US,"Charleston, South Carolina, US",411406
+45021,Cherokee,South Carolina,US,"Cherokee, South Carolina, US",57300
+45023,Chester,South Carolina,US,"Chester, South Carolina, US",32244
+45025,Chesterfield,South Carolina,US,"Chesterfield, South Carolina, US",45650
+45027,Clarendon,South Carolina,US,"Clarendon, South Carolina, US",33745
+45029,Colleton,South Carolina,US,"Colleton, South Carolina, US",37677
+45031,Darlington,South Carolina,US,"Darlington, South Carolina, US",66618
+45033,Dillon,South Carolina,US,"Dillon, South Carolina, US",30479
+45035,Dorchester,South Carolina,US,"Dorchester, South Carolina, US",162809
+45037,Edgefield,South Carolina,US,"Edgefield, South Carolina, US",27260
+45039,Fairfield,South Carolina,US,"Fairfield, South Carolina, US",22347
+45041,Florence,South Carolina,US,"Florence, South Carolina, US",138293
+45043,Georgetown,South Carolina,US,"Georgetown, South Carolina, US",62680
+45045,Greenville,South Carolina,US,"Greenville, South Carolina, US",523542
+45047,Greenwood,South Carolina,US,"Greenwood, South Carolina, US",70811
+45049,Hampton,South Carolina,US,"Hampton, South Carolina, US",19222
+45051,Horry,South Carolina,US,"Horry, South Carolina, US",354081
+45053,Jasper,South Carolina,US,"Jasper, South Carolina, US",30073
+45055,Kershaw,South Carolina,US,"Kershaw, South Carolina, US",66551
+45057,Lancaster,South Carolina,US,"Lancaster, South Carolina, US",98012
+45059,Laurens,South Carolina,US,"Laurens, South Carolina, US",67493
+45061,Lee,South Carolina,US,"Lee, South Carolina, US",16828
+45063,Lexington,South Carolina,US,"Lexington, South Carolina, US",298750
+45067,Marion,South Carolina,US,"Marion, South Carolina, US",30657
+45069,Marlboro,South Carolina,US,"Marlboro, South Carolina, US",26118
+45065,McCormick,South Carolina,US,"McCormick, South Carolina, US",9463
+45071,Newberry,South Carolina,US,"Newberry, South Carolina, US",38440
+45073,Oconee,South Carolina,US,"Oconee, South Carolina, US",79546
+45075,Orangeburg,South Carolina,US,"Orangeburg, South Carolina, US",86175
+45077,Pickens,South Carolina,US,"Pickens, South Carolina, US",126884
+45079,Richland,South Carolina,US,"Richland, South Carolina, US",415759
+45081,Saluda,South Carolina,US,"Saluda, South Carolina, US",20473
+45083,Spartanburg,South Carolina,US,"Spartanburg, South Carolina, US",319785
+45085,Sumter,South Carolina,US,"Sumter, South Carolina, US",106721
+90045,Unassigned,South Carolina,US,"Unassigned, South Carolina, US",#DIV/0!
+45087,Union,South Carolina,US,"Union, South Carolina, US",27316
+45089,Williamsburg,South Carolina,US,"Williamsburg, South Carolina, US",30368
+45091,York,South Carolina,US,"York, South Carolina, US",280979
+46003,Aurora,South Dakota,US,"Aurora, South Dakota, US",2751
+46005,Beadle,South Dakota,US,"Beadle, South Dakota, US",18453
+46009,Bon Homme,South Dakota,US,"Bon Homme, South Dakota, US",6901
+46011,Brookings,South Dakota,US,"Brookings, South Dakota, US",35077
+46013,Brown,South Dakota,US,"Brown, South Dakota, US",38839
+46015,Brule,South Dakota,US,"Brule, South Dakota, US",#DIV/0!
+46017,Buffalo,South Dakota,US,"Buffalo, South Dakota, US",1962
+46019,Butte,South Dakota,US,"Butte, South Dakota, US",#DIV/0!
+46023,Charles Mix,South Dakota,US,"Charles Mix, South Dakota, US",9292
+46025,Clark,South Dakota,US,"Clark, South Dakota, US",3736
+46027,Clay,South Dakota,US,"Clay, South Dakota, US",14070
+46029,Codington,South Dakota,US,"Codington, South Dakota, US",28009
+46031,Corson,South Dakota,US,"Corson, South Dakota, US",4086
+46035,Davison,South Dakota,US,"Davison, South Dakota, US",19775
+46037,Day,South Dakota,US,"Day, South Dakota, US",5424
+46039,Deuel,South Dakota,US,"Deuel, South Dakota, US",4351
+46041,Dewey,South Dakota,US,"Dewey, South Dakota, US",#DIV/0!
+46043,Douglas,South Dakota,US,"Douglas, South Dakota, US",2921
+46045,Edmunds,South Dakota,US,"Edmunds, South Dakota, US",3829
+46047,Fall River,South Dakota,US,"Fall River, South Dakota, US",6713
+46049,Faulk,South Dakota,US,"Faulk, South Dakota, US",2299
+46051,Grant,South Dakota,US,"Grant, South Dakota, US",7052
+46057,Hamlin,South Dakota,US,"Hamlin, South Dakota, US",6164
+46059,Hand,South Dakota,US,"Hand, South Dakota, US",3191
+46065,Hughes,South Dakota,US,"Hughes, South Dakota, US",17526
+46067,Hutchinson,South Dakota,US,"Hutchinson, South Dakota, US",7291
+46069,Hyde,South Dakota,US,"Hyde, South Dakota, US",1301
+46071,Jackson,South Dakota,US,"Jackson, South Dakota, US",3344
+46073,Jerauld,South Dakota,US,"Jerauld, South Dakota, US",2013
+46077,Kingsbury,South Dakota,US,"Kingsbury, South Dakota, US",4939
+46079,Lake,South Dakota,US,"Lake, South Dakota, US",12797
+46081,Lawrence,South Dakota,US,"Lawrence, South Dakota, US",25844
+46083,Lincoln,South Dakota,US,"Lincoln, South Dakota, US",61128
+46085,Lyman,South Dakota,US,"Lyman, South Dakota, US",3781
+46091,Marshall,South Dakota,US,"Marshall, South Dakota, US",4935
+46087,McCook,South Dakota,US,"McCook, South Dakota, US",5586
+46089,McPherson,South Dakota,US,"McPherson, South Dakota, US",2379
+46093,Meade,South Dakota,US,"Meade, South Dakota, US",28332
+46097,Miner,South Dakota,US,"Miner, South Dakota, US",2216
+46099,Minnehaha,South Dakota,US,"Minnehaha, South Dakota, US",193134
+46101,Moody,South Dakota,US,"Moody, South Dakota, US",6576
+46102,Oglala Lakota,South Dakota,US,"Oglala Lakota, South Dakota, US",14177
+46103,Pennington,South Dakota,US,"Pennington, South Dakota, US",113775
+46109,Roberts,South Dakota,US,"Roberts, South Dakota, US",10394
+46111,Sanborn,South Dakota,US,"Sanborn, South Dakota, US",2344
+46115,Spink,South Dakota,US,"Spink, South Dakota, US",6376
+46117,Stanley,South Dakota,US,"Stanley, South Dakota, US",3098
+46119,Sully,South Dakota,US,"Sully, South Dakota, US",1391
+46121,Todd,South Dakota,US,"Todd, South Dakota, US",10177
+46123,Tripp,South Dakota,US,"Tripp, South Dakota, US",5441
+46125,Turner,South Dakota,US,"Turner, South Dakota, US",8384
+90046,Unassigned,South Dakota,US,"Unassigned, South Dakota, US",#DIV/0!
+46127,Union,South Dakota,US,"Union, South Dakota, US",15932
+46129,Walworth,South Dakota,US,"Walworth, South Dakota, US",5435
+46135,Yankton,South Dakota,US,"Yankton, South Dakota, US",22814
+46137,Ziebach,South Dakota,US,"Ziebach, South Dakota, US",2756
+47001,Anderson,Tennessee,US,"Anderson, Tennessee, US",76978
+47003,Bedford,Tennessee,US,"Bedford, Tennessee, US",49713
+47005,Benton,Tennessee,US,"Benton, Tennessee, US",16160
+47007,Bledsoe,Tennessee,US,"Bledsoe, Tennessee, US",15064
+47009,Blount,Tennessee,US,"Blount, Tennessee, US",133088
+47011,Bradley,Tennessee,US,"Bradley, Tennessee, US",108110
+47013,Campbell,Tennessee,US,"Campbell, Tennessee, US",39842
+47015,Cannon,Tennessee,US,"Cannon, Tennessee, US",14678
+47017,Carroll,Tennessee,US,"Carroll, Tennessee, US",27767
+47019,Carter,Tennessee,US,"Carter, Tennessee, US",56391
+47021,Cheatham,Tennessee,US,"Cheatham, Tennessee, US",40667
+47023,Chester,Tennessee,US,"Chester, Tennessee, US",17297
+47025,Claiborne,Tennessee,US,"Claiborne, Tennessee, US",31959
+47027,Clay,Tennessee,US,"Clay, Tennessee, US",7615
+47029,Cocke,Tennessee,US,"Cocke, Tennessee, US",36004
+47031,Coffee,Tennessee,US,"Coffee, Tennessee, US",56520
+47033,Crockett,Tennessee,US,"Crockett, Tennessee, US",14230
+47035,Cumberland,Tennessee,US,"Cumberland, Tennessee, US",60520
+47037,Davidson,Tennessee,US,"Davidson, Tennessee, US",694144
+47039,Decatur,Tennessee,US,"Decatur, Tennessee, US",11663
+47041,DeKalb,Tennessee,US,"DeKalb, Tennessee, US",20490
+47043,Dickson,Tennessee,US,"Dickson, Tennessee, US",53948
+47045,Dyer,Tennessee,US,"Dyer, Tennessee, US",37159
+47047,Fayette,Tennessee,US,"Fayette, Tennessee, US",41133
+47049,Fentress,Tennessee,US,"Fentress, Tennessee, US",18523
+47051,Franklin,Tennessee,US,"Franklin, Tennessee, US",42208
+47053,Gibson,Tennessee,US,"Gibson, Tennessee, US",49133
+47055,Giles,Tennessee,US,"Giles, Tennessee, US",29464
+47057,Grainger,Tennessee,US,"Grainger, Tennessee, US",23320
+47059,Greene,Tennessee,US,"Greene, Tennessee, US",69069
+47061,Grundy,Tennessee,US,"Grundy, Tennessee, US",13427
+47063,Hamblen,Tennessee,US,"Hamblen, Tennessee, US",64934
+47065,Hamilton,Tennessee,US,"Hamilton, Tennessee, US",367804
+47067,Hancock,Tennessee,US,"Hancock, Tennessee, US",6620
+47069,Hardeman,Tennessee,US,"Hardeman, Tennessee, US",25050
+47071,Hardin,Tennessee,US,"Hardin, Tennessee, US",25652
+47073,Hawkins,Tennessee,US,"Hawkins, Tennessee, US",56786
+47075,Haywood,Tennessee,US,"Haywood, Tennessee, US",17304
+47077,Henderson,Tennessee,US,"Henderson, Tennessee, US",28117
+47079,Henry,Tennessee,US,"Henry, Tennessee, US",32345
+47081,Hickman,Tennessee,US,"Hickman, Tennessee, US",25178
+47083,Houston,Tennessee,US,"Houston, Tennessee, US",8201
+47085,Humphreys,Tennessee,US,"Humphreys, Tennessee, US",18582
+47087,Jackson,Tennessee,US,"Jackson, Tennessee, US",11786
+47089,Jefferson,Tennessee,US,"Jefferson, Tennessee, US",54495
+47091,Johnson,Tennessee,US,"Johnson, Tennessee, US",17788
+47093,Knox,Tennessee,US,"Knox, Tennessee, US",470313
+47095,Lake,Tennessee,US,"Lake, Tennessee, US",7016
+47097,Lauderdale,Tennessee,US,"Lauderdale, Tennessee, US",25633
+47099,Lawrence,Tennessee,US,"Lawrence, Tennessee, US",44142
+47101,Lewis,Tennessee,US,"Lewis, Tennessee, US",12268
+47103,Lincoln,Tennessee,US,"Lincoln, Tennessee, US",34366
+47105,Loudon,Tennessee,US,"Loudon, Tennessee, US",54068
+47111,Macon,Tennessee,US,"Macon, Tennessee, US",24602
+47113,Madison,Tennessee,US,"Madison, Tennessee, US",97984
+47115,Marion,Tennessee,US,"Marion, Tennessee, US",28907
+47117,Marshall,Tennessee,US,"Marshall, Tennessee, US",34375
+47119,Maury,Tennessee,US,"Maury, Tennessee, US",96387
+47107,McMinn,Tennessee,US,"McMinn, Tennessee, US",53794
+47109,McNairy,Tennessee,US,"McNairy, Tennessee, US",25694
+47121,Meigs,Tennessee,US,"Meigs, Tennessee, US",12422
+47123,Monroe,Tennessee,US,"Monroe, Tennessee, US",46545
+47125,Montgomery,Tennessee,US,"Montgomery, Tennessee, US",208993
+47127,Moore,Tennessee,US,"Moore, Tennessee, US",6488
+47129,Morgan,Tennessee,US,"Morgan, Tennessee, US",21403
+47131,Obion,Tennessee,US,"Obion, Tennessee, US",30069
+80047,Out of TN,Tennessee,US,"Out of TN, Tennessee, US",#DIV/0!
+47133,Overton,Tennessee,US,"Overton, Tennessee, US",22241
+47135,Perry,Tennessee,US,"Perry, Tennessee, US",8076
+47137,Pickett,Tennessee,US,"Pickett, Tennessee, US",5048
+47139,Polk,Tennessee,US,"Polk, Tennessee, US",16832
+47141,Putnam,Tennessee,US,"Putnam, Tennessee, US",80245
+47143,Rhea,Tennessee,US,"Rhea, Tennessee, US",33167
+47145,Roane,Tennessee,US,"Roane, Tennessee, US",53382
+47147,Robertson,Tennessee,US,"Robertson, Tennessee, US",71813
+47149,Rutherford,Tennessee,US,"Rutherford, Tennessee, US",332285
+47151,Scott,Tennessee,US,"Scott, Tennessee, US",22068
+47153,Sequatchie,Tennessee,US,"Sequatchie, Tennessee, US",15026
+47155,Sevier,Tennessee,US,"Sevier, Tennessee, US",98250
+47157,Shelby,Tennessee,US,"Shelby, Tennessee, US",937166
+47159,Smith,Tennessee,US,"Smith, Tennessee, US",20157
+47161,Stewart,Tennessee,US,"Stewart, Tennessee, US",13715
+47163,Sullivan,Tennessee,US,"Sullivan, Tennessee, US",158348
+47165,Sumner,Tennessee,US,"Sumner, Tennessee, US",191283
+47167,Tipton,Tennessee,US,"Tipton, Tennessee, US",61599
+47169,Trousdale,Tennessee,US,"Trousdale, Tennessee, US",11284
+90047,Unassigned,Tennessee,US,"Unassigned, Tennessee, US",#DIV/0!
+47171,Unicoi,Tennessee,US,"Unicoi, Tennessee, US",17883
+47173,Union,Tennessee,US,"Union, Tennessee, US",19972
+47175,Van Buren,Tennessee,US,"Van Buren, Tennessee, US",5872
+47177,Warren,Tennessee,US,"Warren, Tennessee, US",41277
+47179,Washington,Tennessee,US,"Washington, Tennessee, US",129375
+47181,Wayne,Tennessee,US,"Wayne, Tennessee, US",16673
+47183,Weakley,Tennessee,US,"Weakley, Tennessee, US",33328
+47185,White,Tennessee,US,"White, Tennessee, US",27345
+47187,Williamson,Tennessee,US,"Williamson, Tennessee, US",238412
+47189,Wilson,Tennessee,US,"Wilson, Tennessee, US",144657
+48001,Anderson,Texas,US,"Anderson, Texas, US",57735
+48003,Andrews,Texas,US,"Andrews, Texas, US",18705
+48005,Angelina,Texas,US,"Angelina, Texas, US",86715
+48007,Aransas,Texas,US,"Aransas, Texas, US",23510
+48009,Archer,Texas,US,"Archer, Texas, US",8553
+48011,Armstrong,Texas,US,"Armstrong, Texas, US",1887
+48013,Atascosa,Texas,US,"Atascosa, Texas, US",51153
+48015,Austin,Texas,US,"Austin, Texas, US",30032
+48017,Bailey,Texas,US,"Bailey, Texas, US",7000
+48019,Bandera,Texas,US,"Bandera, Texas, US",23112
+48021,Bastrop,Texas,US,"Bastrop, Texas, US",88723
+48025,Bee,Texas,US,"Bee, Texas, US",32565
+48027,Bell,Texas,US,"Bell, Texas, US",362924
+48029,Bexar,Texas,US,"Bexar, Texas, US",2003554
+48031,Blanco,Texas,US,"Blanco, Texas, US",11931
+48035,Bosque,Texas,US,"Bosque, Texas, US",18685
+48037,Bowie,Texas,US,"Bowie, Texas, US",93245
+48039,Brazoria,Texas,US,"Brazoria, Texas, US",374264
+48041,Brazos,Texas,US,"Brazos, Texas, US",232624
+48043,Brewster,Texas,US,"Brewster, Texas, US",9203
+48045,Briscoe,Texas,US,"Briscoe, Texas, US",1546
+48047,Brooks,Texas,US,"Brooks, Texas, US",7093
+48049,Brown,Texas,US,"Brown, Texas, US",37864
+48051,Burleson,Texas,US,"Burleson, Texas, US",18443
+48053,Burnet,Texas,US,"Burnet, Texas, US",48155
+48055,Caldwell,Texas,US,"Caldwell, Texas, US",43664
+48057,Calhoun,Texas,US,"Calhoun, Texas, US",21290
+48059,Callahan,Texas,US,"Callahan, Texas, US",13943
+48061,Cameron,Texas,US,"Cameron, Texas, US",423163
+48063,Camp,Texas,US,"Camp, Texas, US",13094
+48065,Carson,Texas,US,"Carson, Texas, US",5926
+48067,Cass,Texas,US,"Cass, Texas, US",30026
+48069,Castro,Texas,US,"Castro, Texas, US",7530
+48071,Chambers,Texas,US,"Chambers, Texas, US",43837
+48073,Cherokee,Texas,US,"Cherokee, Texas, US",52646
+48075,Childress,Texas,US,"Childress, Texas, US",7306
+48077,Clay,Texas,US,"Clay, Texas, US",10471
+48079,Cochran,Texas,US,"Cochran, Texas, US",2853
+48081,Coke,Texas,US,"Coke, Texas, US",3387
+48083,Coleman,Texas,US,"Coleman, Texas, US",8175
+48085,Collin,Texas,US,"Collin, Texas, US",1034730
+48087,Collingsworth,Texas,US,"Collingsworth, Texas, US",2920
+48089,Colorado,Texas,US,"Colorado, Texas, US",21493
+48091,Comal,Texas,US,"Comal, Texas, US",156209
+48093,Comanche,Texas,US,"Comanche, Texas, US",13635
+48095,Concho,Texas,US,"Concho, Texas, US",2726
+48097,Cooke,Texas,US,"Cooke, Texas, US",41257
+48099,Coryell,Texas,US,"Coryell, Texas, US",75951
+48101,Cottle,Texas,US,"Cottle, Texas, US",1398
+48103,Crane,Texas,US,"Crane, Texas, US",4797
+48107,Crosby,Texas,US,"Crosby, Texas, US",5737
+48111,Dallam,Texas,US,"Dallam, Texas, US",7287
+48113,Dallas,Texas,US,"Dallas, Texas, US",2694489
+48115,Dawson,Texas,US,"Dawson, Texas, US",12728
+48117,Deaf Smith,Texas,US,"Deaf Smith, Texas, US",18546
+48119,Delta,Texas,US,"Delta, Texas, US",5331
+48121,Denton,Texas,US,"Denton, Texas, US",905899
+48123,DeWitt,Texas,US,"DeWitt, Texas, US",20160
+48125,Dickens,Texas,US,"Dickens, Texas, US",2211
+48127,Dimmit,Texas,US,"Dimmit, Texas, US",10124
+48129,Donley,Texas,US,"Donley, Texas, US",3278
+48131,Duval,Texas,US,"Duval, Texas, US",11157
+48133,Eastland,Texas,US,"Eastland, Texas, US",18360
+48135,Ector,Texas,US,"Ector, Texas, US",166223
+48141,El Paso,Texas,US,"El Paso, Texas, US",839238
+48139,Ellis,Texas,US,"Ellis, Texas, US",184826
+48143,Erath,Texas,US,"Erath, Texas, US",42698
+48145,Falls,Texas,US,"Falls, Texas, US",17297
+48147,Fannin,Texas,US,"Fannin, Texas, US",35514
+48149,Fayette,Texas,US,"Fayette, Texas, US",25346
+48151,Fisher,Texas,US,"Fisher, Texas, US",3830
+48153,Floyd,Texas,US,"Floyd, Texas, US",5712
+48157,Fort Bend,Texas,US,"Fort Bend, Texas, US",811688
+48159,Franklin,Texas,US,"Franklin, Texas, US",10725
+48161,Freestone,Texas,US,"Freestone, Texas, US",19717
+48163,Frio,Texas,US,"Frio, Texas, US",20306
+48165,Gaines,Texas,US,"Gaines, Texas, US",21492
+48167,Galveston,Texas,US,"Galveston, Texas, US",342139
+48169,Garza,Texas,US,"Garza, Texas, US",6229
+48171,Gillespie,Texas,US,"Gillespie, Texas, US",26988
+48173,Glasscock,Texas,US,"Glasscock, Texas, US",1409
+48175,Goliad,Texas,US,"Goliad, Texas, US",7658
+48177,Gonzales,Texas,US,"Gonzales, Texas, US",20837
+48179,Gray,Texas,US,"Gray, Texas, US",21886
+48181,Grayson,Texas,US,"Grayson, Texas, US",136212
+48183,Gregg,Texas,US,"Gregg, Texas, US",123945
+48185,Grimes,Texas,US,"Grimes, Texas, US",28880
+48187,Guadalupe,Texas,US,"Guadalupe, Texas, US",166847
+48189,Hale,Texas,US,"Hale, Texas, US",33406
+48191,Hall,Texas,US,"Hall, Texas, US",2964
+48193,Hamilton,Texas,US,"Hamilton, Texas, US",8461
+48195,Hansford,Texas,US,"Hansford, Texas, US",5399
+48197,Hardeman,Texas,US,"Hardeman, Texas, US",3933
+48199,Hardin,Texas,US,"Hardin, Texas, US",57602
+48201,Harris,Texas,US,"Harris, Texas, US",4713325
+48203,Harrison,Texas,US,"Harrison, Texas, US",66553
+48205,Hartley,Texas,US,"Hartley, Texas, US",5576
+48207,Haskell,Texas,US,"Haskell, Texas, US",5658
+48209,Hays,Texas,US,"Hays, Texas, US",230191
+48211,Hemphill,Texas,US,"Hemphill, Texas, US",3819
+48213,Henderson,Texas,US,"Henderson, Texas, US",82737
+48215,Hidalgo,Texas,US,"Hidalgo, Texas, US",868707
+48217,Hill,Texas,US,"Hill, Texas, US",36649
+48219,Hockley,Texas,US,"Hockley, Texas, US",23021
+48221,Hood,Texas,US,"Hood, Texas, US",61643
+48223,Hopkins,Texas,US,"Hopkins, Texas, US",37084
+48225,Houston,Texas,US,"Houston, Texas, US",22968
+48227,Howard,Texas,US,"Howard, Texas, US",36664
+48229,Hudspeth,Texas,US,"Hudspeth, Texas, US",4886
+48231,Hunt,Texas,US,"Hunt, Texas, US",98594
+48233,Hutchinson,Texas,US,"Hutchinson, Texas, US",20938
+48237,Jack,Texas,US,"Jack, Texas, US",8935
+48239,Jackson,Texas,US,"Jackson, Texas, US",14760
+48241,Jasper,Texas,US,"Jasper, Texas, US",35529
+48245,Jefferson,Texas,US,"Jefferson, Texas, US",251565
+48247,Jim Hogg,Texas,US,"Jim Hogg, Texas, US",5200
+48249,Jim Wells,Texas,US,"Jim Wells, Texas, US",40482
+48251,Johnson,Texas,US,"Johnson, Texas, US",175817
+48253,Jones,Texas,US,"Jones, Texas, US",20083
+48255,Karnes,Texas,US,"Karnes, Texas, US",15601
+48257,Kaufman,Texas,US,"Kaufman, Texas, US",136154
+48259,Kendall,Texas,US,"Kendall, Texas, US",47431
+48265,Kerr,Texas,US,"Kerr, Texas, US",52600
+48267,Kimble,Texas,US,"Kimble, Texas, US",4337
+48271,Kinney,Texas,US,"Kinney, Texas, US",3667
+48273,Kleberg,Texas,US,"Kleberg, Texas, US",30680
+48275,Knox,Texas,US,"Knox, Texas, US",3664
+48283,La Salle,Texas,US,"La Salle, Texas, US",7520
+48277,Lamar,Texas,US,"Lamar, Texas, US",49859
+48279,Lamb,Texas,US,"Lamb, Texas, US",12893
+48281,Lampasas,Texas,US,"Lampasas, Texas, US",21428
+48285,Lavaca,Texas,US,"Lavaca, Texas, US",20154
+48287,Lee,Texas,US,"Lee, Texas, US",17239
+48289,Leon,Texas,US,"Leon, Texas, US",17404
+48291,Liberty,Texas,US,"Liberty, Texas, US",88219
+48293,Limestone,Texas,US,"Limestone, Texas, US",23437
+48295,Lipscomb,Texas,US,"Lipscomb, Texas, US",3233
+48297,Live Oak,Texas,US,"Live Oak, Texas, US",12207
+48299,Llano,Texas,US,"Llano, Texas, US",21795
+48303,Lubbock,Texas,US,"Lubbock, Texas, US",310569
+48305,Lynn,Texas,US,"Lynn, Texas, US",5951
+48313,Madison,Texas,US,"Madison, Texas, US",14284
+48315,Marion,Texas,US,"Marion, Texas, US",9854
+48317,Martin,Texas,US,"Martin, Texas, US",5771
+48319,Mason,Texas,US,"Mason, Texas, US",4274
+48321,Matagorda,Texas,US,"Matagorda, Texas, US",36643
+48323,Maverick,Texas,US,"Maverick, Texas, US",58722
+48307,McCulloch,Texas,US,"McCulloch, Texas, US",7984
+48309,McLennan,Texas,US,"McLennan, Texas, US",256623
+48325,Medina,Texas,US,"Medina, Texas, US",51584
+48329,Midland,Texas,US,"Midland, Texas, US",176832
+48331,Milam,Texas,US,"Milam, Texas, US",24823
+48333,Mills,Texas,US,"Mills, Texas, US",4873
+48335,Mitchell,Texas,US,"Mitchell, Texas, US",8545
+48337,Montague,Texas,US,"Montague, Texas, US",19818
+48339,Montgomery,Texas,US,"Montgomery, Texas, US",607391
+48341,Moore,Texas,US,"Moore, Texas, US",20940
+48343,Morris,Texas,US,"Morris, Texas, US",12388
+48345,Motley,Texas,US,"Motley, Texas, US",1200
+48347,Nacogdoches,Texas,US,"Nacogdoches, Texas, US",65204
+48349,Navarro,Texas,US,"Navarro, Texas, US",50113
+48351,Newton,Texas,US,"Newton, Texas, US",13595
+48353,Nolan,Texas,US,"Nolan, Texas, US",14714
+48355,Nueces,Texas,US,"Nueces, Texas, US",362294
+48357,Ochiltree,Texas,US,"Ochiltree, Texas, US",9836
+48359,Oldham,Texas,US,"Oldham, Texas, US",2112
+48361,Orange,Texas,US,"Orange, Texas, US",83396
+48363,Palo Pinto,Texas,US,"Palo Pinto, Texas, US",29189
+48365,Panola,Texas,US,"Panola, Texas, US",23194
+48367,Parker,Texas,US,"Parker, Texas, US",142878
+48369,Parmer,Texas,US,"Parmer, Texas, US",9605
+48371,Pecos,Texas,US,"Pecos, Texas, US",15823
+48373,Polk,Texas,US,"Polk, Texas, US",51353
+48375,Potter,Texas,US,"Potter, Texas, US",117415
+48377,Presidio,Texas,US,"Presidio, Texas, US",6704
+48379,Rains,Texas,US,"Rains, Texas, US",12514
+48381,Randall,Texas,US,"Randall, Texas, US",137713
+48383,Reagan,Texas,US,"Reagan, Texas, US",3849
+48387,Red River,Texas,US,"Red River, Texas, US",12023
+48389,Reeves,Texas,US,"Reeves, Texas, US",15976
+48391,Refugio,Texas,US,"Refugio, Texas, US",6948
+48393,Roberts,Texas,US,"Roberts, Texas, US",854
+48395,Robertson,Texas,US,"Robertson, Texas, US",17074
+48397,Rockwall,Texas,US,"Rockwall, Texas, US",104915
+48399,Runnels,Texas,US,"Runnels, Texas, US",10264
+48401,Rusk,Texas,US,"Rusk, Texas, US",54406
+48403,Sabine,Texas,US,"Sabine, Texas, US",10542
+48405,San Augustine,Texas,US,"San Augustine, Texas, US",8237
+48407,San Jacinto,Texas,US,"San Jacinto, Texas, US",28859
+48409,San Patricio,Texas,US,"San Patricio, Texas, US",66730
+48411,San Saba,Texas,US,"San Saba, Texas, US",6055
+48415,Scurry,Texas,US,"Scurry, Texas, US",16703
+48417,Shackelford,Texas,US,"Shackelford, Texas, US",3265
+48419,Shelby,Texas,US,"Shelby, Texas, US",25274
+48421,Sherman,Texas,US,"Sherman, Texas, US",3022
+48423,Smith,Texas,US,"Smith, Texas, US",232751
+48427,Starr,Texas,US,"Starr, Texas, US",64633
+48429,Stephens,Texas,US,"Stephens, Texas, US",9366
+48437,Swisher,Texas,US,"Swisher, Texas, US",7397
+48439,Tarrant,Texas,US,"Tarrant, Texas, US",2154892
+48441,Taylor,Texas,US,"Taylor, Texas, US",138034
+48445,Terry,Texas,US,"Terry, Texas, US",12337
+48449,Titus,Texas,US,"Titus, Texas, US",31479
+48451,Tom Green,Texas,US,"Tom Green, Texas, US",119200
+48453,Travis,Texas,US,"Travis, Texas, US",1273954
+48455,Trinity,Texas,US,"Trinity, Texas, US",14651
+48457,Tyler,Texas,US,"Tyler, Texas, US",21672
+90048,Unassigned,Texas,US,"Unassigned, Texas, US",#DIV/0!
+48459,Upshur,Texas,US,"Upshur, Texas, US",41753
+48463,Uvalde,Texas,US,"Uvalde, Texas, US",26741
+48465,Val Verde,Texas,US,"Val Verde, Texas, US",49025
+48467,Van Zandt,Texas,US,"Van Zandt, Texas, US",56590
+48469,Victoria,Texas,US,"Victoria, Texas, US",92084
+48471,Walker,Texas,US,"Walker, Texas, US",72971
+48473,Waller,Texas,US,"Waller, Texas, US",55246
+48475,Ward,Texas,US,"Ward, Texas, US",11998
+48477,Washington,Texas,US,"Washington, Texas, US",35882
+48479,Webb,Texas,US,"Webb, Texas, US",276652
+48481,Wharton,Texas,US,"Wharton, Texas, US",41556
+48483,Wheeler,Texas,US,"Wheeler, Texas, US",5056
+48485,Wichita,Texas,US,"Wichita, Texas, US",132230
+48487,Wilbarger,Texas,US,"Wilbarger, Texas, US",12769
+48489,Willacy,Texas,US,"Willacy, Texas, US",21358
+48491,Williamson,Texas,US,"Williamson, Texas, US",590551
+48493,Wilson,Texas,US,"Wilson, Texas, US",51070
+48495,Winkler,Texas,US,"Winkler, Texas, US",8010
+48497,Wise,Texas,US,"Wise, Texas, US",69984
+48499,Wood,Texas,US,"Wood, Texas, US",45539
+48501,Yoakum,Texas,US,"Yoakum, Texas, US",8713
+48503,Young,Texas,US,"Young, Texas, US",18010
+48505,Zapata,Texas,US,"Zapata, Texas, US",14179
+48507,Zavala,Texas,US,"Zavala, Texas, US",11840
+,Bear River,Utah,US,"Bear River, Utah, US",186818
+,Central Utah,Utah,US,"Central Utah, Utah, US",81954
+49011,Davis,Utah,US,"Davis, Utah, US",355481
+49035,Salt Lake,Utah,US,"Salt Lake, Utah, US",1160437
+49037,San Juan,Utah,US,"San Juan, Utah, US",15308
+,Southeast Utah,Utah,US,"Southeast Utah, Utah, US",40229
+,Southwest Utah,Utah,US,"Southwest Utah, Utah, US",252042
+49043,Summit,Utah,US,"Summit, Utah, US",42145
+49045,Tooele,Utah,US,"Tooele, Utah, US",72259
+,TriCounty,Utah,US,"TriCounty, Utah, US",56622
+90049,Unassigned,Utah,US,"Unassigned, Utah, US",#DIV/0!
+49049,Utah,Utah,US,"Utah, Utah, US",636235
+49051,Wasatch,Utah,US,"Wasatch, Utah, US",34091
+,Weber-Morgan,Utah,US,"Weber-Morgan, Utah, US",272337
+50001,Addison,Vermont,US,"Addison, Vermont, US",36777
+50003,Bennington,Vermont,US,"Bennington, Vermont, US",35470
+50005,Caledonia,Vermont,US,"Caledonia, Vermont, US",29993
+50007,Chittenden,Vermont,US,"Chittenden, Vermont, US",163774
+50009,Essex,Vermont,US,"Essex, Vermont, US",6163
+50011,Franklin,Vermont,US,"Franklin, Vermont, US",49402
+50013,Grand Isle,Vermont,US,"Grand Isle, Vermont, US",7235
+50015,Lamoille,Vermont,US,"Lamoille, Vermont, US",25362
+50017,Orange,Vermont,US,"Orange, Vermont, US",28892
+50019,Orleans,Vermont,US,"Orleans, Vermont, US",27037
+50021,Rutland,Vermont,US,"Rutland, Vermont, US",58191
+90050,Unassigned,Vermont,US,"Unassigned, Vermont, US",#DIV/0!
+50023,Washington,Vermont,US,"Washington, Vermont, US",58409
+50025,Windham,Vermont,US,"Windham, Vermont, US",42222
+50027,Windsor,Vermont,US,"Windsor, Vermont, US",55062
+78,,Virgin Islands,US,"Virgin Islands, US",107268
+51001,Accomack,Virginia,US,"Accomack, Virginia, US",32316
+51003,Albemarle,Virginia,US,"Albemarle, Virginia, US",109330
+51510,Alexandria,Virginia,US,"Alexandria, Virginia, US",159428
+51005,Alleghany,Virginia,US,"Alleghany, Virginia, US",14860
+51007,Amelia,Virginia,US,"Amelia, Virginia, US",13145
+51009,Amherst,Virginia,US,"Amherst, Virginia, US",31605
+51011,Appomattox,Virginia,US,"Appomattox, Virginia, US",15911
+51013,Arlington,Virginia,US,"Arlington, Virginia, US",236842
+51015,Augusta,Virginia,US,"Augusta, Virginia, US",75558
+51017,Bath,Virginia,US,"Bath, Virginia, US",#DIV/0!
+51019,Bedford,Virginia,US,"Bedford, Virginia, US",78997
+51021,Bland,Virginia,US,"Bland, Virginia, US",#DIV/0!
+51023,Botetourt,Virginia,US,"Botetourt, Virginia, US",33419
+51520,Bristol,Virginia,US,"Bristol, Virginia, US",16762
+51025,Brunswick,Virginia,US,"Brunswick, Virginia, US",16231
+51027,Buchanan,Virginia,US,"Buchanan, Virginia, US",21004
+51029,Buckingham,Virginia,US,"Buckingham, Virginia, US",17148
+51530,Buena Vista,Virginia,US,"Buena Vista, Virginia, US",6478
+51031,Campbell,Virginia,US,"Campbell, Virginia, US",54885
+51033,Caroline,Virginia,US,"Caroline, Virginia, US",30725
+51035,Carroll,Virginia,US,"Carroll, Virginia, US",29791
+51036,Charles City,Virginia,US,"Charles City, Virginia, US",6963
+51037,Charlotte,Virginia,US,"Charlotte, Virginia, US",11880
+51540,Charlottesville,Virginia,US,"Charlottesville, Virginia, US",47266
+51550,Chesapeake,Virginia,US,"Chesapeake, Virginia, US",244835
+51041,Chesterfield,Virginia,US,"Chesterfield, Virginia, US",352802
+51043,Clarke,Virginia,US,"Clarke, Virginia, US",14619
+51570,Colonial Heights,Virginia,US,"Colonial Heights, Virginia, US",17370
+51580,Covington,Virginia,US,"Covington, Virginia, US",5538
+51045,Craig,Virginia,US,"Craig, Virginia, US",5131
+51047,Culpeper,Virginia,US,"Culpeper, Virginia, US",52605
+51049,Cumberland,Virginia,US,"Cumberland, Virginia, US",9932
+51590,Danville,Virginia,US,"Danville, Virginia, US",40044
+51051,Dickenson,Virginia,US,"Dickenson, Virginia, US",#DIV/0!
+51053,Dinwiddie,Virginia,US,"Dinwiddie, Virginia, US",28544
+51595,Emporia,Virginia,US,"Emporia, Virginia, US",5346
+51057,Essex,Virginia,US,"Essex, Virginia, US",10953
+51059,Fairfax,Virginia,US,"Fairfax, Virginia, US",1147532
+51600,Fairfax City,Virginia,US,"Fairfax City, Virginia, US",24019
+51610,Falls Church,Virginia,US,"Falls Church, Virginia, US",14617
+51061,Fauquier,Virginia,US,"Fauquier, Virginia, US",71222
+51063,Floyd,Virginia,US,"Floyd, Virginia, US",15749
+51065,Fluvanna,Virginia,US,"Fluvanna, Virginia, US",27270
+51067,Franklin,Virginia,US,"Franklin, Virginia, US",56042
+51620,Franklin City,Virginia,US,"Franklin City, Virginia, US",7967
+51069,Frederick,Virginia,US,"Frederick, Virginia, US",89313
+51630,Fredericksburg,Virginia,US,"Fredericksburg, Virginia, US",29036
+51640,Galax,Virginia,US,"Galax, Virginia, US",6347
+51071,Giles,Virginia,US,"Giles, Virginia, US",16720
+51073,Gloucester,Virginia,US,"Gloucester, Virginia, US",37348
+51075,Goochland,Virginia,US,"Goochland, Virginia, US",23753
+51077,Grayson,Virginia,US,"Grayson, Virginia, US",15550
+51079,Greene,Virginia,US,"Greene, Virginia, US",19819
+51081,Greensville,Virginia,US,"Greensville, Virginia, US",11336
+51083,Halifax,Virginia,US,"Halifax, Virginia, US",33911
+51650,Hampton,Virginia,US,"Hampton, Virginia, US",134510
+51085,Hanover,Virginia,US,"Hanover, Virginia, US",107766
+51660,Harrisonburg,Virginia,US,"Harrisonburg, Virginia, US",53016
+51087,Henrico,Virginia,US,"Henrico, Virginia, US",330818
+51089,Henry,Virginia,US,"Henry, Virginia, US",50557
+51091,Highland,Virginia,US,"Highland, Virginia, US",2190
+51670,Hopewell,Virginia,US,"Hopewell, Virginia, US",22529
+51093,Isle of Wight,Virginia,US,"Isle of Wight, Virginia, US",37109
+51095,James City,Virginia,US,"James City, Virginia, US",76523
+51097,King and Queen,Virginia,US,"King and Queen, Virginia, US",7025
+51099,King George,Virginia,US,"King George, Virginia, US",26836
+51101,King William,Virginia,US,"King William, Virginia, US",17148
+51103,Lancaster,Virginia,US,"Lancaster, Virginia, US",10603
+51105,Lee,Virginia,US,"Lee, Virginia, US",23423
+51678,Lexington,Virginia,US,"Lexington, Virginia, US",7446
+51107,Loudoun,Virginia,US,"Loudoun, Virginia, US",413538
+51109,Louisa,Virginia,US,"Louisa, Virginia, US",37591
+51111,Lunenburg,Virginia,US,"Lunenburg, Virginia, US",12196
+51680,Lynchburg,Virginia,US,"Lynchburg, Virginia, US",82168
+51113,Madison,Virginia,US,"Madison, Virginia, US",13261
+51683,Manassas,Virginia,US,"Manassas, Virginia, US",41085
+51685,Manassas Park,Virginia,US,"Manassas Park, Virginia, US",17478
+51690,Martinsville,Virginia,US,"Martinsville, Virginia, US",12554
+51115,Mathews,Virginia,US,"Mathews, Virginia, US",8834
+51117,Mecklenburg,Virginia,US,"Mecklenburg, Virginia, US",30587
+51119,Middlesex,Virginia,US,"Middlesex, Virginia, US",10582
+51121,Montgomery,Virginia,US,"Montgomery, Virginia, US",98535
+51125,Nelson,Virginia,US,"Nelson, Virginia, US",14930
+51127,New Kent,Virginia,US,"New Kent, Virginia, US",23091
+51700,Newport News,Virginia,US,"Newport News, Virginia, US",179225
+51710,Norfolk,Virginia,US,"Norfolk, Virginia, US",242742
+51131,Northampton,Virginia,US,"Northampton, Virginia, US",11710
+51133,Northumberland,Virginia,US,"Northumberland, Virginia, US",12095
+51720,Norton,Virginia,US,"Norton, Virginia, US",3981
+51135,Nottoway,Virginia,US,"Nottoway, Virginia, US",15232
+51137,Orange,Virginia,US,"Orange, Virginia, US",37051
+51139,Page,Virginia,US,"Page, Virginia, US",23902
+51141,Patrick,Virginia,US,"Patrick, Virginia, US",17608
+51730,Petersburg,Virginia,US,"Petersburg, Virginia, US",31346
+51143,Pittsylvania,Virginia,US,"Pittsylvania, Virginia, US",60354
+51735,Poquoson,Virginia,US,"Poquoson, Virginia, US",12271
+51740,Portsmouth,Virginia,US,"Portsmouth, Virginia, US",94398
+51145,Powhatan,Virginia,US,"Powhatan, Virginia, US",29652
+51147,Prince Edward,Virginia,US,"Prince Edward, Virginia, US",22802
+51149,Prince George,Virginia,US,"Prince George, Virginia, US",38353
+51153,Prince William,Virginia,US,"Prince William, Virginia, US",470335
+51155,Pulaski,Virginia,US,"Pulaski, Virginia, US",34027
+51750,Radford,Virginia,US,"Radford, Virginia, US",18249
+51157,Rappahannock,Virginia,US,"Rappahannock, Virginia, US",7370
+51159,Richmond,Virginia,US,"Richmond, Virginia, US",9023
+51760,Richmond City,Virginia,US,"Richmond City, Virginia, US",230436
+51161,Roanoke,Virginia,US,"Roanoke, Virginia, US",94186
+51770,Roanoke City,Virginia,US,"Roanoke City, Virginia, US",99143
+51163,Rockbridge,Virginia,US,"Rockbridge, Virginia, US",22573
+51165,Rockingham,Virginia,US,"Rockingham, Virginia, US",81948
+51167,Russell,Virginia,US,"Russell, Virginia, US",26586
+51775,Salem,Virginia,US,"Salem, Virginia, US",25301
+51169,Scott,Virginia,US,"Scott, Virginia, US",21566
+51171,Shenandoah,Virginia,US,"Shenandoah, Virginia, US",43616
+51173,Smyth,Virginia,US,"Smyth, Virginia, US",30104
+51175,Southampton,Virginia,US,"Southampton, Virginia, US",17631
+51177,Spotsylvania,Virginia,US,"Spotsylvania, Virginia, US",136215
+51179,Stafford,Virginia,US,"Stafford, Virginia, US",152882
+51790,Staunton,Virginia,US,"Staunton, Virginia, US",24932
+51800,Suffolk,Virginia,US,"Suffolk, Virginia, US",92108
+51181,Surry,Virginia,US,"Surry, Virginia, US",6422
+51183,Sussex,Virginia,US,"Sussex, Virginia, US",11159
+51185,Tazewell,Virginia,US,"Tazewell, Virginia, US",40595
+90051,Unassigned,Virginia,US,"Unassigned, Virginia, US",#DIV/0!
+51810,Virginia Beach,Virginia,US,"Virginia Beach, Virginia, US",449974
+51187,Warren,Virginia,US,"Warren, Virginia, US",40164
+51191,Washington,Virginia,US,"Washington, Virginia, US",53740
+51820,Waynesboro,Virginia,US,"Waynesboro, Virginia, US",22630
+51193,Westmoreland,Virginia,US,"Westmoreland, Virginia, US",18015
+51830,Williamsburg,Virginia,US,"Williamsburg, Virginia, US",14954
+51840,Winchester,Virginia,US,"Winchester, Virginia, US",28078
+51195,Wise,Virginia,US,"Wise, Virginia, US",37383
+51197,Wythe,Virginia,US,"Wythe, Virginia, US",28684
+51199,York,Virginia,US,"York, Virginia, US",68280
+53001,Adams,Washington,US,"Adams, Washington, US",19983
+53003,Asotin,Washington,US,"Asotin, Washington, US",22582
+53005,Benton,Washington,US,"Benton, Washington, US",204390
+53007,Chelan,Washington,US,"Chelan, Washington, US",77200
+53009,Clallam,Washington,US,"Clallam, Washington, US",77331
+53011,Clark,Washington,US,"Clark, Washington, US",488241
+53013,Columbia,Washington,US,"Columbia, Washington, US",3985
+53015,Cowlitz,Washington,US,"Cowlitz, Washington, US",110593
+53017,Douglas,Washington,US,"Douglas, Washington, US",43429
+53019,Ferry,Washington,US,"Ferry, Washington, US",7627
+53021,Franklin,Washington,US,"Franklin, Washington, US",95222
+53023,Garfield,Washington,US,"Garfield, Washington, US",#DIV/0!
+53025,Grant,Washington,US,"Grant, Washington, US",97733
+53027,Grays Harbor,Washington,US,"Grays Harbor, Washington, US",75061
+53029,Island,Washington,US,"Island, Washington, US",85141
+53031,Jefferson,Washington,US,"Jefferson, Washington, US",32221
+53033,King,Washington,US,"King, Washington, US",2252782
+53035,Kitsap,Washington,US,"Kitsap, Washington, US",271473
+53037,Kittitas,Washington,US,"Kittitas, Washington, US",47935
+53039,Klickitat,Washington,US,"Klickitat, Washington, US",22425
+53041,Lewis,Washington,US,"Lewis, Washington, US",80707
+53043,Lincoln,Washington,US,"Lincoln, Washington, US",10939
+53045,Mason,Washington,US,"Mason, Washington, US",66768
+53047,Okanogan,Washington,US,"Okanogan, Washington, US",42243
+53049,Pacific,Washington,US,"Pacific, Washington, US",22471
+53051,Pend Oreille,Washington,US,"Pend Oreille, Washington, US",13724
+53053,Pierce,Washington,US,"Pierce, Washington, US",904980
+53055,San Juan,Washington,US,"San Juan, Washington, US",17582
+53057,Skagit,Washington,US,"Skagit, Washington, US",129205
+53059,Skamania,Washington,US,"Skamania, Washington, US",12083
+53061,Snohomish,Washington,US,"Snohomish, Washington, US",822083
+53063,Spokane,Washington,US,"Spokane, Washington, US",522798
+53065,Stevens,Washington,US,"Stevens, Washington, US",45723
+53067,Thurston,Washington,US,"Thurston, Washington, US",290536
+90053,Unassigned,Washington,US,"Unassigned, Washington, US",#DIV/0!
+53069,Wahkiakum,Washington,US,"Wahkiakum, Washington, US",4488
+53071,Walla Walla,Washington,US,"Walla Walla, Washington, US",60760
+53073,Whatcom,Washington,US,"Whatcom, Washington, US",229247
+53075,Whitman,Washington,US,"Whitman, Washington, US",50104
+53077,Yakima,Washington,US,"Yakima, Washington, US",250873
+54001,Barbour,West Virginia,US,"Barbour, West Virginia, US",16441
+54003,Berkeley,West Virginia,US,"Berkeley, West Virginia, US",119171
+54005,Boone,West Virginia,US,"Boone, West Virginia, US",21457
+54007,Braxton,West Virginia,US,"Braxton, West Virginia, US",13957
+54009,Brooke,West Virginia,US,"Brooke, West Virginia, US",21939
+54011,Cabell,West Virginia,US,"Cabell, West Virginia, US",91945
+54013,Calhoun,West Virginia,US,"Calhoun, West Virginia, US",7109
+54015,Clay,West Virginia,US,"Clay, West Virginia, US",8508
+54019,Fayette,West Virginia,US,"Fayette, West Virginia, US",42406
+54021,Gilmer,West Virginia,US,"Gilmer, West Virginia, US",7823
+54023,Grant,West Virginia,US,"Grant, West Virginia, US",11568
+54025,Greenbrier,West Virginia,US,"Greenbrier, West Virginia, US",34662
+54027,Hampshire,West Virginia,US,"Hampshire, West Virginia, US",23175
+54029,Hancock,West Virginia,US,"Hancock, West Virginia, US",28810
+54031,Hardy,West Virginia,US,"Hardy, West Virginia, US",13776
+54033,Harrison,West Virginia,US,"Harrison, West Virginia, US",67256
+54035,Jackson,West Virginia,US,"Jackson, West Virginia, US",28576
+54037,Jefferson,West Virginia,US,"Jefferson, West Virginia, US",57146
+54039,Kanawha,West Virginia,US,"Kanawha, West Virginia, US",178124
+54041,Lewis,West Virginia,US,"Lewis, West Virginia, US",15907
+54043,Lincoln,West Virginia,US,"Lincoln, West Virginia, US",20409
+54045,Logan,West Virginia,US,"Logan, West Virginia, US",32019
+54049,Marion,West Virginia,US,"Marion, West Virginia, US",56072
+54051,Marshall,West Virginia,US,"Marshall, West Virginia, US",30531
+54053,Mason,West Virginia,US,"Mason, West Virginia, US",26516
+54047,McDowell,West Virginia,US,"McDowell, West Virginia, US",17624
+54055,Mercer,West Virginia,US,"Mercer, West Virginia, US",58758
+54057,Mineral,West Virginia,US,"Mineral, West Virginia, US",26868
+54059,Mingo,West Virginia,US,"Mingo, West Virginia, US",23424
+54061,Monongalia,West Virginia,US,"Monongalia, West Virginia, US",105612
+54063,Monroe,West Virginia,US,"Monroe, West Virginia, US",13275
+54065,Morgan,West Virginia,US,"Morgan, West Virginia, US",17884
+54067,Nicholas,West Virginia,US,"Nicholas, West Virginia, US",24496
+54069,Ohio,West Virginia,US,"Ohio, West Virginia, US",41411
+54071,Pendleton,West Virginia,US,"Pendleton, West Virginia, US",6969
+54073,Pleasants,West Virginia,US,"Pleasants, West Virginia, US",7460
+54075,Pocahontas,West Virginia,US,"Pocahontas, West Virginia, US",8247
+54077,Preston,West Virginia,US,"Preston, West Virginia, US",33432
+54079,Putnam,West Virginia,US,"Putnam, West Virginia, US",56450
+54081,Raleigh,West Virginia,US,"Raleigh, West Virginia, US",73361
+54083,Randolph,West Virginia,US,"Randolph, West Virginia, US",28695
+54085,Ritchie,West Virginia,US,"Ritchie, West Virginia, US",9554
+54087,Roane,West Virginia,US,"Roane, West Virginia, US",13688
+54089,Summers,West Virginia,US,"Summers, West Virginia, US",12573
+54091,Taylor,West Virginia,US,"Taylor, West Virginia, US",16695
+54093,Tucker,West Virginia,US,"Tucker, West Virginia, US",6839
+54095,Tyler,West Virginia,US,"Tyler, West Virginia, US",8591
+90054,Unassigned,West Virginia,US,"Unassigned, West Virginia, US",#DIV/0!
+54097,Upshur,West Virginia,US,"Upshur, West Virginia, US",24176
+54099,Wayne,West Virginia,US,"Wayne, West Virginia, US",39402
+54103,Wetzel,West Virginia,US,"Wetzel, West Virginia, US",15065
+54105,Wirt,West Virginia,US,"Wirt, West Virginia, US",5821
+54107,Wood,West Virginia,US,"Wood, West Virginia, US",83518
+54109,Wyoming,West Virginia,US,"Wyoming, West Virginia, US",20394
+55001,Adams,Wisconsin,US,"Adams, Wisconsin, US",20220
+55003,Ashland,Wisconsin,US,"Ashland, Wisconsin, US",15562
+55005,Barron,Wisconsin,US,"Barron, Wisconsin, US",45244
+55007,Bayfield,Wisconsin,US,"Bayfield, Wisconsin, US",15036
+55009,Brown,Wisconsin,US,"Brown, Wisconsin, US",264542
+55011,Buffalo,Wisconsin,US,"Buffalo, Wisconsin, US",13031
+55013,Burnett,Wisconsin,US,"Burnett, Wisconsin, US",15414
+55015,Calumet,Wisconsin,US,"Calumet, Wisconsin, US",50089
+55017,Chippewa,Wisconsin,US,"Chippewa, Wisconsin, US",64658
+55019,Clark,Wisconsin,US,"Clark, Wisconsin, US",34774
+55021,Columbia,Wisconsin,US,"Columbia, Wisconsin, US",57532
+55023,Crawford,Wisconsin,US,"Crawford, Wisconsin, US",16131
+55025,Dane,Wisconsin,US,"Dane, Wisconsin, US",546695
+55027,Dodge,Wisconsin,US,"Dodge, Wisconsin, US",87839
+55029,Door,Wisconsin,US,"Door, Wisconsin, US",27668
+55031,Douglas,Wisconsin,US,"Douglas, Wisconsin, US",43150
+55033,Dunn,Wisconsin,US,"Dunn, Wisconsin, US",45368
+55035,Eau Claire,Wisconsin,US,"Eau Claire, Wisconsin, US",104646
+55037,Florence,Wisconsin,US,"Florence, Wisconsin, US",4295
+55039,Fond du Lac,Wisconsin,US,"Fond du Lac, Wisconsin, US",103403
+55041,Forest,Wisconsin,US,"Forest, Wisconsin, US",9004
+55043,Grant,Wisconsin,US,"Grant, Wisconsin, US",51439
+55045,Green,Wisconsin,US,"Green, Wisconsin, US",36960
+55047,Green Lake,Wisconsin,US,"Green Lake, Wisconsin, US",18913
+55049,Iowa,Wisconsin,US,"Iowa, Wisconsin, US",23678
+55051,Iron,Wisconsin,US,"Iron, Wisconsin, US",5687
+55053,Jackson,Wisconsin,US,"Jackson, Wisconsin, US",20643
+55055,Jefferson,Wisconsin,US,"Jefferson, Wisconsin, US",84769
+55057,Juneau,Wisconsin,US,"Juneau, Wisconsin, US",26687
+55059,Kenosha,Wisconsin,US,"Kenosha, Wisconsin, US",169561
+55061,Kewaunee,Wisconsin,US,"Kewaunee, Wisconsin, US",20434
+55063,La Crosse,Wisconsin,US,"La Crosse, Wisconsin, US",118016
+55065,Lafayette,Wisconsin,US,"Lafayette, Wisconsin, US",16665
+55067,Langlade,Wisconsin,US,"Langlade, Wisconsin, US",19189
+55069,Lincoln,Wisconsin,US,"Lincoln, Wisconsin, US",27593
+55071,Manitowoc,Wisconsin,US,"Manitowoc, Wisconsin, US",78981
+55073,Marathon,Wisconsin,US,"Marathon, Wisconsin, US",135692
+55075,Marinette,Wisconsin,US,"Marinette, Wisconsin, US",40350
+55077,Marquette,Wisconsin,US,"Marquette, Wisconsin, US",15574
+55078,Menominee,Wisconsin,US,"Menominee, Wisconsin, US",4556
+55079,Milwaukee,Wisconsin,US,"Milwaukee, Wisconsin, US",945726
+55081,Monroe,Wisconsin,US,"Monroe, Wisconsin, US",46253
+55083,Oconto,Wisconsin,US,"Oconto, Wisconsin, US",37930
+55085,Oneida,Wisconsin,US,"Oneida, Wisconsin, US",35595
+55087,Outagamie,Wisconsin,US,"Outagamie, Wisconsin, US",187885
+55089,Ozaukee,Wisconsin,US,"Ozaukee, Wisconsin, US",89221
+55091,Pepin,Wisconsin,US,"Pepin, Wisconsin, US",7287
+55093,Pierce,Wisconsin,US,"Pierce, Wisconsin, US",42754
+55095,Polk,Wisconsin,US,"Polk, Wisconsin, US",43783
+55097,Portage,Wisconsin,US,"Portage, Wisconsin, US",70772
+55099,Price,Wisconsin,US,"Price, Wisconsin, US",13351
+55101,Racine,Wisconsin,US,"Racine, Wisconsin, US",196311
+55103,Richland,Wisconsin,US,"Richland, Wisconsin, US",17252
+55105,Rock,Wisconsin,US,"Rock, Wisconsin, US",163354
+55107,Rusk,Wisconsin,US,"Rusk, Wisconsin, US",14178
+55111,Sauk,Wisconsin,US,"Sauk, Wisconsin, US",64442
+55113,Sawyer,Wisconsin,US,"Sawyer, Wisconsin, US",16558
+55115,Shawano,Wisconsin,US,"Shawano, Wisconsin, US",40899
+55117,Sheboygan,Wisconsin,US,"Sheboygan, Wisconsin, US",115340
+55109,St. Croix,Wisconsin,US,"St. Croix, Wisconsin, US",90687
+55119,Taylor,Wisconsin,US,"Taylor, Wisconsin, US",20343
+55121,Trempealeau,Wisconsin,US,"Trempealeau, Wisconsin, US",29649
+90055,Unassigned,Wisconsin,US,"Unassigned, Wisconsin, US",#DIV/0!
+55123,Vernon,Wisconsin,US,"Vernon, Wisconsin, US",30822
+55125,Vilas,Wisconsin,US,"Vilas, Wisconsin, US",22195
+55127,Walworth,Wisconsin,US,"Walworth, Wisconsin, US",103868
+55129,Washburn,Wisconsin,US,"Washburn, Wisconsin, US",15720
+55131,Washington,Wisconsin,US,"Washington, Wisconsin, US",136034
+55133,Waukesha,Wisconsin,US,"Waukesha, Wisconsin, US",404198
+55135,Waupaca,Wisconsin,US,"Waupaca, Wisconsin, US",50990
+55137,Waushara,Wisconsin,US,"Waushara, Wisconsin, US",24443
+55139,Winnebago,Wisconsin,US,"Winnebago, Wisconsin, US",171907
+55141,Wood,Wisconsin,US,"Wood, Wisconsin, US",72999
+56001,Albany,Wyoming,US,"Albany, Wyoming, US",38880
+56003,Big Horn,Wyoming,US,"Big Horn, Wyoming, US",11790
+56005,Campbell,Wyoming,US,"Campbell, Wyoming, US",46341
+56007,Carbon,Wyoming,US,"Carbon, Wyoming, US",14800
+56009,Converse,Wyoming,US,"Converse, Wyoming, US",13822
+56011,Crook,Wyoming,US,"Crook, Wyoming, US",7584
+56013,Fremont,Wyoming,US,"Fremont, Wyoming, US",39261
+56015,Goshen,Wyoming,US,"Goshen, Wyoming, US",13211
+56017,Hot Springs,Wyoming,US,"Hot Springs, Wyoming, US",4413
+56019,Johnson,Wyoming,US,"Johnson, Wyoming, US",8445
+56021,Laramie,Wyoming,US,"Laramie, Wyoming, US",99500
+56023,Lincoln,Wyoming,US,"Lincoln, Wyoming, US",19830
+56025,Natrona,Wyoming,US,"Natrona, Wyoming, US",79858
+56027,Niobrara,Wyoming,US,"Niobrara, Wyoming, US",2356
+56029,Park,Wyoming,US,"Park, Wyoming, US",29194
+56031,Platte,Wyoming,US,"Platte, Wyoming, US",8393
+56033,Sheridan,Wyoming,US,"Sheridan, Wyoming, US",30485
+56035,Sublette,Wyoming,US,"Sublette, Wyoming, US",9831
+56037,Sweetwater,Wyoming,US,"Sweetwater, Wyoming, US",42343
+56039,Teton,Wyoming,US,"Teton, Wyoming, US",23464
+56041,Uinta,Wyoming,US,"Uinta, Wyoming, US",20226
+90056,Unassigned,Wyoming,US,"Unassigned, Wyoming, US",#DIV/0!
+56043,Washakie,Wyoming,US,"Washakie, Wyoming, US",7805
+56045,Weston,Wyoming,US,"Weston, Wyoming, US",6927
+,,,Uzbekistan,Uzbekistan,33469199
+,,,Venezuela,Venezuela,28435943
+,,,Vietnam,Vietnam,97338583
+,,,West Bank and Gaza,West Bank and Gaza,5101416
+,,,Yemen,Yemen,29825968
+,,,Zambia,Zambia,18383956
+,,,Zimbabwe,Zimbabwe,14862927
