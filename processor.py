@@ -44,16 +44,16 @@ def cli(input, processtype):
         # fill empty values otherwise operations fail
         ages = ages.fillna(0)
         # combine ages
-        ages['0-9'] = (ages['<1 year'] +
-                       ages['1 to 4'] + ages['5 to 9'])
-        ages['10-19'] = ages['10 to 14'] + ages['15 to 19']
-        ages['20-29'] = ages['20 to 24'] + ages['25 to 29']
-        ages['30-39'] = ages['30 to 34'] + ages['35 to 39']
-        ages['40-49'] = ages['40 to 44'] + ages['45 to 49']
-        ages['50-59'] = ages['50 to 54'] + ages['55 to 59']
-        ages['60-69'] = ages['60 to 64'] + ages['65 to 69']
-        ages['70-79'] = ages['70 to 74'] + ages['75 to 79']
-        ages['80-89'] = ages['80 to 84'] + ages['85 to 89']
+        ages['0 to 9'] = (ages['<1 year'] +
+                          ages['1 to 4'] + ages['5 to 9'])
+        ages['10 to 19'] = ages['10 to 14'] + ages['15 to 19']
+        ages['20 to 29'] = ages['20 to 24'] + ages['25 to 29']
+        ages['30 to 39'] = ages['30 to 34'] + ages['35 to 39']
+        ages['40 to 49'] = ages['40 to 44'] + ages['45 to 49']
+        ages['50 to 59'] = ages['50 to 54'] + ages['55 to 59']
+        ages['60 to 69'] = ages['60 to 64'] + ages['65 to 69']
+        ages['70 to 79'] = ages['70 to 74'] + ages['75 to 79']
+        ages['80 to 89'] = ages['80 to 84'] + ages['85 to 89']
         ages['90+'] = ages['90 to 94'] + ages['95 plus']
 
         # get rid of older brackets / columns
@@ -97,6 +97,202 @@ def cli(input, processtype):
         output = output.reset_index()
         output.to_csv(r'output.csv', index=None, header=True)
 
+    elif processtype == 'death-causes-percent':
+        # reduce floating points to reduce file size. Making them ints also helps a lot with size
+        # loaded['value'] = (loaded['val'] * 10000)
+        # del loaded['val']
+        # loaded['val'] = loaded['value'].astype(int)
+        # del loaded['value']
+        # get rid of float points
+        loaded['val'] = loaded['val'].astype(int)
+        # expand ages so we can combine them in 10 year buckets instead of 5
+        ages = pd.pivot_table(loaded, values='val', columns=['age'],
+                              index=['location', 'cause', 'sex'],
+                              aggfunc=lambda x: x)
+        ages = ages.reset_index()
+
+        # fill empty values otherwise operations fail
+        ages = ages.fillna(0)
+        # combine ages
+        ages['0 to 9'] = (ages['<1 year'] +
+                          ages['1 to 4'] + ages['5 to 9'])
+        ages['10 to 19'] = ages['10 to 14'] + ages['15 to 19']
+        ages['20 to 29'] = ages['20 to 24'] + ages['25 to 29']
+        ages['30 to 39'] = ages['30 to 34'] + ages['35 to 39']
+        ages['40 to 49'] = ages['40 to 44'] + ages['45 to 49']
+        ages['50 to 59'] = ages['50 to 54'] + ages['55 to 59']
+        ages['60 to 69'] = ages['60 to 64'] + ages['65 to 69']
+        ages['70 to 79'] = ages['70 to 74'] + ages['75 to 79']
+        ages['80 to 89'] = ages['80 to 84'] + ages['85 to 89']
+        ages['90+'] = ages['90 to 94'] + ages['95 plus']
+
+        # get rid of older brackets / columns
+        del ages['<1 year']
+        del ages['1 to 4']
+        del ages['10 to 14']
+        del ages['20 to 24']
+        del ages['30 to 34']
+        del ages['40 to 44']
+        del ages['50 to 54']
+        del ages['60 to 64']
+        del ages['70 to 74']
+        del ages['80 to 84']
+        del ages['90 to 94']
+        del ages['5 to 9']
+        del ages['15 to 19']
+        del ages['25 to 29']
+        del ages['35 to 39']
+        del ages['45 to 49']
+        del ages['55 to 59']
+        del ages['65 to 69']
+        del ages['75 to 79']
+        del ages['85 to 89']
+        del ages['95 plus']
+
+        # convert ages to single column
+        ages = pd.melt(ages,
+                       id_vars=['cause', 'sex', 'location'],
+                       # list of days of the week
+                       value_vars=list(ages.columns[3:]),
+                       var_name='age',
+                       value_name='val')
+
+        # exapnd by cause to calculate percentages
+        output = pd.pivot_table(ages, values='val', columns=['cause'],
+                                index=['location', 'age', 'sex'],
+                                aggfunc=lambda x: x)
+        output = output.reset_index()
+
+        #  calculate an all causes column
+        output['All causes'] = output.sum(axis=1, numeric_only=True)
+
+        allCauses = output.columns[3:]
+        allCauses = allCauses.drop('All causes')
+        output = output.fillna(0)
+
+        # convert values to percentages
+        for cause in allCauses:
+            output[cause] = (
+                (output[cause] / output['All causes']) * 10000)
+            output = output.fillna(0)
+            output[cause] = output[cause].astype(int)
+            output[cause] = output[cause] / 100
+
+        del output['All causes']
+        # convert causes to single column
+        output = pd.melt(output,
+                         id_vars=['age', 'sex', 'location'],
+                         # list of days of the week
+                         value_vars=list(output.columns[3:]),
+                         var_name='cause',
+                         value_name='val')
+
+        # expand location to multiple columns to reduce rows and file size
+        output = pd.pivot_table(output, values='val', columns=['location'],
+                                index=['cause', 'sex', 'age'],
+                                aggfunc=lambda x: x)
+
+        output = output.replace(0, np.nan)
+
+        output = output.reset_index()
+        output.to_csv(r'output.csv', index=None, header=True)
+        click.echo('outpout exported')
+
+        # allAges = output.age.unique()
+        allSexes = output.sex.unique()
+
+        top_causes = pd.DataFrame(
+            columns=['location', 'sex', 'age', 'cause', 'value'])
+
+        allLocation = output.columns[3:]
+        for location in allLocation:
+            # for age in allAges:
+            for sex in allSexes:
+                top_value0 = 0
+                top_cause0 = ""
+                top_value1 = 0
+                top_cause1 = ""
+                top_value2 = 0
+                top_cause2 = ""
+                top_value3 = 0
+                top_cause3 = ""
+                top_value4 = 0
+                top_cause4 = ""
+                top_value5 = 0
+                top_cause5 = ""
+                top_value6 = 0
+                top_cause6 = ""
+                top_value7 = 0
+                top_cause7 = ""
+                top_value8 = 0
+                top_cause8 = ""
+                top_value9 = 0
+                top_cause9 = ""
+                top_value10 = 0
+                top_cause10 = ""
+
+                for (idx, row) in output.iterrows():
+                    if row.sex == sex and row.age == '0 to 9' and row[location] > top_value0 and row.cause != 'All causes':
+                        top_value0 = float(row[location])
+                        top_cause0 = row.cause
+                    elif row.sex == sex and row.age == '10 to 19' and row[location] > top_value1 and row.cause != 'All causes':
+                        top_value1 = float(row[location])
+                        top_cause1 = row.cause
+                    elif row.sex == sex and row.age == '20 to 29' and row[location] > top_value2 and row.cause != 'All causes':
+                        top_value2 = float(row[location])
+                        top_cause2 = row.cause
+                    elif row.sex == sex and row.age == '30 to 39' and row[location] > top_value3 and row.cause != 'All causes':
+                        top_value3 = float(row[location])
+                        top_cause3 = row.cause
+                    elif row.sex == sex and row.age == '40 to 49' and row[location] > top_value4 and row.cause != 'All causes':
+                        top_value4 = float(row[location])
+                        top_cause4 = row.cause
+                    elif row.sex == sex and row.age == '50 to 59' and row[location] > top_value5 and row.cause != 'All causes':
+                        top_value5 = float(row[location])
+                        top_cause5 = row.cause
+                    elif row.sex == sex and row.age == '60 to 69' and row[location] > top_value6 and row.cause != 'All causes':
+                        top_value6 = float(row[location])
+                        top_cause6 = row.cause
+                    elif row.sex == sex and row.age == '70 to 79' and row[location] > top_value7 and row.cause != 'All causes':
+                        top_value7 = float(row[location])
+                        top_cause7 = row.cause
+                    elif row.sex == sex and row.age == '80 to 89' and row[location] > top_value8 and row.cause != 'All causes':
+                        top_value8 = float(row[location])
+                        top_cause8 = row.cause
+                    elif row.sex == sex and row.age == '90+' and row[location] > top_value9 and row.cause != 'All causes':
+                        top_value9 = float(row[location])
+                        top_cause9 = row.cause
+                    elif row.sex == sex and row.age == 'All Ages' and row[location] > top_value10 and row.cause != 'All causes':
+                        top_value10 = float(row[location])
+                        top_cause10 = row.cause
+
+                top_causes = top_causes.append({'location': location, 'sex': sex, 'age': '0 to 9', 'cause': top_cause0,
+                                                'value': top_value0}, ignore_index=True)
+                top_causes = top_causes.append({'location': location, 'sex': sex, 'age': '10 to 19', 'cause': top_cause1,
+                                                'value': top_value1}, ignore_index=True)
+                top_causes = top_causes.append({'location': location, 'sex': sex, 'age': '20 to 29', 'cause': top_cause2,
+                                                'value': top_value2}, ignore_index=True)
+                top_causes = top_causes.append({'location': location, 'sex': sex, 'age': '30 to 39', 'cause': top_cause3,
+                                                'value': top_value3}, ignore_index=True)
+                top_causes = top_causes.append({'location': location, 'sex': sex, 'age': '40 to 49', 'cause': top_cause4,
+                                                'value': top_value4}, ignore_index=True)
+                top_causes = top_causes.append({'location': location, 'sex': sex, 'age': '50 to 59', 'cause': top_cause5,
+                                                'value': top_value5}, ignore_index=True)
+                top_causes = top_causes.append({'location': location, 'sex': sex, 'age': '60 to 69', 'cause': top_cause6,
+                                                'value': top_value6}, ignore_index=True)
+                top_causes = top_causes.append({'location': location, 'sex': sex, 'age': '70 to 79', 'cause': top_cause7,
+                                                'value': top_value7}, ignore_index=True)
+                top_causes = top_causes.append({'location': location, 'sex': sex, 'age': '80 to 89', 'cause': top_cause8,
+                                                'value': top_value8}, ignore_index=True)
+                top_causes = top_causes.append({'location': location, 'sex': sex, 'age': '90+', 'cause': top_cause9,
+                                                'value': top_value9}, ignore_index=True)
+                top_causes = top_causes.append({'location': location, 'sex': sex, 'age': 'All Ages', 'cause': top_cause10,
+                                                'value': top_value10}, ignore_index=True)
+
+        top_causes = top_causes.reset_index()
+        top_causes.to_csv(r'output2.csv', index=None, header=True)
+        click.echo('output2 exported')
+
     elif processtype == 'death-risks':
         # get rid of float points
         loaded['val'] = loaded['val'].astype(int)
@@ -109,16 +305,16 @@ def cli(input, processtype):
         # fill empty values otherwise operations fail
         ages = ages.fillna(0)
         # combine ages
-        ages['0-9'] = (ages['<1 year'] +
-                       ages['1 to 4'] + ages['5 to 9'])
-        ages['10-19'] = ages['10 to 14'] + ages['15 to 19']
-        ages['20-29'] = ages['20 to 24'] + ages['25 to 29']
-        ages['30-39'] = ages['30 to 34'] + ages['35 to 39']
-        ages['40-49'] = ages['40 to 44'] + ages['45 to 49']
-        ages['50-59'] = ages['50 to 54'] + ages['55 to 59']
-        ages['60-69'] = ages['60 to 64'] + ages['65 to 69']
-        ages['70-79'] = ages['70 to 74'] + ages['75 to 79']
-        ages['80-89'] = ages['80 to 84'] + ages['85 to 89']
+        ages['0 to 9'] = (ages['<1 year'] +
+                          ages['1 to 4'] + ages['5 to 9'])
+        ages['10 to 19'] = ages['10 to 14'] + ages['15 to 19']
+        ages['20 to 29'] = ages['20 to 24'] + ages['25 to 29']
+        ages['30 to 39'] = ages['30 to 34'] + ages['35 to 39']
+        ages['40 to 49'] = ages['40 to 44'] + ages['45 to 49']
+        ages['50 to 59'] = ages['50 to 54'] + ages['55 to 59']
+        ages['60 to 69'] = ages['60 to 64'] + ages['65 to 69']
+        ages['70 to 79'] = ages['70 to 74'] + ages['75 to 79']
+        ages['80 to 89'] = ages['80 to 84'] + ages['85 to 89']
         ages['90+'] = ages['90 to 94'] + ages['95 plus']
 
         # get rid of older brackets / columns
