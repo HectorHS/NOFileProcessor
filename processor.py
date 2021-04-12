@@ -216,28 +216,28 @@ def cli(input, processtype):
         output = pd.DataFrame(
             columns=['Country', 'Confirmed', 'Confirmed_pc', 'Deaths', 'Deaths_pc', 'Death_rate', 'Recovered', 'Recovered_pc', 'Recovered_rate', 'Active', 'Active_pc', 'Tested', 'Tested_pc', 'Tested_rate', 'Population'])
 
-        usDeaths, usConfirmed, usRecovered, usActive = 0, 0, 0, 0
-        ausDeaths, ausConfirmed, ausRecovered, ausActive = 0, 0, 0, 0
-        canDeaths, canConfirmed, canRecovered, canActive = 0, 0, 0, 0
-        chnDeaths, chnConfirmed, chnRecovered, chnActive = 0, 0, 0, 0
-        itDeaths, itConfirmed, itRecovered, itActive = 0, 0, 0, 0
-        gerDeaths, gerConfirmed, gerRecovered, gerActive = 0, 0, 0, 0
-        spnDeaths, spnConfirmed, spnRecovered, spnActive = 0, 0, 0, 0
-        braDeaths, braConfirmed, braRecovered, braActive = 0, 0, 0, 0
-        chlDeaths, chlConfirmed, chlRecovered, chlActive = 0, 0, 0, 0
-        mexDeaths, mexConfirmed, mexRecovered, mexActive = 0, 0, 0, 0
-        perDeaths, perConfirmed, perRecovered, perActive = 0, 0, 0, 0
-        colDeaths, colConfirmed, colRecovered, colActive = 0, 0, 0, 0
-        jpnDeaths, jpnConfirmed, jpnRecovered, jpnActive = 0, 0, 0, 0
-        rusDeaths, rusConfirmed, rusRecovered, rusActive = 0, 0, 0, 0
-        ukrDeaths, ukrConfirmed, ukrRecovered, ukrActive = 0, 0, 0, 0
-        sweDeaths, sweConfirmed, sweRecovered, sweActive = 0, 0, 0, 0
-        pakDeaths, pakConfirmed, pakRecovered, pakActive = 0, 0, 0, 0
-        indDeaths, indConfirmed, indRecovered, indActive = 0, 0, 0, 0
-        ukDeaths, ukConfirmed, ukRecovered, ukActive = 0, 0, 0, 0
-        nldDeaths, nldConfirmed, nldRecovered, nldActive = 0, 0, 0, 0
-        belDeaths, belConfirmed, belRecovered, belActive = 0, 0, 0, 0
-        glDeaths, glConfirmed, glRecovered, glActive = 0, 0, 0, 0
+        usDeaths, usConfirmed, usRecovered, usActive, usTest = 0, 0, 0, 0, 0
+        ausDeaths, ausConfirmed, ausRecovered, ausActive, ausTest = 0, 0, 0, 0, 0
+        canDeaths, canConfirmed, canRecovered, canActive, canTest = 0, 0, 0, 0, 0
+        chnDeaths, chnConfirmed, chnRecovered, chnActive, chnTest = 0, 0, 0, 0, 0
+        itDeaths, itConfirmed, itRecovered, itActive, itTest = 0, 0, 0, 0, 0
+        gerDeaths, gerConfirmed, gerRecovered, gerActive, gerTest = 0, 0, 0, 0, 0
+        spnDeaths, spnConfirmed, spnRecovered, spnActive, spnTest = 0, 0, 0, 0, 0
+        braDeaths, braConfirmed, braRecovered, braActive, braTest = 0, 0, 0, 0, 0
+        chlDeaths, chlConfirmed, chlRecovered, chlActive, chlTest = 0, 0, 0, 0, 0
+        mexDeaths, mexConfirmed, mexRecovered, mexActive, mexTest = 0, 0, 0, 0, 0
+        perDeaths, perConfirmed, perRecovered, perActive, perTest = 0, 0, 0, 0, 0
+        colDeaths, colConfirmed, colRecovered, colActive, colTest = 0, 0, 0, 0, 0
+        jpnDeaths, jpnConfirmed, jpnRecovered, jpnActive, jpnTest = 0, 0, 0, 0, 0
+        rusDeaths, rusConfirmed, rusRecovered, rusActive, rusTest = 0, 0, 0, 0, 0
+        ukrDeaths, ukrConfirmed, ukrRecovered, ukrActive, ukrTest = 0, 0, 0, 0, 0
+        sweDeaths, sweConfirmed, sweRecovered, sweActive, sweTest = 0, 0, 0, 0, 0
+        pakDeaths, pakConfirmed, pakRecovered, pakActive, pakTest = 0, 0, 0, 0, 0
+        indDeaths, indConfirmed, indRecovered, indActive, indTest = 0, 0, 0, 0, 0
+        ukDeaths, ukConfirmed, ukRecovered, ukActive, ukTest = 0, 0, 0, 0, 0
+        nldDeaths, nldConfirmed, nldRecovered, nldActive, nldTest = 0, 0, 0, 0, 0
+        belDeaths, belConfirmed, belRecovered, belActive, belTest = 0, 0, 0, 0, 0
+        glDeaths, glConfirmed, glRecovered, glActive, glTest = 0, 0, 0, 0, 0
 
         def getPopulation(country):
             nonlocal population
@@ -525,6 +525,9 @@ def cli(input, processtype):
                 tested = 0 if testingCountryName == "" else getTestTotal(
                     testingCountryName, row.Confirmed)
 
+                if tested > 0:
+                    glTest += tested
+
                 if not isinstance(row.Country_Region, float):
                     outputAppend(row.Country_Region, row.Confirmed, row.Deaths,
                                  row.Recovered, row.Active, tested, getPopulation(row.Country_Region))
@@ -533,6 +536,7 @@ def cli(input, processtype):
 
                 tested = 0 if testingCountryName == "" else getTestTotal(
                     testingCountryName, row.Confirmed)
+                glTest += tested
                 outputAppend(row.Province_State, row.Confirmed, row.Deaths,
                              row.Recovered, row.Active, tested, getPopulation(row.Province_State))
 
@@ -541,71 +545,78 @@ def cli(input, processtype):
             usActive = usConfirmed - usDeaths - usRecovered
         if canActive == 0:
             canActive = canConfirmed - canDeaths - canRecovered
+        # get test values and add to global
+        usTest = getTestTotal(getTestingCountryName('USA'), usConfirmed)
+        ausTest = getTestTotal(
+            getTestingCountryName('Australia'), ausConfirmed)
+        canTest = getTestTotal(getTestingCountryName('Canada'), canConfirmed)
+        itTest = getTestTotal(getTestingCountryName('Italy'), itConfirmed)
+        gerTest = getTestTotal(getTestingCountryName('Germany'), gerConfirmed)
+        spnTest = getTestTotal(getTestingCountryName('Spain'), spnConfirmed)
+        braTest = getTestTotal(getTestingCountryName('Brazil'), braConfirmed)
+        chlTest = getTestTotal(getTestingCountryName('Chile'), chlConfirmed)
+        mexTest = getTestTotal(getTestingCountryName('Mexico'), mexConfirmed)
+        perTest = getTestTotal(getTestingCountryName('Peru'), perConfirmed)
+        colTest = getTestTotal(getTestingCountryName('Colombia'), colConfirmed)
+        jpnTest = getTestTotal(getTestingCountryName('Japan'), jpnConfirmed)
+        rusTest = getTestTotal(getTestingCountryName('Russia'), rusConfirmed)
+        ukrTest = getTestTotal(getTestingCountryName('Ukraine'), ukrConfirmed)
+        sweTest = getTestTotal(getTestingCountryName('Sweden'), sweConfirmed)
+        pakTest = getTestTotal(getTestingCountryName('Pakistan'), pakConfirmed)
+        indTest = getTestTotal(getTestingCountryName('India'), indConfirmed)
+        belTest = getTestTotal(getTestingCountryName('Belgium'), belConfirmed)
+        ukTest = getTestTotal(getTestingCountryName(
+            'United Kingdom'), ukConfirmed)
+        nldTest = getTestTotal(getTestingCountryName(
+            'Netherlands'), nldConfirmed)
+
+        glTest = glTest + usTest + ausTest + canTest + itTest + gerTest + spnTest + braTest + chlTest + mexTest + perTest + colTest + jpnTest + rusTest + ukrTest + sweTest + \
+            pakTest + indTest + belTest + ukTest + nldTest
 
         outputAppend('USA', usConfirmed, usDeaths,
-                     usRecovered, usActive, getTestTotal(
-                         getTestingCountryName('USA'), usConfirmed), getPopulation('USA'))
+                     usRecovered, usActive, usTest, getPopulation('USA'))
         outputAppend('Australia', ausConfirmed, ausDeaths,
-                     ausRecovered, ausActive, getTestTotal(
-                         getTestingCountryName("Australia"), ausConfirmed), getPopulation('Australia'))
+                     ausRecovered, ausActive, ausTest, getPopulation('Australia'))
         outputAppend('Canada', canConfirmed, canDeaths,
-                     canRecovered, canActive, getTestTotal(
-                         getTestingCountryName("Canada"), canConfirmed), getPopulation('Canada'))
+                     canRecovered, canActive, canTest, getPopulation('Canada'))
         outputAppend('China', chnConfirmed, chnDeaths,
                      chnRecovered, chnActive, 0, getPopulation('China'))
         outputAppend('Italy', itConfirmed, itDeaths,
-                     itRecovered, itActive, getTestTotal(
-                         getTestingCountryName("Italy"), itConfirmed), getPopulation('Italy'))
+                     itRecovered, itActive, itTest, getPopulation('Italy'))
         outputAppend('Germany', gerConfirmed, gerDeaths,
-                     gerRecovered, gerActive, getTestTotal(
-                         getTestingCountryName("Germany"), gerConfirmed), getPopulation('Germany'))
+                     gerRecovered, gerActive, gerTest, getPopulation('Germany'))
         outputAppend('Spain', spnConfirmed, spnDeaths,
-                     spnRecovered, spnActive, getTestTotal(
-                         getTestingCountryName("Spain"), spnConfirmed), getPopulation('Spain'))
+                     spnRecovered, spnActive, spnTest, getPopulation('Spain'))
         outputAppend('Brazil', braConfirmed, braDeaths,
-                     braRecovered, braActive, getTestTotal(
-                         getTestingCountryName("Brazil"), braConfirmed), getPopulation('Brazil'))
+                     braRecovered, braActive, braTest, getPopulation('Brazil'))
         outputAppend('Chile', chlConfirmed, chlDeaths,
-                     chlRecovered, chlActive, getTestTotal(
-                         getTestingCountryName("Chile"), chlConfirmed), getPopulation('Chile'))
+                     chlRecovered, chlActive, chlTest, getPopulation('Chile'))
         outputAppend('Mexico', mexConfirmed, mexDeaths,
-                     mexRecovered, mexActive, getTestTotal(
-                         getTestingCountryName("Mexico"), mexConfirmed), getPopulation('Mexico'))
+                     mexRecovered, mexActive, mexTest, getPopulation('Mexico'))
         outputAppend('Peru', perConfirmed, perDeaths,
-                     perRecovered, perActive, getTestTotal(
-                         getTestingCountryName("Peru"), perConfirmed), getPopulation('Peru'))
+                     perRecovered, perActive, perTest, getPopulation('Peru'))
         outputAppend('Colombia', colConfirmed, colDeaths,
-                     colRecovered, colActive, getTestTotal(
-                         getTestingCountryName("Colombia"), colConfirmed), getPopulation('Colombia'))
+                     colRecovered, colActive, colTest, getPopulation('Colombia'))
         outputAppend('Japan', jpnConfirmed, jpnDeaths,
-                     jpnRecovered, jpnActive, getTestTotal(
-                         getTestingCountryName("Japan"), jpnConfirmed), getPopulation('Japan'))
+                     jpnRecovered, jpnActive, jpnTest, getPopulation('Japan'))
         outputAppend('Russia', rusConfirmed, rusDeaths,
-                     rusRecovered, rusActive, getTestTotal(
-                         getTestingCountryName("Russia"), rusConfirmed), getPopulation('Russia'))
+                     rusRecovered, rusActive, rusTest, getPopulation('Russia'))
         outputAppend('Ukraine', ukrConfirmed, ukrDeaths,
-                     ukrRecovered, ukrActive, getTestTotal(
-                         getTestingCountryName("Ukraine"), ukrConfirmed), getPopulation('Ukraine'))
+                     ukrRecovered, ukrActive, ukrTest, getPopulation('Ukraine'))
         outputAppend('Sweden', sweConfirmed, sweDeaths,
-                     sweRecovered, sweActive, getTestTotal(
-                         getTestingCountryName("Sweden"), sweConfirmed), getPopulation('Sweden'))
+                     sweRecovered, sweActive, sweTest, getPopulation('Sweden'))
         outputAppend('Pakistan', pakConfirmed, pakDeaths,
-                     pakRecovered, pakActive, getTestTotal(
-                         getTestingCountryName("Pakistan"), pakConfirmed), getPopulation('Pakistan'))
+                     pakRecovered, pakActive, pakTest, getPopulation('Pakistan'))
         outputAppend('India', indConfirmed, indDeaths,
-                     indRecovered, indActive, getTestTotal(
-                         getTestingCountryName("India"), indConfirmed), getPopulation('India'))
+                     indRecovered, indActive, indTest, getPopulation('India'))
         outputAppend('Belgium', belConfirmed, belDeaths,
-                     belRecovered, belActive, getTestTotal(
-                         getTestingCountryName("Belgium"), belConfirmed), getPopulation('Belgium'))
+                     belRecovered, belActive, belTest, getPopulation('Belgium'))
         outputAppend('United Kingdom', ukConfirmed, ukDeaths,
-                     ukRecovered, ukActive, getTestTotal(
-                         getTestingCountryName("United Kingdom"), ukConfirmed), getPopulation('United Kingdom'))
+                     ukRecovered, ukActive, ukTest, getPopulation('United Kingdom'))
         outputAppend('Netherlands', nldConfirmed, nldDeaths,
-                     nldRecovered, nldActive, getTestTotal(
-                         getTestingCountryName("Netherlands"), nldConfirmed), getPopulation('Netherlands'))
+                     nldRecovered, nldActive, nldTest, getPopulation('Netherlands'))
         outputAppend('World', glConfirmed, glDeaths,
-                     glRecovered, glActive, 0, getPopulation('World'))
+                     glRecovered, glActive, glTest, getPopulation('World'))
 
         # Sort by country, but because sorting in python with mixed cases is messy, do all this
         output['country_lower'] = output['Country'].str.lower()
@@ -630,16 +641,10 @@ def cli(input, processtype):
         for row in output.itertuples():
             today.append(row.Confirmed)
         for row in output.itertuples():
-            today.append(row.Recovered)
-        for row in output.itertuples():
-            today.append(row.Active)
-        for row in output.itertuples():
             today.append(row.Deaths)
 
         for i in range(len(output)):
             today.append(output.at[i, 'Confirmed'] - older.at[i, 'Confirmed'])
-        for i in range(len(output)):
-            today.append(output.at[i, 'Recovered'] - older.at[i, 'Recovered'])
         for i in range(len(output)):
             today.append(output.at[i, 'Deaths'] - older.at[i, 'Deaths'])
 
