@@ -514,7 +514,7 @@ def cli(input, processtype):
                 "Saudi Arabia": "Saudi Arabia - tests performed",
                 "Senegal": "Senegal - tests performed",
                 "Serbia": "Serbia - people tested",
-                "Singapore": "Singapore - people tested",
+                "Singapore": "Singapore - samples tested",
                 "Slovakia": "Slovakia - tests performed",
                 "Slovenia": "Slovenia - tests performed",
                 "South Africa": "South Africa - people tested",
@@ -524,7 +524,7 @@ def cli(input, processtype):
                 "Switzerland": "Switzerland - tests performed",
                 "Taiwan": "Taiwan - tests performed",
                 "Thailand": "Thailand - tests performed",
-                "Tunisia": "Tunisia - tests performed",
+                "Tunisia": "Tunisia - people tested",
                 "Turkey": "Turkey - tests performed",
                 "Uganda": "Uganda - samples tested",
                 "Ukraine": "Ukraine - tests performed",
@@ -908,11 +908,15 @@ def cli(input, processtype):
             "Germany",
             "Greece",
             "Korea, South",
-            "New Zealand"}
+            "New Zealand",
+            "Australia",
+            "Canada",
+            "Chile",
+            "Taiwan"}
 
-        years = {2015, 2016, 2017, 2018, 2019, 2020}
+        years = {2015, 2016, 2017, 2018, 2019, 2020, 2021}
         weeks = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26,
-                 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52}
+                 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53}
         uk = {"GBRTENW", "GBR_NIR", "GBR_SCO"}
 
         def getCountryCode(country):
@@ -947,12 +951,16 @@ def cli(input, processtype):
                 "Germany": "DEUTNP",
                 "Greece": "GRC",
                 "Korea, South": "KOR",
-                "New Zealand": "NZL_NP"}
+                "New Zealand": "NZL_NP",
+                "Australia": "AUS2",
+                "Canada": "CAN",
+                "Chile": "CHL",
+                "Taiwan": "TWN"}
 
             return countryCode[country]
 
         output = pd.DataFrame(
-            columns=['Country', 'Week', 'Deaths_old', 'Deaths_2020'])
+            columns=['Country', 'Week', 'Deaths_old', 'Deaths_2020', 'Deaths_2021'])
 
         # filter out uneeded rows
         loaded = loaded[loaded.Sex == 'b']
@@ -964,39 +972,56 @@ def cli(input, processtype):
                 loadedFiltered = loadedFiltered[loadedFiltered.CountryCode ==
                                                 getCountryCode(country)]
                 oldSum = 0
-                latest = 0
+                sum20 = 0
+                sum21 = 0
                 for row in loadedFiltered.itertuples():
                     if row.Year == 2020:
-                        latest = row.DTotal
+                        sum20 = row.DTotal
+                    elif row.Year == 2021:
+                        sum21 = row.DTotal
                     else:
                         oldSum += row.DTotal
-                if country in ['Greece', 'Germany']:
+                if week == 53 and country != "Australia":
+                    oldAverage = oldSum
+                elif country in ['Greece', 'Germany']:
                     oldAverage = oldSum / 4
                 else:
                     oldAverage = oldSum / 5
 
                 output = output.append(
-                    {'Country': country, 'Week': week, 'Deaths_old': oldAverage, 'Deaths_2020': latest}, ignore_index=True)
+                    {'Country': country, 'Week': week, 'Deaths_old': oldAverage, 'Deaths_2020': sum20, 'Deaths_2021': sum21}, ignore_index=True)
 
         for week in weeks:
             loadedFiltered = loaded[loaded.Week == week]
             loadedFiltered = loadedFiltered[loadedFiltered['CountryCode'].isin(
                 uk)]
             oldSum = 0
-            latest = 0
+            sum20 = 0
+            sum21 = 0
             i = 0
+            j = 0
             for row in loadedFiltered.itertuples():
                 if row.Year == 2020:
-                    latest += row.DTotal
+                    sum20 += row.DTotal
                     i += 1
+                elif row.Year == 2021:
+                    sum21 += row.DTotal
+                    j += 1
                 else:
                     oldSum += row.DTotal
-            oldAverage = oldSum / 5
+
+            if week == 53:
+                oldAverage = oldSum
+            else:
+                oldAverage = oldSum / 5
+
             if i < 3:
-                latest = 0
+                sum20 = 0
+            if j < 3:
+                sum21 = 0
 
             output = output.append({'Country': "United Kingdom", 'Week': week,
-                                    'Deaths_old': oldAverage, 'Deaths_2020': latest}, ignore_index=True)
+                                    'Deaths_old': oldAverage, 'Deaths_2020': sum20, 'Deaths_2021': sum21}, ignore_index=True)
         output = output.reset_index()
         output.to_csv(
             r'../NavigateObscurity/worlddata/static/worlddata/csv/covid-excess-deaths.csv', index=None, header=True)
