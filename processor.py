@@ -408,9 +408,12 @@ def cli(input, processtype):
         testing.columns = [c.strip().lower().replace('-', '_')
                            for c in testing.columns]
         click.echo('testing data loaded')
+        vaccinations = pd.read_csv(
+            '../owid-covid-data/public/data/vaccinations/vaccinations.csv', delimiter=',', encoding='latin1')
+        click.echo('vaccination data loaded')
 
         output = pd.DataFrame(
-            columns=['Country', 'Confirmed', 'Confirmed_pc', 'Deaths', 'Deaths_pc', 'Death_rate', 'Recovered', 'Recovered_pc', 'Recovered_rate', 'Active', 'Active_pc', 'Tested', 'Tested_pc', 'Tested_rate', 'Population'])
+            columns=['Country', 'Confirmed', 'Confirmed_pc', 'Deaths', 'Deaths_pc', 'Death_rate', 'Recovered', 'Recovered_pc', 'Recovered_rate', 'Active', 'Active_pc', 'Tested', 'Tested_pc', 'Tested_rate', 'Fully_vaccinated_pc', 'Population'])
 
         usDeaths, usConfirmed, usRecovered, usActive, usTest = 0, 0, 0, 0, 0
         ausDeaths, ausConfirmed, ausRecovered, ausActive, ausTest = 0, 0, 0, 0, 0
@@ -550,7 +553,20 @@ def cli(input, processtype):
                        str(testingCountryName) + ' not found')
             return 0
 
-        def outputAppend(country, confirmed, deaths, recovered, active, tested, population):
+        def getVaccination(country):
+            nonlocal vaccinations
+            value = 0
+
+            # filter out uneeded rows
+            subset = vaccinations[vaccinations.location == country]
+            if len(subset.index) > 0:
+                lastRow = subset.tail(1)
+                if not(math.isnan(lastRow.people_fully_vaccinated_per_hundred)):
+                    value = lastRow.iloc[0]['people_fully_vaccinated_per_hundred']
+
+            return value
+
+        def outputAppend(country, confirmed, deaths, recovered, active, tested, vaccinated, population):
             nonlocal output
             confirmedPC, deathsPC, deathCent, recoveredPC, recoveredCent, activePC, testedPC, testedCent = 0, 0, 0, 0, 0, 0, 0, 0
             if confirmed > 0:
@@ -572,7 +588,7 @@ def cli(input, processtype):
                 testedCent = (confirmed / tested) * 100
 
             output = output.append({'Country': country, 'Confirmed': confirmed, 'Confirmed_pc': confirmedPC, 'Deaths': deaths, 'Deaths_pc': deathsPC, 'Death_rate': deathCent, 'Recovered': recovered,
-                                    'Recovered_pc': recoveredPC, 'Recovered_rate': recoveredCent, 'Active': active, 'Active_pc': activePC, 'Tested': tested, 'Tested_pc': testedPC, 'Tested_rate': testedCent, 'Population': population}, ignore_index=True)
+                                    'Recovered_pc': recoveredPC, 'Recovered_rate': recoveredCent, 'Active': active, 'Active_pc': activePC, 'Tested': tested, 'Tested_pc': testedPC, 'Tested_rate': testedCent, 'Fully_vaccinated_pc': vaccinated, 'Population': population}, ignore_index=True)
 
         for row in loaded.itertuples():
             # counters for global values
@@ -726,7 +742,7 @@ def cli(input, processtype):
 
                 if not isinstance(row.Country_Region, float):
                     outputAppend(row.Country_Region, row.Confirmed, row.Deaths,
-                                 row.Recovered, row.Active, tested, getPopulation(row.Country_Region))
+                                 row.Recovered, row.Active, tested, getVaccination(row.Country_Region), getPopulation(row.Country_Region))
             else:
                 testingCountryName = getTestingCountryName(row.Province_State)
 
@@ -734,7 +750,7 @@ def cli(input, processtype):
                     testingCountryName, row.Confirmed)
                 glTest += tested
                 outputAppend(row.Province_State, row.Confirmed, row.Deaths,
-                             row.Recovered, row.Active, tested, getPopulation(row.Province_State))
+                             row.Recovered, row.Active, tested, getVaccination(row.Country_Region), getPopulation(row.Province_State))
 
         # There are some errors here I am fixing maually for now
         if usActive == 0:
@@ -770,49 +786,49 @@ def cli(input, processtype):
             pakTest + indTest + belTest + ukTest + nldTest
 
         outputAppend('USA', usConfirmed, usDeaths,
-                     usRecovered, usActive, usTest, getPopulation('USA'))
+                     usRecovered, usActive, usTest, getVaccination('United States'), getPopulation('USA'))
         outputAppend('Australia', ausConfirmed, ausDeaths,
-                     ausRecovered, ausActive, ausTest, getPopulation('Australia'))
+                     ausRecovered, ausActive, ausTest, getVaccination('Australia'), getPopulation('Australia'))
         outputAppend('Canada', canConfirmed, canDeaths,
-                     canRecovered, canActive, canTest, getPopulation('Canada'))
+                     canRecovered, canActive, canTest, getVaccination('Canada'), getPopulation('Canada'))
         outputAppend('China', chnConfirmed, chnDeaths,
-                     chnRecovered, chnActive, 0, getPopulation('China'))
+                     chnRecovered, chnActive, 0, getVaccination('China'), getPopulation('China'))
         outputAppend('Italy', itConfirmed, itDeaths,
-                     itRecovered, itActive, itTest, getPopulation('Italy'))
+                     itRecovered, itActive, itTest, getVaccination('Italy'), getPopulation('Italy'))
         outputAppend('Germany', gerConfirmed, gerDeaths,
-                     gerRecovered, gerActive, gerTest, getPopulation('Germany'))
+                     gerRecovered, gerActive, gerTest, getVaccination('Germany'), getPopulation('Germany'))
         outputAppend('Spain', spnConfirmed, spnDeaths,
-                     spnRecovered, spnActive, spnTest, getPopulation('Spain'))
+                     spnRecovered, spnActive, spnTest, getVaccination('Spain'), getPopulation('Spain'))
         outputAppend('Brazil', braConfirmed, braDeaths,
-                     braRecovered, braActive, braTest, getPopulation('Brazil'))
+                     braRecovered, braActive, braTest, getVaccination('Brazil'), getPopulation('Brazil'))
         outputAppend('Chile', chlConfirmed, chlDeaths,
-                     chlRecovered, chlActive, chlTest, getPopulation('Chile'))
+                     chlRecovered, chlActive, chlTest, getVaccination('Chile'), getPopulation('Chile'))
         outputAppend('Mexico', mexConfirmed, mexDeaths,
-                     mexRecovered, mexActive, mexTest, getPopulation('Mexico'))
+                     mexRecovered, mexActive, mexTest, getVaccination('Mexico'), getPopulation('Mexico'))
         outputAppend('Peru', perConfirmed, perDeaths,
-                     perRecovered, perActive, perTest, getPopulation('Peru'))
+                     perRecovered, perActive, perTest, getVaccination('Peru'), getPopulation('Peru'))
         outputAppend('Colombia', colConfirmed, colDeaths,
-                     colRecovered, colActive, colTest, getPopulation('Colombia'))
+                     colRecovered, colActive, colTest, getVaccination('Colombia'), getPopulation('Colombia'))
         outputAppend('Japan', jpnConfirmed, jpnDeaths,
-                     jpnRecovered, jpnActive, jpnTest, getPopulation('Japan'))
+                     jpnRecovered, jpnActive, jpnTest, getVaccination('Japan'), getPopulation('Japan'))
         outputAppend('Russia', rusConfirmed, rusDeaths,
-                     rusRecovered, rusActive, rusTest, getPopulation('Russia'))
+                     rusRecovered, rusActive, rusTest, getVaccination('Russia'), getPopulation('Russia'))
         outputAppend('Ukraine', ukrConfirmed, ukrDeaths,
-                     ukrRecovered, ukrActive, ukrTest, getPopulation('Ukraine'))
+                     ukrRecovered, ukrActive, ukrTest, getVaccination('Ukraine'), getPopulation('Ukraine'))
         outputAppend('Sweden', sweConfirmed, sweDeaths,
-                     sweRecovered, sweActive, sweTest, getPopulation('Sweden'))
+                     sweRecovered, sweActive, sweTest, getVaccination('Sweden'), getPopulation('Sweden'))
         outputAppend('Pakistan', pakConfirmed, pakDeaths,
-                     pakRecovered, pakActive, pakTest, getPopulation('Pakistan'))
+                     pakRecovered, pakActive, pakTest, getVaccination('Pakistan'), getPopulation('Pakistan'))
         outputAppend('India', indConfirmed, indDeaths,
-                     indRecovered, indActive, indTest, getPopulation('India'))
+                     indRecovered, indActive, indTest, getVaccination('India'), getPopulation('India'))
         outputAppend('Belgium', belConfirmed, belDeaths,
-                     belRecovered, belActive, belTest, getPopulation('Belgium'))
+                     belRecovered, belActive, belTest, getVaccination('Belgium'), getPopulation('Belgium'))
         outputAppend('United Kingdom', ukConfirmed, ukDeaths,
-                     ukRecovered, ukActive, ukTest, getPopulation('United Kingdom'))
+                     ukRecovered, ukActive, ukTest, getVaccination('United Kingdom'), getPopulation('United Kingdom'))
         outputAppend('Netherlands', nldConfirmed, nldDeaths,
-                     nldRecovered, nldActive, nldTest, getPopulation('Netherlands'))
+                     nldRecovered, nldActive, nldTest, getVaccination('Netherlands'), getPopulation('Netherlands'))
         outputAppend('World', glConfirmed, glDeaths,
-                     glRecovered, glActive, glTest, getPopulation('World'))
+                     glRecovered, glActive, glTest, getVaccination('World'), getPopulation('World'))
 
         # Sort by country, but because sorting in python with mixed cases is messy, do all this
         output['country_lower'] = output['Country'].str.lower()
