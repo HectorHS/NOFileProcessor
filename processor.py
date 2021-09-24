@@ -436,6 +436,7 @@ def cli(input, processtype):
         ukDeaths, ukConfirmed, ukRecovered, ukActive, ukTest = 0, 0, 0, 0, 0
         nldDeaths, nldConfirmed, nldRecovered, nldActive, nldTest = 0, 0, 0, 0, 0
         belDeaths, belConfirmed, belRecovered, belActive, belTest = 0, 0, 0, 0, 0
+        malDeaths, malConfirmed, malRecovered, malActive, malTest = 0, 0, 0, 0, 0
         glDeaths, glConfirmed, glRecovered, glActive, glTest = 0, 0, 0, 0, 0
 
         def getPopulation(country):
@@ -557,12 +558,29 @@ def cli(input, processtype):
             nonlocal vaccinations
             value = 0
 
+            if country == "Korea, South":
+                country = "South Korea"
+            elif country == "Taiwan*":
+                country = "Taiwan"
+            elif country == "Burma":
+                country = "Myanmar"
+            elif country == "Cabo Verde":
+                country = "Cape Verde"
+            elif country == "Congo (Brazzaville)":
+                country = "Congo"
+            elif country == "West Bank and Gaza":
+                country = "Palestine"
+            elif country == "Timor-Leste":
+                country = "Timor"
+
             # filter out uneeded rows
             subset = vaccinations[vaccinations.location == country]
             if len(subset.index) > 0:
                 lastRow = subset.tail(1)
                 if not(math.isnan(lastRow.people_fully_vaccinated_per_hundred)):
                     value = lastRow.iloc[0]['people_fully_vaccinated_per_hundred']
+            else:
+                click.echo("No vaccination rows found for " + country)
 
             return value
 
@@ -713,6 +731,12 @@ def cli(input, processtype):
                 belRecovered += row.Recovered
                 if row.Active > 0:
                     belActive += row.Active
+            elif row.Country_Region == 'Malaysia':
+                malDeaths += row.Deaths
+                malConfirmed += row.Confirmed
+                malRecovered += row.Recovered
+                if row.Active > 0:
+                    malActive += row.Active
             elif row.Country_Region == 'United Kingdom' and row.Province_State in ['England', 'Scotland', 'Northern Ireland', 'Unknown', 'Wales']:
                 ukDeaths += row.Deaths
                 ukConfirmed += row.Confirmed
@@ -725,7 +749,7 @@ def cli(input, processtype):
                 nldRecovered += row.Recovered
                 if row.Active > 0:
                     nldActive += row.Active
-            elif row.Country_Region in ['Diamond Princess', 'MS Zaandam']:
+            elif row.Country_Region in ['Diamond Princess', 'MS Zaandam', 'Summer Olympics 2020']:
                 what = 'No idea what to do with this'
             # In the remainer countries, the ones that have a state are considered different countries
             # If there is no state, it's the main country. The empty value is interpreted as a float
@@ -777,6 +801,7 @@ def cli(input, processtype):
         pakTest = getTestTotal(getTestingCountryName('Pakistan'), pakConfirmed)
         indTest = getTestTotal(getTestingCountryName('India'), indConfirmed)
         belTest = getTestTotal(getTestingCountryName('Belgium'), belConfirmed)
+        malTest = getTestTotal(getTestingCountryName('Malaysia'), malConfirmed)
         ukTest = getTestTotal(getTestingCountryName(
             'United Kingdom'), ukConfirmed)
         nldTest = getTestTotal(getTestingCountryName(
@@ -823,6 +848,8 @@ def cli(input, processtype):
                      indRecovered, indActive, indTest, getVaccination('India'), getPopulation('India'))
         outputAppend('Belgium', belConfirmed, belDeaths,
                      belRecovered, belActive, belTest, getVaccination('Belgium'), getPopulation('Belgium'))
+        outputAppend('Malaysia', malConfirmed, malDeaths,
+                     malRecovered, malActive, malTest, getVaccination('Malaysia'), getPopulation('Malaysia'))
         outputAppend('United Kingdom', ukConfirmed, ukDeaths,
                      ukRecovered, ukActive, ukTest, getVaccination('United Kingdom'), getPopulation('United Kingdom'))
         outputAppend('Netherlands', nldConfirmed, nldDeaths,
@@ -1194,7 +1221,7 @@ def cli(input, processtype):
         for i in range(len(loaded)):
             pop = getPopulation(loaded.at[i, 'CurrentCountry'],
                                 loaded.at[i, 'CovidArea'], loaded.at[i, 'CovidAreaSmaller'])
-    
+
             for row in loaded03.itertuples():
 
                 if loaded.at[i, 'CurrentCountry'] == 'US' and loaded.at[i, 'CovidArea'] == row.Province_State and loaded.at[i, 'CovidAreaSmaller'] == row.Admin2:
