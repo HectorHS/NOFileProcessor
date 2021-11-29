@@ -22,7 +22,7 @@ def cli(input, processtype):
         loaded = pd.read_csv(
             input, skiprows=2, delimiter=',', encoding='latin1')
         click.echo('file loaded')
-    elif processtype not in ['covid19', 'cclab-covid']:
+    elif processtype not in ['covid19', 'cclab-covid-time']:
         loaded = pd.read_csv(input, delimiter=',', encoding='latin1')
         click.echo('file loaded')
 
@@ -402,14 +402,14 @@ def cli(input, processtype):
             'resources/population.csv', delimiter=',', encoding='latin1')
         click.echo('population data loaded')
         testing = pd.read_csv(
-            '../owid-covid-data/public/data/testing/covid-testing-latest-data-source-details.csv', delimiter=',', encoding='latin1')
+            'C:/WorkspacesOther/owid-covid-data/public/data/testing/covid-testing-latest-data-source-details.csv', delimiter=',', encoding='latin1')
         testing.columns = [c.strip().lower().replace(' ', '_')
                            for c in testing.columns]
         testing.columns = [c.strip().lower().replace('-', '_')
                            for c in testing.columns]
         click.echo('testing data loaded')
         vaccinations = pd.read_csv(
-            '../owid-covid-data/public/data/vaccinations/vaccinations.csv', delimiter=',', encoding='latin1')
+            'C:/WorkspacesOther/owid-covid-data/public/data/vaccinations/vaccinations.csv', delimiter=',', encoding='latin1')
         click.echo('vaccination data loaded')
 
         output = pd.DataFrame(
@@ -1055,6 +1055,151 @@ def cli(input, processtype):
 
     elif processtype == 'cclab-covid':
 
+         # Load covid data files
+        location_01 = '../COVID-19/csse_covid_19_data/csse_covid_19_daily_reports_us/09-26-2020.csv'
+        location_02 = '../COVID-19/csse_covid_19_data/csse_covid_19_daily_reports_us/10-27-2020.csv'
+        location_03 = '../COVID-19/csse_covid_19_data/csse_covid_19_daily_reports_us/11-28-2020.csv'
+        location_04 = '../COVID-19/csse_covid_19_data/csse_covid_19_daily_reports_us/12-28-2020.csv'
+        location_05 = '../COVID-19/csse_covid_19_data/csse_covid_19_daily_reports_us/01-27-2021.csv'
+        location_06 = '../COVID-19/csse_covid_19_data/csse_covid_19_daily_reports_us/02-26-2021.csv'
+        location_07 = '../COVID-19/csse_covid_19_data/csse_covid_19_daily_reports_us/03-28-2021.csv'
+        location_08 = '../COVID-19/csse_covid_19_data/csse_covid_19_daily_reports_us/04-27-2021.csv'
+        location_09 = '../COVID-19/csse_covid_19_data/csse_covid_19_daily_reports_us/05-27-2021.csv'
+        location_10 = '../COVID-19/csse_covid_19_data/csse_covid_19_daily_reports_us/06-26-2021.csv'
+        location_11 = '../COVID-19/csse_covid_19_data/csse_covid_19_daily_reports_us/07-26-2021.csv'
+        location_12 = '../COVID-19/csse_covid_19_data/csse_covid_19_daily_reports_us/08-25-2021.csv'
+        location_13 = '../COVID-19/csse_covid_19_data/csse_covid_19_daily_reports_us/10-25-2021.csv'
+        loaded01 = pd.read_csv(location_01, delimiter=',', encoding='latin1')
+        loaded02 = pd.read_csv(location_02, delimiter=',', encoding='latin1')
+        loaded03 = pd.read_csv(location_03, delimiter=',', encoding='latin1')
+        loaded04 = pd.read_csv(location_04, delimiter=',', encoding='latin1')
+        loaded05 = pd.read_csv(location_05, delimiter=',', encoding='latin1')
+        loaded06 = pd.read_csv(location_06, delimiter=',', encoding='latin1')
+        loaded07 = pd.read_csv(location_07, delimiter=',', encoding='latin1')
+        loaded08 = pd.read_csv(location_08, delimiter=',', encoding='latin1')
+        loaded09 = pd.read_csv(location_09, delimiter=',', encoding='latin1')
+        loaded10 = pd.read_csv(location_10, delimiter=',', encoding='latin1')
+        loaded11 = pd.read_csv(location_11, delimiter=',', encoding='latin1')
+        loaded12 = pd.read_csv(location_12, delimiter=',', encoding='latin1')
+        loaded13 = pd.read_csv(location_13, delimiter=',', encoding='latin1')
+
+        click.echo('covid data loaded')
+
+        # initialise columns
+        loaded['Incident_Rate.01'] = ''
+        loaded['Case-Fatality_Ratio.01'] = ''
+        loaded['Incident_Rate.02'] = ''
+        loaded['Case-Fatality_Ratio.02'] = ''
+        loaded['Incident_Rate.03'] = ''
+        loaded['Case-Fatality_Ratio.03'] = ''
+        loaded['Incident_Rate.04'] = ''
+        loaded['Case-Fatality_Ratio.04'] = ''
+        loaded['Incident_Rate.05'] = ''
+        loaded['Case-Fatality_Ratio.05'] = ''
+        loaded['Incident_Rate.06'] = ''
+        loaded['Case-Fatality_Ratio.06'] = ''
+        loaded['Incident_Rate.07'] = ''
+        loaded['Case-Fatality_Ratio.07'] = ''
+        loaded['Incident_Rate.08'] = ''
+        loaded['Case-Fatality_Ratio.08'] = ''
+        loaded['Incident_Rate.09'] = ''
+        loaded['Case-Fatality_Ratio.09'] = ''
+        loaded['Incident_Rate.10'] = ''
+        loaded['Case-Fatality_Ratio.10'] = ''
+        loaded['Incident_Rate.11'] = ''
+        loaded['Case-Fatality_Ratio.11'] = ''
+        loaded['Incident_Rate.12'] = ''
+        loaded['Case-Fatality_Ratio.12'] = ''
+        loaded['Incident_Rate.13'] = ''
+        loaded['Case-Fatality_Ratio.13'] = ''
+
+        for i in range(len(loaded)):
+            for row in loaded01.itertuples():
+                if loaded.at[i, 'State_full'] == row.Province_State:
+                    if (row.Confirmed > 0):
+                        loaded.at[i, 'Incident_Rate.01'] = row.Incident_Rate
+                        loaded.at[i, 'Case-Fatality_Ratio.01'] = row.Mortality_Rate
+                    break
+            for row in loaded02.itertuples():
+                if loaded.at[i, 'State_full'] == row.Province_State:
+                    if (row.Confirmed > 0):
+                        loaded.at[i, 'Incident_Rate.02'] = row.Incident_Rate
+                        loaded.at[i, 'Case-Fatality_Ratio.02'] = row.Mortality_Rate
+                    break
+            for row in loaded03.itertuples():
+                if loaded.at[i, 'State_full'] == row.Province_State:
+                    if (row.Confirmed > 0):
+                        loaded.at[i, 'Incident_Rate.03'] = row.Incident_Rate
+                        loaded.at[i, 'Case-Fatality_Ratio.03'] = row.Case_Fatality_Ratio
+                    break
+            for row in loaded04.itertuples():
+                if loaded.at[i, 'State_full'] == row.Province_State:
+                    if (row.Confirmed > 0):
+                        loaded.at[i, 'Incident_Rate.04'] = row.Incident_Rate
+                        loaded.at[i, 'Case-Fatality_Ratio.04'] = row.Case_Fatality_Ratio
+                    break
+            for row in loaded05.itertuples():
+                if loaded.at[i, 'State_full'] == row.Province_State:
+                    if (row.Confirmed > 0):
+                        loaded.at[i, 'Incident_Rate.05'] = row.Incident_Rate
+                        loaded.at[i, 'Case-Fatality_Ratio.05'] = row.Case_Fatality_Ratio
+                    break
+            for row in loaded06.itertuples():
+                if loaded.at[i, 'State_full'] == row.Province_State:
+                    if (row.Confirmed > 0):
+                        loaded.at[i, 'Incident_Rate.06'] = row.Incident_Rate
+                        loaded.at[i, 'Case-Fatality_Ratio.06'] = row.Case_Fatality_Ratio
+                    break
+            for row in loaded07.itertuples():
+                if loaded.at[i, 'State_full'] == row.Province_State:
+                    if (row.Confirmed > 0):
+                        loaded.at[i, 'Incident_Rate.07'] = row.Incident_Rate
+                        loaded.at[i, 'Case-Fatality_Ratio.07'] = row.Case_Fatality_Ratio
+                    break
+            for row in loaded08.itertuples():
+                if loaded.at[i, 'State_full'] == row.Province_State:
+                    if (row.Confirmed > 0):
+                        loaded.at[i, 'Incident_Rate.08'] = row.Incident_Rate
+                        loaded.at[i, 'Case-Fatality_Ratio.08'] = row.Case_Fatality_Ratio
+                    break
+            for row in loaded09.itertuples():
+                if loaded.at[i, 'State_full'] == row.Province_State:
+                    if (row.Confirmed > 0):
+                        loaded.at[i, 'Incident_Rate.09'] = row.Incident_Rate
+                        loaded.at[i, 'Case-Fatality_Ratio.09'] = row.Case_Fatality_Ratio
+                    break
+            for row in loaded10.itertuples():
+                if loaded.at[i, 'State_full'] == row.Province_State:
+                    if (row.Confirmed > 0):
+                        loaded.at[i, 'Incident_Rate.10'] = row.Incident_Rate
+                        loaded.at[i, 'Case-Fatality_Ratio.10'] = row.Case_Fatality_Ratio
+                    break
+            for row in loaded11.itertuples():
+                if loaded.at[i, 'State_full'] == row.Province_State:
+                    if (row.Confirmed > 0):
+                        loaded.at[i, 'Incident_Rate.11'] = row.Incident_Rate
+                        loaded.at[i, 'Case-Fatality_Ratio.11'] = row.Case_Fatality_Ratio
+                    break
+            for row in loaded12.itertuples():
+                if loaded.at[i, 'State_full'] == row.Province_State:
+                    if (row.Confirmed > 0):
+                        loaded.at[i, 'Incident_Rate.12'] = row.Incident_Rate
+                        loaded.at[i, 'Case-Fatality_Ratio.12'] = row.Case_Fatality_Ratio
+                    break
+            for row in loaded13.itertuples():
+                if loaded.at[i, 'State_full'] == row.Province_State:
+                    if (row.Confirmed > 0):
+                        loaded.at[i, 'Incident_Rate.13'] = row.Incident_Rate
+                        loaded.at[i, 'Case-Fatality_Ratio.13'] = row.Case_Fatality_Ratio
+                    break
+
+
+        loaded = loaded.reset_index()
+        loaded.to_csv(r'output.csv', index=None, header=True)
+        
+        click.echo('output file exported')
+    elif processtype == 'cclab-covid-time':
+
         month = input[:2]
         day = input[3:5]
         year = input[6:10]
@@ -1168,7 +1313,7 @@ def cli(input, processtype):
         loaded['Incidence_Rate.13'] = ''
         loaded['Case-Fatality_Ratio.13'] = ''
         loaded['Incidence_Rate.14'] = ''
-        loaded['Incidence_Rate.14'] = ''
+        loaded['Case-Fatality_Ratio.14'] = ''
 
         # change default column name of Case-Fatality_Ratio to Case_Fatality_Ratio
         # loaded01.columns = [c.strip().replace('/', '_')
@@ -1200,120 +1345,123 @@ def cli(input, processtype):
         loaded14.columns = [c.strip().replace('-', '_')
                             for c in loaded14.columns]
 
-        def getPopulation(country, state, admin):
-            nonlocal population
-            click.echo(str(country) +
-                       str(state) + str(admin))
-            for row in population.itertuples():
-                if row.Country_Region == country and row.Province_State == state and row.Admin2 == admin:
-                    return int(row.Population)
-            for row in population.itertuples():
-                if row.Country_Region == country and row.Province_State == state:
-                    return int(row.Population)
-            for row in population.itertuples():
-                if row.Country_Region == country:
-                    return int(row.Population)
-            click.echo('population for ' + str(country) +
-                       str(state) + str(admin) + ' not found')
-            return 0
+        # def getPopulation(country, state, admin):
+        #     nonlocal population
+        #     click.echo(str(country) +
+        #                str(state) + str(admin))
+        #     for row in population.itertuples():
+        #         if row.Country_Region == country and row.Province_State == state and row.Admin2 == admin:
+        #             click.echo("All")
+        #             return int(row.Population)
+        #     for row in population.itertuples():
+        #         if row.Country_Region == country and row.Province_State == state and math.isnan(row.Admin2):
+        #             click.echo("No admin")
+        #             return int(row.Population)
+        #     for row in population.itertuples():
+        #         if row.Country_Region == country and math.isnan(row.Province_State) and math.isnan(row.Admin2):
+        #             click.echo("No state")
+        #             return int(row.Population)
+        #     click.echo('population for ' + str(country) +
+        #                str(state) + str(admin) + ' not found')
+        #     return 0
 
         # Populate columns. one loop for each time point
         for i in range(len(loaded)):
             pop = getPopulation(loaded.at[i, 'CurrentCountry'],
                                 loaded.at[i, 'CovidArea'], loaded.at[i, 'CovidAreaSmaller'])
 
-            for row in loaded03.itertuples():
+            # for row in loaded03.itertuples():
 
-                if loaded.at[i, 'CurrentCountry'] == 'US' and loaded.at[i, 'CovidArea'] == row.Province_State and loaded.at[i, 'CovidAreaSmaller'] == row.Admin2:
-                    click.echo(row.Confirmed)
-                    click.echo(pop)
-                    if (row.Confirmed > 0):
-                        loaded.at[i, 'Incidence_Rate.03'] = row.Confirmed/pop*100000
-                        loaded.at[i, 'Case-Fatality_Ratio.03'] = row.Deaths / \
-                            row.Confirmed*100
-                    break
-                elif loaded.at[i, 'CurrentCountry'] != 'US' and loaded.at[i, 'CurrentCountry'] == row.Country_Region and loaded.at[i, 'CovidArea'] == row.Province_State:
-                    loaded.at[i, 'Incidence_Rate.03'] = row.Confirmed/pop*100000
-                    loaded.at[i, 'Case-Fatality_Ratio.03'] = row.Deaths / \
-                        row.Confirmed*100
-                    break
-                elif loaded.at[i, 'CurrentCountry'] == row.Combined_Key:
-                    loaded.at[i, 'Incidence_Rate.03'] = row.Confirmed/pop*100000
-                    loaded.at[i, 'Case-Fatality_Ratio.03'] = row.Deaths / \
-                        row.Confirmed*100
-                    break
+            #     if loaded.at[i, 'CurrentCountry'] == 'US' and loaded.at[i, 'CovidArea'] == row.Province_State and loaded.at[i, 'CovidAreaSmaller'] == row.Admin2:
+            #         click.echo(row.Confirmed)
+            #         click.echo(pop)
+            #         if (row.Confirmed > 0):
+            #             loaded.at[i, 'Incidence_Rate.03'] = row.Confirmed/pop*100000
+            #             loaded.at[i, 'Case-Fatality_Ratio.03'] = row.Deaths / \
+            #                 row.Confirmed*100
+            #         break
+            #     elif loaded.at[i, 'CurrentCountry'] != 'US' and loaded.at[i, 'CurrentCountry'] == row.Country_Region and loaded.at[i, 'CovidArea'] == row.Province_State:
+            #         loaded.at[i, 'Incidence_Rate.03'] = row.Confirmed/pop*100000
+            #         loaded.at[i, 'Case-Fatality_Ratio.03'] = row.Deaths / \
+            #             row.Confirmed*100
+            #         break
+            #     elif loaded.at[i, 'CurrentCountry'] == row.Combined_Key:
+            #         loaded.at[i, 'Incidence_Rate.03'] = row.Confirmed/pop*100000
+            #         loaded.at[i, 'Case-Fatality_Ratio.03'] = row.Deaths / \
+            #             row.Confirmed*100
+            #         break
 
-            for row in loaded04.itertuples():
-                if loaded.at[i, 'CurrentCountry'] == 'US' and loaded.at[i, 'CovidArea'] == row.Province_State and loaded.at[i, 'CovidAreaSmaller'] == row.Admin2:
-                    if (row.Confirmed > 0):
-                        loaded.at[i, 'Incidence_Rate.04'] = row.Confirmed/pop*100000
-                        loaded.at[i, 'Case-Fatality_Ratio.04'] = row.Deaths / \
-                            row.Confirmed*100
-                    break
-                elif loaded.at[i, 'CurrentCountry'] != 'US' and loaded.at[i, 'CurrentCountry'] == row.Country_Region and loaded.at[i, 'CovidArea'] == row.Province_State:
-                    loaded.at[i, 'Incidence_Rate.04'] = row.Confirmed/pop*100000
-                    loaded.at[i, 'Case-Fatality_Ratio.04'] = row.Deaths / \
-                        row.Confirmed*100
-                    break
-                elif loaded.at[i, 'CurrentCountry'] == row.Combined_Key:
-                    loaded.at[i, 'Incidence_Rate.04'] = row.Confirmed/pop*100000
-                    loaded.at[i, 'Case-Fatality_Ratio.04'] = row.Deaths / \
-                        row.Confirmed*100
-                    break
+            # for row in loaded04.itertuples():
+            #     if loaded.at[i, 'CurrentCountry'] == 'US' and loaded.at[i, 'CovidArea'] == row.Province_State and loaded.at[i, 'CovidAreaSmaller'] == row.Admin2:
+            #         if (row.Confirmed > 0):
+            #             loaded.at[i, 'Incidence_Rate.04'] = row.Confirmed/pop*100000
+            #             loaded.at[i, 'Case-Fatality_Ratio.04'] = row.Deaths / \
+            #                 row.Confirmed*100
+            #         break
+            #     elif loaded.at[i, 'CurrentCountry'] != 'US' and loaded.at[i, 'CurrentCountry'] == row.Country_Region and loaded.at[i, 'CovidArea'] == row.Province_State:
+            #         loaded.at[i, 'Incidence_Rate.04'] = row.Confirmed/pop*100000
+            #         loaded.at[i, 'Case-Fatality_Ratio.04'] = row.Deaths / \
+            #             row.Confirmed*100
+            #         break
+            #     elif loaded.at[i, 'CurrentCountry'] == row.Combined_Key:
+            #         loaded.at[i, 'Incidence_Rate.04'] = row.Confirmed/pop*100000
+            #         loaded.at[i, 'Case-Fatality_Ratio.04'] = row.Deaths / \
+            #             row.Confirmed*100
+            #         break
 
-            for row in loaded05.itertuples():
-                if loaded.at[i, 'CurrentCountry'] == 'US' and loaded.at[i, 'CovidArea'] == row.Province_State and loaded.at[i, 'CovidAreaSmaller'] == row.Admin2:
-                    if (row.Confirmed > 0):
-                        loaded.at[i, 'Incidence_Rate.05'] = row.Confirmed/pop*100000
-                        loaded.at[i, 'Case-Fatality_Ratio.05'] = row.Deaths / \
-                            row.Confirmed*100
-                    break
-                elif loaded.at[i, 'CurrentCountry'] != 'US' and loaded.at[i, 'CurrentCountry'] == row.Country_Region and loaded.at[i, 'CovidArea'] == row.Province_State:
-                    loaded.at[i, 'Incidence_Rate.05'] = row.Confirmed/pop*100000
-                    loaded.at[i, 'Case-Fatality_Ratio.05'] = row.Deaths / \
-                        row.Confirmed*100
-                    break
-                elif loaded.at[i, 'CurrentCountry'] == row.Combined_Key:
-                    loaded.at[i, 'Incidence_Rate.05'] = row.Confirmed/pop*100000
-                    loaded.at[i, 'Case-Fatality_Ratio.05'] = row.Deaths / \
-                        row.Confirmed*100
-                    break
+            # for row in loaded05.itertuples():
+            #     if loaded.at[i, 'CurrentCountry'] == 'US' and loaded.at[i, 'CovidArea'] == row.Province_State and loaded.at[i, 'CovidAreaSmaller'] == row.Admin2:
+            #         if (row.Confirmed > 0):
+            #             loaded.at[i, 'Incidence_Rate.05'] = row.Confirmed/pop*100000
+            #             loaded.at[i, 'Case-Fatality_Ratio.05'] = row.Deaths / \
+            #                 row.Confirmed*100
+            #         break
+            #     elif loaded.at[i, 'CurrentCountry'] != 'US' and loaded.at[i, 'CurrentCountry'] == row.Country_Region and loaded.at[i, 'CovidArea'] == row.Province_State:
+            #         loaded.at[i, 'Incidence_Rate.05'] = row.Confirmed/pop*100000
+            #         loaded.at[i, 'Case-Fatality_Ratio.05'] = row.Deaths / \
+            #             row.Confirmed*100
+            #         break
+            #     elif loaded.at[i, 'CurrentCountry'] == row.Combined_Key:
+            #         loaded.at[i, 'Incidence_Rate.05'] = row.Confirmed/pop*100000
+            #         loaded.at[i, 'Case-Fatality_Ratio.05'] = row.Deaths / \
+            #             row.Confirmed*100
+            #         break
 
-            for row in loaded06.itertuples():
-                if loaded.at[i, 'CurrentCountry'] == 'US' and loaded.at[i, 'CovidArea'] == row.Province_State and loaded.at[i, 'CovidAreaSmaller'] == row.Admin2:
-                    if (row.Confirmed > 0):
-                        loaded.at[i, 'Incidence_Rate.06'] = row.Confirmed/pop*100000
-                        loaded.at[i, 'Case-Fatality_Ratio.06'] = row.Deaths / \
-                            row.Confirmed*100
-                    break
-                elif loaded.at[i, 'CurrentCountry'] != 'US' and loaded.at[i, 'CurrentCountry'] == row.Country_Region and loaded.at[i, 'CovidArea'] == row.Province_State:
-                    loaded.at[i, 'Incidence_Rate.06'] = row.Confirmed/pop*100000
-                    loaded.at[i, 'Case-Fatality_Ratio.06'] = row.Deaths / \
-                        row.Confirmed*100
-                    break
-                elif loaded.at[i, 'CurrentCountry'] == row.Combined_Key:
-                    loaded.at[i, 'Incidence_Rate.06'] = row.Confirmed/pop*100000
-                    loaded.at[i, 'Case-Fatality_Ratio.06'] = row.Deaths / \
-                        row.Confirmed*100
-                    break
+            # for row in loaded06.itertuples():
+            #     if loaded.at[i, 'CurrentCountry'] == 'US' and loaded.at[i, 'CovidArea'] == row.Province_State and loaded.at[i, 'CovidAreaSmaller'] == row.Admin2:
+            #         if (row.Confirmed > 0):
+            #             loaded.at[i, 'Incidence_Rate.06'] = row.Confirmed/pop*100000
+            #             loaded.at[i, 'Case-Fatality_Ratio.06'] = row.Deaths / \
+            #                 row.Confirmed*100
+            #         break
+            #     elif loaded.at[i, 'CurrentCountry'] != 'US' and loaded.at[i, 'CurrentCountry'] == row.Country_Region and loaded.at[i, 'CovidArea'] == row.Province_State:
+            #         loaded.at[i, 'Incidence_Rate.06'] = row.Confirmed/pop*100000
+            #         loaded.at[i, 'Case-Fatality_Ratio.06'] = row.Deaths / \
+            #             row.Confirmed*100
+            #         break
+            #     elif loaded.at[i, 'CurrentCountry'] == row.Combined_Key:
+            #         loaded.at[i, 'Incidence_Rate.06'] = row.Confirmed/pop*100000
+            #         loaded.at[i, 'Case-Fatality_Ratio.06'] = row.Deaths / \
+            #             row.Confirmed*100
+            #         break
 
-            for row in loaded07.itertuples():
-                if loaded.at[i, 'CurrentCountry'] == 'US' and loaded.at[i, 'CovidArea'] == row.Province_State and loaded.at[i, 'CovidAreaSmaller'] == row.Admin2:
-                    if (row.Confirmed > 0):
-                        loaded.at[i, 'Incidence_Rate.07'] = row.Confirmed/pop*100000
-                        loaded.at[i, 'Case-Fatality_Ratio.07'] = row.Deaths / \
-                            row.Confirmed*100
-                    break
-                elif loaded.at[i, 'CurrentCountry'] != 'US' and loaded.at[i, 'CurrentCountry'] == row.Country_Region and loaded.at[i, 'CovidArea'] == row.Province_State:
-                    loaded.at[i, 'Incidence_Rate.07'] = row.Confirmed/pop*100000
-                    loaded.at[i, 'Case-Fatality_Ratio.07'] = row.Deaths / \
-                        row.Confirmed*100
-                    break
-                elif loaded.at[i, 'CurrentCountry'] == row.Combined_Key:
-                    loaded.at[i, 'Incidence_Rate.07'] = row.Confirmed/pop*100000
-                    loaded.at[i, 'Case-Fatality_Ratio.07'] = row.Deaths / \
-                        row.Confirmed*100
-                    break
+            # for row in loaded07.itertuples():
+            #     if loaded.at[i, 'CurrentCountry'] == 'US' and loaded.at[i, 'CovidArea'] == row.Province_State and loaded.at[i, 'CovidAreaSmaller'] == row.Admin2:
+            #         if (row.Confirmed > 0):
+            #             loaded.at[i, 'Incidence_Rate.07'] = row.Confirmed/pop*100000
+            #             loaded.at[i, 'Case-Fatality_Ratio.07'] = row.Deaths / \
+            #                 row.Confirmed*100
+            #         break
+            #     elif loaded.at[i, 'CurrentCountry'] != 'US' and loaded.at[i, 'CurrentCountry'] == row.Country_Region and loaded.at[i, 'CovidArea'] == row.Province_State:
+            #         loaded.at[i, 'Incidence_Rate.07'] = row.Confirmed/pop*100000
+            #         loaded.at[i, 'Case-Fatality_Ratio.07'] = row.Deaths / \
+            #             row.Confirmed*100
+            #         break
+            #     elif loaded.at[i, 'CurrentCountry'] == row.Combined_Key:
+            #         loaded.at[i, 'Incidence_Rate.07'] = row.Confirmed/pop*100000
+            #         loaded.at[i, 'Case-Fatality_Ratio.07'] = row.Deaths / \
+            #             row.Confirmed*100
+            #         break
 
             for row in loaded08.itertuples():
                 if loaded.at[i, 'CurrentCountry'] == 'US' and loaded.at[i, 'CovidArea'] == row.Province_State and loaded.at[i, 'CovidAreaSmaller'] == row.Admin2:
@@ -1425,7 +1573,7 @@ def cli(input, processtype):
                 # loaded = loaded.reset_index()
                 loaded.to_csv(r'output1.csv', index=None, header=True)
                 click.echo('sample exported')
-            if (i == 100):
+            if (i == 75):
                 # loaded = loaded.reset_index()
                 loaded.to_csv(r'output2.csv', index=None, header=True)
                 click.echo('sample exported')
@@ -1436,5 +1584,587 @@ def cli(input, processtype):
 
         loaded = loaded.reset_index()
         loaded.to_csv(r'output.csv', index=None, header=True)
+
+    elif processtype == "preprint3-aggregate":
+
+        #load aditional files
+        recAge = pd.read_csv(
+            'C:/Users/Hecto/OneDrive/Desktop/aggregates/recreational-age-scat_data.csv', delimiter=',', encoding='latin1')
+        recCovid = pd.read_csv(
+            'C:/Users/Hecto/OneDrive/Desktop/aggregates/recreational-covid-scat_data.csv', delimiter=',', encoding='latin1')
+        recEducation = pd.read_csv(
+            'C:/Users/Hecto/OneDrive/Desktop/aggregates/recreational-education-scat_data.csv', delimiter=',', encoding='latin1')
+        recFuture = pd.read_csv(
+            'C:/Users/Hecto/OneDrive/Desktop/aggregates/recreational-future-scat_data.csv', delimiter=',', encoding='latin1')
+        recImmediate = pd.read_csv(
+            'C:/Users/Hecto/OneDrive/Desktop/aggregates/recreational-immediate-scat_data.csv', delimiter=',', encoding='latin1')
+        recMask1 = pd.read_csv(
+            'C:/Users/Hecto/OneDrive/Desktop/aggregates/recreational-mask1-scat_data.csv', delimiter=',', encoding='latin1')
+        recMask2 = pd.read_csv(
+            'C:/Users/Hecto/OneDrive/Desktop/aggregates/recreational-mask2-scat_data.csv', delimiter=',', encoding='latin1')
+        recMask3 = pd.read_csv(
+            'C:/Users/Hecto/OneDrive/Desktop/aggregates/recreational-mask3-scat_data.csv', delimiter=',', encoding='latin1')
+        recMask4 = pd.read_csv(
+            'C:/Users/Hecto/OneDrive/Desktop/aggregates/recreational-mask4-scat_data.csv', delimiter=',', encoding='latin1')
+        recMask5 = pd.read_csv(
+            'C:/Users/Hecto/OneDrive/Desktop/aggregates/recreational-mask5-scat_data.csv', delimiter=',', encoding='latin1')
+        recPolitical = pd.read_csv(
+            'C:/Users/Hecto/OneDrive/Desktop/aggregates/recreational-political-scat_data.csv', delimiter=',', encoding='latin1')
+        recRisk = pd.read_csv(
+            'C:/Users/Hecto/OneDrive/Desktop/aggregates/recreational-risk-scat_data.csv', delimiter=',', encoding='latin1')
+        recSes = pd.read_csv(
+            'C:/Users/Hecto/OneDrive/Desktop/aggregates/recreational-ses-scat_data.csv', delimiter=',', encoding='latin1')
+        recSex = pd.read_csv(
+            'C:/Users/Hecto/OneDrive/Desktop/aggregates/recreational-sex-scat_data.csv', delimiter=',', encoding='latin1')
+        recStress = pd.read_csv(
+            'C:/Users/Hecto/OneDrive/Desktop/aggregates/recreational-stress-scat_data.csv', delimiter=',', encoding='latin1')
+
+        rouAge = pd.read_csv(
+            'C:/Users/Hecto/OneDrive/Desktop/aggregates/routine-age_data.csv', delimiter=',', encoding='latin1')
+        rouCovid = pd.read_csv(
+            'C:/Users/Hecto/OneDrive/Desktop/aggregates/routine-covid_data.csv', delimiter=',', encoding='latin1')
+        rouEducation = pd.read_csv(
+            'C:/Users/Hecto/OneDrive/Desktop/aggregates/routine-education_data.csv', delimiter=',', encoding='latin1')
+        rouFuture = pd.read_csv(
+            'C:/Users/Hecto/OneDrive/Desktop/aggregates/routine-future_data.csv', delimiter=',', encoding='latin1')
+        rouImmediate = pd.read_csv(
+            'C:/Users/Hecto/OneDrive/Desktop/aggregates/routine-immediate_data.csv', delimiter=',', encoding='latin1')
+        rouMask1 = pd.read_csv(
+            'C:/Users/Hecto/OneDrive/Desktop/aggregates/routine-mask1_data.csv', delimiter=',', encoding='latin1')
+        rouMask2 = pd.read_csv(
+            'C:/Users/Hecto/OneDrive/Desktop/aggregates/routine-mask2_data.csv', delimiter=',', encoding='latin1')
+        rouMask3 = pd.read_csv(
+            'C:/Users/Hecto/OneDrive/Desktop/aggregates/routine-mask3_data.csv', delimiter=',', encoding='latin1')
+        rouMask4 = pd.read_csv(
+            'C:/Users/Hecto/OneDrive/Desktop/aggregates/routine-mask4_data.csv', delimiter=',', encoding='latin1')
+        rouMask5 = pd.read_csv(
+            'C:/Users/Hecto/OneDrive/Desktop/aggregates/routine-mask5_data.csv', delimiter=',', encoding='latin1')
+        rouPolitical = pd.read_csv(
+            'C:/Users/Hecto/OneDrive/Desktop/aggregates/routine-political_data.csv', delimiter=',', encoding='latin1')
+        rouRisk = pd.read_csv(
+            'C:/Users/Hecto/OneDrive/Desktop/aggregates/routine-risk_data.csv', delimiter=',', encoding='latin1')
+        rouSes = pd.read_csv(
+            'C:/Users/Hecto/OneDrive/Desktop/aggregates/routine-ses_data.csv', delimiter=',', encoding='latin1')
+        rouSex = pd.read_csv(
+            'C:/Users/Hecto/OneDrive/Desktop/aggregates/routine-sex_data.csv', delimiter=',', encoding='latin1')
+        rouStress = pd.read_csv(
+            'C:/Users/Hecto/OneDrive/Desktop/aggregates/routine-stress_data.csv', delimiter=',', encoding='latin1')
+
+        click.echo("additional files loaded")
+        #initialise columns
+        loaded['recAgeAggr'] = ''
+        loaded['recCovidAggr'] = ''
+        loaded['recEducationAggr'] = ''
+        loaded['recEducationJit'] = ''
+        loaded['recFutureAggr'] = ''
+        loaded['recImmediateAggr'] = ''
+        loaded['recMask1Aggr'] = ''
+        loaded['recMask1Jit'] = ''
+        loaded['recMask2Aggr'] = ''
+        loaded['recMask2Jit'] = ''
+        loaded['recMask3Aggr'] = ''
+        loaded['recMask3Jit'] = ''
+        loaded['recMask4Aggr'] = ''
+        loaded['recMask4Jit'] = ''
+        loaded['recMask5Aggr'] = ''
+        loaded['recMask5Jit'] = ''
+        loaded['recPoliticalAggr'] = ''
+        loaded['recPoliticalJit'] = ''
+        loaded['recRiskAggr'] = ''
+        loaded['recRiskJit'] = ''
+        loaded['recSesAggr'] = ''
+        loaded['recSesJit'] = ''
+        loaded['recSexAggr'] = ''
+        loaded['recSexJit'] = ''
+        loaded['recStressAggr'] = ''
+        loaded['recStressJit'] = ''
+        loaded['rouAgeAggr'] = ''
+        loaded['rouCovidAggr'] = ''
+        loaded['rouEducationAggr'] = ''
+        loaded['rouEducationJit'] = ''
+        loaded['rouFutureAggr'] = ''
+        loaded['rouImmediateAggr'] = ''
+        loaded['rouMask1Aggr'] = ''
+        loaded['rouMask1Jit'] = ''
+        loaded['rouMask2Aggr'] = ''
+        loaded['rouMask2Jit'] = ''
+        loaded['rouMask3Aggr'] = ''
+        loaded['rouMask3Jit'] = ''
+        loaded['rouMask4Aggr'] = ''
+        loaded['rouMask4Jit'] = ''
+        loaded['rouMask5Aggr'] = ''
+        loaded['rouMask5Jit'] = ''
+        loaded['rouPoliticalAggr'] = ''
+        loaded['rouPoliticalJit'] = ''
+        loaded['rouRiskAggr'] = ''
+        loaded['rouRiskJit'] = ''
+        loaded['rouSesAggr'] = ''
+        loaded['rouSesJit'] = ''
+        loaded['rouSexAggr'] = ''
+        loaded['rouSexJit'] = ''
+        loaded['rouStressAggr'] = ''
+        loaded['rouStressJit'] = ''
+       
+        for i in range(len(loaded)):
+            # click.echo(loaded.at[i, 'Age'])
+            for row in recAge.itertuples():
+                if str(loaded.at[i, 'Age']) == str(row.Age) and str(loaded.at[i, 'Recreational']) == str(row.Recreational):
+                    loaded.at[i, 'recAgeAggr'] = row.Count
+                    break
+
+            for row in recCovid.itertuples():
+                if str(loaded.at[i, 'Covid']) == str(row.Covid) and str(loaded.at[i, 'Recreational']) == str(row.Recreational):
+                    loaded.at[i, 'recCovidAggr'] = row.Count
+                    break
+            
+            for row in recEducation.itertuples():
+                if str(loaded.at[i, 'Education']) == str(row.Education) and str(loaded.at[i, 'Recreational']) == str(row.Recreational):
+                    loaded.at[i, 'recEducationAggr'] = row.Count
+                    jit = row.jitter/4 - 0.125
+                    value = row.Education + jit
+                    loaded.at[i, 'recEducationJit'] = value
+                    break
+
+            for row in recFuture.itertuples():
+                if str(loaded.at[i, 'CFCcompositeFuture']) == str(row.CFCcompositeFuture) and str(loaded.at[i, 'Recreational']) == str(row.Recreational):
+                    loaded.at[i, 'recFutureAggr'] = row.Count
+                    break
+
+            for row in recImmediate.itertuples():
+                if str(loaded.at[i, 'CFCcompositeImmediate']) == str(row.CFCcompositeImmediate) and str(loaded.at[i, 'Recreational']) == str(row.Recreational):
+                    loaded.at[i, 'recImmediateAggr'] = row.Count
+                    break
+
+            for row in recMask1.itertuples():
+                if str(loaded.at[i, 'Mask1']) == str(row.Mask1) and str(loaded.at[i, 'Recreational']) == str(row.Recreational):
+                    loaded.at[i, 'recMask1Aggr'] = row.Count
+                    jit = row.jitter/4 - 0.125
+                    value = row.Mask1 + jit
+                    loaded.at[i, 'recMask1Jit'] = value
+                    break
+
+            for row in recMask2.itertuples():
+                if str(loaded.at[i, 'Mask2']) == str(row.Mask2) and str(loaded.at[i, 'Recreational']) == str(row.Recreational):
+                    loaded.at[i, 'recMask2Aggr'] = row.Count
+                    jit = row.jitter/4 - 0.125
+                    value = row.Mask2 + jit
+                    loaded.at[i, 'recMask2Jit'] = value
+                    break
+
+            for row in recMask3.itertuples():
+                if str(loaded.at[i, 'Mask3']) == str(row.Mask3) and str(loaded.at[i, 'Recreational']) == str(row.Recreational):
+                    loaded.at[i, 'recMask3Aggr'] = row.Count
+                    jit = row.jitter/4 - 0.125
+                    value = row.Mask3 + jit
+                    loaded.at[i, 'recMask3Jit'] = value
+                    break
+
+            for row in recMask4.itertuples():
+                if str(loaded.at[i, 'Mask4']) == str(row.Mask4) and str(loaded.at[i, 'Recreational']) == str(row.Recreational):
+                    loaded.at[i, 'recMask4Aggr'] = row.Count
+                    jit = row.jitter/4 - 0.125
+                    value = row.Mask4 + jit
+                    loaded.at[i, 'recMask4Jit'] = value
+                    break
+
+            for row in recMask5.itertuples():
+                if str(loaded.at[i, 'Mask5']) == str(row.Mask5) and str(loaded.at[i, 'Recreational']) == str(row.Recreational):
+                    loaded.at[i, 'recMask5Aggr'] = row.Count
+                    jit = row.jitter/4 - 0.125
+                    value = row.Mask5 + jit
+                    loaded.at[i, 'recMask5Jit'] = value
+                    break
+
+            for row in recPolitical.itertuples():
+                if str(loaded.at[i, 'Political']) == str(row.Political) and str(loaded.at[i, 'Recreational']) == str(row.Recreational):
+                    loaded.at[i, 'recPoliticalAggr'] = row.Count
+                    jit = row.jitter/4 - 0.125
+                    value = row.Political + jit
+                    loaded.at[i, 'recPoliticalJit'] = value
+                    break
+
+            for row in recRisk.itertuples():
+                if str(loaded.at[i, 'Risk']) == str(row.Risk) and str(loaded.at[i, 'Recreational']) == str(row.Recreational):
+                    loaded.at[i, 'recRiskAggr'] = row.Count
+                    jit = row.jitter/4 - 0.125
+                    value = row.Risk + jit
+                    loaded.at[i, 'recRiskJit'] = value
+                    break
+
+            for row in recSes.itertuples():
+                if str(loaded.at[i, 'SubjectiveSES']) == str(row.SubjectiveSES) and str(loaded.at[i, 'Recreational']) == str(row.Recreational):
+                    loaded.at[i, 'recSesAggr'] = row.Count
+                    jit = row.jitter/4 - 0.125
+                    value = row.SubjectiveSES + jit
+                    loaded.at[i, 'recSesJit'] = value
+                    break
+
+            for row in recSex.itertuples():
+                if str(loaded.at[i, 'Sex']) == str(row.Sex) and str(loaded.at[i, 'Recreational']) == str(row.Recreational):
+                    loaded.at[i, 'recSexAggr'] = row.Count
+                    jit = row.jitter/4 - 0.125
+                    value = row.Sex + jit
+                    loaded.at[i, 'recSexJit'] = value
+                    break
+
+            for row in recStress.itertuples():
+                if str(loaded.at[i, 'Stress']) == str(row.Stress) and str(loaded.at[i, 'Recreational']) == str(row.Recreational):
+                    loaded.at[i, 'recStressAggr'] = row.Count
+                    jit = row.jitter/4 - 0.125
+                    value = row.Stress + jit
+                    loaded.at[i, 'recStressJit'] = value
+                    break
+
+            for row in rouAge.itertuples():
+                if str(loaded.at[i, 'Age']) == str(row.Age) and str(loaded.at[i, 'Routine']) == str(row.Routine):
+                    loaded.at[i, 'rouAgeAggr'] = row.Count
+                    break
+
+            for row in rouCovid.itertuples():
+                if str(loaded.at[i, 'Covid']) == str(row.Covid) and str(loaded.at[i, 'Routine']) == str(row.Routine):
+                    loaded.at[i, 'rouCovidAggr'] = row.Count
+                    break
+
+            for row in rouEducation.itertuples():
+                if str(loaded.at[i, 'Education']) == str(row.Education) and str(loaded.at[i, 'Routine']) == str(row.Routine):
+                    loaded.at[i, 'rouEducationAggr'] = row.Count
+                    jit = row.jitter/4 - 0.125
+                    value = row.Education + jit
+                    loaded.at[i, 'rouEducationJit'] = value
+                    break
+
+            for row in rouFuture.itertuples():
+                if str(loaded.at[i, 'CFCcompositeFuture']) == str(row.CFCcompositeFuture) and str(loaded.at[i, 'Routine']) == str(row.Routine):
+                    loaded.at[i, 'rouFutureAggr'] = row.Count
+                    break
+
+            for row in rouImmediate.itertuples():
+                if str(loaded.at[i, 'CFCcompositeImmediate']) == str(row.CFCcompositeImmediate) and str(loaded.at[i, 'Routine']) == str(row.Routine):
+                    loaded.at[i, 'rouImmediateAggr'] = row.Count
+                    break
+
+            for row in rouMask1.itertuples():
+                if str(loaded.at[i, 'Mask1']) == str(row.Mask1) and str(loaded.at[i, 'Routine']) == str(row.Routine):
+                    loaded.at[i, 'rouMask1Aggr'] = row.Count
+                    jit = row.jitter/4 - 0.125
+                    value = row.Mask1 + jit
+                    loaded.at[i, 'rouMask1Jit'] = value
+                    break
+
+            for row in rouMask2.itertuples():
+                if str(loaded.at[i, 'Mask2']) == str(row.Mask2) and str(loaded.at[i, 'Routine']) == str(row.Routine):
+                    loaded.at[i, 'rouMask2Aggr'] = row.Count
+                    jit = row.jitter/4 - 0.125
+                    value = row.Mask2 + jit
+                    loaded.at[i, 'rouMask2Jit'] = value
+                    break
+
+            for row in rouMask3.itertuples():
+                if str(loaded.at[i, 'Mask3']) == str(row.Mask3) and str(loaded.at[i, 'Routine']) == str(row.Routine):
+                    loaded.at[i, 'rouMask3Aggr'] = row.Count
+                    jit = row.jitter/4 - 0.125
+                    value = row.Mask3 + jit
+                    loaded.at[i, 'rouMask3Jit'] = value
+                    break
+
+            for row in rouMask4.itertuples():
+                if str(loaded.at[i, 'Mask4']) == str(row.Mask4) and str(loaded.at[i, 'Routine']) == str(row.Routine):
+                    loaded.at[i, 'rouMask4Aggr'] = row.Count
+                    jit = row.jitter/4 - 0.125
+                    value = row.Mask4 + jit
+                    loaded.at[i, 'rouMask4Jit'] = value
+                    break
+
+            for row in rouMask5.itertuples():
+                if str(loaded.at[i, 'Mask5']) == str(row.Mask5) and str(loaded.at[i, 'Routine']) == str(row.Routine):
+                    loaded.at[i, 'rouMask5Aggr'] = row.Count
+                    jit = row.jitter/4 - 0.125
+                    value = row.Mask5 + jit
+                    loaded.at[i, 'rouMask5Jit'] = value
+                    break
+
+            for row in rouPolitical.itertuples():
+                if str(loaded.at[i, 'Political']) == str(row.Political) and str(loaded.at[i, 'Routine']) == str(row.Routine):
+                    loaded.at[i, 'rouPoliticalAggr'] = row.Count
+                    jit = row.jitter/4 - 0.125
+                    value = row.Political + jit
+                    loaded.at[i, 'rouPoliticalJit'] = value
+                    break
+
+            for row in rouRisk.itertuples():
+                if str(loaded.at[i, 'Risk']) == str(row.Risk) and str(loaded.at[i, 'Routine']) == str(row.Routine):
+                    loaded.at[i, 'rouRiskAggr'] = row.Count
+                    jit = row.jitter/4 - 0.125
+                    value = row.Risk + jit
+                    loaded.at[i, 'rouRiskJit'] = value
+                    break
+
+            for row in rouSes.itertuples():
+                if str(loaded.at[i, 'SubjectiveSES']) == str(row.SubjectiveSES) and str(loaded.at[i, 'Routine']) == str(row.Routine):
+                    loaded.at[i, 'rouSesAggr'] = row.Count
+                    jit = row.jitter/4 - 0.125
+                    value = row.SubjectiveSES + jit
+                    loaded.at[i, 'rouSesJit'] = value
+                    break
+
+            for row in rouSex.itertuples():
+                if str(loaded.at[i, 'Sex']) == str(row.Sex) and str(loaded.at[i, 'Routine']) == str(row.Routine):
+                    loaded.at[i, 'rouSexAggr'] = row.Count
+                    jit = row.jitter/4 - 0.125
+                    value = row.Sex + jit
+                    loaded.at[i, 'rouSexJit'] = value
+                    break
+
+            for row in rouStress.itertuples():
+                if str(loaded.at[i, 'Stress']) == str(row.Stress) and str(loaded.at[i, 'Routine']) == str(row.Routine):
+                    loaded.at[i, 'rouStressAggr'] = row.Count
+                    jit = row.jitter/4 - 0.125
+                    value = row.Stress + jit
+                    loaded.at[i, 'rouStressJit'] = value
+                    break
+
+
+        loaded = loaded.reset_index()
+        loaded.to_csv(r'output.csv', index=None, header=True)
+
+    elif processtype == "cclab-dashboard-us":
+
+        measures = ["Age", "PerceptionRisk", "PFIaffectNeigh", "PFINeigh1", "PFINeigh6", "PFIcountry1", 
+        "PFIcountry6", "WillingnessNeigh", "NBTneigh", "WillingnessCountry", "NBTcountry"]
+
+        # get states
+        states = loaded.State_full.unique()
+
+        output = pd.DataFrame(
+            columns=['State', 'Measure', 't1', 't2', 't3', 't4', 't5', 't6', 't7', 't8', 't9', 't10', 't11', 't12'])
+
+        # For each variable calculate averages by state and date
+        for msr in measures:
+            total_all_t1 = 0
+            count_all_t1 = 0
+            total_all_t2 = 0
+            count_all_t2 = 0
+            total_all_t3 = 0
+            count_all_t3 = 0
+            total_all_t4 = 0
+            count_all_t4 = 0
+            total_all_t5 = 0
+            count_all_t5 = 0
+            total_all_t6 = 0
+            count_all_t6 = 0
+            total_all_t7 = 0
+            count_all_t7 = 0
+            total_all_t8 = 0
+            count_all_t8 = 0
+            total_all_t9 = 0
+            count_all_t9 = 0
+            total_all_t10 = 0
+            count_all_t10 = 0
+            total_all_t11 = 0
+            count_all_t11 = 0
+            total_all_t12 = 0
+            count_all_t12 = 0
+            for state in states: 
+                t1_total = 0
+                t1_count = 0
+                t2_total = 0
+                t2_count = 0
+                t3_total = 0
+                t3_count = 0
+                t4_total = 0
+                t4_count = 0
+                t5_total = 0
+                t5_count = 0
+                t6_total = 0
+                t6_count = 0
+                t7_total = 0
+                t7_count = 0
+                t8_total = 0
+                t8_count = 0
+                t9_total = 0
+                t9_count = 0
+                t10_total = 0
+                t10_count = 0
+                t11_total = 0
+                t11_count = 0
+                t12_total = 0
+                t12_count = 0
+                avg1 = np.nan
+                avg2 = np.nan
+                avg3 = np.nan
+                avg4 = np.nan
+                avg5 = np.nan
+                avg6 = np.nan
+                avg7 = np.nan
+                avg8 = np.nan
+                avg9 = np.nan
+                avg10 = np.nan
+                avg11 = np.nan
+                avg12 = np.nan
+
+                for i in range(len(loaded)):
+                    val = float(loaded.at[i, msr])
+                   
+                    if state == loaded.at[i, "State_full"] and math.isnan(val) == False:
+                        if loaded.at[i, "Date"] == "09/26/2020":
+                            t1_total += val
+                            t1_count += 1
+                        elif  loaded.at[i, "Date"] == "10/27/2020":
+                            t2_total += val
+                            t2_count += 1
+                        elif  loaded.at[i, "Date"] == "11/28/2020":
+                            t3_total += val
+                            t3_count += 1
+                        elif loaded.at[i, "Date"] == "12/28/2020":
+                            t4_total += val
+                            t4_count += 1
+                        elif  loaded.at[i, "Date"] == "01/27/2021":
+                            t5_total += val
+                            t5_count += 1
+                        elif  loaded.at[i, "Date"] == "02/26/2021":
+                            t6_total += val
+                            t6_count += 1
+                        elif  loaded.at[i, "Date"] == "03/28/2021":
+                            t7_total += val
+                            t7_count += 1
+                        elif  loaded.at[i, "Date"] == "04/27/2021":
+                            t8_total += val
+                            t8_count += 1
+                        elif  loaded.at[i, "Date"] == "05/27/2021":
+                            t9_total += val
+                            t9_count += 1
+                        elif  loaded.at[i, "Date"] == "06/26/2021":
+                            t10_total += val
+                            t10_count += 1
+                        elif  loaded.at[i, "Date"] == "07/26/2021":
+                            t11_total += val
+                            t11_count += 1
+                        elif  loaded.at[i, "Date"] == "08/25/2021":
+                            t12_total += val
+                            t12_count += 1
+                
+                if t1_total > 0:
+                    avg1 = t1_total/t1_count
+                
+                if t2_total > 0:    
+                    avg2 = t2_total/t2_count
+                
+                if t3_total > 0:
+                    avg3 = t3_total/t3_count
+                
+                if t4_total > 0:
+                    avg4 = t4_total/t4_count
+                
+                if t5_total > 0:
+                    avg5 = t5_total/t5_count
+                
+                if t6_total > 0:
+                    avg6 = t6_total/t6_count
+                
+                if t7_total > 0:
+                    avg7 = t7_total/t7_count
+                
+                if t8_total > 0:
+                    avg8 = t8_total/t8_count
+                
+                if t9_total > 0:
+                    avg9 = t9_total/t9_count
+                
+                if t10_total > 0:
+                    avg10 = t10_total/t10_count
+                
+                if t11_total > 0:
+                    avg11 = t11_total/t11_count
+                
+                if t12_total > 0:
+                    avg12 = t12_total/t12_count
+                
+                output = output.append({'State': state, 'Measure': msr, 't1': avg1, 't2': avg2, 't3': avg3, 't4': avg4, 't5': avg5,
+                                't6': avg6, 't7': avg7, 't8': avg8, 't9': avg9, 't10': avg10, 't11': avg11, 't12': avg12}, ignore_index=True)
+
+                total_all_t1 += t1_total
+                count_all_t1 += t1_count
+                total_all_t2 += t2_total
+                count_all_t2 += t2_count
+                total_all_t3 += t3_total
+                count_all_t3 += t3_count
+                total_all_t4 += t4_total
+                count_all_t4 += t4_count
+                total_all_t5 += t5_total
+                count_all_t5 += t5_count
+                total_all_t6 += t6_total
+                count_all_t6 += t6_count
+                total_all_t7 += t7_total
+                count_all_t7 += t7_count
+                total_all_t8 += t8_total
+                count_all_t8 += t8_count
+                total_all_t9 += t9_total
+                count_all_t9 += t9_count
+                total_all_t10 += t10_total
+                count_all_t10 += t10_count
+                total_all_t11 += t11_total
+                count_all_t11 += t11_count
+                total_all_t12 += t12_total
+                count_all_t12 += t12_count
+                
+            
+            tot_avg1 = total_all_t1/count_all_t1
+            tot_avg2 = total_all_t2/count_all_t2
+            tot_avg3 = total_all_t3/count_all_t3
+            tot_avg4 = total_all_t4/count_all_t4
+            tot_avg5 = total_all_t5/count_all_t5
+            tot_avg6 = total_all_t6/count_all_t6
+            tot_avg7 = total_all_t7/count_all_t7
+            tot_avg8 = total_all_t8/count_all_t8
+            tot_avg9 = total_all_t9/count_all_t9
+            tot_avg10 = total_all_t10/count_all_t10
+            tot_avg11 = total_all_t11/count_all_t11
+            tot_avg12 = total_all_t12/count_all_t12
+
+            output = output.append({'State': "All", 'Measure': msr, 't1': tot_avg1, 't2': tot_avg2, 't3': tot_avg3, 't4': tot_avg4, 't5': tot_avg5,
+                                    't6': tot_avg6, 't7': tot_avg7, 't8': tot_avg8, 't9': tot_avg9, 't10': tot_avg10, 't11': tot_avg11, 't12': tot_avg12}, ignore_index=True)
+            click.echo("processing for " + msr + " completed")
+        
+        # sex & covid
+        sex_total_all = 0
+        sex_count_all = 0
+        covid_total_all = 0
+        covid_count_all = 0
+        for state in states: 
+            sex_total = 0
+            sex_count = 0
+            covid_total = 0
+
+            for i in range(len(loaded)):
+                sex = float(loaded.at[i, "Sex"])
+                covid = float(loaded.at[i, "InfectedCovidLatest"])
+                
+                if state == loaded.at[i, "State_full"] and math.isnan(sex) == False and loaded.at[i, "Date"] == "09/26/2020":
+                        if sex == 2:
+                            sex_total += 1
+                        sex_count += 1
+                
+                if state == loaded.at[i, "State_full"] and math.isnan(covid) == False and loaded.at[i, "Date"] == "09/26/2020":
+                        if covid == 3:
+                            covid_total += 1
+            
+            sex_per = sex_total/sex_count
+            output = output.append({'State': state, 'Measure': "Sex", 't1': sex_per, 't2': '', 't3': '', 't4': '', 't5': '',
+                                't6': '', 't7': '', 't8': '', 't9': '', 't10': '', 't11': '', 't12': ''}, ignore_index=True)
+            output = output.append({'State': state, 'Measure': "InfectedCovidLatest", 't1': covid_total, 't2': '', 't3': '', 't4': '', 't5': '',
+                                't6': '', 't7': '', 't8': '', 't9': '', 't10': '', 't11': '', 't12': ''}, ignore_index=True)
+            sex_total_all += sex_total
+            sex_count_all += sex_count
+            covid_total_all += covid_total
+
+            sex_per_all = sex_total_all/sex_count_all
+        
+        output = output.append({'State': "All", 'Measure': "Sex", 't1': sex_per_all, 't2': '', 't3': '', 't4': '', 't5': '',
+                                't6': '', 't7': '', 't8': '', 't9': '', 't10': '', 't11': '', 't12': ''}, ignore_index=True)
+        output = output.append({'State': "All", 'Measure': "InfectedCovidLatest", 't1': covid_total_all, 't2': '', 't3': '', 't4': '', 't5': '',
+                                't6': '', 't7': '', 't8': '', 't9': '', 't10': '', 't11': '', 't12': ''}, ignore_index=True)
+        
+        output = output.reset_index()
+        output.to_csv(r'output.csv', index=None, header=True)
 
     click.echo('Processing completed.')
