@@ -389,129 +389,179 @@ def cli(input, processtype):
         output.to_csv(r'output.csv', index=None, header=True)
 
     elif processtype == 'covid19':
-        day = input[:2]
-        month = input[3:5]
-        year = input[6:10]
+        day = int(input[:2])
+        month = int(input[3:5])
+        year = int(input[6:10])
+        targerDate = str(year) + '-' + str(month).zfill(2) + '-' + str(day).zfill(2) 
 
-        loaded_location = '../COVID-19/csse_covid_19_data/csse_covid_19_daily_reports/' + \
-            month + '-' + day + '-' + year + '.csv'
+        cases = pd.read_csv(
+            'C:/WorkspacesOther/owid-covid-data/public/data/jhu/total_cases.csv', delimiter=',', encoding='latin1')
+        deaths = pd.read_csv(
+            'C:/WorkspacesOther/owid-covid-data/public/data/jhu/total_deaths.csv', delimiter=',', encoding='latin1')
+        weekly_cases = pd.read_csv(
+            'C:/WorkspacesOther/owid-covid-data/public/data/jhu/weekly_cases_per_million.csv', delimiter=',', encoding='latin1')
+        weekly_cases_abs = pd.read_csv(
+            'C:/WorkspacesOther/owid-covid-data/public/data/jhu/weekly_cases.csv', delimiter=',', encoding='latin1')
+        weekly_deaths = pd.read_csv(
+            'C:/WorkspacesOther/owid-covid-data/public/data/jhu/weekly_deaths_per_million.csv', delimiter=',', encoding='latin1')     
+        click.echo("cases and deaths loaded")
+        vaccinations = pd.read_csv(
+            'C:/WorkspacesOther/owid-covid-data/public/data/vaccinations/vaccinations.csv', delimiter=',', encoding='latin1')
+        click.echo('vaccination data loaded')
 
-        loaded = pd.read_csv(loaded_location, delimiter=',', encoding='latin1')
+        countries = cases.columns.tolist()
+        del countries[0]
 
-        population = pd.read_csv(
-            'resources/population.csv', delimiter=',', encoding='latin1')
-        click.echo('population data loaded')
+        # Remove possible newer records
+        allDates = cases['date'].tolist()
+        dateIndex = allDates.index(targerDate)
+        cases = cases.iloc[:dateIndex+1]
+        deaths = deaths.iloc[:dateIndex+1]
+        weekly_cases = weekly_cases.iloc[:dateIndex+1]
+        weekly_cases_abs = weekly_cases_abs.iloc[:dateIndex+1]
+        weekly_deaths = weekly_deaths.iloc[:dateIndex+1]
+
+        # latest 10 dates
+        datesList = cases['date'].tolist()[-10:]
+        datesList = list(reversed(datesList))
+        datesListLonger = cases['date'].tolist()[-180:]
+        datesListLonger = list(reversed(datesListLonger))
+
+        # filter out uneeded rows - we keep 10 in case the target date is not available
+        cases = cases[cases.date.isin(datesList)]
+        deaths = deaths[deaths.date.isin(datesList)]
+        weekly_cases = weekly_cases[weekly_cases.date.isin(datesList)]
+        weekly_cases_abs = weekly_cases_abs[weekly_cases_abs.date.isin(datesList)]
+        weekly_deaths = weekly_deaths[weekly_deaths.date.isin(datesList)]
+        vaccinations = vaccinations[vaccinations.date.isin(datesListLonger)]
+
         testing = pd.read_csv(
             'C:/WorkspacesOther/owid-covid-data/public/data/testing/covid-testing-latest-data-source-details.csv', delimiter=',', encoding='latin1')
         testing.columns = [c.strip().lower().replace(' ', '_')
                            for c in testing.columns]
         testing.columns = [c.strip().lower().replace('-', '_')
                            for c in testing.columns]
+        testing.columns = [c.strip().lower().replace('7', 'seven')
+                           for c in testing.columns]
         click.echo('testing data loaded')
-        vaccinations = pd.read_csv(
-            'C:/WorkspacesOther/owid-covid-data/public/data/vaccinations/vaccinations.csv', delimiter=',', encoding='latin1')
-        click.echo('vaccination data loaded')
 
         output = pd.DataFrame(
-            columns=['Country', 'Confirmed', 'Confirmed_pc', 'Deaths', 'Deaths_pc', 'Death_rate', 'Recovered', 'Recovered_pc', 'Recovered_rate', 'Active', 'Active_pc', 'Tested', 'Tested_pc', 'Tested_rate', 'Fully_vaccinated_pc', 'Population'])
-
-        usDeaths, usConfirmed, usRecovered, usActive, usTest = 0, 0, 0, 0, 0
-        ausDeaths, ausConfirmed, ausRecovered, ausActive, ausTest = 0, 0, 0, 0, 0
-        canDeaths, canConfirmed, canRecovered, canActive, canTest = 0, 0, 0, 0, 0
-        chnDeaths, chnConfirmed, chnRecovered, chnActive, chnTest = 0, 0, 0, 0, 0
-        itDeaths, itConfirmed, itRecovered, itActive, itTest = 0, 0, 0, 0, 0
-        gerDeaths, gerConfirmed, gerRecovered, gerActive, gerTest = 0, 0, 0, 0, 0
-        spnDeaths, spnConfirmed, spnRecovered, spnActive, spnTest = 0, 0, 0, 0, 0
-        braDeaths, braConfirmed, braRecovered, braActive, braTest = 0, 0, 0, 0, 0
-        chlDeaths, chlConfirmed, chlRecovered, chlActive, chlTest = 0, 0, 0, 0, 0
-        mexDeaths, mexConfirmed, mexRecovered, mexActive, mexTest = 0, 0, 0, 0, 0
-        perDeaths, perConfirmed, perRecovered, perActive, perTest = 0, 0, 0, 0, 0
-        colDeaths, colConfirmed, colRecovered, colActive, colTest = 0, 0, 0, 0, 0
-        jpnDeaths, jpnConfirmed, jpnRecovered, jpnActive, jpnTest = 0, 0, 0, 0, 0
-        rusDeaths, rusConfirmed, rusRecovered, rusActive, rusTest = 0, 0, 0, 0, 0
-        ukrDeaths, ukrConfirmed, ukrRecovered, ukrActive, ukrTest = 0, 0, 0, 0, 0
-        sweDeaths, sweConfirmed, sweRecovered, sweActive, sweTest = 0, 0, 0, 0, 0
-        pakDeaths, pakConfirmed, pakRecovered, pakActive, pakTest = 0, 0, 0, 0, 0
-        indDeaths, indConfirmed, indRecovered, indActive, indTest = 0, 0, 0, 0, 0
-        ukDeaths, ukConfirmed, ukRecovered, ukActive, ukTest = 0, 0, 0, 0, 0
-        nldDeaths, nldConfirmed, nldRecovered, nldActive, nldTest = 0, 0, 0, 0, 0
-        belDeaths, belConfirmed, belRecovered, belActive, belTest = 0, 0, 0, 0, 0
-        malDeaths, malConfirmed, malRecovered, malActive, malTest = 0, 0, 0, 0, 0
-        glDeaths, glConfirmed, glRecovered, glActive, glTest = 0, 0, 0, 0, 0
-
-        def getPopulation(country):
-            nonlocal population
-            for row in population.itertuples():
-                if row.Country == country:
-                    return row.Population
-            click.echo('population for ' + str(country) + ' not found')
-            return 0
+            columns=['Country', 'Cases', 'Cases_week', 'Deaths', 'Deaths_week', 'Positive_rate', 'Fully_vaccinated', 'Vaccinated_booster'])
 
         def getTestingCountryName(country):
             countryName = {
+                "Albania": "Albania - tests performed",
+                "Andorra": "Andorra - people tested",
+                "Antigua and barbuda": "Antigua and Barbuda - tests performed",
                 "Argentina": "Argentina - tests performed",
+                "Armenia": "Armenia - tests performed",
+                "Azerbaijan": "Azerbaijan - tests performed",
                 "Australia": "Australia - tests performed",
                 "Austria": "Austria - tests performed",
+                "Bahamas": "Bahamas - tests performed",
                 "Bahrain": "Bahrain - units unclear",
                 "Bangladesh": "Bangladesh - tests performed",
                 "Belarus": "Belarus - tests performed",
                 "Belgium": "Belgium - tests performed",
+                "Belize": "Belize - tests performed",
+                "Benin": "Benin - tests performed",
+                "Bhutan": "Bhutan - samples tested",
                 "Bolivia": "Bolivia - tests performed",
+                "Bosnia and Herzegovina": "Bosnia and Herzegovina - tests performed",
+                "Botswana": "Botswana - tests performed",
                 "Brazil": "Brazil - tests performed",
                 "Bulgaria": "Bulgaria - tests performed",
-                "Canada": "Canada - people tested",
+                "Cambodia": "Cambodia - tests performed",
+                "Canada": "Canada - tests performed",
+                "Cape Verde": "Cape Verde - tests performed",
                 "Chile": "Chile - tests performed",
+                "China": "China - tests performed",
                 "Colombia": "Colombia - tests performed",
                 "Costa Rica": "Costa Rica - people tested",
+                "Cote d'Ivoire": "Cote d'Ivoire - samples tested",
                 "Croatia": "Croatia - people tested",
                 "Cuba": "Cuba - tests performed",
+                "Cyprus": "Cyprus - tests performed",
                 "Czechia": "Czechia - tests performed",
+                "Democratic Republic of Congo": "Democratic Republic of Congo - samples tested",
                 "Denmark": "Denmark - tests performed",
+                "Dominican Republic": "Dominican Republic - samples tested",
                 "Ecuador": "Ecuador - people tested",
-                "El Salvador": "El Salvador - tests performed",
+                "El_salvador": "El Salvador - tests performed",
+                "Equatorial Guinea": "Equatorial Guinea - tests performed",
                 "Estonia": "Estonia - tests performed",
                 "Ethiopia": "Ethiopia - tests performed",
+                "Faeroe Islands": "Faeroe Islands - people tested",
+                "Fiji": "Fiji - tests performed",
                 "Finland": "Finland - tests performed",
                 "France": "France - people tested",
+                "Gabon": "Gabon - samples tested",
+                "Gambia": "Gambia - samples tested",
+                "Georgia": "Georgia - tests performed",
                 "Germany": "Germany - tests performed",
                 "Ghana": "Ghana - samples tested",
                 "Greece": "Greece - samples tested",
+                "Guatemala": "Guatemala - people tested",
+                "Haiti": "Haiti - tests performed",
                 "Hong Kong": "Hong Kong - tests performed",
                 "Hungary": "Hungary - tests performed",
                 "Iceland": "Iceland - tests performed",
                 "India": "India - samples tested",
                 "Indonesia": "Indonesia - people tested",
                 "Iran": "Iran - tests performed",
+                "Iraq": "Iraq - samples tested",
                 "Ireland": "Ireland - tests performed",
                 "Israel": "Israel - tests performed",
-                "Italy": "Italy - people tested",
+                "Italy": "Italy - tests performed",
+                "Jamaica": "Jamaica - samples tested",
                 "Japan": "Japan - people tested",
+                "Jordan": "Jordan - tests performed",
                 "Kazakhstan": "Kazakhstan - tests performed",
                 "Kenya": "Kenya - samples tested",
+                "Kosovo": "Kosovo - tests performed",
+                "Kuwait": "Kuwait - tests performed",
+                "Laos": "Laos - people tested",
                 "Latvia": "Latvia - tests performed",
+                "Lebanon": "Lebanon - tests performed",
+                "Libya": "Libya - samples tested",
+                "Liechtenstein": "Liechtenstein - tests performed",
                 "Lithuania": "Lithuania - tests performed",
                 "Luxembourg": "Luxembourg - tests performed",
+                "Madagascar": "Madagascar - tests performed",
+                "Malawi": "Malawi - samples tested",
                 "Malaysia": "Malaysia - people tested",
+                "Malta": "Malta - tests performed",
+                "Mauritania": "Mauritania - tests performed",
                 "Mexico": "Mexico - people tested",
                 "Maldives": "Maldives - samples tested",
+                "Moldova": "Moldova - tests performed",
+                "Mongolia": "Mongolia - samples tested",
                 "Morocco": "Morocco - people tested",
-                "Burma": "Myanmar - samples tested",
+                "Mozambique": "Mozambique - units unclear",
+                "Myanmar": "Myanmar - samples tested",
+                "Namibia": "Namibia - samples tested",
                 "Nepal": "Nepal - tests performed",
-                "Netherlands": "Netherlands - people tested",
+                "Netherlands": "Netherlands - tests performed",
                 "New Zealand": "New Zealand - tests performed",
                 "Nigeria": "Nigeria - samples tested",
+                "North Macedonia": "North Macedonia - tests performed",
                 "Norway": "Norway - people tested",
+                "Oman": "Oman - units unclear",
+                "Palestine": "Palestine - tests performed",
                 "Pakistan": "Pakistan - tests performed",
                 "Panama": "Panama - tests performed",
+                "Papua New Guinea": "Papua New Guinea - tests performed",
                 "Paraguay": "Paraguay - tests performed",
                 "Peru": "Peru - tests performed",
                 "Philippines": "Philippines - people tested",
-                "Poland": "Poland - people tested",
+                "Poland": "Poland - samples tested",
                 "Portugal": "Portugal - tests performed",
                 "Qatar": "Qatar - people tested",
                 "Romania": "Romania - tests performed",
                 "Russia": "Russia - tests performed",
                 "Rwanda": "Rwanda - samples tested",
+                "Saint Kitts and Nevis": "Saint Kitts and Nevis - people tested",
+                "Saint Vincent and the Grenadines": "Saint Vincent and the Grenadines - tests performed",
                 "Saudi Arabia": "Saudi Arabia - tests performed",
                 "Senegal": "Senegal - tests performed",
                 "Serbia": "Serbia - people tested",
@@ -519,343 +569,172 @@ def cli(input, processtype):
                 "Slovakia": "Slovakia - tests performed",
                 "Slovenia": "Slovenia - tests performed",
                 "South Africa": "South Africa - people tested",
-                "Korea, South": "South Korea - people tested",
+                "South Korea": "South Korea - people tested",
+                "South Sudan": "South Sudan - tests performed",
                 "Spain": "Spain - tests performed",
+                "Sri Lanka": "Sri Lanka - tests performed",
                 "Sweden": "Sweden - tests performed",
                 "Switzerland": "Switzerland - tests performed",
-                "Taiwan": "Taiwan - tests performed",
+                "Taiwan": "Taiwan - people tested",
                 "Thailand": "Thailand - tests performed",
+                "Timor": "Timor - tests performed",
+                "Togo": "Togo - tests performed",
+                "Trinidad and Tobago": "Trinidad and Tobago - people tested",
                 "Tunisia": "Tunisia - people tested",
                 "Turkey": "Turkey - tests performed",
                 "Uganda": "Uganda - samples tested",
                 "Ukraine": "Ukraine - tests performed",
+                "United Arab Emirates": "United Arab Emirates - tests performed",
                 "United Kingdom": "United Kingdom - tests performed",
-                "USA": "United States - tests performed",
-                "Uruguay": "Uruguay - tests performed",
+                "United States": "United States - tests performed",
+                "Uruguay": "Uruguay - people tested",
                 "Vietnam": "Vietnam - samples tested",
+                "Zambia": "Zambia - tests performed",
                 "Zimbabwe": "Zimbabwe - tests performed"
             }
 
             name = countryName[country] if country in countryName else ""
             return name
 
-        def getTestTotal(testingCountryName, confirmed):
+        def getPositiveRate(testingCountryName, country, provided):
             nonlocal testing
+            if provided:
             for row in testing.itertuples():
                 if row.entity == testingCountryName:
-                    # France, DRC and Sweden are missing testing totals, so this is a workaround
-                    if row.entity in ["France - people tested", "Sweden - tests performed", "Democratic Republic of Congo - samples tested"]:
-                        return (confirmed / row.short_term_positive_rate)
-                    # Numbers for Peru do not add up, so ignore them for now
-                    if row.entity == "Peru - people tested":
+                        rate = row.short_term_positive_rate
+                        if not (math.isnan(rate)):
+                            return rate
+                        
+            # if the positive rate is not readily provided we will try to calculate it    
+            else:
+                weeklyCases = getWeeklyCasesAbsolute(country)
+                weeklyTests = getWeeklyTestsAbsolute(testingCountryName)
+                if weeklyCases > 0 and weeklyTests > 0:
+                    rate = (weeklyCases/7)/weeklyTests
+                    return rate
+            
+            click.echo('Positive test rate for ' + str(testingCountryName) + ' not found')
                         return 0
-                    return row.cumulative_total
-            click.echo('Testing total for ' +
-                       str(testingCountryName) + ' not found')
+                
+        def getWeeklyCasesAbsolute(country):
+             # we repeat the process in case the latest values are not available
+            for date in datesList:
+                sliced = weekly_cases_abs[weekly_cases_abs.date == date]
+                val = sliced.iloc[0][country]
+                if not(math.isnan(val)):
+                    return val
+                # for row in weekly_cases_abs.itertuples():
+                #     if row.date == date:
+                #         val = getattr(row, country)
+                #         if not(math.isnan(val)):
+                #             return val
+            
+            click.echo("no absolute weekly cases data found for " + country)
+            return 0
+
+        def getWeeklyTestsAbsolute(testingCountryName):
+            nonlocal testing
+            # sliced = testing[testing.date == targerDate]
+            # val = sliced.iloc[0][testingCountryName]
+            # return val
+            for row in testing.itertuples():
+                if row.entity == testingCountryName:
+                    val = row.seven_day_smoothed_daily_change
+                    if not (math.isnan(val)):
+                        return val
+
+            click.echo("no absolute weekly tests data found for " + testingCountryName)
             return 0
 
         def getVaccination(country):
             nonlocal vaccinations
-            value = 0
+            # click.echo(vaccinations)
+            # filter out uneeded rows
+            subset = vaccinations[vaccinations.location == country]
+            # click.echo(subset)
 
-            if country == "Korea, South":
-                country = "South Korea"
-            elif country == "Taiwan*":
-                country = "Taiwan"
-            elif country == "Burma":
-                country = "Myanmar"
-            elif country == "Cabo Verde":
-                country = "Cape Verde"
-            elif country == "Congo (Brazzaville)":
-                country = "Congo"
-            elif country == "West Bank and Gaza":
-                country = "Palestine"
-            elif country == "Timor-Leste":
-                country = "Timor"
+            for date in datesListLonger:
+                for row in subset.itertuples():
+                    if row.date == date:
+                        val = row.people_fully_vaccinated_per_hundred
+                        if not(math.isnan(val)):
+                            return val
+
+            click.echo("No vaccination rows found for " + country)
+            return 0
+
+        def getVaccinationBooster(country):
+            nonlocal vaccinations
 
             # filter out uneeded rows
             subset = vaccinations[vaccinations.location == country]
-            if len(subset.index) > 0:
-                lastRow = subset.tail(1)
-                if not(math.isnan(lastRow.people_fully_vaccinated_per_hundred)):
-                    value = lastRow.iloc[0]['people_fully_vaccinated_per_hundred']
-            else:
-                click.echo("No vaccination rows found for " + country)
 
-            return value
+            for date in datesListLonger:
+                for row in subset.itertuples():
+                    if row.date == date:
+                        val = row.total_boosters_per_hundred
+                        if not(math.isnan(val)):
+                            return val
 
-        def outputAppend(country, confirmed, deaths, recovered, active, tested, vaccinated, population):
-            nonlocal output
-            confirmedPC, deathsPC, deathCent, recoveredPC, recoveredCent, activePC, testedPC, testedCent = 0, 0, 0, 0, 0, 0, 0, 0
-            if confirmed > 0:
-                confirmedPC = confirmed / (population/1000000)
+            return 0
 
-            if deaths > 0:
-                deathsPC = deaths / (population/1000000)
-                deathCent = (deaths / confirmed) * 100
+        def getCases(country):
+            sliced = cases[cases.date == targerDate]
+            val = sliced.iloc[0][country]
+            return val
 
-            if recovered > 0:
-                recoveredPC = recovered / (population/1000000)
-                recoveredCent = (recovered / confirmed) * 100
+        def getDeaths(country):
+            sliced = deaths[deaths.date == targerDate]
+            val = sliced.iloc[0][country]
+            return val
 
-            if active > 0:
-                activePC = active / (population/1000000)
+        def getWeeklyDeaths(country):
+             # we repeat the process in case the latest values are not available
+            for date in datesList:
+                sliced = weekly_deaths[weekly_deaths.date == date]
+                val = sliced.iloc[0][country]
+                if not(math.isnan(val)):
+                    return val
 
-            if tested > 0:
-                testedPC = tested / (population/1000000)
-                testedCent = (confirmed / tested) * 100
+            click.echo("no weekly death data found for " + country)
+            return 0
 
-            output = output.append({'Country': country, 'Confirmed': confirmed, 'Confirmed_pc': confirmedPC, 'Deaths': deaths, 'Deaths_pc': deathsPC, 'Death_rate': deathCent, 'Recovered': recovered,
-                                    'Recovered_pc': recoveredPC, 'Recovered_rate': recoveredCent, 'Active': active, 'Active_pc': activePC, 'Tested': tested, 'Tested_pc': testedPC, 'Tested_rate': testedCent, 'Fully_vaccinated_pc': vaccinated, 'Population': population}, ignore_index=True)
+        def getWeeklyCases(country):
+            # we repeat the process in case the latest values are not available
+            for date in datesList:
+                sliced = weekly_cases[weekly_cases.date == date]
+                val = sliced.iloc[0][country]
+                if not(math.isnan(val)):
+                    return val
 
-        for row in loaded.itertuples():
-            # counters for global values
-            glDeaths += row.Deaths
-            glConfirmed += row.Confirmed
-            glRecovered += row.Recovered
-            if row.Active > 0:
-                glActive += row.Active
+            click.echo("no weekly cases data found for " + country)
+            return 0
 
-            # These countries are split up in regions, so add them up
-            if row.Country_Region == 'US':
-                usDeaths += row.Deaths
-                usConfirmed += row.Confirmed
-                usRecovered += row.Recovered
-                if row.Active > 0:
-                    usActive += row.Active
-            elif row.Country_Region == 'Australia':
-                ausDeaths += row.Deaths
-                ausConfirmed += row.Confirmed
-                ausRecovered += row.Recovered
-                if row.Active > 0:
-                    ausActive += row.Active
-            elif row.Country_Region == 'Canada':
-                canDeaths += row.Deaths
-                canConfirmed += row.Confirmed
-                canRecovered += row.Recovered
-                if row.Active > 0:
-                    canActive += row.Active
-            elif row.Country_Region == 'China':
-                chnDeaths += row.Deaths
-                chnConfirmed += row.Confirmed
-                chnRecovered += row.Recovered
-                if row.Active > 0:
-                    chnActive += row.Active
-            elif row.Country_Region == 'Italy':
-                itDeaths += row.Deaths
-                itConfirmed += row.Confirmed
-                itRecovered += row.Recovered
-                if row.Active > 0:
-                    itActive += row.Active
-            elif row.Country_Region == 'Germany':
-                gerDeaths += row.Deaths
-                gerConfirmed += row.Confirmed
-                gerRecovered += row.Recovered
-                if row.Active > 0:
-                    gerActive += row.Active
-            elif row.Country_Region == 'Spain':
-                spnDeaths += row.Deaths
-                spnConfirmed += row.Confirmed
-                spnRecovered += row.Recovered
-                if row.Active > 0:
-                    spnActive += row.Active
-            elif row.Country_Region == 'Brazil':
-                braDeaths += row.Deaths
-                braConfirmed += row.Confirmed
-                braRecovered += row.Recovered
-                if row.Active > 0:
-                    braActive += row.Active
-            elif row.Country_Region == 'Chile':
-                chlDeaths += row.Deaths
-                chlConfirmed += row.Confirmed
-                chlRecovered += row.Recovered
-                if row.Active > 0:
-                    chlActive += row.Active
-            elif row.Country_Region == 'Mexico':
-                mexDeaths += row.Deaths
-                mexConfirmed += row.Confirmed
-                mexRecovered += row.Recovered
-                if row.Active > 0:
-                    mexActive += row.Active
-            elif row.Country_Region == 'Peru':
-                perDeaths += row.Deaths
-                perConfirmed += row.Confirmed
-                perRecovered += row.Recovered
-                if row.Active > 0:
-                    perActive += row.Active
-            elif row.Country_Region == 'Colombia':
-                colDeaths += row.Deaths
-                colConfirmed += row.Confirmed
-                colRecovered += row.Recovered
-                if row.Active > 0:
-                    colActive += row.Active
-            elif row.Country_Region == 'Japan':
-                jpnDeaths += row.Deaths
-                jpnConfirmed += row.Confirmed
-                jpnRecovered += row.Recovered
-                if row.Active > 0:
-                    jpnActive += row.Active
-            elif row.Country_Region == 'Russia':
-                rusDeaths += row.Deaths
-                rusConfirmed += row.Confirmed
-                rusRecovered += row.Recovered
-                if row.Active > 0:
-                    rusActive += row.Active
-            elif row.Country_Region == 'Ukraine':
-                ukrDeaths += row.Deaths
-                ukrConfirmed += row.Confirmed
-                ukrRecovered += row.Recovered
-                if row.Active > 0:
-                    ukrActive += row.Active
-            elif row.Country_Region == 'Sweden':
-                sweDeaths += row.Deaths
-                sweConfirmed += row.Confirmed
-                sweRecovered += row.Recovered
-                if row.Active > 0:
-                    sweActive += row.Active
-            elif row.Country_Region == 'Pakistan':
-                pakDeaths += row.Deaths
-                pakConfirmed += row.Confirmed
-                pakRecovered += row.Recovered
-                if row.Active > 0:
-                    pakActive += row.Active
-            elif row.Country_Region == 'India':
-                indDeaths += row.Deaths
-                indConfirmed += row.Confirmed
-                indRecovered += row.Recovered
-                if row.Active > 0:
-                    indActive += row.Active
-            elif row.Country_Region == 'Belgium':
-                belDeaths += row.Deaths
-                belConfirmed += row.Confirmed
-                belRecovered += row.Recovered
-                if row.Active > 0:
-                    belActive += row.Active
-            elif row.Country_Region == 'Malaysia':
-                malDeaths += row.Deaths
-                malConfirmed += row.Confirmed
-                malRecovered += row.Recovered
-                if row.Active > 0:
-                    malActive += row.Active
-            elif row.Country_Region == 'United Kingdom' and row.Province_State in ['England', 'Scotland', 'Northern Ireland', 'Unknown', 'Wales']:
-                ukDeaths += row.Deaths
-                ukConfirmed += row.Confirmed
-                ukRecovered += row.Recovered
-                if row.Active > 0:
-                    ukActive += row.Active
-            elif row.Country_Region == 'Netherlands' and row.Province_State in ['Drenthe', 'Flevoland', 'Friesland', 'Gelderland', 'Groningen', 'Limburg', 'Noord-Brabant', 'Noord-Holland', 'Overijssel', 'Unknown', 'Utrecht', 'Zeeland', 'Zuid-Holland']:
-                nldDeaths += row.Deaths
-                nldConfirmed += row.Confirmed
-                nldRecovered += row.Recovered
-                if row.Active > 0:
-                    nldActive += row.Active
-            elif row.Country_Region in ['Diamond Princess', 'MS Zaandam', 'Summer Olympics 2020']:
-                what = 'No idea what to do with this'
-            # In the remainer countries, the ones that have a state are considered different countries
-            # If there is no state, it's the main country. The empty value is interpreted as a float
-            elif isinstance(row.Province_State, float):
+        for country in countries:
+            if country not in ['Africa', 'Asia', 'Europe', 'European Union', 'High Income', 'International', 'Low Income', 'Lower Middle Income', 'North America', 'Oceania', 'South America', 'Summer Olympics 2020', 'Upper Middle Income']:
+                weekDea = 0
 
-                testingCountryName = getTestingCountryName(
-                    row.Country_Region)
+                cas = getCases(country)
+                dea = getDeaths(country)
+                weekCas = getWeeklyCases(country)
+                if dea > 0:
+                    weekDea = getWeeklyDeaths(country)
 
-                tested = 0 if testingCountryName == "" else getTestTotal(
-                    testingCountryName, row.Confirmed)
+                postiveRate = 0
 
-                if tested > 0:
-                    glTest += tested
+                testingCountryName = getTestingCountryName(country)
+                if (testingCountryName):
+                    # owid provides figures for some countries, and for some others provides neccesary data to calculate it
+                    provided = True
+                    if testingCountryName in ['Saint Kitts and Nevis - people tested', 'Equatorial Guinea - tests performed', 'Mauritania - tests performed', 'Faeroe Islands - people tested', 'Paraguay - tests performed', 'Qatar - people tested', 'Palestine - tests performed', 'Iceland - tests performed', 'Malta - tests performed', 'Mongolia - samples tested', 'Latvia - tests performed', 'Croatia - people tested', 'Lebanon - tests performed', 'Rwanda - samples tested', 'Ukraine - tests performed', 'Bahrain - units unclear', 'Pakistan - tests performed', 'Brazil - tests performed', 'Romania - tests performed', 'Hong Kong - tests performed', 'Iran - tests performed', 'Indonesia - people tested', 'Portugal - tests performed', 'United Arab Emirates - tests performed', 'India - samples tested']:
+                        provided = False
+                    postiveRate = getPositiveRate(testingCountryName, country, provided)
 
-                if not isinstance(row.Country_Region, float):
-                    outputAppend(row.Country_Region, row.Confirmed, row.Deaths,
-                                 row.Recovered, row.Active, tested, getVaccination(row.Country_Region), getPopulation(row.Country_Region))
-            else:
-                testingCountryName = getTestingCountryName(row.Province_State)
-
-                tested = 0 if testingCountryName == "" else getTestTotal(
-                    testingCountryName, row.Confirmed)
-                glTest += tested
-                outputAppend(row.Province_State, row.Confirmed, row.Deaths,
-                             row.Recovered, row.Active, tested, getVaccination(row.Country_Region), getPopulation(row.Province_State))
-
-        # There are some errors here I am fixing maually for now
-        if usActive == 0:
-            usActive = usConfirmed - usDeaths - usRecovered
-        if canActive == 0:
-            canActive = canConfirmed - canDeaths - canRecovered
-        # get test values and add to global
-        usTest = getTestTotal(getTestingCountryName('USA'), usConfirmed)
-        ausTest = getTestTotal(
-            getTestingCountryName('Australia'), ausConfirmed)
-        canTest = getTestTotal(getTestingCountryName('Canada'), canConfirmed)
-        itTest = getTestTotal(getTestingCountryName('Italy'), itConfirmed)
-        gerTest = getTestTotal(getTestingCountryName('Germany'), gerConfirmed)
-        spnTest = getTestTotal(getTestingCountryName('Spain'), spnConfirmed)
-        braTest = getTestTotal(getTestingCountryName('Brazil'), braConfirmed)
-        chlTest = getTestTotal(getTestingCountryName('Chile'), chlConfirmed)
-        mexTest = getTestTotal(getTestingCountryName('Mexico'), mexConfirmed)
-        perTest = getTestTotal(getTestingCountryName('Peru'), perConfirmed)
-        colTest = getTestTotal(getTestingCountryName('Colombia'), colConfirmed)
-        jpnTest = getTestTotal(getTestingCountryName('Japan'), jpnConfirmed)
-        rusTest = getTestTotal(getTestingCountryName('Russia'), rusConfirmed)
-        ukrTest = getTestTotal(getTestingCountryName('Ukraine'), ukrConfirmed)
-        sweTest = getTestTotal(getTestingCountryName('Sweden'), sweConfirmed)
-        pakTest = getTestTotal(getTestingCountryName('Pakistan'), pakConfirmed)
-        indTest = getTestTotal(getTestingCountryName('India'), indConfirmed)
-        belTest = getTestTotal(getTestingCountryName('Belgium'), belConfirmed)
-        malTest = getTestTotal(getTestingCountryName('Malaysia'), malConfirmed)
-        ukTest = getTestTotal(getTestingCountryName(
-            'United Kingdom'), ukConfirmed)
-        nldTest = getTestTotal(getTestingCountryName(
-            'Netherlands'), nldConfirmed)
-
-        glTest = glTest + usTest + ausTest + canTest + itTest + gerTest + spnTest + braTest + chlTest + mexTest + perTest + colTest + jpnTest + rusTest + ukrTest + sweTest + \
-            pakTest + indTest + belTest + ukTest + nldTest
-
-        outputAppend('USA', usConfirmed, usDeaths,
-                     usRecovered, usActive, usTest, getVaccination('United States'), getPopulation('USA'))
-        outputAppend('Australia', ausConfirmed, ausDeaths,
-                     ausRecovered, ausActive, ausTest, getVaccination('Australia'), getPopulation('Australia'))
-        outputAppend('Canada', canConfirmed, canDeaths,
-                     canRecovered, canActive, canTest, getVaccination('Canada'), getPopulation('Canada'))
-        outputAppend('China', chnConfirmed, chnDeaths,
-                     chnRecovered, chnActive, 0, getVaccination('China'), getPopulation('China'))
-        outputAppend('Italy', itConfirmed, itDeaths,
-                     itRecovered, itActive, itTest, getVaccination('Italy'), getPopulation('Italy'))
-        outputAppend('Germany', gerConfirmed, gerDeaths,
-                     gerRecovered, gerActive, gerTest, getVaccination('Germany'), getPopulation('Germany'))
-        outputAppend('Spain', spnConfirmed, spnDeaths,
-                     spnRecovered, spnActive, spnTest, getVaccination('Spain'), getPopulation('Spain'))
-        outputAppend('Brazil', braConfirmed, braDeaths,
-                     braRecovered, braActive, braTest, getVaccination('Brazil'), getPopulation('Brazil'))
-        outputAppend('Chile', chlConfirmed, chlDeaths,
-                     chlRecovered, chlActive, chlTest, getVaccination('Chile'), getPopulation('Chile'))
-        outputAppend('Mexico', mexConfirmed, mexDeaths,
-                     mexRecovered, mexActive, mexTest, getVaccination('Mexico'), getPopulation('Mexico'))
-        outputAppend('Peru', perConfirmed, perDeaths,
-                     perRecovered, perActive, perTest, getVaccination('Peru'), getPopulation('Peru'))
-        outputAppend('Colombia', colConfirmed, colDeaths,
-                     colRecovered, colActive, colTest, getVaccination('Colombia'), getPopulation('Colombia'))
-        outputAppend('Japan', jpnConfirmed, jpnDeaths,
-                     jpnRecovered, jpnActive, jpnTest, getVaccination('Japan'), getPopulation('Japan'))
-        outputAppend('Russia', rusConfirmed, rusDeaths,
-                     rusRecovered, rusActive, rusTest, getVaccination('Russia'), getPopulation('Russia'))
-        outputAppend('Ukraine', ukrConfirmed, ukrDeaths,
-                     ukrRecovered, ukrActive, ukrTest, getVaccination('Ukraine'), getPopulation('Ukraine'))
-        outputAppend('Sweden', sweConfirmed, sweDeaths,
-                     sweRecovered, sweActive, sweTest, getVaccination('Sweden'), getPopulation('Sweden'))
-        outputAppend('Pakistan', pakConfirmed, pakDeaths,
-                     pakRecovered, pakActive, pakTest, getVaccination('Pakistan'), getPopulation('Pakistan'))
-        outputAppend('India', indConfirmed, indDeaths,
-                     indRecovered, indActive, indTest, getVaccination('India'), getPopulation('India'))
-        outputAppend('Belgium', belConfirmed, belDeaths,
-                     belRecovered, belActive, belTest, getVaccination('Belgium'), getPopulation('Belgium'))
-        outputAppend('Malaysia', malConfirmed, malDeaths,
-                     malRecovered, malActive, malTest, getVaccination('Malaysia'), getPopulation('Malaysia'))
-        outputAppend('United Kingdom', ukConfirmed, ukDeaths,
-                     ukRecovered, ukActive, ukTest, getVaccination('United Kingdom'), getPopulation('United Kingdom'))
-        outputAppend('Netherlands', nldConfirmed, nldDeaths,
-                     nldRecovered, nldActive, nldTest, getVaccination('Netherlands'), getPopulation('Netherlands'))
-        outputAppend('World', glConfirmed, glDeaths,
-                     glRecovered, glActive, glTest, getVaccination('World'), getPopulation('World'))
+                vacc = getVaccination(country)
+                vaccBoost = getVaccinationBooster(country)
+                
+                output = output.append({'Country': country, 'Cases': cas, 'Cases_week': weekCas, 'Deaths': dea, 'Deaths_week': weekDea,
+                                    'Positive_rate': postiveRate, 'Fully_vaccinated': vacc, 'Vaccinated_booster': vaccBoost}, ignore_index=True)
 
         # Sort by country, but because sorting in python with mixed cases is messy, do all this
         output['country_lower'] = output['Country'].str.lower()
@@ -863,45 +742,116 @@ def cli(input, processtype):
         output.drop('country_lower', axis=1, inplace=True)
 
         output = output.reset_index()
+        # output.to_csv(
+        #     r'../NavigateObscurity/worlddata/static/worlddata/csv/covid-map.csv', index=None, header=True)
         output.to_csv(
-            r'../NavigateObscurity/worlddata/static/worlddata/csv/covid-map.csv', index=None, header=True)
+            r'covid-map.csv', index=None, header=True)
         click.echo('covid-map.csv exported')
 
         # Update covid-time.csv
+        click.echo('processing covid-time started')
         time = pd.read_csv(
             '../NavigateObscurity/static/worlddata/csv/covid-time.csv', delimiter=',', encoding='latin1')
         click.echo('time series data loaded')
+        testingFull = pd.read_csv(
+            'C:/WorkspacesOther/owid-covid-data/public/data/testing/covid-testing-all-observations.csv', delimiter=',', encoding='latin1')
+        click.echo('testing data loaded')
+        new_cases = pd.read_csv(
+            'C:/WorkspacesOther/owid-covid-data/public/data/jhu/new_cases.csv', delimiter=',', encoding='latin1')
+        new_deaths = pd.read_csv(
+            'C:/WorkspacesOther/owid-covid-data/public/data/jhu/new_deaths.csv', delimiter=',', encoding='latin1')
 
-        older = pd.read_csv(
-            '../NavigateObscurity/static/worlddata/csv/covid-map.csv', delimiter=',', encoding='latin1')
-        click.echo('older data loaded')
+        # only keep 10 latest dates 
+        testingFull = testingFull[testingFull.Date.isin(datesList)]
+        new_cases = new_cases[new_cases.date.isin(datesList)]
+        new_deaths = new_deaths[new_deaths.date.isin(datesList)]
 
+        timeCases = time[time.Parameter == "Cases"]
+        timeDeaths = time[time.Parameter == "Deaths"]
+        timeTests = time[time.Parameter == "Tests"]
+        timeRates = time[time.Parameter == "Tests_rate"]
+
+        # remove latest 10 days from existing covid time file. We do this to attempt to have more updated data as this data is not always up to latest date
+        datesList = list(reversed(datesList))
+        newDateList = []
+        for date in datesList:
+            year = int(date[:4])
+            month = int(date[5:7])
+            day = int(date[8:10])
+            newDate = str(day).zfill(2) + "/" + str(month).zfill(2) + "/" + str(year)
+            newDateList.append(newDate)
+
+        for date in newDateList:
+            if date in time.columns.tolist():
+                time.drop(date, axis=1, inplace=True)
+
+        def getTimeNewCases(country, date):
+            sliced = new_cases[new_cases.date == date]
+            val = sliced.iloc[0][country]
+            if not(math.isnan(val)):
+                return val
+            return 0
+
+        def getTimeNewDeaths(country, date):
+            sliced = new_deaths[new_deaths.date == date]
+            val = sliced.iloc[0][country]
+            if not(math.isnan(val)):
+                return val
+            return 0
+
+        def getTimeTest(country, date):
+            country = getTestingCountryName(country)
+            subset = testingFull[testingFull.Entity == country]
+            subset = subset[subset.Date == date]
+            if len(subset.index) > 0:
+                val = subset.iloc[0]['7-day smoothed daily change']
+                if not(math.isnan(val)):
+                    return val
+            return ""
+        def getTimeTestRate(country, date):
+            testingCountryName = getTestingCountryName(country)
+            subset = testingFull[testingFull.Entity == testingCountryName]
+            subset = subset[subset.Date == date]
+            if len(subset.index) > 0:
+                val = subset.iloc[0]['Short-term positive rate']
+                if not(math.isnan(val)):
+                    return val
+                # we didnt get one, so let's try to calculate it
+                weeklyCases = getTimeWeeklyCases(country, date)
+                weeklyTests = getTimeTest(country, date)
+                if weeklyTests == "":
+                    weeklyTests = 0
+                if weeklyCases > 0 and weeklyTests > 0:
+                    rate = (weeklyCases/7)/weeklyTests
+                    rate = '%.4f'%(rate)
+                    return rate
+            return ""
+        def getTimeWeeklyCases(country, date):
+            sliced = weekly_cases_abs[weekly_cases_abs.date == date]
+            val = sliced.iloc[0][country]
+            if not(math.isnan(val)):
+                return val
+            return 0
+
+        # for each date, create a new column to covid time file
+        for i in range(len(datesList)):
         today = []
-        for row in output.itertuples():
-            today.append(row.Confirmed)
-        for row in output.itertuples():
-            today.append(row.Deaths)
+            click.echo("processing for: " + datesList[i])
+            for row in timeCases.itertuples():
+                today.append(getTimeNewCases(row.Country, datesList[i]))
 
-        for i in range(len(output)):
-            today.append(output.at[i, 'Confirmed'] - older.at[i, 'Confirmed'])
-        for i in range(len(output)):
-            today.append(output.at[i, 'Deaths'] - older.at[i, 'Deaths'])
+            for row in timeDeaths.itertuples():
+                today.append(getTimeNewDeaths(row.Country, datesList[i]))
 
-        time = time.assign(**{input: today})
-        time.to_csv(
-            r'../NavigateObscurity/worlddata/static/worlddata/csv/covid-time.csv', index=False, header=True)
+            for row in timeTests.itertuples():
+                today.append(getTimeTest(row.Country, datesList[i]))
+            for row in timeRates.itertuples():
+                today.append(getTimeTestRate(row.Country, datesList[i]))
+
+            time = time.assign(**{newDateList[i]: today})
+
+        time.to_csv(r'time_test.csv', index=False, header=True)
         click.echo('covid-time.csv exported')
-
-        # Update covid-lockdown.csv
-        # lockdown = pd.read_csv(
-        #     '../NavigateObscurity/static/worlddata/csv/covid-lockdown.csv', delimiter=',', encoding='latin1')
-        # click.echo('lockdown data loaded')
-        # lockday = []
-        # lockday = lockdown.iloc[:, -1:]
-        # lockdown = lockdown.assign(**{input: lockday})
-        # lockdown.to_csv(
-        #     r'../NavigateObscurity/worlddata/static/worlddata/csv/covid-lockdown.csv', index=False, header=True)
-        # click.echo('covid-lockdown.csv exported')
 
     elif processtype == 'covid19-week':
         countries = {
