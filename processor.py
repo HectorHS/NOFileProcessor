@@ -408,6 +408,7 @@ def cli(input, processtype):
         vaccinations = pd.read_csv(
             'C:/WorkspacesOther/owid-covid-data/public/data/vaccinations/vaccinations.csv', delimiter=',', encoding='latin1')
         click.echo('vaccination data loaded')
+        historical = pd.read_csv('resources/covid-historical.csv', delimiter=',', encoding='latin1')
 
         countries = cases.columns.tolist()
         del countries[0]
@@ -422,7 +423,7 @@ def cli(input, processtype):
         weekly_deaths = weekly_deaths.iloc[:dateIndex+1]
 
         # latest 10 dates
-        datesList = cases['date'].tolist()[-10:]
+        datesList = cases['date'].tolist()[-20:]
         datesList = list(reversed(datesList))
         datesListLonger = cases['date'].tolist()[-180:]
         datesListLonger = list(reversed(datesListLonger))
@@ -446,7 +447,7 @@ def cli(input, processtype):
         click.echo('testing data loaded')
 
         output = pd.DataFrame(
-            columns=['Country', 'Cases', 'Cases_week', 'Deaths', 'Deaths_week', 'Positive_rate', 'Fully_vaccinated', 'Vaccinated_booster'])
+            columns=['Country', 'Cases', 'Cases_2020', 'Cases_2021', 'Cases_2022', 'Cases_week', 'Deaths', 'Deaths_2020', 'Deaths_2021', 'Deaths_2022', 'Deaths_week', 'Positive_rate', 'Fully_vaccinated', 'Vaccinated_booster'])
 
         def getTestingCountryName(country):
             countryName = {
@@ -495,11 +496,11 @@ def cli(input, processtype):
                 "Fiji": "Fiji - tests performed",
                 "Finland": "Finland - tests performed",
                 "France": "France - people tested",
-                "Gabon": "Gabon - samples tested",
-                "Gambia": "Gambia - samples tested",
+                "Gabon": "Gabon - tests performed",
+                "Gambia": "Gambia - tests performed",
                 "Georgia": "Georgia - tests performed",
                 "Germany": "Germany - tests performed",
-                "Ghana": "Ghana - samples tested",
+                "Ghana": "Ghana - tests performed",
                 "Greece": "Greece - samples tested",
                 "Guatemala": "Guatemala - people tested",
                 "Haiti": "Haiti - tests performed",
@@ -517,10 +518,10 @@ def cli(input, processtype):
                 "Japan": "Japan - people tested",
                 "Jordan": "Jordan - tests performed",
                 "Kazakhstan": "Kazakhstan - tests performed",
-                "Kenya": "Kenya - samples tested",
+                "Kenya": "Kenya - tests performed",
                 "Kosovo": "Kosovo - tests performed",
                 "Kuwait": "Kuwait - tests performed",
-                "Laos": "Laos - people tested",
+                "Laos": "Laos - tests performed",
                 "Latvia": "Latvia - tests performed",
                 "Lebanon": "Lebanon - tests performed",
                 "Libya": "Libya - samples tested",
@@ -528,7 +529,7 @@ def cli(input, processtype):
                 "Lithuania": "Lithuania - tests performed",
                 "Luxembourg": "Luxembourg - tests performed",
                 "Madagascar": "Madagascar - tests performed",
-                "Malawi": "Malawi - samples tested",
+                "Malawi": "Malawi - tests performed",
                 "Malaysia": "Malaysia - people tested",
                 "Malta": "Malta - tests performed",
                 "Mauritania": "Mauritania - tests performed",
@@ -537,13 +538,13 @@ def cli(input, processtype):
                 "Moldova": "Moldova - tests performed",
                 "Mongolia": "Mongolia - samples tested",
                 "Morocco": "Morocco - people tested",
-                "Mozambique": "Mozambique - units unclear",
+                "Mozambique": "Mozambique - tests performed",
                 "Myanmar": "Myanmar - samples tested",
-                "Namibia": "Namibia - samples tested",
+                "Namibia": "Namibia - tests performed",
                 "Nepal": "Nepal - tests performed",
                 "Netherlands": "Netherlands - tests performed",
                 "New Zealand": "New Zealand - tests performed",
-                "Nigeria": "Nigeria - samples tested",
+                "Nigeria": "Nigeria - tests performed",
                 "North Macedonia": "North Macedonia - tests performed",
                 "Norway": "Norway - people tested",
                 "Oman": "Oman - units unclear",
@@ -554,7 +555,7 @@ def cli(input, processtype):
                 "Paraguay": "Paraguay - tests performed",
                 "Peru": "Peru - tests performed",
                 "Philippines": "Philippines - people tested",
-                "Poland": "Poland - samples tested",
+                "Poland": "Poland - people tested",
                 "Portugal": "Portugal - tests performed",
                 "Qatar": "Qatar - people tested",
                 "Romania": "Romania - tests performed",
@@ -582,13 +583,13 @@ def cli(input, processtype):
                 "Trinidad and Tobago": "Trinidad and Tobago - people tested",
                 "Tunisia": "Tunisia - people tested",
                 "Turkey": "Turkey - tests performed",
-                "Uganda": "Uganda - samples tested",
+                "Uganda": "Uganda - tests performed",
                 "Ukraine": "Ukraine - tests performed",
                 "United Arab Emirates": "United Arab Emirates - tests performed",
                 "United Kingdom": "United Kingdom - tests performed",
                 "United States": "United States - tests performed",
                 "Uruguay": "Uruguay - people tested",
-                "Vietnam": "Vietnam - samples tested",
+                "Vietnam": "Vietnam - people tested",
                 "Zambia": "Zambia - tests performed",
                 "Zimbabwe": "Zimbabwe - tests performed"
             }
@@ -596,25 +597,29 @@ def cli(input, processtype):
             name = countryName[country] if country in countryName else ""
             return name
 
-        def getPositiveRate(testingCountryName, country, provided):
+        def getPositiveRate(testingCountryName, country):
             nonlocal testing
-            if provided:
-            for row in testing.itertuples():
-                if row.entity == testingCountryName:
-                        rate = row.short_term_positive_rate
+            sliced = testing[testing.entity == testingCountryName]
+            if len(sliced.index) > 0:  
+                rate = sliced.iloc[0]['short_term_positive_rate']
+                # for row in testing.itertuples():
+                #     if row.entity == testingCountryName:
+                #         rate = row.short_term_positive_rate
                         if not (math.isnan(rate)):
+                    rate = rate*100
+                    rate = '%.2f'%(rate)
                             return rate
                         
-            # if the positive rate is not readily provided we will try to calculate it    
-            else:
+            # we didnt get one, so let's try to calculate it
                 weeklyCases = getWeeklyCasesAbsolute(country)
                 weeklyTests = getWeeklyTestsAbsolute(testingCountryName)
                 if weeklyCases > 0 and weeklyTests > 0:
-                    rate = (weeklyCases/7)/weeklyTests
+                rate = ((weeklyCases/7)/weeklyTests)*100
+                rate = '%.2f'%(rate)
                     return rate
             
             click.echo('Positive test rate for ' + str(testingCountryName) + ' not found')
-                        return 0
+            return ""
                 
         def getWeeklyCasesAbsolute(country):
              # we repeat the process in case the latest values are not available
@@ -634,12 +639,13 @@ def cli(input, processtype):
 
         def getWeeklyTestsAbsolute(testingCountryName):
             nonlocal testing
-            # sliced = testing[testing.date == targerDate]
-            # val = sliced.iloc[0][testingCountryName]
+            sliced = testing[testing.entity == testingCountryName]
+            if len(sliced.index) > 0:  
+                val = sliced.iloc[0]['seven_day_smoothed_daily_change']
             # return val
-            for row in testing.itertuples():
-                if row.entity == testingCountryName:
-                    val = row.seven_day_smoothed_daily_change
+                # for row in testing.itertuples():
+                #     if row.entity == testingCountryName:
+                #         val = row.seven_day_smoothed_daily_change
                     if not (math.isnan(val)):
                         return val
 
@@ -654,9 +660,12 @@ def cli(input, processtype):
             # click.echo(subset)
 
             for date in datesListLonger:
-                for row in subset.itertuples():
-                    if row.date == date:
-                        val = row.people_fully_vaccinated_per_hundred
+                sliced = subset[subset.date == date]
+                # for row in subset.itertuples():
+                #     if row.date == date:
+                        # val = row.people_fully_vaccinated_per_hundred
+                if len(sliced.index) > 0:      
+                    val = sliced.iloc[0]['people_fully_vaccinated_per_hundred']
                         if not(math.isnan(val)):
                             return val
 
@@ -670,9 +679,12 @@ def cli(input, processtype):
             subset = vaccinations[vaccinations.location == country]
 
             for date in datesListLonger:
-                for row in subset.itertuples():
-                    if row.date == date:
-                        val = row.total_boosters_per_hundred
+                sliced = subset[subset.date == date]
+                # for row in subset.itertuples():
+                    # if row.date == date:
+                        # val = row.total_boosters_per_hundred
+                if len(sliced.index) > 0: 
+                    val = sliced.iloc[0]['total_boosters_per_hundred']
                         if not(math.isnan(val)):
                             return val
 
@@ -694,7 +706,7 @@ def cli(input, processtype):
                 sliced = weekly_deaths[weekly_deaths.date == date]
                 val = sliced.iloc[0][country]
                 if not(math.isnan(val)):
-                    return val
+                    return '%.4f'%(val/7)
 
             click.echo("no weekly death data found for " + country)
             return 0
@@ -705,17 +717,34 @@ def cli(input, processtype):
                 sliced = weekly_cases[weekly_cases.date == date]
                 val = sliced.iloc[0][country]
                 if not(math.isnan(val)):
-                    return val
+                    return '%.4f'%(val/7)
 
             click.echo("no weekly cases data found for " + country)
             return 0
+        def getHistoricalData(country, measure, year):
+            sliced = historical[historical.location == country]
+            # val = 0
+            meas = measure + "_" + year
+            val = sliced.iloc[0][meas]
+            if not(math.isnan(val)):
+                return val
+            
+            return 0
 
         for country in countries:
-            if country not in ['Africa', 'Asia', 'Europe', 'European Union', 'High Income', 'International', 'Low Income', 'Lower Middle Income', 'North America', 'Oceania', 'South America', 'Summer Olympics 2020', 'Upper Middle Income']:
+            if country not in ['Africa', 'Asia', 'Europe', 'European Union', 'High income', 'International', 'Low income', 'Lower middle income', 'North America', 'Oceania', 'South America', 'Summer Olympics 2020', 'Upper middle income']:
                 weekDea = 0
 
                 cas = getCases(country)
+                cas2020 = getHistoricalData(country, "cases", "2020")
+                cas2021 = getHistoricalData(country, "cases", "2021")
+                cas2022 = cas - cas2020 - cas2021
+
                 dea = getDeaths(country)
+                dea2020 = getHistoricalData(country, "deaths", "2020")
+                dea2021 = getHistoricalData(country, "deaths", "2021")
+                dea2022 = dea - dea2020 - dea2021
+
                 weekCas = getWeeklyCases(country)
                 if dea > 0:
                     weekDea = getWeeklyDeaths(country)
@@ -724,16 +753,13 @@ def cli(input, processtype):
 
                 testingCountryName = getTestingCountryName(country)
                 if (testingCountryName):
-                    # owid provides figures for some countries, and for some others provides neccesary data to calculate it
-                    provided = True
-                    if testingCountryName in ['Saint Kitts and Nevis - people tested', 'Equatorial Guinea - tests performed', 'Mauritania - tests performed', 'Faeroe Islands - people tested', 'Paraguay - tests performed', 'Qatar - people tested', 'Palestine - tests performed', 'Iceland - tests performed', 'Malta - tests performed', 'Mongolia - samples tested', 'Latvia - tests performed', 'Croatia - people tested', 'Lebanon - tests performed', 'Rwanda - samples tested', 'Ukraine - tests performed', 'Bahrain - units unclear', 'Pakistan - tests performed', 'Brazil - tests performed', 'Romania - tests performed', 'Hong Kong - tests performed', 'Iran - tests performed', 'Indonesia - people tested', 'Portugal - tests performed', 'United Arab Emirates - tests performed', 'India - samples tested']:
-                        provided = False
-                    postiveRate = getPositiveRate(testingCountryName, country, provided)
+                    postiveRate = getPositiveRate(testingCountryName, country)
 
                 vacc = getVaccination(country)
                 vaccBoost = getVaccinationBooster(country)
                 
-                output = output.append({'Country': country, 'Cases': cas, 'Cases_week': weekCas, 'Deaths': dea, 'Deaths_week': weekDea,
+                output = output.append({'Country': country, 'Cases': cas, 'Cases_2020': cas2020, 'Cases_2021': cas2021, 'Cases_2022': cas2022, 
+                    'Cases_week': weekCas, 'Deaths': dea, 'Deaths_2020': dea2020, 'Deaths_2021':dea2021, 'Deaths_2022': dea2022, 'Deaths_week': weekDea,
                                     'Positive_rate': postiveRate, 'Fully_vaccinated': vacc, 'Vaccinated_booster': vaccBoost}, ignore_index=True)
 
         # Sort by country, but because sorting in python with mixed cases is messy, do all this
@@ -742,10 +768,8 @@ def cli(input, processtype):
         output.drop('country_lower', axis=1, inplace=True)
 
         output = output.reset_index()
-        # output.to_csv(
-        #     r'../NavigateObscurity/worlddata/static/worlddata/csv/covid-map.csv', index=None, header=True)
         output.to_csv(
-            r'covid-map.csv', index=None, header=True)
+            r'../NavigateObscurity/worlddata/static/worlddata/csv/covid-map.csv', index=None, header=True)
         click.echo('covid-map.csv exported')
 
         # Update covid-time.csv
@@ -815,15 +839,15 @@ def cli(input, processtype):
             if len(subset.index) > 0:
                 val = subset.iloc[0]['Short-term positive rate']
                 if not(math.isnan(val)):
-                    return val
+                    return val*100
                 # we didnt get one, so let's try to calculate it
                 weeklyCases = getTimeWeeklyCases(country, date)
                 weeklyTests = getTimeTest(country, date)
                 if weeklyTests == "":
                     weeklyTests = 0
                 if weeklyCases > 0 and weeklyTests > 0:
-                    rate = (weeklyCases/7)/weeklyTests
-                    rate = '%.4f'%(rate)
+                    rate = ((weeklyCases/7)/weeklyTests)*100
+                    rate = '%.2f'%(rate)
                     return rate
             return ""
         def getTimeWeeklyCases(country, date):
@@ -850,7 +874,8 @@ def cli(input, processtype):
 
             time = time.assign(**{newDateList[i]: today})
 
-        time.to_csv(r'time_test.csv', index=False, header=True)
+        time.to_csv(
+            r'../NavigateObscurity/worlddata/static/worlddata/csv/covid-time.csv', index=None, header=True)
         click.echo('covid-time.csv exported')
 
     elif processtype == 'covid19-week':
