@@ -962,7 +962,7 @@ def cli(input, processtype):
             return countryCode[country]
 
         output = pd.DataFrame(
-            columns=['Country', 'Week', 'Deaths_old', 'Deaths_2020', 'Deaths_2021'])
+            columns=['Country', 'Week', 'Deaths_old', 'Deaths_2020', 'Deaths_2021', 'Deaths_2022'])
 
         # filter out uneeded rows
         loaded = loaded[loaded.Sex == 'b']
@@ -976,22 +976,27 @@ def cli(input, processtype):
                 oldSum = 0
                 sum20 = 0
                 sum21 = 0
+                sum22 = 0
                 for row in loadedFiltered.itertuples():
                     if row.Year == 2020:
                         sum20 = row.DTotal
                     elif row.Year == 2021:
                         sum21 = row.DTotal
+                    elif row.Year == 2022:
+                        sum22 = row.DTotal
                     else:
                         oldSum += row.DTotal
-                if week == 53 and country != "Australia":
+                if week == 53:
                     oldAverage = oldSum
-                elif country in ['Greece', 'Germany']:
-                    oldAverage = oldSum / 4
                 else:
                     oldAverage = oldSum / 5
-
+                countryName = country
+                if country == 'USA':
+                    countryName = 'United States'
+                if country == 'Korea, South':
+                    countryName = 'South Korea'
                 output = output.append(
-                    {'Country': country, 'Week': week, 'Deaths_old': oldAverage, 'Deaths_2020': sum20, 'Deaths_2021': sum21}, ignore_index=True)
+                    {'Country': countryName, 'Week': week, 'Deaths_old': oldAverage, 'Deaths_2020': sum20, 'Deaths_2021': sum21, 'Deaths_2022': sum22}, ignore_index=True)
 
         for week in weeks:
             loadedFiltered = loaded[loaded.Week == week]
@@ -1000,8 +1005,10 @@ def cli(input, processtype):
             oldSum = 0
             sum20 = 0
             sum21 = 0
+            sum22 = 0
             i = 0
             j = 0
+            k = 0
             for row in loadedFiltered.itertuples():
                 if row.Year == 2020:
                     sum20 += row.DTotal
@@ -1009,6 +1016,9 @@ def cli(input, processtype):
                 elif row.Year == 2021:
                     sum21 += row.DTotal
                     j += 1
+                elif row.Year == 2022:
+                    sum22 += row.DTotal
+                    k += 1
                 else:
                     oldSum += row.DTotal
 
@@ -1021,9 +1031,11 @@ def cli(input, processtype):
                 sum20 = 0
             if j < 3:
                 sum21 = 0
+            if k < 3:
+                sum22 = 0
 
             output = output.append({'Country': "United Kingdom", 'Week': week,
-                                    'Deaths_old': oldAverage, 'Deaths_2020': sum20, 'Deaths_2021': sum21}, ignore_index=True)
+                                    'Deaths_old': oldAverage, 'Deaths_2020': sum20, 'Deaths_2021': sum21, 'Deaths_2022': sum22}, ignore_index=True)
         output = output.reset_index()
         output.to_csv(
             r'../NavigateObscurity/worlddata/static/worlddata/csv/covid-excess-deaths.csv', index=None, header=True)
