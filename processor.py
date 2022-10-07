@@ -408,6 +408,7 @@ def cli(input, processtype):
         vaccinations = pd.read_csv(
             'https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/vaccinations/vaccinations.csv', delimiter=',', encoding='latin1')
         click.echo('vaccination data loaded')
+        historical = pd.read_csv('resources/covid-historical.csv', delimiter=',', encoding='latin1')
 
         countries = cases.columns.tolist()
         del countries[0]
@@ -540,7 +541,11 @@ def cli(input, processtype):
                 "Mozambique": "Mozambique - tests performed",
                 "Myanmar": "Myanmar - samples tested",
                 "Namibia": "Namibia - tests performed",
+<<<<<<< HEAD
                 "Nepal": "Nepal - samples tested",
+=======
+                "Nepal": "Nepal - tests performed",
+>>>>>>> f18f373d2e30c013b1e1b6832d8edcce21523e88
                 "Netherlands": "Netherlands - tests performed",
                 "New Zealand": "New Zealand - tests performed",
                 "Nigeria": "Nigeria - tests performed",
@@ -554,7 +559,11 @@ def cli(input, processtype):
                 "Paraguay": "Paraguay - tests performed",
                 "Peru": "Peru - tests performed",
                 "Philippines": "Philippines - people tested",
+<<<<<<< HEAD
                 "Poland": "Poland - tests performed",
+=======
+                "Poland": "Poland - people tested",
+>>>>>>> f18f373d2e30c013b1e1b6832d8edcce21523e88
                 "Portugal": "Portugal - tests performed",
                 "Qatar": "Qatar - tests performed",
                 "Romania": "Romania - tests performed",
@@ -597,7 +606,10 @@ def cli(input, processtype):
             return name
 
         def getPositiveRate(testingCountryName, country):
+<<<<<<< HEAD
             # click.echo("got in positive rate")
+=======
+>>>>>>> f18f373d2e30c013b1e1b6832d8edcce21523e88
             nonlocal testing
             sliced = testing[testing.entity == testingCountryName]
             if len(sliced.index) > 0:  
@@ -722,6 +734,7 @@ def cli(input, processtype):
             click.echo("no weekly cases data found for " + country)
             return 0
         def getHistoricalData(country, measure, year):
+<<<<<<< HEAD
             # click.echo("got in historical data" + country + measure + year)
             sliced = historical[historical.location == country]
             val = 0
@@ -733,6 +746,14 @@ def cli(input, processtype):
             else:
                 if not(math.isnan(val)):
                     return val
+=======
+            sliced = historical[historical.location == country]
+            # val = 0
+            meas = measure + "_" + year
+            val = sliced.iloc[0][meas]
+            if not(math.isnan(val)):
+                return val
+>>>>>>> f18f373d2e30c013b1e1b6832d8edcce21523e88
             
             return 0
 
@@ -844,15 +865,15 @@ def cli(input, processtype):
             if len(subset.index) > 0:
                 val = subset.iloc[0]['Short-term positive rate']
                 if not(math.isnan(val)):
-                    return val
+                    return val*100
                 # we didnt get one, so let's try to calculate it
                 weeklyCases = getTimeWeeklyCases(country, date)
                 weeklyTests = getTimeTest(country, date)
                 if weeklyTests == "":
                     weeklyTests = 0
                 if weeklyCases > 0 and weeklyTests > 0:
-                    rate = (weeklyCases/7)/weeklyTests
-                    rate = '%.4f'%(rate)
+                    rate = ((weeklyCases/7)/weeklyTests)*100
+                    rate = '%.2f'%(rate)
                     return rate
             return ""
         def getTimeWeeklyCases(country, date):
@@ -967,7 +988,7 @@ def cli(input, processtype):
             return countryCode[country]
 
         output = pd.DataFrame(
-            columns=['Country', 'Week', 'Deaths_old', 'Deaths_2020', 'Deaths_2021'])
+            columns=['Country', 'Week', 'Deaths_old', 'Deaths_2020', 'Deaths_2021', 'Deaths_2022'])
 
         # filter out uneeded rows
         loaded = loaded[loaded.Sex == 'b']
@@ -981,22 +1002,27 @@ def cli(input, processtype):
                 oldSum = 0
                 sum20 = 0
                 sum21 = 0
+                sum22 = 0
                 for row in loadedFiltered.itertuples():
                     if row.Year == 2020:
                         sum20 = row.DTotal
                     elif row.Year == 2021:
                         sum21 = row.DTotal
+                    elif row.Year == 2022:
+                        sum22 = row.DTotal
                     else:
                         oldSum += row.DTotal
-                if week == 53 and country != "Australia":
+                if week == 53:
                     oldAverage = oldSum
-                elif country in ['Greece', 'Germany']:
-                    oldAverage = oldSum / 4
                 else:
                     oldAverage = oldSum / 5
-
+                countryName = country
+                if country == 'USA':
+                    countryName = 'United States'
+                if country == 'Korea, South':
+                    countryName = 'South Korea'
                 output = output.append(
-                    {'Country': country, 'Week': week, 'Deaths_old': oldAverage, 'Deaths_2020': sum20, 'Deaths_2021': sum21}, ignore_index=True)
+                    {'Country': countryName, 'Week': week, 'Deaths_old': oldAverage, 'Deaths_2020': sum20, 'Deaths_2021': sum21, 'Deaths_2022': sum22}, ignore_index=True)
 
         for week in weeks:
             loadedFiltered = loaded[loaded.Week == week]
@@ -1005,8 +1031,10 @@ def cli(input, processtype):
             oldSum = 0
             sum20 = 0
             sum21 = 0
+            sum22 = 0
             i = 0
             j = 0
+            k = 0
             for row in loadedFiltered.itertuples():
                 if row.Year == 2020:
                     sum20 += row.DTotal
@@ -1014,6 +1042,9 @@ def cli(input, processtype):
                 elif row.Year == 2021:
                     sum21 += row.DTotal
                     j += 1
+                elif row.Year == 2022:
+                    sum22 += row.DTotal
+                    k += 1
                 else:
                     oldSum += row.DTotal
 
@@ -1026,9 +1057,11 @@ def cli(input, processtype):
                 sum20 = 0
             if j < 3:
                 sum21 = 0
+            if k < 3:
+                sum22 = 0
 
             output = output.append({'Country': "United Kingdom", 'Week': week,
-                                    'Deaths_old': oldAverage, 'Deaths_2020': sum20, 'Deaths_2021': sum21}, ignore_index=True)
+                                    'Deaths_old': oldAverage, 'Deaths_2020': sum20, 'Deaths_2021': sum21, 'Deaths_2022': sum22}, ignore_index=True)
         output = output.reset_index()
         output.to_csv(
             r'../NavigateObscurity/worlddata/static/worlddata/csv/covid-excess-deaths.csv', index=None, header=True)
