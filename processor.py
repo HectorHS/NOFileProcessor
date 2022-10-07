@@ -541,11 +541,7 @@ def cli(input, processtype):
                 "Mozambique": "Mozambique - tests performed",
                 "Myanmar": "Myanmar - samples tested",
                 "Namibia": "Namibia - tests performed",
-<<<<<<< HEAD
                 "Nepal": "Nepal - samples tested",
-=======
-                "Nepal": "Nepal - tests performed",
->>>>>>> f18f373d2e30c013b1e1b6832d8edcce21523e88
                 "Netherlands": "Netherlands - tests performed",
                 "New Zealand": "New Zealand - tests performed",
                 "Nigeria": "Nigeria - tests performed",
@@ -559,11 +555,7 @@ def cli(input, processtype):
                 "Paraguay": "Paraguay - tests performed",
                 "Peru": "Peru - tests performed",
                 "Philippines": "Philippines - people tested",
-<<<<<<< HEAD
                 "Poland": "Poland - tests performed",
-=======
-                "Poland": "Poland - people tested",
->>>>>>> f18f373d2e30c013b1e1b6832d8edcce21523e88
                 "Portugal": "Portugal - tests performed",
                 "Qatar": "Qatar - tests performed",
                 "Romania": "Romania - tests performed",
@@ -606,10 +598,7 @@ def cli(input, processtype):
             return name
 
         def getPositiveRate(testingCountryName, country):
-<<<<<<< HEAD
             # click.echo("got in positive rate")
-=======
->>>>>>> f18f373d2e30c013b1e1b6832d8edcce21523e88
             nonlocal testing
             sliced = testing[testing.entity == testingCountryName]
             if len(sliced.index) > 0:  
@@ -734,7 +723,6 @@ def cli(input, processtype):
             click.echo("no weekly cases data found for " + country)
             return 0
         def getHistoricalData(country, measure, year):
-<<<<<<< HEAD
             # click.echo("got in historical data" + country + measure + year)
             sliced = historical[historical.location == country]
             val = 0
@@ -746,14 +734,6 @@ def cli(input, processtype):
             else:
                 if not(math.isnan(val)):
                     return val
-=======
-            sliced = historical[historical.location == country]
-            # val = 0
-            meas = measure + "_" + year
-            val = sliced.iloc[0][meas]
-            if not(math.isnan(val)):
-                return val
->>>>>>> f18f373d2e30c013b1e1b6832d8edcce21523e88
             
             return 0
 
