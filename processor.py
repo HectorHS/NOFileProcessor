@@ -446,7 +446,7 @@ def cli(input, processtype):
         click.echo('testing data loaded')
 
         output = pd.DataFrame(
-            columns=['Country', 'Cases', 'Cases_week', 'Deaths', 'Deaths_week', 'Positive_rate', 'Fully_vaccinated', 'Vaccinated_booster'])
+            columns=['Country', 'Cases', 'Cases_2020', 'Cases_2021', 'Cases_2022', 'Cases_week', 'Deaths', 'Deaths_2020', 'Deaths_2021', 'Deaths_2022', 'Deaths_week', 'Positive_rate', 'Fully_vaccinated', 'Vaccinated_booster'])
 
         def getTestingCountryName(country):
             countryName = {
@@ -596,25 +596,30 @@ def cli(input, processtype):
             name = countryName[country] if country in countryName else ""
             return name
 
-        def getPositiveRate(testingCountryName, country, provided):
+        def getPositiveRate(testingCountryName, country):
+            # click.echo("got in positive rate")
             nonlocal testing
-            if provided:
-            for row in testing.itertuples():
-                if row.entity == testingCountryName:
-                        rate = row.short_term_positive_rate
+            sliced = testing[testing.entity == testingCountryName]
+            if len(sliced.index) > 0:  
+                rate = sliced.iloc[0]['short_term_positive_rate']
+                # for row in testing.itertuples():
+                #     if row.entity == testingCountryName:
+                #         rate = row.short_term_positive_rate
                         if not (math.isnan(rate)):
+                    rate = rate*100
+                    rate = '%.2f'%(rate)
                             return rate
                         
-            # if the positive rate is not readily provided we will try to calculate it    
-            else:
+            # we didnt get one, so let's try to calculate it
                 weeklyCases = getWeeklyCasesAbsolute(country)
                 weeklyTests = getWeeklyTestsAbsolute(testingCountryName)
                 if weeklyCases > 0 and weeklyTests > 0:
-                    rate = (weeklyCases/7)/weeklyTests
+                rate = ((weeklyCases/7)/weeklyTests)*100
+                rate = '%.2f'%(rate)
                     return rate
             
             click.echo('Positive test rate for ' + str(testingCountryName) + ' not found')
-                        return 0
+            return ""
                 
         def getWeeklyCasesAbsolute(country):
              # we repeat the process in case the latest values are not available
@@ -633,13 +638,15 @@ def cli(input, processtype):
             return 0
 
         def getWeeklyTestsAbsolute(testingCountryName):
+            # click.echo("got in weekly tests absolute")
             nonlocal testing
-            # sliced = testing[testing.date == targerDate]
-            # val = sliced.iloc[0][testingCountryName]
+            sliced = testing[testing.entity == testingCountryName]
+            if len(sliced.index) > 0:  
+                val = sliced.iloc[0]['seven_day_smoothed_daily_change']
             # return val
-            for row in testing.itertuples():
-                if row.entity == testingCountryName:
-                    val = row.seven_day_smoothed_daily_change
+                # for row in testing.itertuples():
+                #     if row.entity == testingCountryName:
+                #         val = row.seven_day_smoothed_daily_change
                     if not (math.isnan(val)):
                         return val
 
@@ -654,9 +661,12 @@ def cli(input, processtype):
             # click.echo(subset)
 
             for date in datesListLonger:
-                for row in subset.itertuples():
-                    if row.date == date:
-                        val = row.people_fully_vaccinated_per_hundred
+                sliced = subset[subset.date == date]
+                # for row in subset.itertuples():
+                #     if row.date == date:
+                        # val = row.people_fully_vaccinated_per_hundred
+                if len(sliced.index) > 0:      
+                    val = sliced.iloc[0]['people_fully_vaccinated_per_hundred']
                         if not(math.isnan(val)):
                             return val
 
@@ -670,12 +680,14 @@ def cli(input, processtype):
             subset = vaccinations[vaccinations.location == country]
 
             for date in datesListLonger:
-                for row in subset.itertuples():
-                    if row.date == date:
-                        val = row.total_boosters_per_hundred
+                sliced = subset[subset.date == date]
+                # for row in subset.itertuples():
+                    # if row.date == date:
+                        # val = row.total_boosters_per_hundred
+                if len(sliced.index) > 0: 
+                    val = sliced.iloc[0]['total_boosters_per_hundred']
                         if not(math.isnan(val)):
                             return val
-
             return 0
 
         def getCases(country):
@@ -694,7 +706,7 @@ def cli(input, processtype):
                 sliced = weekly_deaths[weekly_deaths.date == date]
                 val = sliced.iloc[0][country]
                 if not(math.isnan(val)):
-                    return val
+                    return '%.4f'%(val/7)
 
             click.echo("no weekly death data found for " + country)
             return 0
@@ -705,17 +717,39 @@ def cli(input, processtype):
                 sliced = weekly_cases[weekly_cases.date == date]
                 val = sliced.iloc[0][country]
                 if not(math.isnan(val)):
-                    return val
+                    return '%.4f'%(val/7)
 
             click.echo("no weekly cases data found for " + country)
             return 0
+        def getHistoricalData(country, measure, year):
+            # click.echo("got in historical data" + country + measure + year)
+            sliced = historical[historical.location == country]
+            val = 0
+            meas = measure + "_" + year
+            try:
+                val = sliced.iloc[0][meas]
+            except:
+                click.echo("Unable to get historical data for " + country + measure + year)
+            else:
+                if not(math.isnan(val)):
+                    return val
+            
+            return 0
 
         for country in countries:
-            if country not in ['Africa', 'Asia', 'Europe', 'European Union', 'High Income', 'International', 'Low Income', 'Lower Middle Income', 'North America', 'Oceania', 'South America', 'Summer Olympics 2020', 'Upper Middle Income']:
+            if country not in ['Africa', 'Asia', 'Europe', 'European Union', 'High income', 'International', 'Low income', 'Lower middle income', 'North America', 'Oceania', 'South America', 'Summer Olympics 2020', 'Upper middle income']:
                 weekDea = 0
 
                 cas = getCases(country)
+                cas2020 = getHistoricalData(country, "cases", "2020")
+                cas2021 = getHistoricalData(country, "cases", "2021")
+                cas2022 = cas - cas2020 - cas2021
+
                 dea = getDeaths(country)
+                dea2020 = getHistoricalData(country, "deaths", "2020")
+                dea2021 = getHistoricalData(country, "deaths", "2021")
+                dea2022 = dea - dea2020 - dea2021
+
                 weekCas = getWeeklyCases(country)
                 if dea > 0:
                     weekDea = getWeeklyDeaths(country)
@@ -724,16 +758,13 @@ def cli(input, processtype):
 
                 testingCountryName = getTestingCountryName(country)
                 if (testingCountryName):
-                    # owid provides figures for some countries, and for some others provides neccesary data to calculate it
-                    provided = True
-                    if testingCountryName in ['Saint Kitts and Nevis - people tested', 'Equatorial Guinea - tests performed', 'Mauritania - tests performed', 'Faeroe Islands - people tested', 'Paraguay - tests performed', 'Qatar - people tested', 'Palestine - tests performed', 'Iceland - tests performed', 'Malta - tests performed', 'Mongolia - samples tested', 'Latvia - tests performed', 'Croatia - people tested', 'Lebanon - tests performed', 'Rwanda - samples tested', 'Ukraine - tests performed', 'Bahrain - units unclear', 'Pakistan - tests performed', 'Brazil - tests performed', 'Romania - tests performed', 'Hong Kong - tests performed', 'Iran - tests performed', 'Indonesia - people tested', 'Portugal - tests performed', 'United Arab Emirates - tests performed', 'India - samples tested']:
-                        provided = False
-                    postiveRate = getPositiveRate(testingCountryName, country, provided)
+                    postiveRate = getPositiveRate(testingCountryName, country)
 
                 vacc = getVaccination(country)
                 vaccBoost = getVaccinationBooster(country)
                 
-                output = output.append({'Country': country, 'Cases': cas, 'Cases_week': weekCas, 'Deaths': dea, 'Deaths_week': weekDea,
+                output = output.append({'Country': country, 'Cases': cas, 'Cases_2020': cas2020, 'Cases_2021': cas2021, 'Cases_2022': cas2022, 
+                    'Cases_week': weekCas, 'Deaths': dea, 'Deaths_2020': dea2020, 'Deaths_2021':dea2021, 'Deaths_2022': dea2022, 'Deaths_week': weekDea,
                                     'Positive_rate': postiveRate, 'Fully_vaccinated': vacc, 'Vaccinated_booster': vaccBoost}, ignore_index=True)
 
         # Sort by country, but because sorting in python with mixed cases is messy, do all this
