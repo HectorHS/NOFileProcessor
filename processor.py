@@ -395,18 +395,18 @@ def cli(input, processtype):
         targerDate = str(year) + '-' + str(month).zfill(2) + '-' + str(day).zfill(2) 
 
         cases = pd.read_csv(
-            'C:/WorkspacesOther/owid-covid-data/public/data/jhu/total_cases.csv', delimiter=',', encoding='latin1')
+            'https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/jhu/total_cases.csv', delimiter=',', encoding='latin1')
         deaths = pd.read_csv(
-            'C:/WorkspacesOther/owid-covid-data/public/data/jhu/total_deaths.csv', delimiter=',', encoding='latin1')
+            'https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/jhu/total_deaths.csv', delimiter=',', encoding='latin1')
         weekly_cases = pd.read_csv(
-            'C:/WorkspacesOther/owid-covid-data/public/data/jhu/weekly_cases_per_million.csv', delimiter=',', encoding='latin1')
+            'https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/jhu/weekly_cases_per_million.csv', delimiter=',', encoding='latin1')
         weekly_cases_abs = pd.read_csv(
-            'C:/WorkspacesOther/owid-covid-data/public/data/jhu/weekly_cases.csv', delimiter=',', encoding='latin1')
+            'https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/jhu/weekly_cases.csv', delimiter=',', encoding='latin1')
         weekly_deaths = pd.read_csv(
-            'C:/WorkspacesOther/owid-covid-data/public/data/jhu/weekly_deaths_per_million.csv', delimiter=',', encoding='latin1')     
+            'https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/jhu/weekly_deaths_per_million.csv', delimiter=',', encoding='latin1')     
         click.echo("cases and deaths loaded")
         vaccinations = pd.read_csv(
-            'C:/WorkspacesOther/owid-covid-data/public/data/vaccinations/vaccinations.csv', delimiter=',', encoding='latin1')
+            'https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/vaccinations/vaccinations.csv', delimiter=',', encoding='latin1')
         click.echo('vaccination data loaded')
 
         countries = cases.columns.tolist()
@@ -436,7 +436,7 @@ def cli(input, processtype):
         vaccinations = vaccinations[vaccinations.date.isin(datesListLonger)]
 
         testing = pd.read_csv(
-            'C:/WorkspacesOther/owid-covid-data/public/data/testing/covid-testing-latest-data-source-details.csv', delimiter=',', encoding='latin1')
+             'https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/testing/covid-testing-latest-data-source-details.csv', delimiter=',', encoding='latin1')
         testing.columns = [c.strip().lower().replace(' ', '_')
                            for c in testing.columns]
         testing.columns = [c.strip().lower().replace('-', '_')
@@ -742,10 +742,8 @@ def cli(input, processtype):
         output.drop('country_lower', axis=1, inplace=True)
 
         output = output.reset_index()
-        # output.to_csv(
-        #     r'../NavigateObscurity/worlddata/static/worlddata/csv/covid-map.csv', index=None, header=True)
         output.to_csv(
-            r'covid-map.csv', index=None, header=True)
+            r'../NavigateObscurity/worlddata/static/worlddata/csv/covid-map.csv', index=None, header=True)
         click.echo('covid-map.csv exported')
 
         # Update covid-time.csv
@@ -754,12 +752,12 @@ def cli(input, processtype):
             '../NavigateObscurity/static/worlddata/csv/covid-time.csv', delimiter=',', encoding='latin1')
         click.echo('time series data loaded')
         testingFull = pd.read_csv(
-            'C:/WorkspacesOther/owid-covid-data/public/data/testing/covid-testing-all-observations.csv', delimiter=',', encoding='latin1')
+            'https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/testing/covid-testing-all-observations.csv', delimiter=',', encoding='latin1')
         click.echo('testing data loaded')
         new_cases = pd.read_csv(
-            'C:/WorkspacesOther/owid-covid-data/public/data/jhu/new_cases.csv', delimiter=',', encoding='latin1')
+            'https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/jhu/new_cases.csv', delimiter=',', encoding='latin1')
         new_deaths = pd.read_csv(
-            'C:/WorkspacesOther/owid-covid-data/public/data/jhu/new_deaths.csv', delimiter=',', encoding='latin1')
+            'https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/jhu/new_deaths.csv', delimiter=',', encoding='latin1')
 
         # only keep 10 latest dates 
         testingFull = testingFull[testingFull.Date.isin(datesList)]
@@ -850,7 +848,8 @@ def cli(input, processtype):
 
             time = time.assign(**{newDateList[i]: today})
 
-        time.to_csv(r'time_test.csv', index=False, header=True)
+        time.to_csv(
+            r'../NavigateObscurity/worlddata/static/worlddata/csv/covid-time.csv', index=None, header=True)
         click.echo('covid-time.csv exported')
 
     elif processtype == 'covid19-week':
