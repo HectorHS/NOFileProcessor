@@ -3,6 +3,7 @@ import click
 import numpy as np
 import pandas as pd
 import math
+import datetime
 
 
 @click.command()
@@ -392,276 +393,59 @@ def cli(input, processtype):
         day = int(input[:2])
         month = int(input[3:5])
         year = int(input[6:10])
-        targerDate = str(year) + '-' + str(month).zfill(2) + '-' + str(day).zfill(2) 
 
-        cases = pd.read_csv(
+        # Since we are reporting on a weekly basis, let's find the last 3 sundays
+        targetDate = datetime.date(year,month,day)
+        idx = (targetDate.weekday() + 1) % 7 # MON = 0, SUN = 6 -> SUN = 0 .. SAT = 6
+              
+        sun = targetDate - datetime.timedelta(idx)
+        sun2 = targetDate - datetime.timedelta(7+idx)
+        sun3 = targetDate - datetime.timedelta(14+idx)
+        sunday = sun.strftime('%Y-%m-%d')
+        sunday2 = sun2.strftime('%Y-%m-%d')
+        sunday3 = sun3.strftime('%Y-%m-%d')
+        targetDates = []
+        targetDates.append(sunday)
+        targetDates.append(sunday2)
+        targetDates.append(sunday3)
+        targetDatesReversed = list(reversed(targetDates))
+
+        total_cases = pd.read_csv(
             'https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/jhu/total_cases.csv', delimiter=',', encoding='latin1')
-        deaths = pd.read_csv(
+        total_deaths = pd.read_csv(
             'https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/jhu/total_deaths.csv', delimiter=',', encoding='latin1')
-        weekly_cases = pd.read_csv(
+        weekly_cases_pc = pd.read_csv(
             'https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/jhu/weekly_cases_per_million.csv', delimiter=',', encoding='latin1')
-        weekly_cases_abs = pd.read_csv(
-            'https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/jhu/weekly_cases.csv', delimiter=',', encoding='latin1')
-        weekly_deaths = pd.read_csv(
+        weekly_deaths_pc = pd.read_csv(
             'https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/jhu/weekly_deaths_per_million.csv', delimiter=',', encoding='latin1')     
+        
         click.echo("cases and deaths loaded")
         vaccinations = pd.read_csv(
             'https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/vaccinations/vaccinations.csv', delimiter=',', encoding='latin1')
         click.echo('vaccination data loaded')
+       
         historical = pd.read_csv('resources/covid-historical.csv', delimiter=',', encoding='latin1')
 
-        countries = cases.columns.tolist()
+        countries = total_cases.columns.tolist()
         del countries[0]
 
-        # Remove possible newer records
-        allDates = cases['date'].tolist()
-        dateIndex = allDates.index(targerDate)
-        cases = cases.iloc[:dateIndex+1]
-        deaths = deaths.iloc[:dateIndex+1]
-        weekly_cases = weekly_cases.iloc[:dateIndex+1]
-        weekly_cases_abs = weekly_cases_abs.iloc[:dateIndex+1]
-        weekly_deaths = weekly_deaths.iloc[:dateIndex+1]
+        # vaccination data does not come in regular dates like the others
+        vaccinationDates = total_cases['date'].tolist()[-180:]
+        vaccinationDates = list(reversed(vaccinationDates))
 
-        # latest 10 dates
-        datesList = cases['date'].tolist()[-10:]
-        datesList = list(reversed(datesList))
-        datesListLonger = cases['date'].tolist()[-180:]
-        datesListLonger = list(reversed(datesListLonger))
-
-        # filter out uneeded rows - we keep 10 in case the target date is not available
-        cases = cases[cases.date.isin(datesList)]
-        deaths = deaths[deaths.date.isin(datesList)]
-        weekly_cases = weekly_cases[weekly_cases.date.isin(datesList)]
-        weekly_cases_abs = weekly_cases_abs[weekly_cases_abs.date.isin(datesList)]
-        weekly_deaths = weekly_deaths[weekly_deaths.date.isin(datesList)]
-        vaccinations = vaccinations[vaccinations.date.isin(datesListLonger)]
-
-        testing = pd.read_csv(
-             'https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/testing/covid-testing-latest-data-source-details.csv', delimiter=',', encoding='latin1')
-        testing.columns = [c.strip().lower().replace(' ', '_')
-                           for c in testing.columns]
-        testing.columns = [c.strip().lower().replace('-', '_')
-                           for c in testing.columns]
-        testing.columns = [c.strip().lower().replace('7', 'seven')
-                           for c in testing.columns]
-        click.echo('testing data loaded')
+        # filter out uneeded rows
+        weekly_cases_pc = weekly_cases_pc[weekly_cases_pc.date.isin(targetDates)]
+        weekly_deaths_pc = weekly_deaths_pc[weekly_deaths_pc.date.isin(targetDates)]
+        vaccinations = vaccinations[vaccinations.date.isin(vaccinationDates)]
 
         output = pd.DataFrame(
-            columns=['Country', 'Cases', 'Cases_2020', 'Cases_2021', 'Cases_2022', 'Cases_week', 'Deaths', 'Deaths_2020', 'Deaths_2021', 'Deaths_2022', 'Deaths_week', 'Positive_rate', 'Fully_vaccinated', 'Vaccinated_booster'])
-
-        def getTestingCountryName(country):
-            countryName = {
-                "Albania": "Albania - tests performed",
-                "Andorra": "Andorra - tests performed",
-                "Antigua and barbuda": "Antigua and Barbuda - tests performed",
-                "Argentina": "Argentina - tests performed",
-                "Armenia": "Armenia - tests performed",
-                "Azerbaijan": "Azerbaijan - tests performed",
-                "Australia": "Australia - tests performed",
-                "Austria": "Austria - tests performed",
-                "Bahamas": "Bahamas - tests performed",
-                "Bahrain": "Bahrain - units unclear",
-                "Bangladesh": "Bangladesh - tests performed",
-                "Belarus": "Belarus - tests performed",
-                "Belgium": "Belgium - tests performed",
-                "Belize": "Belize - tests performed",
-                "Benin": "Benin - tests performed",
-                "Bhutan": "Bhutan - samples tested",
-                "Bolivia": "Bolivia - tests performed",
-                "Bosnia and Herzegovina": "Bosnia and Herzegovina - tests performed",
-                "Botswana": "Botswana - tests performed",
-                "Brazil": "Brazil - tests performed",
-                "Bulgaria": "Bulgaria - tests performed",
-                "Cambodia": "Cambodia - tests performed",
-                "Canada": "Canada - tests performed",
-                "Cape Verde": "Cape Verde - tests performed",
-                "Chile": "Chile - tests performed",
-                "China": "China - tests performed",
-                "Colombia": "Colombia - tests performed",
-                "Costa Rica": "Costa Rica - people tested",
-                "Cote d'Ivoire": "Cote d'Ivoire - tests performed",
-                "Croatia": "Croatia - people tested",
-                "Cuba": "Cuba - tests performed",
-                "Cyprus": "Cyprus - tests performed",
-                "Czechia": "Czechia - tests performed",
-                "Democratic Republic of Congo": "Democratic Republic of Congo - samples tested",
-                "Denmark": "Denmark - tests performed",
-                "Dominican Republic": "Dominican Republic - samples tested",
-                "Ecuador": "Ecuador - people tested",
-                "El_salvador": "El Salvador - tests performed",
-                "Equatorial Guinea": "Equatorial Guinea - tests performed",
-                "Estonia": "Estonia - tests performed",
-                "Ethiopia": "Ethiopia - tests performed",
-                "Faeroe Islands": "Faeroe Islands - people tested",
-                "Fiji": "Fiji - tests performed",
-                "Finland": "Finland - tests performed",
-                "France": "France - people tested",
-                "Gabon": "Gabon - tests performed",
-                "Gambia": "Gambia - tests performed",
-                "Georgia": "Georgia - tests performed",
-                "Germany": "Germany - tests performed",
-                "Ghana": "Ghana - tests performed",
-                "Greece": "Greece - samples tested",
-                "Guatemala": "Guatemala - people tested",
-                "Haiti": "Haiti - tests performed",
-                "Hong Kong": "Hong Kong - tests performed",
-                "Hungary": "Hungary - tests performed",
-                "Iceland": "Iceland - tests performed",
-                "India": "India - samples tested",
-                "Indonesia": "Indonesia - people tested",
-                "Iran": "Iran - tests performed",
-                "Iraq": "Iraq - tests performed",
-                "Ireland": "Ireland - tests performed",
-                "Israel": "Israel - people tested",
-                "Italy": "Italy - tests performed",
-                "Jamaica": "Jamaica - samples tested",
-                "Japan": "Japan - people tested",
-                "Jordan": "Jordan - tests performed",
-                "Kazakhstan": "Kazakhstan - tests performed",
-                "Kenya": "Kenya - tests performed",
-                "Kosovo": "Kosovo - tests performed",
-                "Kuwait": "Kuwait - tests performed",
-                "Laos": "Laos - tests performed",
-                "Latvia": "Latvia - tests performed",
-                "Lebanon": "Lebanon - tests performed",
-                "Libya": "Libya - samples tested",
-                "Liechtenstein": "Liechtenstein - tests performed",
-                "Lithuania": "Lithuania - tests performed",
-                "Luxembourg": "Luxembourg - tests performed",
-                "Madagascar": "Madagascar - tests performed",
-                "Malawi": "Malawi - tests performed",
-                "Malaysia": "Malaysia - people tested",
-                "Malta": "Malta - tests performed",
-                "Mauritania": "Mauritania - tests performed",
-                "Mexico": "Mexico - people tested",
-                "Maldives": "Maldives - samples tested",
-                "Moldova": "Moldova - tests performed",
-                "Mongolia": "Mongolia - samples tested",
-                "Morocco": "Morocco - people tested",
-                "Mozambique": "Mozambique - tests performed",
-                "Myanmar": "Myanmar - samples tested",
-                "Namibia": "Namibia - tests performed",
-                "Nepal": "Nepal - samples tested",
-                "Netherlands": "Netherlands - tests performed",
-                "New Zealand": "New Zealand - tests performed",
-                "Nigeria": "Nigeria - tests performed",
-                "North Macedonia": "North Macedonia - tests performed",
-                "Norway": "Norway - people tested",
-                "Oman": "Oman - tests performed",
-                "Palestine": "Palestine - tests performed",
-                "Pakistan": "Pakistan - tests performed",
-                "Panama": "Panama - tests performed",
-                "Papua New Guinea": "Papua New Guinea - people tested",
-                "Paraguay": "Paraguay - tests performed",
-                "Peru": "Peru - tests performed",
-                "Philippines": "Philippines - people tested",
-                "Poland": "Poland - tests performed",
-                "Portugal": "Portugal - tests performed",
-                "Qatar": "Qatar - tests performed",
-                "Romania": "Romania - tests performed",
-                "Russia": "Russia - tests performed",
-                "Rwanda": "Rwanda - samples tested",
-                "Saint Kitts and Nevis": "Saint Kitts and Nevis - people tested",
-                "Saint Vincent and the Grenadines": "Saint Vincent and the Grenadines - tests performed",
-                "Saudi Arabia": "Saudi Arabia - tests performed",
-                "Senegal": "Senegal - tests performed",
-                "Serbia": "Serbia - people tested",
-                "Singapore": "Singapore - samples tested",
-                "Slovakia": "Slovakia - tests performed",
-                "Slovenia": "Slovenia - tests performed",
-                "South Africa": "South Africa - people tested",
-                "South Korea": "South Korea - people tested",
-                "South Sudan": "South Sudan - tests performed",
-                "Spain": "Spain - tests performed",
-                "Sri Lanka": "Sri Lanka - tests performed",
-                "Sweden": "Sweden - tests performed",
-                "Switzerland": "Switzerland - tests performed",
-                "Taiwan": "Taiwan - people tested",
-                "Thailand": "Thailand - tests performed",
-                "Timor": "Timor - tests performed",
-                "Togo": "Togo - tests performed",
-                "Trinidad and Tobago": "Trinidad and Tobago - people tested",
-                "Tunisia": "Tunisia - people tested",
-                "Turkey": "Turkey - tests performed",
-                "Uganda": "Uganda - tests performed",
-                "Ukraine": "Ukraine - tests performed",
-                "United Arab Emirates": "United Arab Emirates - tests performed",
-                "United Kingdom": "United Kingdom - tests performed",
-                "United States": "United States - tests performed",
-                "Uruguay": "Uruguay - people tested",
-                "Vietnam": "Vietnam - people tested",
-                "Zambia": "Zambia - tests performed",
-                "Zimbabwe": "Zimbabwe - tests performed"
-            }
-
-            name = countryName[country] if country in countryName else ""
-            return name
-
-        def getPositiveRate(testingCountryName, country):
-            # click.echo("got in positive rate")
-            nonlocal testing
-            sliced = testing[testing.entity == testingCountryName]
-            if len(sliced.index) > 0:  
-                rate = sliced.iloc[0]['short_term_positive_rate']
-                # for row in testing.itertuples():
-                #     if row.entity == testingCountryName:
-                #         rate = row.short_term_positive_rate
-                        if not (math.isnan(rate)):
-                    rate = rate*100
-                    rate = '%.2f'%(rate)
-                            return rate
-                        
-            # we didnt get one, so let's try to calculate it
-                weeklyCases = getWeeklyCasesAbsolute(country)
-                weeklyTests = getWeeklyTestsAbsolute(testingCountryName)
-                if weeklyCases > 0 and weeklyTests > 0:
-                rate = ((weeklyCases/7)/weeklyTests)*100
-                rate = '%.2f'%(rate)
-                    return rate
-            
-            click.echo('Positive test rate for ' + str(testingCountryName) + ' not found')
-            return ""
-                
-        def getWeeklyCasesAbsolute(country):
-             # we repeat the process in case the latest values are not available
-            for date in datesList:
-                sliced = weekly_cases_abs[weekly_cases_abs.date == date]
-                val = sliced.iloc[0][country]
-                if not(math.isnan(val)):
-                    return val
-                # for row in weekly_cases_abs.itertuples():
-                #     if row.date == date:
-                #         val = getattr(row, country)
-                #         if not(math.isnan(val)):
-                #             return val
-            
-            click.echo("no absolute weekly cases data found for " + country)
-            return 0
-
-        def getWeeklyTestsAbsolute(testingCountryName):
-            # click.echo("got in weekly tests absolute")
-            nonlocal testing
-            sliced = testing[testing.entity == testingCountryName]
-            if len(sliced.index) > 0:  
-                val = sliced.iloc[0]['seven_day_smoothed_daily_change']
-            # return val
-                # for row in testing.itertuples():
-                #     if row.entity == testingCountryName:
-                #         val = row.seven_day_smoothed_daily_change
-                    if not (math.isnan(val)):
-                        return val
-
-            click.echo("no absolute weekly tests data found for " + testingCountryName)
-            return 0
+            columns=['Country', 'Cases', 'Cases_2020', 'Cases_2021', 'Cases_2022', 'Cases_week', 'Deaths', 'Deaths_2020', 'Deaths_2021', 'Deaths_2022', 'Deaths_week', 'Fully_vaccinated', 'Vaccinated_booster'])
 
         def getVaccination(country):
             nonlocal vaccinations
-            # click.echo(vaccinations)
-            # filter out uneeded rows
             subset = vaccinations[vaccinations.location == country]
-            # click.echo(subset)
 
-            for date in datesListLonger:
+            for date in vaccinationDates:
                 sliced = subset[subset.date == date]
                 # for row in subset.itertuples():
                 #     if row.date == date:
@@ -675,12 +459,13 @@ def cli(input, processtype):
             return 0
 
         def getVaccinationBooster(country):
+            # click.echo("got in vaccination booster")
             nonlocal vaccinations
 
             # filter out uneeded rows
             subset = vaccinations[vaccinations.location == country]
 
-            for date in datesListLonger:
+            for date in vaccinationDates:
                 sliced = subset[subset.date == date]
                 # for row in subset.itertuples():
                     # if row.date == date:
@@ -691,20 +476,24 @@ def cli(input, processtype):
                             return val
             return 0
 
-        def getCases(country):
-            sliced = cases[cases.date == targerDate]
+        def getTotalCases(country):
+           # click.echo("got in get cases")
+            sliced = total_cases[total_cases.date == sunday]
             val = sliced.iloc[0][country]
             return val
 
-        def getDeaths(country):
-            sliced = deaths[deaths.date == targerDate]
+        def getTotalDeaths(country):
+            # click.echo("got in get deaths")
+            sliced = total_deaths[total_deaths.date == sunday]
             val = sliced.iloc[0][country]
             return val
 
-        def getWeeklyDeaths(country):
+        def getWeeklyDeathsPC(country):
              # we repeat the process in case the latest values are not available
-            for date in datesList:
-                sliced = weekly_deaths[weekly_deaths.date == date]
+            for date in targetDates:
+
+                sliced = weekly_deaths_pc[weekly_deaths_pc.date == date]
+                if len(sliced.index) > 0: 
                 val = sliced.iloc[0][country]
                 if not(math.isnan(val)):
                     return '%.4f'%(val/7)
@@ -712,16 +501,18 @@ def cli(input, processtype):
             click.echo("no weekly death data found for " + country)
             return 0
 
-        def getWeeklyCases(country):
+        def getWeeklyCasesPC(country):
             # we repeat the process in case the latest values are not available
-            for date in datesList:
-                sliced = weekly_cases[weekly_cases.date == date]
+            for date in targetDates:
+                sliced = weekly_cases_pc[weekly_cases_pc.date == date]
+                if len(sliced.index) > 0: 
                 val = sliced.iloc[0][country]
                 if not(math.isnan(val)):
                     return '%.4f'%(val/7)
 
             click.echo("no weekly cases data found for " + country)
             return 0
+
         def getHistoricalData(country, measure, year):
             # click.echo("got in historical data" + country + measure + year)
             sliced = historical[historical.location == country]
@@ -741,32 +532,26 @@ def cli(input, processtype):
             if country not in ['Africa', 'Asia', 'Europe', 'European Union', 'High income', 'International', 'Low income', 'Lower middle income', 'North America', 'Oceania', 'South America', 'Summer Olympics 2020', 'Upper middle income']:
                 weekDea = 0
 
-                cas = getCases(country)
+                cas = getTotalCases(country)
                 cas2020 = getHistoricalData(country, "cases", "2020")
                 cas2021 = getHistoricalData(country, "cases", "2021")
                 cas2022 = cas - cas2020 - cas2021
 
-                dea = getDeaths(country)
+                dea = getTotalDeaths(country)
                 dea2020 = getHistoricalData(country, "deaths", "2020")
                 dea2021 = getHistoricalData(country, "deaths", "2021")
                 dea2022 = dea - dea2020 - dea2021
 
-                weekCas = getWeeklyCases(country)
+                weekCas = getWeeklyCasesPC(country)
                 if dea > 0:
-                    weekDea = getWeeklyDeaths(country)
-
-                postiveRate = 0
-
-                testingCountryName = getTestingCountryName(country)
-                if (testingCountryName):
-                    postiveRate = getPositiveRate(testingCountryName, country)
+                    weekDea = getWeeklyDeathsPC(country)
 
                 vacc = getVaccination(country)
                 vaccBoost = getVaccinationBooster(country)
                 
                 output = output.append({'Country': country, 'Cases': cas, 'Cases_2020': cas2020, 'Cases_2021': cas2021, 'Cases_2022': cas2022, 
                     'Cases_week': weekCas, 'Deaths': dea, 'Deaths_2020': dea2020, 'Deaths_2021':dea2021, 'Deaths_2022': dea2022, 'Deaths_week': weekDea,
-                                    'Positive_rate': postiveRate, 'Fully_vaccinated': vacc, 'Vaccinated_booster': vaccBoost}, ignore_index=True)
+                    'Fully_vaccinated': vacc, 'Vaccinated_booster': vaccBoost}, ignore_index=True)
 
         # Sort by country, but because sorting in python with mixed cases is messy, do all this
         output['country_lower'] = output['Country'].str.lower()
@@ -783,102 +568,133 @@ def cli(input, processtype):
         time = pd.read_csv(
             '../NavigateObscurity/static/worlddata/csv/covid-time.csv', delimiter=',', encoding='latin1')
         click.echo('time series data loaded')
-        testingFull = pd.read_csv(
-            'https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/testing/covid-testing-all-observations.csv', delimiter=',', encoding='latin1')
-        click.echo('testing data loaded')
-        new_cases = pd.read_csv(
-            'https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/jhu/new_cases.csv', delimiter=',', encoding='latin1')
-        new_deaths = pd.read_csv(
-            'https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/jhu/new_deaths.csv', delimiter=',', encoding='latin1')
 
-        # only keep 10 latest dates 
-        testingFull = testingFull[testingFull.Date.isin(datesList)]
-        new_cases = new_cases[new_cases.date.isin(datesList)]
-        new_deaths = new_deaths[new_deaths.date.isin(datesList)]
+        weekly_cases_abs = pd.read_csv(
+            'https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/jhu/weekly_cases.csv', delimiter=',', encoding='latin1')
+        weekly_deaths_abs = pd.read_csv(
+            'https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/jhu/weekly_deaths.csv', delimiter=',', encoding='latin1')         
+        hospitalizations = pd.read_csv(
+            'https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/hospitalizations/covid-hospitalizations.csv', delimiter=',', encoding='latin1')
+        click.echo('weekly cases, deaths and hospitalization data loaded')
+
+        # filter out uneeded rows
+        weekly_cases_abs = weekly_cases_abs[weekly_cases_abs.date.isin(targetDates)]
+        weekly_deaths_abs = weekly_deaths_abs[weekly_deaths_abs.date.isin(targetDates)]
 
         timeCases = time[time.Parameter == "Cases"]
         timeDeaths = time[time.Parameter == "Deaths"]
-        timeTests = time[time.Parameter == "Tests"]
-        timeRates = time[time.Parameter == "Tests_rate"]
+        timeHospitalizations = time[time.Parameter == "Hospitalizations"]
+        timeICU = time[time.Parameter == "ICU"]
 
-        # remove latest 10 days from existing covid time file. We do this to attempt to have more updated data as this data is not always up to latest date
-        datesList = list(reversed(datesList))
-        newDateList = []
-        for date in datesList:
-            year = int(date[:4])
-            month = int(date[5:7])
-            day = int(date[8:10])
-            newDate = str(day).zfill(2) + "/" + str(month).zfill(2) + "/" + str(year)
-            newDateList.append(newDate)
-
-        for date in newDateList:
+        # we are adding data for the last 3 sundays. If some are already populated, we remove them. 
+        # This is to ensure we have up to date data
+        for date in targetDates:
             if date in time.columns.tolist():
                 time.drop(date, axis=1, inplace=True)
 
-        def getTimeNewCases(country, date):
-            sliced = new_cases[new_cases.date == date]
-            val = sliced.iloc[0][country]
-            if not(math.isnan(val)):
-                return val
-            return 0
-
-        def getTimeNewDeaths(country, date):
-            sliced = new_deaths[new_deaths.date == date]
-            val = sliced.iloc[0][country]
-            if not(math.isnan(val)):
-                return val
-            return 0
-
-        def getTimeTest(country, date):
-            country = getTestingCountryName(country)
-            subset = testingFull[testingFull.Entity == country]
-            subset = subset[subset.Date == date]
-            if len(subset.index) > 0:
-                val = subset.iloc[0]['7-day smoothed daily change']
-                if not(math.isnan(val)):
-                    return val
-            return ""
-        def getTimeTestRate(country, date):
-            testingCountryName = getTestingCountryName(country)
-            subset = testingFull[testingFull.Entity == testingCountryName]
-            subset = subset[subset.Date == date]
-            if len(subset.index) > 0:
-                val = subset.iloc[0]['Short-term positive rate']
-                if not(math.isnan(val)):
-                    return val*100
-                # we didnt get one, so let's try to calculate it
-                weeklyCases = getTimeWeeklyCases(country, date)
-                weeklyTests = getTimeTest(country, date)
-                if weeklyTests == "":
-                    weeklyTests = 0
-                if weeklyCases > 0 and weeklyTests > 0:
-                    rate = ((weeklyCases/7)/weeklyTests)*100
-                    rate = '%.2f'%(rate)
-                    return rate
-            return ""
-        def getTimeWeeklyCases(country, date):
+        def getWeeklyCasesAbs(country, date):
+            # click.echo("got in get cases")
             sliced = weekly_cases_abs[weekly_cases_abs.date == date]
             val = sliced.iloc[0][country]
             if not(math.isnan(val)):
                 return val
-            return 0
+            click.echo("no absolute weekly cases data found for " + country)
+            return ''
+
+        def getWeeklyDeathsAbs(country, date):
+            # click.echo("got in get cases")
+            sliced = weekly_deaths_abs[weekly_deaths_abs.date == date]
+            val = sliced.iloc[0][country]
+            if not(math.isnan(val)):
+                return val
+            click.echo("no absolute weekly deaths data found for " + country)
+            return ''
+
+        def getHospitalDayIndx(country, date):
+            # dates for some countries don't fall on sundays
+            # TODO in the future check to see if more countries are added to data
+            if country in ['Portugal', 'Poland', 'Japan', 'Netherlands', 'Cyprus']:
+                day = int(date[8:10])
+                month = int(date[5:7])
+                year = int(date[:4])
+                currentTargetDate = datetime.date(year,month,day)
+                dayIndx = 0
+        
+                if country == 'Portugal':
+                    dayIndx = 5
+                elif country in ['Poland', 'Japan']:
+                    dayIndx = 4
+                elif country == 'Netherlands':
+                    dayIndx = 2
+                elif country == 'Cyprus':
+                    dayIndx = 3
+            
+                newTargetDate = currentTargetDate - datetime.timedelta(dayIndx)
+                return newTargetDate.strftime('%Y-%m-%d')
+            
+            return date
+
+        def getHospitalizations(country, date):
+            nonlocal hospitalizations
+            sliced = hospitalizations[hospitalizations.entity == country]
+            tDate = getHospitalDayIndx(country, date)
+            sliced = sliced[sliced.date == tDate]
+            # Note that absolute numbers are not available for certain countries so we get weekly admissions instead
+            if country in ['Greece', 'Liechtenstein', 'Russia', 'Singapore', 'Norway', 'Malta', 'Latvia', 'Chile', 'Germany']:
+                subset = sliced[sliced.indicator == 'Weekly new hospital admissions']
+            if len(subset.index) > 0:
+                    val = subset.iloc[0]['value']
+                    if not(math.isnan(val)):
+                        return val
+            else:
+                subset = sliced[sliced.indicator == 'Daily hospital occupancy']
+                if len(subset.index) > 0: 
+                    val = subset.iloc[0]['value']
+                if not(math.isnan(val)):
+                    return val
+            
+            click.echo("no hospitalization data found for " + country + " on " + date)
+            return ''
+        
+        def getIcu(country, date):
+            nonlocal hospitalizations
+            sliced = hospitalizations[hospitalizations.entity == country]
+            tDate = getHospitalDayIndx(country, date)
+            sliced = sliced[sliced.date == tDate]
+            # Note that absolute numbers are not available for certain countries so we get weekly admissions instead
+            if country in ['Greece', 'Liechtenstein', 'Russia', 'Singapore', 'Norway', 'Malta', 'Latvia', 'Chile', 'Germany']:
+                subset = sliced[sliced.indicator == 'Weekly new ICU admissions']
+            if len(subset.index) > 0:
+                    val = subset.iloc[0]['value']
+                if not(math.isnan(val)):
+                        return val
+            else:
+                subset = sliced[sliced.indicator == 'Daily ICU occupancy']
+                if len(subset.index) > 0: 
+                    val = subset.iloc[0]['value']
+            if not(math.isnan(val)):
+                return val
+            
+            click.echo("no ICU data found for " + country + " on " + date)
+            return ''
 
         # for each date, create a new column to covid time file
-        for i in range(len(datesList)):
+        for i in range(len(targetDatesReversed)):
         today = []
-            click.echo("processing for: " + datesList[i])
+            click.echo("processing for: " + targetDatesReversed[i])
             for row in timeCases.itertuples():
-                today.append(getTimeNewCases(row.Country, datesList[i]))
+                today.append(getWeeklyCasesAbs(row.Country, targetDatesReversed[i]))
 
             for row in timeDeaths.itertuples():
-                today.append(getTimeNewDeaths(row.Country, datesList[i]))
+                today.append(getWeeklyDeathsAbs(row.Country, targetDatesReversed[i]))
+            
+            for row in timeHospitalizations.itertuples():
+                today.append(getHospitalizations(row.Country, targetDatesReversed[i]))
 
-            for row in timeTests.itertuples():
-                today.append(getTimeTest(row.Country, datesList[i]))
-            for row in timeRates.itertuples():
-                today.append(getTimeTestRate(row.Country, datesList[i]))
+            for row in timeICU.itertuples():
+                today.append(getIcu(row.Country, targetDatesReversed[i]))
 
-            time = time.assign(**{newDateList[i]: today})
+            time = time.assign(**{targetDatesReversed[i]: today})
 
         time.to_csv(
             r'../NavigateObscurity/worlddata/static/worlddata/csv/covid-time.csv', index=None, header=True)
