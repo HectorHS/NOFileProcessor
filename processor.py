@@ -1,3 +1,4 @@
+from xml.etree.ElementTree import C14NWriterTarget
 import click
 # import csv
 import numpy as np
@@ -393,7 +394,7 @@ def cli(input, processtype):
         day = int(input[:2])
         month = int(input[3:5])
         year = int(input[6:10])
-
+        
         # Since we are reporting on a weekly basis, let's find the last 3 sundays
         targetDate = datetime.date(year,month,day)
         idx = (targetDate.weekday() + 1) % 7 # MON = 0, SUN = 6 -> SUN = 0 .. SAT = 6
@@ -437,7 +438,7 @@ def cli(input, processtype):
         weekly_cases_pc = weekly_cases_pc[weekly_cases_pc.date.isin(targetDates)]
         weekly_deaths_pc = weekly_deaths_pc[weekly_deaths_pc.date.isin(targetDates)]
         vaccinations = vaccinations[vaccinations.date.isin(vaccinationDates)]
-
+       
         output = pd.DataFrame(
             columns=['Country', 'Cases', 'Cases_2020', 'Cases_2021', 'Cases_2022', 'Cases_week', 'Deaths', 'Deaths_2020', 'Deaths_2021', 'Deaths_2022', 'Deaths_week', 'Fully_vaccinated', 'Vaccinated_booster'])
 
@@ -452,8 +453,8 @@ def cli(input, processtype):
                         # val = row.people_fully_vaccinated_per_hundred
                 if len(sliced.index) > 0:      
                     val = sliced.iloc[0]['people_fully_vaccinated_per_hundred']
-                        if not(math.isnan(val)):
-                            return val
+                    if not(math.isnan(val)):
+                        return val
 
             click.echo("No vaccination rows found for " + country)
             return 0
@@ -472,8 +473,8 @@ def cli(input, processtype):
                         # val = row.total_boosters_per_hundred
                 if len(sliced.index) > 0: 
                     val = sliced.iloc[0]['total_boosters_per_hundred']
-                        if not(math.isnan(val)):
-                            return val
+                    if not(math.isnan(val)):
+                        return val
             return 0
 
         def getTotalCases(country):
@@ -487,16 +488,16 @@ def cli(input, processtype):
             sliced = total_deaths[total_deaths.date == sunday]
             val = sliced.iloc[0][country]
             return val
-
+        
         def getWeeklyDeathsPC(country):
              # we repeat the process in case the latest values are not available
             for date in targetDates:
 
                 sliced = weekly_deaths_pc[weekly_deaths_pc.date == date]
                 if len(sliced.index) > 0: 
-                val = sliced.iloc[0][country]
-                if not(math.isnan(val)):
-                    return '%.4f'%(val/7)
+                    val = sliced.iloc[0][country]
+                    if not(math.isnan(val)):
+                        return '%.4f'%(val/7)
 
             click.echo("no weekly death data found for " + country)
             return 0
@@ -506,9 +507,9 @@ def cli(input, processtype):
             for date in targetDates:
                 sliced = weekly_cases_pc[weekly_cases_pc.date == date]
                 if len(sliced.index) > 0: 
-                val = sliced.iloc[0][country]
-                if not(math.isnan(val)):
-                    return '%.4f'%(val/7)
+                    val = sliced.iloc[0][country]
+                    if not(math.isnan(val)):
+                        return '%.4f'%(val/7)
 
             click.echo("no weekly cases data found for " + country)
             return 0
@@ -531,7 +532,7 @@ def cli(input, processtype):
         for country in countries:
             if country not in ['Africa', 'Asia', 'Europe', 'European Union', 'High income', 'International', 'Low income', 'Lower middle income', 'North America', 'Oceania', 'South America', 'Summer Olympics 2020', 'Upper middle income']:
                 weekDea = 0
-
+                
                 cas = getTotalCases(country)
                 cas2020 = getHistoricalData(country, "cases", "2020")
                 cas2021 = getHistoricalData(country, "cases", "2021")
@@ -568,7 +569,7 @@ def cli(input, processtype):
         time = pd.read_csv(
             '../NavigateObscurity/static/worlddata/csv/covid-time.csv', delimiter=',', encoding='latin1')
         click.echo('time series data loaded')
-
+      
         weekly_cases_abs = pd.read_csv(
             'https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/jhu/weekly_cases.csv', delimiter=',', encoding='latin1')
         weekly_deaths_abs = pd.read_csv(
@@ -586,18 +587,14 @@ def cli(input, processtype):
         timeHospitalizations = time[time.Parameter == "Hospitalizations"]
         timeICU = time[time.Parameter == "ICU"]
 
-        # we are adding data for the last 3 sundays. If some are already populated, we remove them. 
-        # This is to ensure we have up to date data
-        for date in targetDates:
-            if date in time.columns.tolist():
-                time.drop(date, axis=1, inplace=True)
+       
 
         def getWeeklyCasesAbs(country, date):
             # click.echo("got in get cases")
             sliced = weekly_cases_abs[weekly_cases_abs.date == date]
             val = sliced.iloc[0][country]
             if not(math.isnan(val)):
-                return val
+                    return val
             click.echo("no absolute weekly cases data found for " + country)
             return ''
 
@@ -606,7 +603,7 @@ def cli(input, processtype):
             sliced = weekly_deaths_abs[weekly_deaths_abs.date == date]
             val = sliced.iloc[0][country]
             if not(math.isnan(val)):
-                return val
+                    return val
             click.echo("no absolute weekly deaths data found for " + country)
             return ''
 
@@ -642,7 +639,7 @@ def cli(input, processtype):
             # Note that absolute numbers are not available for certain countries so we get weekly admissions instead
             if country in ['Greece', 'Liechtenstein', 'Russia', 'Singapore', 'Norway', 'Malta', 'Latvia', 'Chile', 'Germany']:
                 subset = sliced[sliced.indicator == 'Weekly new hospital admissions']
-            if len(subset.index) > 0:
+                if len(subset.index) > 0: 
                     val = subset.iloc[0]['value']
                     if not(math.isnan(val)):
                         return val
@@ -650,8 +647,8 @@ def cli(input, processtype):
                 subset = sliced[sliced.indicator == 'Daily hospital occupancy']
                 if len(subset.index) > 0: 
                     val = subset.iloc[0]['value']
-                if not(math.isnan(val)):
-                    return val
+                    if not(math.isnan(val)):
+                        return val
             
             click.echo("no hospitalization data found for " + country + " on " + date)
             return ''
@@ -664,23 +661,37 @@ def cli(input, processtype):
             # Note that absolute numbers are not available for certain countries so we get weekly admissions instead
             if country in ['Greece', 'Liechtenstein', 'Russia', 'Singapore', 'Norway', 'Malta', 'Latvia', 'Chile', 'Germany']:
                 subset = sliced[sliced.indicator == 'Weekly new ICU admissions']
-            if len(subset.index) > 0:
+                if len(subset.index) > 0: 
                     val = subset.iloc[0]['value']
-                if not(math.isnan(val)):
+                    if not(math.isnan(val)):
                         return val
             else:
                 subset = sliced[sliced.indicator == 'Daily ICU occupancy']
                 if len(subset.index) > 0: 
                     val = subset.iloc[0]['value']
-            if not(math.isnan(val)):
-                return val
+                    if not(math.isnan(val)):
+                        return val
             
             click.echo("no ICU data found for " + country + " on " + date)
             return ''
 
+        def changeDateFormat(date):
+            d = int(date[8:10])
+            m = int(date[5:7])
+            y = int(date[0:4])
+            tDate = datetime.date(y,m,d)
+            return tDate.strftime('%d/%m/%Y')
+
+        # we are adding data for the last 3 sundays. If some are already populated, we remove them. 
+        # This is to ensure we have up to date data
+        for date in targetDates:
+            dFormated = changeDateFormat(date)
+            if dFormated in time.columns.tolist():
+                time.drop(dFormated, axis=1, inplace=True)
+
         # for each date, create a new column to covid time file
         for i in range(len(targetDatesReversed)):
-        today = []
+            today = []
             click.echo("processing for: " + targetDatesReversed[i])
             for row in timeCases.itertuples():
                 today.append(getWeeklyCasesAbs(row.Country, targetDatesReversed[i]))
@@ -694,7 +705,7 @@ def cli(input, processtype):
             for row in timeICU.itertuples():
                 today.append(getIcu(row.Country, targetDatesReversed[i]))
 
-            time = time.assign(**{targetDatesReversed[i]: today})
+            time = time.assign(**{changeDateFormat(targetDatesReversed[i]): today})
 
         time.to_csv(
             r'../NavigateObscurity/worlddata/static/worlddata/csv/covid-time.csv', index=None, header=True)
@@ -1885,7 +1896,7 @@ def cli(input, processtype):
 
         output_vars = pd.DataFrame(
             columns=['State', 'Measure', 't1', 't2', 't3', 't4', 't5', 't6', 't7', 't8', 't9', 't10', 't11', 't12'])
-
+        
         output_breakdown = pd.DataFrame(
             columns=['State', 'Measure', 'subclass', 't1', 't2', 't3', 't4', 't5', 't6', 't7', 't8', 't9', 't10', 't11', 't12'])
         
@@ -2101,8 +2112,8 @@ def cli(input, processtype):
 
             for i in range(len(loaded)):
                  if state == loaded.at[i, "State_full"] and loaded.at[i, "Date"] == "09/26/2020":
-                sex = float(loaded.at[i, "Sex"])
-                covid = float(loaded.at[i, "InfectedCovidLatest"])
+                    sex = float(loaded.at[i, "Sex"])
+                    covid = float(loaded.at[i, "InfectedCovidLatest"])
                     age = float(loaded.at[i, "Age"])
                     state_code = loaded.at[i, "State"]
                     count += 1
@@ -3336,6 +3347,47 @@ def cli(input, processtype):
         
         output_large.to_csv(r'output_large.csv', header=True)
         click.echo("output_large.csv exported")
+
+    elif processtype == "cclab-id-lookup":
+         
+        output = pd.DataFrame(
+            columns=['cohort', 'timepoint', 'id', 'wrongCohort'])
+
+
+
+        t1Slice = loaded[loaded.timepoint == 't1']
+        c1Ids = t1Slice.id.unique()
+
+        t3Slice = loaded[loaded.timepoint == 't3']
+        c2Ids = t3Slice.id.unique()
+
+
+        click.echo(len(c2Ids))
+
+        for row in loaded.itertuples():
+            if row.cohort == 2:
+                if row.id not in c2Ids:
+                    wrongCohort = False
+                    if row.id in c1Ids:
+                        wrongCohort = True
+                    click.echo("two")
+                    output = output.append({'cohort': 2, 'timepoint': row.timepoint, 'id': row.id, 'wrongCohort': wrongCohort}, ignore_index=True)
+            elif row.cohort == 1:
+                 if row.id not in c1Ids:
+                    wrongCohort = False
+                    if row.id in c2Ids:
+                        wrongCohort = True
+                    click.echo("one")
+                    output = output.append({'cohort': 1, 'timepoint': row.timepoint, 'id': row.id, 'wrongCohort': wrongCohort}, ignore_index=True)
+            else:
+                click.echo("couldn't match cohort")
+            
+            click.echo(len(output))
         
+
+        output = output.reset_index()
+        output.to_csv(r'output_ids.csv', header=True)
+        
+
 
     click.echo('Processing completed.')
